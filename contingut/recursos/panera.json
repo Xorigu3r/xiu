@@ -1,0 +1,92 @@
+{
+  "id": "panera",
+  "tipus": "activitat",
+  "edat": "0-1",
+  "area": "exp",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "15-20 min",
+  "novetat": true,
+  "titol": {
+    "ca": "Panera dels tresors",
+    "es": "Cesta de los tesoros"
+  },
+  "subtitol": {
+    "ca": "Descobrir el món amb les mans i la boca",
+    "es": "Descubrir el mundo con las manos y la boca"
+  },
+  "intencio": {
+    "ca": "Oferir a l'infant que ja s'asseu sol una col·lecció d'objectes quotidians i naturals perquè els explori lliurement, seguint la seva pròpia curiositat.",
+    "es": "Ofrecer al bebé que ya se sienta solo una colección de objetos cotidianos y naturales para que los explore libremente, siguiendo su propia curiosidad."
+  },
+  "treballa": {
+    "ca": [
+      "Exploració sensorial",
+      "Concentració i atenció",
+      "Coordinació òcul-manual",
+      "Presa de decisions"
+    ],
+    "es": [
+      "Exploración sensorial",
+      "Concentración y atención",
+      "Coordinación óculo-manual",
+      "Toma de decisiones"
+    ]
+  },
+  "materials": {
+    "ca": [
+      "Una panera baixa de vímet",
+      "Pinya, closca de coco, esponja natural",
+      "Cullera de fusta, anella metàl·lica",
+      "Retalls de roba de diferents textures"
+    ],
+    "es": [
+      "Una cesta baja de mimbre",
+      "Piña, cáscara de coco, esponja natural",
+      "Cuchara de madera, anilla metálica",
+      "Retales de tela de distintas texturas"
+    ]
+  },
+  "preparacio": {
+    "ca": "Renta i revisa tots els objectes. Col·loca la panera sobre una manta en un racó tranquil i amb bona llum.",
+    "es": "Lava y revisa todos los objetos. Coloca la cesta sobre una manta en un rincón tranquilo y con buena luz."
+  },
+  "desenvolupament": {
+    "ca": [
+      "Asseu l'infant al costat de la panera, ben recolzat.",
+      "Deixa que triï i explori sense intervenir.",
+      "Mantén una presència tranquil·la i atenta, a prop.",
+      "Acaba quan perdi l'interès."
+    ],
+    "es": [
+      "Sienta al bebé junto a la cesta, bien apoyado.",
+      "Deja que elija y explore sin intervenir.",
+      "Mantén una presencia tranquila y atenta, cerca.",
+      "Termina cuando pierda el interés."
+    ]
+  },
+  "variants": {
+    "ca": [
+      "Paneres temàtiques: fusta, metall, tèxtil.",
+      "A l'aula: dues paneres per a tres infants."
+    ],
+    "es": [
+      "Cestas temáticas: madera, metal, textil.",
+      "En el aula: dos cestas para tres niños."
+    ]
+  },
+  "seguretat": {
+    "ca": [
+      "Cap objecte més petit de 4 cm.",
+      "Supervisió constant de l'adult.",
+      "Revisa que no hi hagi estelles ni peces soltes."
+    ],
+    "es": [
+      "Ningún objeto menor de 4 cm.",
+      "Supervisión constante del adulto.",
+      "Revisa que no haya astillas ni piezas sueltas."
+    ]
+  }
+}

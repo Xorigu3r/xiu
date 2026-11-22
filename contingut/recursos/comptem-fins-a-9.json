@@ -1,0 +1,102 @@
+{
+  "id": "comptem-fins-a-9",
+  "tipus": "fitxa",
+  "edat": "5-6",
+  "area": "log",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "15 min",
+  "titol": {
+    "ca": "Comptem fins a 9",
+    "es": "Contamos hasta 9"
+  },
+  "subtitol": {
+    "ca": "Comptatge i associació quantitat-nombre.",
+    "es": "Conteo y asociación cantidad-número."
+  },
+  "full": {
+    "exercicis": [
+      {
+        "tipus": "compta",
+        "text": {
+          "ca": "Compta els elements i encercla el nombre correcte.",
+          "es": "Cuenta los elementos y rodea el número correcto."
+        },
+        "grups": [
+          {
+            "element": "estrella",
+            "n": 7,
+            "opcions": [
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "element": "castanya",
+            "n": 9,
+            "opcions": [
+              7,
+              8,
+              9
+            ]
+          },
+          {
+            "element": "flor",
+            "n": 6,
+            "opcions": [
+              5,
+              6,
+              7
+            ]
+          }
+        ]
+      },
+      {
+        "tipus": "compta",
+        "text": {
+          "ca": "Quants n'hi ha? Compta amb el dit.",
+          "es": "¿Cuántos hay? Cuenta con el dedo."
+        },
+        "grups": [
+          {
+            "element": "pedra",
+            "n": 8,
+            "opcions": [
+              6,
+              8,
+              9
+            ]
+          },
+          {
+            "element": "poma",
+            "n": 5,
+            "opcions": [
+              5,
+              6,
+              7
+            ]
+          },
+          {
+            "element": "bola",
+            "n": 9,
+            "opcions": [
+              7,
+              8,
+              9
+            ]
+          }
+        ]
+      },
+      {
+        "tipus": "dibuixa",
+        "text": {
+          "ca": "Dibuixa set estrelles dins del requadre.",
+          "es": "Dibuja siete estrellas dentro del recuadro."
+        }
+      }
+    ]
+  }
+}

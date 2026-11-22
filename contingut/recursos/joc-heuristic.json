@@ -1,0 +1,85 @@
+{
+  "id": "joc-heuristic",
+  "tipus": "activitat",
+  "edat": "1-2",
+  "area": "exp",
+  "perfil": [
+    "pro",
+    "fam"
+  ],
+  "durada": "30-40 min",
+  "titol": {
+    "ca": "Joc heurístic",
+    "es": "Juego heurístico"
+  },
+  "subtitol": {
+    "ca": "Omplir, buidar, encaixar i provar.",
+    "es": "Llenar, vaciar, encajar y probar."
+  },
+  "intencio": {
+    "ca": "Proposar una sessió de joc lliure amb objectes no estructurats i recipients perquè els infants investiguin què poden fer amb ells: posar, treure, apilar, encaixar.",
+    "es": "Proponer una sesión de juego libre con objetos no estructurados y recipientes para que los niños investiguen qué pueden hacer con ellos: meter, sacar, apilar, encajar."
+  },
+  "treballa": {
+    "ca": [
+      "Exploració i experimentació",
+      "Coordinació òcul-manual",
+      "Concentració",
+      "Primeres nocions de quantitat i mida"
+    ],
+    "es": [
+      "Exploración y experimentación",
+      "Coordinación óculo-manual",
+      "Concentración",
+      "Primeras nociones de cantidad y tamaño"
+    ]
+  },
+  "materials": {
+    "ca": [
+      "Recipients: pots, capses, tubs de cartró",
+      "Objectes: taps de suro, anelles de fusta, cadenes, pinces",
+      "Bosses de roba per guardar cada material"
+    ],
+    "es": [
+      "Recipientes: botes, cajas, tubos de cartón",
+      "Objetos: tapones de corcho, anillas de madera, cadenas, pinzas",
+      "Bolsas de tela para guardar cada material"
+    ]
+  },
+  "preparacio": {
+    "ca": "Prepara un espai ampli i tranquil. Reparteix els materials en grups per terra, amb diversos recipients a prop de cada grup.",
+    "es": "Prepara un espacio amplio y tranquilo. Reparte los materiales en grupos por el suelo, con varios recipientes cerca de cada grupo."
+  },
+  "desenvolupament": {
+    "ca": [
+      "Deixa que els infants entrin i triïn on començar.",
+      "L'adult observa sense dirigir el joc ni proposar usos.",
+      "Quan baixa l'interès, convida a recollir junts cada material a la seva bossa."
+    ],
+    "es": [
+      "Deja que los niños entren y elijan dónde empezar.",
+      "El adulto observa sin dirigir el juego ni proponer usos.",
+      "Cuando baja el interés, invita a recoger juntos cada material en su bolsa."
+    ]
+  },
+  "variants": {
+    "ca": [
+      "A casa: una sola safata amb pocs objectes i dos recipients.",
+      "Canvia els materials cada setmana per mantenir la curiositat."
+    ],
+    "es": [
+      "En casa: una sola bandeja con pocos objetos y dos recipientes.",
+      "Cambia los materiales cada semana para mantener la curiosidad."
+    ]
+  },
+  "seguretat": {
+    "ca": [
+      "Objectes més grans que la boca de l'infant.",
+      "Cadenes curtes i sense parts que es desmuntin."
+    ],
+    "es": [
+      "Objetos más grandes que la boca del niño.",
+      "Cadenas cortas y sin partes que se desmonten."
+    ]
+  }
+}

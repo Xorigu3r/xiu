@@ -1,0 +1,83 @@
+{
+  "id": "bossa-misteriosa",
+  "tipus": "activitat",
+  "edat": "3-4",
+  "area": "llen",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "15 min",
+  "titol": {
+    "ca": "La bossa misteriosa",
+    "es": "La bolsa misteriosa"
+  },
+  "subtitol": {
+    "ca": "Toco, endevino i ho explico.",
+    "es": "Toco, adivino y lo explico."
+  },
+  "intencio": {
+    "ca": "Descobrir objectes només amb el tacte i trobar les paraules per descriure'ls, ampliant el vocabulari de manera divertida.",
+    "es": "Descubrir objetos solo con el tacto y encontrar las palabras para describirlos, ampliando el vocabulario de forma divertida."
+  },
+  "treballa": {
+    "ca": [
+      "Vocabulari i descripció",
+      "Percepció tàctil",
+      "Expressió oral",
+      "Torn de paraula"
+    ],
+    "es": [
+      "Vocabulario y descripción",
+      "Percepción táctil",
+      "Expresión oral",
+      "Turno de palabra"
+    ]
+  },
+  "materials": {
+    "ca": [
+      "Una bossa de roba opaca",
+      "6-8 objectes coneguts: cullera, pinya, pilota, raspall..."
+    ],
+    "es": [
+      "Una bolsa de tela opaca",
+      "6-8 objetos conocidos: cuchara, piña, pelota, cepillo..."
+    ]
+  },
+  "preparacio": {
+    "ca": "Posa els objectes dins la bossa sense que l'infant els vegi.",
+    "es": "Mete los objetos en la bolsa sin que el niño los vea."
+  },
+  "desenvolupament": {
+    "ca": [
+      "L'infant fica la mà i en toca un sense treure'l.",
+      "Pregunta: és dur o tou? Llis o rugós? Gran o petit?",
+      "Intenta endevinar què és i després el treu per comprovar-ho.",
+      "Canvieu els papers: ara l'adult toca i l'infant pregunta."
+    ],
+    "es": [
+      "El niño mete la mano y toca uno sin sacarlo.",
+      "Pregunta: ¿es duro o blando? ¿Liso o rugoso? ¿Grande o pequeño?",
+      "Intenta adivinar qué es y después lo saca para comprobarlo.",
+      "Cambiad los papeles: ahora el adulto toca y el niño pregunta."
+    ]
+  },
+  "variants": {
+    "ca": [
+      "Objectes que comencin pel mateix so.",
+      "Trobar a la bossa l'objecte que l'adult descriu."
+    ],
+    "es": [
+      "Objetos que empiecen por el mismo sonido.",
+      "Encontrar en la bolsa el objeto que el adulto describe."
+    ]
+  },
+  "seguretat": {
+    "ca": [
+      "Res punxegut ni tallant dins la bossa."
+    ],
+    "es": [
+      "Nada puntiagudo ni cortante dentro de la bolsa."
+    ]
+  }
+}

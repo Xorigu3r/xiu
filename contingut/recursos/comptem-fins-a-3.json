@@ -1,0 +1,102 @@
+{
+  "id": "comptem-fins-a-3",
+  "tipus": "fitxa",
+  "edat": "3-4",
+  "area": "log",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "10 min",
+  "titol": {
+    "ca": "Comptem fins a 3",
+    "es": "Contamos hasta 3"
+  },
+  "subtitol": {
+    "ca": "Comptatge i associació quantitat-nombre.",
+    "es": "Conteo y asociación cantidad-número."
+  },
+  "full": {
+    "exercicis": [
+      {
+        "tipus": "compta",
+        "text": {
+          "ca": "Compta els elements i encercla el nombre correcte.",
+          "es": "Cuenta los elementos y rodea el número correcto."
+        },
+        "grups": [
+          {
+            "element": "poma",
+            "n": 2,
+            "opcions": [
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "element": "estrella",
+            "n": 3,
+            "opcions": [
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "element": "flor",
+            "n": 1,
+            "opcions": [
+              1,
+              2,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "tipus": "compta",
+        "text": {
+          "ca": "Quantes n'hi ha?",
+          "es": "¿Cuántos hay?"
+        },
+        "grups": [
+          {
+            "element": "fulla",
+            "n": 3,
+            "opcions": [
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "element": "bola",
+            "n": 1,
+            "opcions": [
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "element": "pedra",
+            "n": 2,
+            "opcions": [
+              1,
+              2,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "tipus": "dibuixa",
+        "text": {
+          "ca": "Dibuixa tres boles dins del requadre.",
+          "es": "Dibuja tres bolas dentro del recuadro."
+        }
+      }
+    ]
+  }
+}

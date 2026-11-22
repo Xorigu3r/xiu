@@ -1,0 +1,85 @@
+{
+  "id": "llum-i-ombres",
+  "tipus": "activitat",
+  "edat": "4-5",
+  "area": "exp",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "20-30 min",
+  "titol": {
+    "ca": "Llum i ombres",
+    "es": "Luz y sombras"
+  },
+  "subtitol": {
+    "ca": "Juguem amb la llum de la llanterna.",
+    "es": "Jugamos con la luz de la linterna."
+  },
+  "intencio": {
+    "ca": "Investigar com es formen les ombres i com canvien quan movem la llum o l'objecte, a través del joc i de la pregunta.",
+    "es": "Investigar cómo se forman las sombras y cómo cambian cuando movemos la luz o el objeto, a través del juego y la pregunta."
+  },
+  "treballa": {
+    "ca": [
+      "Observació",
+      "Hipòtesis i comprovació",
+      "Nocions de mida i distància",
+      "Imaginació"
+    ],
+    "es": [
+      "Observación",
+      "Hipótesis y comprobación",
+      "Nociones de tamaño y distancia",
+      "Imaginación"
+    ]
+  },
+  "materials": {
+    "ca": [
+      "Una llanterna",
+      "Una paret clara o un llençol blanc",
+      "Joguines, fulles i les mans"
+    ],
+    "es": [
+      "Una linterna",
+      "Una pared clara o una sábana blanca",
+      "Juguetes, hojas y las manos"
+    ]
+  },
+  "preparacio": {
+    "ca": "Enfosqueix l'habitació i enfoca la llanterna cap a la paret.",
+    "es": "Oscurece la habitación y enfoca la linterna hacia la pared."
+  },
+  "desenvolupament": {
+    "ca": [
+      "Posa un objecte davant la llum: què veiem a la paret?",
+      "Acosta'l i allunya'l: com canvia l'ombra?",
+      "Feu animals amb les mans.",
+      "Endevineu objectes només per l'ombra."
+    ],
+    "es": [
+      "Pon un objeto delante de la luz: ¿qué vemos en la pared?",
+      "Acércalo y aléjalo: ¿cómo cambia la sombra?",
+      "Haced animales con las manos.",
+      "Adivinad objetos solo por la sombra."
+    ]
+  },
+  "variants": {
+    "ca": [
+      "Al pati: mirar l'ombra al matí i a la tarda.",
+      "Dibuixar el contorn de l'ombra d'una joguina."
+    ],
+    "es": [
+      "En el patio: mirar la sombra por la mañana y por la tarde.",
+      "Dibujar el contorno de la sombra de un juguete."
+    ]
+  },
+  "seguretat": {
+    "ca": [
+      "No enfocar la llum als ulls."
+    ],
+    "es": [
+      "No enfocar la luz a los ojos."
+    ]
+  }
+}

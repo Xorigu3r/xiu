@@ -1,0 +1,60 @@
+{
+  "id": "vocal-i",
+  "tipus": "fitxa",
+  "edat": "3-4",
+  "area": "llen",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "10 min",
+  "titol": {
+    "ca": "Descobrim la vocal I",
+    "es": "Descubrimos la vocal I"
+  },
+  "subtitol": {
+    "ca": "Reconeixement i traç de la lletra.",
+    "es": "Reconocimiento y trazo de la letra."
+  },
+  "full": {
+    "exercicis": [
+      {
+        "tipus": "ressegueix",
+        "text": {
+          "ca": "Resseguim la lletra I.",
+          "es": "Repasamos la letra I."
+        },
+        "caracters": "IIIIII"
+      },
+      {
+        "tipus": "dibuixa",
+        "text": {
+          "ca": "Practiquem nosaltres.",
+          "es": "Practicamos nosotros."
+        }
+      },
+      {
+        "tipus": "encercla",
+        "text": {
+          "ca": "Identifica i encercla la lletra I.",
+          "es": "Identifica y rodea la letra I."
+        },
+        "objectiu": "I",
+        "elements": [
+          "I",
+          "E",
+          "E",
+          "I",
+          "U",
+          "O",
+          "U",
+          "U",
+          "O",
+          "U",
+          "O",
+          "I"
+        ]
+      }
+    ]
+  }
+}

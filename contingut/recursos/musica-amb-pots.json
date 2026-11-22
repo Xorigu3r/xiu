@@ -1,0 +1,85 @@
+{
+  "id": "musica-amb-pots",
+  "tipus": "activitat",
+  "edat": "1-2",
+  "area": "cre",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "15 min",
+  "titol": {
+    "ca": "Música amb pots",
+    "es": "Música con botes"
+  },
+  "subtitol": {
+    "ca": "Sons de casa per fer música.",
+    "es": "Sonidos de casa para hacer música."
+  },
+  "intencio": {
+    "ca": "Descobrir que els objectes quotidians fan sons diferents i gaudir de fer música junts, seguint ritmes senzills.",
+    "es": "Descubrir que los objetos cotidianos hacen sonidos distintos y disfrutar haciendo música juntos, siguiendo ritmos sencillos."
+  },
+  "treballa": {
+    "ca": [
+      "Percepció auditiva",
+      "Ritme",
+      "Expressió i gaudi",
+      "Imitació"
+    ],
+    "es": [
+      "Percepción auditiva",
+      "Ritmo",
+      "Expresión y disfrute",
+      "Imitación"
+    ]
+  },
+  "materials": {
+    "ca": [
+      "Pots i cassoles de metall",
+      "Culleres de fusta",
+      "Pots tancats amb arròs o llegums"
+    ],
+    "es": [
+      "Botes y cazuelas de metal",
+      "Cucharas de madera",
+      "Botes cerrados con arroz o legumbres"
+    ]
+  },
+  "preparacio": {
+    "ca": "Tria un racó on es pugui fer soroll i posa els instruments a terra, en cercle.",
+    "es": "Elige un rincón donde se pueda hacer ruido y pon los instrumentos en el suelo, en círculo."
+  },
+  "desenvolupament": {
+    "ca": [
+      "Explora cada instrument amb l'infant: com sona si piquem, si sacsegem?",
+      "Canteu una cançó coneguda i acompanyeu-la amb els pots.",
+      "Jugueu a fort i fluix, ràpid i a poc a poc."
+    ],
+    "es": [
+      "Explora cada instrumento con el niño: ¿cómo suena si golpeamos, si agitamos?",
+      "Cantad una canción conocida y acompañadla con los botes.",
+      "Jugad a fuerte y flojo, rápido y despacio."
+    ]
+  },
+  "variants": {
+    "ca": [
+      "Fer silenci de cop quan para la música.",
+      "A l'aula: una orquestra on cada infant té un pot diferent."
+    ],
+    "es": [
+      "Hacer silencio de golpe cuando para la música.",
+      "En el aula: una orquesta en la que cada niño tiene un bote distinto."
+    ]
+  },
+  "seguretat": {
+    "ca": [
+      "Pots tancats amb cinta perquè no s'obrin.",
+      "Cura amb el volum: millor sons suaus a prop de les orelles."
+    ],
+    "es": [
+      "Botes cerrados con cinta para que no se abran.",
+      "Cuidado con el volumen: mejor sonidos suaves cerca de los oídos."
+    ]
+  }
+}

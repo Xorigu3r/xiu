@@ -1,0 +1,90 @@
+{
+  "id": "ampolles-sensorials",
+  "tipus": "activitat",
+  "edat": "0-1",
+  "area": "exp",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "10-15 min",
+  "titol": {
+    "ca": "Ampolles sensorials",
+    "es": "Botellas sensoriales"
+  },
+  "subtitol": {
+    "ca": "Mirar, sacsejar i escoltar.",
+    "es": "Mirar, agitar y escuchar."
+  },
+  "intencio": {
+    "ca": "Oferir ampolles transparents plenes de materials que es mouen i sonen, perquè l'infant observi, segueixi el moviment amb la mirada i descobreixi que les seves accions tenen efectes.",
+    "es": "Ofrecer botellas transparentes llenas de materiales que se mueven y suenan, para que el bebé observe, siga el movimiento con la mirada y descubra que sus acciones tienen efectos."
+  },
+  "treballa": {
+    "ca": [
+      "Percepció visual i auditiva",
+      "Seguiment visual",
+      "Causa i efecte",
+      "Prensió i força de les mans"
+    ],
+    "es": [
+      "Percepción visual y auditiva",
+      "Seguimiento visual",
+      "Causa y efecto",
+      "Prensión y fuerza de las manos"
+    ]
+  },
+  "materials": {
+    "ca": [
+      "3 o 4 ampolles petites de plàstic resistent",
+      "Aigua, oli i colorant alimentari",
+      "Arròs, cigrons o botons grossos",
+      "Cola calenta o cinta americana per segellar"
+    ],
+    "es": [
+      "3 o 4 botellas pequeñas de plástico resistente",
+      "Agua, aceite y colorante alimentario",
+      "Arroz, garbanzos o botones grandes",
+      "Cola caliente o cinta americana para sellar"
+    ]
+  },
+  "preparacio": {
+    "ca": "Omple cada ampolla amb un contingut diferent: aigua amb oli i colorant, arròs, cigrons... Segella bé el tap amb cola i cinta i comprova que no s'obre.",
+    "es": "Llena cada botella con un contenido distinto: agua con aceite y colorante, arroz, garbanzos... Sella bien el tapón con cola y cinta y comprueba que no se abre."
+  },
+  "desenvolupament": {
+    "ca": [
+      "Deixa les ampolles a terra, a l'abast de l'infant, estirat o assegut.",
+      "Fes rodolar una ampolla a poc a poc perquè la segueixi amb la mirada.",
+      "Deixa que les agafi, les sacsegi i les escolti al seu ritme.",
+      "Posa paraules al que passa: «sona», «cau», «es mou a poc a poc»."
+    ],
+    "es": [
+      "Deja las botellas en el suelo, al alcance del bebé, tumbado o sentado.",
+      "Haz rodar una botella poco a poco para que la siga con la mirada.",
+      "Deja que las coja, las agite y las escuche a su ritmo.",
+      "Pon palabras a lo que pasa: «suena», «cae», «se mueve despacio»."
+    ]
+  },
+  "variants": {
+    "ca": [
+      "Ampolles de calma amb purpurina i sabó per a moments de relaxació.",
+      "Amb infants més grans: endevinar què hi ha dins de cada ampolla pel so."
+    ],
+    "es": [
+      "Botellas de calma con purpurina y jabón para momentos de relajación.",
+      "Con niños mayores: adivinar qué hay dentro de cada botella por el sonido."
+    ]
+  },
+  "seguretat": {
+    "ca": [
+      "Tap ben segellat: revisa'l abans de cada ús.",
+      "Retira l'ampolla si té esquerdes o pèrdues."
+    ],
+    "es": [
+      "Tapón bien sellado: revísalo antes de cada uso.",
+      "Retira la botella si tiene grietas o pérdidas."
+    ]
+  },
+  "novetat": true
+}

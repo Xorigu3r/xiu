@@ -1,0 +1,90 @@
+{
+  "id": "macedonia",
+  "tipus": "activitat",
+  "edat": "4-5",
+  "area": "aut",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "30 min",
+  "titol": {
+    "ca": "Cuinem una macedònia",
+    "es": "Cocinamos una macedonia"
+  },
+  "subtitol": {
+    "ca": "Petits cuiners amb les seves mans.",
+    "es": "Pequeños cocineros con sus manos."
+  },
+  "intencio": {
+    "ca": "Participar en la preparació d'un aliment saludable, practicant gestos de la vida diària com pelar, tallar i remenar.",
+    "es": "Participar en la preparación de un alimento saludable, practicando gestos de la vida diaria como pelar, cortar y remover."
+  },
+  "treballa": {
+    "ca": [
+      "Autonomia a la cuina",
+      "Alimentació saludable",
+      "Motricitat fina",
+      "Seguir passos"
+    ],
+    "es": [
+      "Autonomía en la cocina",
+      "Alimentación saludable",
+      "Motricidad fina",
+      "Seguir pasos"
+    ]
+  },
+  "materials": {
+    "ca": [
+      "Fruites de temporada: plàtan, mandarina, poma, raïm",
+      "Ganivet de punta rodona o tallador infantil",
+      "Taula de tallar i un bol gran"
+    ],
+    "es": [
+      "Frutas de temporada: plátano, mandarina, manzana, uva",
+      "Cuchillo de punta redonda o cortador infantil",
+      "Tabla de cortar y un bol grande"
+    ]
+  },
+  "preparacio": {
+    "ca": "Renteu-vos les mans i renteu la fruita. Prepara-ho tot a l'alçada de l'infant.",
+    "es": "Lavaos las manos y lavad la fruta. Prepáralo todo a la altura del niño."
+  },
+  "desenvolupament": {
+    "ca": [
+      "Pelem junts el plàtan i la mandarina.",
+      "L'infant talla els trossos tous; l'adult, els durs.",
+      "Ho posem tot al bol i remenem.",
+      "Servim i parlem dels colors i els gustos."
+    ],
+    "es": [
+      "Pelamos juntos el plátano y la mandarina.",
+      "El niño corta los trozos blandos; el adulto, los duros.",
+      "Lo ponemos todo en el bol y removemos.",
+      "Servimos y hablamos de los colores y los sabores."
+    ]
+  },
+  "variants": {
+    "ca": [
+      "Brotxetes de fruita.",
+      "Fer una llista de la compra amb dibuixos."
+    ],
+    "es": [
+      "Brochetas de fruta.",
+      "Hacer una lista de la compra con dibujos."
+    ]
+  },
+  "seguretat": {
+    "ca": [
+      "Ganivet sempre amb supervisió.",
+      "Raïm tallat a quarts per als més petits.",
+      "Tingues en compte les al·lèrgies."
+    ],
+    "es": [
+      "Cuchillo siempre con supervisión.",
+      "Uva cortada en cuartos para los más pequeños.",
+      "Ten en cuenta las alergias."
+    ]
+  },
+  "novetat": true
+}

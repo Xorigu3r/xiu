@@ -1,0 +1,91 @@
+{
+  "id": "tardor",
+  "tipus": "activitat",
+  "edat": "1-2",
+  "area": "exp",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "20-30 min",
+  "novetat": true,
+  "destacat": true,
+  "titol": {
+    "ca": "Safata sensorial de tardor",
+    "es": "Bandeja sensorial de otoño"
+  },
+  "subtitol": {
+    "ca": "Fulles, castanyes i pinyes per tocar, olorar i descobrir",
+    "es": "Hojas, castañas y piñas para tocar, oler y descubrir"
+  },
+  "intencio": {
+    "ca": "Portar la tardor a casa o a l'aula perquè els infants descobreixin els seus colors, olors i textures a través de la manipulació lliure.",
+    "es": "Llevar el otoño a casa o al aula para que los niños descubran sus colores, olores y texturas a través de la manipulación libre."
+  },
+  "treballa": {
+    "ca": [
+      "Descoberta sensorial",
+      "Vocabulari de la natura",
+      "Manipulació i trasvasament",
+      "Connexió amb l'estació"
+    ],
+    "es": [
+      "Descubrimiento sensorial",
+      "Vocabulario de la naturaleza",
+      "Manipulación y trasvase",
+      "Conexión con la estación"
+    ]
+  },
+  "materials": {
+    "ca": [
+      "Una safata gran de fusta",
+      "Fulles seques de diferents mides",
+      "Castanyes i pinyes",
+      "Cullerots i boles de fusta"
+    ],
+    "es": [
+      "Una bandeja grande de madera",
+      "Hojas secas de distintos tamaños",
+      "Castañas y piñas",
+      "Cucharones y cuencos de madera"
+    ]
+  },
+  "preparacio": {
+    "ca": "Recolliu els elements junts en una passejada. Deixeu-los assecar un parell de dies i disposeu-los a la safata.",
+    "es": "Recoged los elementos juntos en un paseo. Dejadlos secar un par de días y colocadlos en la bandeja."
+  },
+  "desenvolupament": {
+    "ca": [
+      "Presenta la safata i deixa que hi arribin per iniciativa pròpia.",
+      "Posa nom als elements mentre els toquen: «aquesta fulla cruix».",
+      "Ofereix bols per omplir i buidar.",
+      "Recolliu junts al final."
+    ],
+    "es": [
+      "Presenta la bandeja y deja que se acerquen por iniciativa propia.",
+      "Pon nombre a los elementos mientras los tocan: «esta hoja cruje».",
+      "Ofrece cuencos para llenar y vaciar.",
+      "Recoged juntos al final."
+    ]
+  },
+  "variants": {
+    "ca": [
+      "Afegeix canyella o taronja seca per a l'olfacte.",
+      "Per a 2-3 anys: classificar per colors."
+    ],
+    "es": [
+      "Añade canela o naranja seca para el olfato.",
+      "Para 2-3 años: clasificar por colores."
+    ]
+  },
+  "seguretat": {
+    "ca": [
+      "Castanyes només amb supervisió: risc d'ennuegament.",
+      "Evita fruits que puguin ser tòxics."
+    ],
+    "es": [
+      "Castañas solo con supervisión: riesgo de atragantamiento.",
+      "Evita frutos que puedan ser tóxicos."
+    ]
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "id": "titelles-contes",
+  "tipus": "activitat",
+  "edat": "5-6",
+  "area": "llen",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "30-40 min",
+  "titol": {
+    "ca": "Contes amb titelles",
+    "es": "Cuentos con títeres"
+  },
+  "subtitol": {
+    "ca": "Inventem, expliquem i escoltem.",
+    "es": "Inventamos, contamos y escuchamos."
+  },
+  "intencio": {
+    "ca": "Crear titelles senzills i fer-los servir per inventar i explicar històries, treballant l'estructura del relat: inici, nus i desenllaç.",
+    "es": "Crear títeres sencillos y usarlos para inventar y contar historias, trabajando la estructura del relato: inicio, nudo y desenlace."
+  },
+  "treballa": {
+    "ca": [
+      "Expressió oral",
+      "Estructura del relat",
+      "Imaginació",
+      "Escolta activa"
+    ],
+    "es": [
+      "Expresión oral",
+      "Estructura del relato",
+      "Imaginación",
+      "Escucha activa"
+    ]
+  },
+  "materials": {
+    "ca": [
+      "Pals de fusta o mitjons vells",
+      "Cartolina, retoladors i cola",
+      "Una caixa gran com a teatre"
+    ],
+    "es": [
+      "Palos de madera o calcetines viejos",
+      "Cartulina, rotuladores y cola",
+      "Una caja grande como teatro"
+    ]
+  },
+  "preparacio": {
+    "ca": "Prepara el material per fer els personatges i retalla una finestra a la caixa per fer el teatre.",
+    "es": "Prepara el material para hacer los personajes y recorta una ventana en la caja para hacer el teatro."
+  },
+  "desenvolupament": {
+    "ca": [
+      "Cada infant crea un o dos personatges.",
+      "Pensem junts: qui són, on són i què els passa.",
+      "Representem la història davant dels altres.",
+      "Al final, cada un explica què li ha agradat més."
+    ],
+    "es": [
+      "Cada niño crea uno o dos personajes.",
+      "Pensamos juntos: quiénes son, dónde están y qué les pasa.",
+      "Representamos la historia delante de los demás.",
+      "Al final, cada uno explica qué le ha gustado más."
+    ]
+  },
+  "variants": {
+    "ca": [
+      "Representar un conte conegut.",
+      "Dibuixar la història en tres vinyetes."
+    ],
+    "es": [
+      "Representar un cuento conocido.",
+      "Dibujar la historia en tres viñetas."
+    ]
+  },
+  "seguretat": {
+    "ca": [
+      "Tisores de punta rodona."
+    ],
+    "es": [
+      "Tijeras de punta redonda."
+    ]
+  }
+}

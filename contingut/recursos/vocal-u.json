@@ -1,0 +1,60 @@
+{
+  "id": "vocal-u",
+  "tipus": "fitxa",
+  "edat": "3-4",
+  "area": "llen",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "10 min",
+  "titol": {
+    "ca": "Descobrim la vocal U",
+    "es": "Descubrimos la vocal U"
+  },
+  "subtitol": {
+    "ca": "Reconeixement i traç de la lletra.",
+    "es": "Reconocimiento y trazo de la letra."
+  },
+  "full": {
+    "exercicis": [
+      {
+        "tipus": "ressegueix",
+        "text": {
+          "ca": "Resseguim la lletra U.",
+          "es": "Repasamos la letra U."
+        },
+        "caracters": "UUUUUU"
+      },
+      {
+        "tipus": "dibuixa",
+        "text": {
+          "ca": "Practiquem nosaltres.",
+          "es": "Practicamos nosotros."
+        }
+      },
+      {
+        "tipus": "encercla",
+        "text": {
+          "ca": "Identifica i encercla la lletra U.",
+          "es": "Identifica y rodea la letra U."
+        },
+        "objectiu": "U",
+        "elements": [
+          "U",
+          "I",
+          "I",
+          "I",
+          "I",
+          "E",
+          "A",
+          "U",
+          "A",
+          "O",
+          "O",
+          "U"
+        ]
+      }
+    ]
+  }
+}

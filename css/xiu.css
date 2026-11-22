@@ -263,3 +263,7 @@ main{padding-left:var(--gut);padding-right:var(--gut)}
 }
 /* pantalles molt grans: una mica més d'aire */
 @media (min-width:1600px){main{max-width:1320px}}
+/* fitxa PDF: les pàgines es veuen senceres; amb el dit s'hi dibuixa a sobre */
+.pis.pagina{background:#fff;box-shadow:0 4px 16px rgba(56,51,46,.10)}
+.sheet+.sheet{margin-top:18px}
+.photo.pag{background:#fff}.photo.pag img{object-position:top}

@@ -1,0 +1,83 @@
+{
+  "id": "caixa-permanencia",
+  "tipus": "activitat",
+  "edat": "0-1",
+  "area": "log",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "10 min",
+  "titol": {
+    "ca": "Caixa de permanència",
+    "es": "Caja de permanencia"
+  },
+  "subtitol": {
+    "ca": "On és la pilota?",
+    "es": "¿Dónde está la pelota?"
+  },
+  "intencio": {
+    "ca": "Ajudar l'infant a descobrir que els objectes continuen existint encara que no els vegi, amb una caixa on la pilota entra, desapareix i torna a sortir.",
+    "es": "Ayudar al bebé a descubrir que los objetos siguen existiendo aunque no los vea, con una caja donde la pelota entra, desaparece y vuelve a salir."
+  },
+  "treballa": {
+    "ca": [
+      "Permanència de l'objecte",
+      "Atenció i memòria",
+      "Coordinació mà-ull"
+    ],
+    "es": [
+      "Permanencia del objeto",
+      "Atención y memoria",
+      "Coordinación mano-ojo"
+    ]
+  },
+  "materials": {
+    "ca": [
+      "Una caixa de cartró o de fusta amb tapa",
+      "Una pilota petita de fusta o de roba",
+      "Una safata o rampa a la sortida"
+    ],
+    "es": [
+      "Una caja de cartón o de madera con tapa",
+      "Una pelota pequeña de madera o de tela",
+      "Una bandeja o rampa a la salida"
+    ]
+  },
+  "preparacio": {
+    "ca": "Fes un forat rodó a la tapa, una mica més gran que la pilota, i una obertura al lateral perquè la pilota surti rodolant.",
+    "es": "Haz un agujero redondo en la tapa, un poco más grande que la pelota, y una abertura en el lateral para que la pelota salga rodando."
+  },
+  "desenvolupament": {
+    "ca": [
+      "Mostra com la pilota entra pel forat i surt pel costat.",
+      "Pregunta «on és?» quan desapareix i celebra quan torna a sortir.",
+      "Deixa que l'infant ho provi tantes vegades com vulgui."
+    ],
+    "es": [
+      "Muestra cómo la pelota entra por el agujero y sale por el lado.",
+      "Pregunta «¿dónde está?» cuando desaparece y celebra cuando vuelve a salir.",
+      "Deja que el niño lo pruebe tantas veces como quiera."
+    ]
+  },
+  "variants": {
+    "ca": [
+      "Juga a amagar un objecte sota un mocador.",
+      "Fes servir pilotes de colors diferents i posa'ls nom."
+    ],
+    "es": [
+      "Juega a esconder un objeto bajo un pañuelo.",
+      "Usa pelotas de colores distintos y ponles nombre."
+    ]
+  },
+  "seguretat": {
+    "ca": [
+      "Pilota de més de 4 cm de diàmetre.",
+      "Revisa que la caixa no tingui grapes ni vores tallants."
+    ],
+    "es": [
+      "Pelota de más de 4 cm de diámetro.",
+      "Revisa que la caja no tenga grapas ni bordes cortantes."
+    ]
+  }
+}

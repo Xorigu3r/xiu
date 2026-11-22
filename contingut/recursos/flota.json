@@ -1,0 +1,79 @@
+{
+  "id": "flota",
+  "tipus": "activitat",
+  "edat": "4-5",
+  "area": "exp",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "20 min",
+  "titol": {
+    "ca": "Flota o s'enfonsa?",
+    "es": "¿Flota o se hunde?"
+  },
+  "subtitol": {
+    "ca": "Un primer experiment per fer hipòtesis",
+    "es": "Un primer experimento para hacer hipótesis"
+  },
+  "intencio": {
+    "ca": "Iniciar els infants en el mètode científic: preguntar, predir, comprovar i explicar el que ha passat.",
+    "es": "Iniciar a los niños en el método científico: preguntar, predecir, comprobar y explicar lo que ha pasado."
+  },
+  "treballa": {
+    "ca": [
+      "Pensament científic",
+      "Hipòtesis i comprovació",
+      "Vocabulari"
+    ],
+    "es": [
+      "Pensamiento científico",
+      "Hipótesis y comprobación",
+      "Vocabulario"
+    ]
+  },
+  "materials": {
+    "ca": [
+      "Un recipient transparent amb aigua",
+      "Objectes variats: suro, clau, poma, pedra",
+      "Dues safates: flota / s'enfonsa"
+    ],
+    "es": [
+      "Un recipiente transparente con agua",
+      "Objetos variados: corcho, llave, manzana, piedra",
+      "Dos bandejas: flota / se hunde"
+    ]
+  },
+  "preparacio": {
+    "ca": "Omple el recipient i agrupa els objectes en una cistella.",
+    "es": "Llena el recipiente y agrupa los objetos en una cesta."
+  },
+  "desenvolupament": {
+    "ca": [
+      "Abans de cada objecte, pregunta: què creus que passarà?",
+      "Comproveu-ho junts.",
+      "Classifiqueu-lo a la safata corresponent."
+    ],
+    "es": [
+      "Antes de cada objeto, pregunta: ¿qué crees que pasará?",
+      "Comprobadlo juntos.",
+      "Clasificadlo en la bandeja correspondiente."
+    ]
+  },
+  "variants": {
+    "ca": [
+      "Afegeix sal a l'aigua i torna-ho a provar."
+    ],
+    "es": [
+      "Añade sal al agua y vuelve a probar."
+    ]
+  },
+  "seguretat": {
+    "ca": [
+      "Supervisió a prop de l'aigua."
+    ],
+    "es": [
+      "Supervisión cerca del agua."
+    ]
+  }
+}

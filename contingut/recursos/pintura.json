@@ -1,0 +1,82 @@
+{
+  "id": "pintura",
+  "tipus": "activitat",
+  "edat": "3-4",
+  "area": "cre",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "30-40 min",
+  "novetat": true,
+  "titol": {
+    "ca": "Pinzells de natura",
+    "es": "Pinceles de naturaleza"
+  },
+  "subtitol": {
+    "ca": "Pintar amb branques, plomes i fulles",
+    "es": "Pintar con ramas, plumas y hojas"
+  },
+  "intencio": {
+    "ca": "Descobrir que qualsevol element pot deixar una empremta i experimentar amb traços i textures diferents dels del pinzell habitual.",
+    "es": "Descubrir que cualquier elemento puede dejar una huella y experimentar con trazos y texturas distintos a los del pincel habitual."
+  },
+  "treballa": {
+    "ca": [
+      "Experimentació plàstica",
+      "Creativitat",
+      "Pinça i control del traç"
+    ],
+    "es": [
+      "Experimentación plástica",
+      "Creatividad",
+      "Pinza y control del trazo"
+    ]
+  },
+  "materials": {
+    "ca": [
+      "Paper gruixut gran",
+      "Pintura de témpera",
+      "Branquetes, plomes, fulles i gomes",
+      "Cinta de carrosser"
+    ],
+    "es": [
+      "Papel grueso grande",
+      "Pintura de témpera",
+      "Ramitas, plumas, hojas y gomas",
+      "Cinta de carrocero"
+    ]
+  },
+  "preparacio": {
+    "ca": "Lliga els elements naturals a branquetes per fer pinzells. Fixa el paper a la taula.",
+    "es": "Ata los elementos naturales a ramitas para hacer pinceles. Fija el papel a la mesa."
+  },
+  "desenvolupament": {
+    "ca": [
+      "Presenta els pinzells i deixa que els toquin.",
+      "Convida a provar-los un per un.",
+      "Parleu de les empremtes: quina és més suau?"
+    ],
+    "es": [
+      "Presenta los pinceles y deja que los toquen.",
+      "Invita a probarlos uno a uno.",
+      "Hablad de las huellas: ¿cuál es más suave?"
+    ]
+  },
+  "variants": {
+    "ca": [
+      "En gran format, a terra o a la paret."
+    ],
+    "es": [
+      "En gran formato, en el suelo o en la pared."
+    ]
+  },
+  "seguretat": {
+    "ca": [
+      "Pintura apta per a infants."
+    ],
+    "es": [
+      "Pintura apta para niños."
+    ]
+  }
+}

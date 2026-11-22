@@ -1,0 +1,61 @@
+{
+  "id": "numero-9",
+  "tipus": "fitxa",
+  "edat": "5-6",
+  "area": "log",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "10 min",
+  "titol": {
+    "ca": "Descobrim el número 9",
+    "es": "Descubrimos el número 9"
+  },
+  "subtitol": {
+    "ca": "Reconeixement i representació dels nombres.",
+    "es": "Reconocimiento y representación de los números."
+  },
+  "full": {
+    "exercicis": [
+      {
+        "tipus": "ressegueix",
+        "text": {
+          "ca": "Ressegueix el número amb la línia de punts.",
+          "es": "Repasa el número con la línea de puntos."
+        },
+        "caracters": "99999"
+      },
+      {
+        "tipus": "dibuixa",
+        "text": {
+          "ca": "Escriu-lo pel teu compte.",
+          "es": "Escríbelo por tu cuenta."
+        }
+      },
+      {
+        "tipus": "encercla",
+        "text": {
+          "ca": "Troba el número 9 entre altres nombres.",
+          "es": "Encuentra el número 9 entre otros números."
+        },
+        "objectiu": "9",
+        "elements": [
+          "9",
+          "8",
+          "8",
+          "6",
+          "9",
+          "7",
+          "6",
+          "7",
+          "5",
+          "5",
+          "6",
+          "7",
+          "9"
+        ]
+      }
+    ]
+  }
+}

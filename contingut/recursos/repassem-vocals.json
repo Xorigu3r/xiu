@@ -1,0 +1,61 @@
+{
+  "id": "repassem-vocals",
+  "tipus": "fitxa",
+  "edat": "4-5",
+  "area": "llen",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "10 min",
+  "titol": {
+    "ca": "Repassem les vocals",
+    "es": "Repasamos las vocales"
+  },
+  "subtitol": {
+    "ca": "Totes les vocals, una darrere l'altra.",
+    "es": "Todas las vocales, una detrás de otra."
+  },
+  "full": {
+    "exercicis": [
+      {
+        "tipus": "ressegueix",
+        "text": {
+          "ca": "Ressegueix les cinc vocals.",
+          "es": "Repasa las cinco vocales."
+        },
+        "caracters": "AEIOU"
+      },
+      {
+        "tipus": "encercla",
+        "text": {
+          "ca": "Troba i encercla totes les E.",
+          "es": "Encuentra y rodea todas las E."
+        },
+        "objectiu": "E",
+        "elements": [
+          "I",
+          "I",
+          "E",
+          "I",
+          "O",
+          "U",
+          "E",
+          "E",
+          "U",
+          "O",
+          "E",
+          "U",
+          "O"
+        ]
+      },
+      {
+        "tipus": "dibuixa",
+        "text": {
+          "ca": "Escriu la vocal que més t'agradi.",
+          "es": "Escribe la vocal que más te guste."
+        }
+      }
+    ]
+  }
+}

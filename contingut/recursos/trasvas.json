@@ -1,0 +1,84 @@
+{
+  "id": "trasvas",
+  "tipus": "activitat",
+  "edat": "2-3",
+  "area": "mot",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "15 min",
+  "novetat": true,
+  "titol": {
+    "ca": "Trasvasaments amb cullera",
+    "es": "Trasvases con cuchara"
+  },
+  "subtitol": {
+    "ca": "De bol a bol, amb calma i precisió",
+    "es": "De cuenco a cuenco, con calma y precisión"
+  },
+  "intencio": {
+    "ca": "Practicar un moviment de la vida quotidiana que afina la coordinació de la mà i prepara la pinça per a l'escriptura.",
+    "es": "Practicar un movimiento de la vida cotidiana que afina la coordinación de la mano y prepara la pinza para la escritura."
+  },
+  "treballa": {
+    "ca": [
+      "Coordinació òcul-manual",
+      "Control del moviment",
+      "Concentració"
+    ],
+    "es": [
+      "Coordinación óculo-manual",
+      "Control del movimiento",
+      "Concentración"
+    ]
+  },
+  "materials": {
+    "ca": [
+      "Dos bols petits",
+      "Una cullera",
+      "Llegums grossos o castanyes",
+      "Una safata"
+    ],
+    "es": [
+      "Dos cuencos pequeños",
+      "Una cuchara",
+      "Legumbres grandes o castañas",
+      "Una bandeja"
+    ]
+  },
+  "preparacio": {
+    "ca": "Prepara la safata amb un bol ple a l'esquerra i un de buit a la dreta.",
+    "es": "Prepara la bandeja con un cuenco lleno a la izquierda y uno vacío a la derecha."
+  },
+  "desenvolupament": {
+    "ca": [
+      "Mostra el moviment lentament, sense parlar.",
+      "Ofereix la cullera a l'infant.",
+      "Si cau algun llegum, recolliu-lo junts amb naturalitat."
+    ],
+    "es": [
+      "Muestra el movimiento despacio, sin hablar.",
+      "Ofrece la cuchara al niño.",
+      "Si cae alguna legumbre, recogedla juntos con naturalidad."
+    ]
+  },
+  "variants": {
+    "ca": [
+      "Amb pinces de cuina per a més repte.",
+      "Amb aigua i una esponja."
+    ],
+    "es": [
+      "Con pinzas de cocina para más reto.",
+      "Con agua y una esponja."
+    ]
+  },
+  "seguretat": {
+    "ca": [
+      "Llegums grossos i supervisió constant."
+    ],
+    "es": [
+      "Legumbres grandes y supervisión constante."
+    ]
+  }
+}

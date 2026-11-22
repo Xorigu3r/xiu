@@ -1,0 +1,60 @@
+{
+  "id": "vocal-e",
+  "tipus": "fitxa",
+  "edat": "3-4",
+  "area": "llen",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "10 min",
+  "titol": {
+    "ca": "Descobrim la vocal E",
+    "es": "Descubrimos la vocal E"
+  },
+  "subtitol": {
+    "ca": "Reconeixement i traç de la lletra.",
+    "es": "Reconocimiento y trazo de la letra."
+  },
+  "full": {
+    "exercicis": [
+      {
+        "tipus": "ressegueix",
+        "text": {
+          "ca": "Resseguim la lletra E.",
+          "es": "Repasamos la letra E."
+        },
+        "caracters": "EEEEEE"
+      },
+      {
+        "tipus": "dibuixa",
+        "text": {
+          "ca": "Practiquem nosaltres.",
+          "es": "Practicamos nosotros."
+        }
+      },
+      {
+        "tipus": "encercla",
+        "text": {
+          "ca": "Identifica i encercla la lletra E.",
+          "es": "Identifica y rodea la letra E."
+        },
+        "objectiu": "E",
+        "elements": [
+          "E",
+          "O",
+          "I",
+          "A",
+          "O",
+          "U",
+          "U",
+          "A",
+          "U",
+          "E",
+          "I",
+          "E"
+        ]
+      }
+    ]
+  }
+}

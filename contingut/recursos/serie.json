@@ -1,0 +1,17 @@
+{
+  "id": "serie",
+  "tipus": "fitxa",
+  "edat": "5-6",
+  "area": "log",
+  "perfil": ["fam", "pro"],
+  "durada": "10 min",
+  "titol": { "ca": "Continua la sèrie", "es": "Continúa la serie" },
+  "subtitol": { "ca": "Patrons de fulles i pedres.", "es": "Patrones de hojas y piedras." },
+  "full": {
+    "exercicis": [
+      { "tipus": "serie", "text": { "ca": "Observa el patró i completa la sèrie.", "es": "Observa el patrón y completa la serie." },
+        "files": ["fpfpf?", "ffpff?", "ppfpp?", "ebeeb?"] },
+      { "tipus": "dibuixa", "text": { "ca": "Inventa la teva sèrie.", "es": "Inventa tu serie." } }
+    ]
+  }
+}

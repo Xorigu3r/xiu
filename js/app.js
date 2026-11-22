@@ -1,8 +1,13 @@
 // XIU · Aprendre jugant — l'app (Inici, Biblioteca, Fitxa, Favorits, Inspiració).
 // Contingut: window.XIU_BIB i window.XIU_RECURSOS (js/contingut.js, generat per scripts/contingut.mjs).
 (function () {
-  const BIB = window.XIU_BIB, R = window.XIU_RECURSOS, AREES = BIB.arees, EDATS = BIB.edats;
-  const perId = Object.fromEntries(R.map((r) => [r.id, r]));
+  // el contingut el posa js/carrega.js i es pot actualitzar mentre l'app és oberta (event «xiu-contingut»)
+  let BIB, R, AREES, EDATS, perId;
+  function dades() {
+    BIB = window.XIU_BIB; R = window.XIU_RECURSOS; AREES = BIB.arees; EDATS = BIB.edats;
+    perId = Object.fromEntries(R.map((r) => [r.id, r]));
+  }
+  dades();
 
   const T = {
     ca: { tag: 'Aprendre jugant', inici: 'Inici', bib: 'Biblioteca', fav: 'Favorits', insp: 'Inspiració',
@@ -15,7 +20,7 @@
       tornar: 'Tornar', guardar: 'Desar', guardat: 'Desat', pdf: 'Descarregar PDF', compartir: 'Compartir', fent: 'Preparant...', durada: 'Durada',
       intencio: 'Intenció pedagògica', treballa: 'Què es treballa', materials: 'Materials', preparacio: 'Preparació',
       desenvolupament: 'Desenvolupament', variants: 'Variants i adaptacions', seguretat: 'Recomanacions de seguretat',
-      vistaFitxa: 'Vista prèvia de la fitxa', nom: 'Nom:', data: 'Data:', desat: 'Desat a {p}', ferAqui: 'Fer-la aquí', imprimir: 'Imprimir', esborra: 'Esborra', reinicia: 'Torna-hi', moltbe: 'Molt bé!', errPdf: 'No s\'ha pogut crear el PDF',
+      vistaFitxa: 'Vista prèvia de la fitxa', nom: 'Nom:', data: 'Data:', desat: 'Desat a {p}', ferAqui: 'Fer-la aquí', ambElDit: 'Fes la fitxa amb el dit, directament a sobre.', imprimir: 'Imprimir', esborra: 'Esborra', reinicia: 'Torna-hi', moltbe: 'Molt bé!', errPdf: 'No s\'ha pogut crear el PDF',
       favBuit: 'Encara no tens favorits', favBuitP: 'Toca el cor d\'una activitat per desar-la aquí i recuperar-la quan la necessitis.',
       favP: 'Les teves propostes desades.', bibS: 'Tot el que necessites, ben ordenat.', inspS: 'Idees per descobrir.', anarBib: 'Anar a la biblioteca',
       inspP: 'Col·leccions, temporades i propostes que potser encara no coneixes.', potser: 'Potser no coneixes...', foto: 'foto' },
@@ -29,7 +34,7 @@
       tornar: 'Volver', guardar: 'Guardar', guardat: 'Guardado', pdf: 'Descargar PDF', compartir: 'Compartir', fent: 'Preparando...', durada: 'Duración',
       intencio: 'Intención pedagógica', treballa: 'Qué se trabaja', materials: 'Materiales', preparacio: 'Preparación',
       desenvolupament: 'Desarrollo', variants: 'Variantes y adaptaciones', seguretat: 'Recomendaciones de seguridad',
-      vistaFitxa: 'Vista previa de la ficha', nom: 'Nombre:', data: 'Fecha:', desat: 'Guardado en {p}', ferAqui: 'Hacerla aquí', imprimir: 'Imprimir', esborra: 'Borrar', reinicia: 'Otra vez', moltbe: '¡Muy bien!', errPdf: 'No se ha podido crear el PDF',
+      vistaFitxa: 'Vista previa de la ficha', nom: 'Nombre:', data: 'Fecha:', desat: 'Guardado en {p}', ferAqui: 'Hacerla aquí', ambElDit: 'Haz la ficha con el dedo, directamente encima.', imprimir: 'Imprimir', esborra: 'Borrar', reinicia: 'Otra vez', moltbe: '¡Muy bien!', errPdf: 'No se ha podido crear el PDF',
       favBuit: 'Todavía no tienes favoritos', favBuitP: 'Toca el corazón de una actividad para guardarla aquí y recuperarla cuando la necesites.',
       favP: 'Tus propuestas guardadas.', bibS: 'Todo lo que necesitas, bien ordenado.', inspS: 'Ideas para descubrir.', anarBib: 'Ir a la biblioteca',
       inspP: 'Colecciones, temporadas y propuestas que quizá todavía no conoces.', potser: 'Quizá no conoces...', foto: 'foto' },
@@ -67,7 +72,10 @@
 
   /* Foto del recurs o, mentre no n'hi hagi, una composició abstracta amb el color de l'àrea */
   function photo(r) {
-    if (r.foto) return `<div class="photo"><img src="${esc(r.foto)}" alt="" loading="lazy"></div>`;
+    if (r.foto) return `<div class="photo"><img src="${esc(XIU_URL(r.foto))}" alt="" loading="lazy"></div>`;
+    // fitxa PDF sense foto: la primera pàgina, per la part de dalt
+    const pag = r.full && r.full.model === 'pdf' && r.full.pagines.ca[0];
+    if (pag) return `<div class="photo pag"><img src="${esc(XIU_URL((r.full.pagines[lang] || r.full.pagines.ca)[0].src))}" alt="" loading="lazy"></div>`;
     const seed = [...r.id].reduce((a, c) => a + c.charCodeAt(0), 0);
     const rnd = (n) => { const x = Math.sin(seed * 9.7 + n * 3.1) * 10000; return x - Math.floor(x); };
     const c = AREES[r.area].color;
@@ -160,11 +168,11 @@
       const tabs = `<div class="modes"><button class="${modeFitxa == 'digital' ? 'on' : ''}" data-mode="digital">${I.dit}${t('ferAqui')}</button>
         <button class="${modeFitxa == 'paper' ? 'on' : ''}" data-mode="paper">${I.print}${t('imprimir')}</button></div>`;
       if (modeFitxa == 'digital') return cap + tabs + `<div class="digital" id="digital" style="--c:${a.color}">
-        ${XFitxa.html(r, lang, { esborra: t('esborra'), reinicia: t('reinicia'), moltbe: t('moltbe') })}</div>`;
+        ${XFitxa.html(r, lang, { esborra: t('esborra'), reinicia: t('reinicia'), moltbe: t('moltbe'), ambElDit: t('ambElDit') })}</div>`;
       return cap + tabs + `<div class="actions" style="justify-content:center">
           <button class="btn pri" data-pdf="${r.id}">${I.dl}${t('pdf')}</button>
           ${XP.potCompartir() ? `<button class="btn" data-comparteix="${r.id}">${I.share}${t('compartir')}</button>` : ''}</div>
-        <div class="sheet">${XFitxa.svg(r, a, lang, { nom: t('nom'), data: t('data') })}</div>`;
+        ${XFitxa.previa(r, a, lang, { nom: t('nom'), data: t('data') })}`;
     }
     return cap + `<div style="--c:${a.color}">
       <div class="intent"><div class="eyebrow" style="margin-bottom:8px">${t('intencio')}</div><p>${esc(L(r.intencio))}</p></div>
@@ -272,5 +280,13 @@
     if (e.target.id == 'q') { F.q = e.target.value; $('#llista').innerHTML = llista(); }
   });
   XP.botoEnrere(enrere);
+  // contingut nou des de la web: es refresca, excepte si l'infant és fent una fitxa (es faria quan surti)
+  let pendent = false;
+  addEventListener('xiu-contingut', () => {
+    dades();
+    if ($('#digital')) pendent = true; else render(true);
+  });
+  const goOrig = go;
+  go = (h) => { if (pendent) { pendent = false; dades(); } goOrig(h); };
   render();
 })();

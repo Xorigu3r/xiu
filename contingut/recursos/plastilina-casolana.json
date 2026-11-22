@@ -1,0 +1,90 @@
+{
+  "id": "plastilina-casolana",
+  "tipus": "activitat",
+  "edat": "2-3",
+  "area": "cre",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "30 min",
+  "titol": {
+    "ca": "Plastilina casolana",
+    "es": "Plastilina casera"
+  },
+  "subtitol": {
+    "ca": "La fem, la toquem, la transformem.",
+    "es": "La hacemos, la tocamos, la transformamos."
+  },
+  "intencio": {
+    "ca": "Preparar junts una massa casolana i fer-la servir per modelar lliurement, gaudint de la textura i de la transformació dels materials.",
+    "es": "Preparar juntos una masa casera y usarla para modelar libremente, disfrutando de la textura y de la transformación de los materiales."
+  },
+  "treballa": {
+    "ca": [
+      "Experimentació amb materials",
+      "Força i to de les mans",
+      "Creativitat",
+      "Vocabulari: tou, dur, enganxós"
+    ],
+    "es": [
+      "Experimentación con materiales",
+      "Fuerza y tono de las manos",
+      "Creatividad",
+      "Vocabulario: blando, duro, pegajoso"
+    ]
+  },
+  "materials": {
+    "ca": [
+      "2 tasses de farina i 1 de sal",
+      "1 tassa d'aigua tèbia i 2 cullerades d'oli",
+      "Colorant alimentari o espècies (cúrcuma, cacau)",
+      "Corrons, motlles i elements naturals"
+    ],
+    "es": [
+      "2 tazas de harina y 1 de sal",
+      "1 taza de agua tibia y 2 cucharadas de aceite",
+      "Colorante alimentario o especias (cúrcuma, cacao)",
+      "Rodillos, moldes y elementos naturales"
+    ]
+  },
+  "preparacio": {
+    "ca": "Prepara els ingredients en bols separats i una superfície fàcil de netejar.",
+    "es": "Prepara los ingredientes en cuencos separados y una superficie fácil de limpiar."
+  },
+  "desenvolupament": {
+    "ca": [
+      "Barregeu la farina i la sal; l'infant les remena.",
+      "Afegiu l'aigua i l'oli a poc a poc i pasteu.",
+      "Separeu la massa en boles i doneu-los color.",
+      "Modelem lliurement amb les mans i les eines."
+    ],
+    "es": [
+      "Mezclad la harina y la sal; el niño las remueve.",
+      "Añadid el agua y el aceite poco a poco y amasad.",
+      "Separad la masa en bolas y dadles color.",
+      "Modelamos libremente con las manos y las herramientas."
+    ]
+  },
+  "variants": {
+    "ca": [
+      "Fer empremtes de fulles, petxines i pinyes.",
+      "Guardar-la en un pot tancat a la nevera fins a una setmana."
+    ],
+    "es": [
+      "Hacer huellas de hojas, conchas y piñas.",
+      "Guardarla en un bote cerrado en la nevera hasta una semana."
+    ]
+  },
+  "seguretat": {
+    "ca": [
+      "Conté molta sal: no s'ha de menjar.",
+      "Aigua tèbia, mai calenta."
+    ],
+    "es": [
+      "Contiene mucha sal: no se debe comer.",
+      "Agua tibia, nunca caliente."
+    ]
+  },
+  "novetat": true
+}

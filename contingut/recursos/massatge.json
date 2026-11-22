@@ -1,0 +1,78 @@
+{
+  "id": "massatge",
+  "tipus": "activitat",
+  "edat": "0-1",
+  "area": "llen",
+  "perfil": [
+    "fam"
+  ],
+  "durada": "10 min",
+  "titol": {
+    "ca": "Massatge amb rimes",
+    "es": "Masaje con rimas"
+  },
+  "subtitol": {
+    "ca": "Paraules, tacte i vincle",
+    "es": "Palabras, tacto y vínculo"
+  },
+  "intencio": {
+    "ca": "Acompanyar el massatge amb cançons i rimes per afavorir el vincle afectiu, la consciència corporal i les primeres connexions amb el llenguatge.",
+    "es": "Acompañar el masaje con canciones y rimas para favorecer el vínculo afectivo, la conciencia corporal y las primeras conexiones con el lenguaje."
+  },
+  "treballa": {
+    "ca": [
+      "Vincle afectiu",
+      "Ritme i musicalitat",
+      "Descoberta corporal"
+    ],
+    "es": [
+      "Vínculo afectivo",
+      "Ritmo y musicalidad",
+      "Descubrimiento corporal"
+    ]
+  },
+  "materials": {
+    "ca": [
+      "Una manta suau",
+      "Oli vegetal neutre",
+      "Una cançó o rima coneguda"
+    ],
+    "es": [
+      "Una manta suave",
+      "Aceite vegetal neutro",
+      "Una canción o rima conocida"
+    ]
+  },
+  "preparacio": {
+    "ca": "Escalfa l'habitació i tria un moment de calma, lluny dels àpats.",
+    "es": "Calienta la habitación y elige un momento de calma, lejos de las comidas."
+  },
+  "desenvolupament": {
+    "ca": [
+      "Mira l'infant als ulls i demana-li permís amb la veu.",
+      "Recorre cada part del cos tot dient-ne el nom.",
+      "Acompanya els moviments amb la rima."
+    ],
+    "es": [
+      "Mira al bebé a los ojos y pídele permiso con la voz.",
+      "Recorre cada parte del cuerpo nombrándola.",
+      "Acompaña los movimientos con la rima."
+    ]
+  },
+  "variants": {
+    "ca": [
+      "Sense oli, per sobre de la roba."
+    ],
+    "es": [
+      "Sin aceite, por encima de la ropa."
+    ]
+  },
+  "seguretat": {
+    "ca": [
+      "Prova l'oli abans en una zona petita de la pell."
+    ],
+    "es": [
+      "Prueba el aceite antes en una zona pequeña de la piel."
+    ]
+  }
+}

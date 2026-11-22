@@ -252,6 +252,12 @@
     return (fontsCss = parts.join(''));
   }
   async function pdf(r, area, lang, textos) {
+    if (r.full && r.full.model === 'pdf') {
+      const src = r.full.pdf[lang] || r.full.pdf.ca;
+      const res = await fetch(window.XIU_URL ? XIU_URL(src) : src);
+      if (!res.ok) throw new Error('PDF no disponible');
+      return new Uint8Array(await res.arrayBuffer());
+    }
     const css = await carregaFonts();
     const s = (r.tipus === 'fitxa' ? svgPaper(r, area, lang, textos) : svgActivitat(r, area, lang)).replace('>', `><style>${css}</style>`);
     const img = new Image();
@@ -269,7 +275,15 @@
   }
 
   /* ---------- Versió digital ---------- */
+  const pagines = (r, lang) => (r.full.pagines[lang] || r.full.pagines.ca);
   function html(r, lang, T) {
+    if (r.full.model === 'pdf') {
+      const ps = pagines(r, lang).map((p, k) => `<div class="pis pagina" data-k="${k}" data-p="dibuix" style="aspect-ratio:${p.w}/${p.h};--ar:${(p.w / p.h).toFixed(3)}">
+        <svg viewBox="0 0 ${p.w} ${p.h}"><image href="${esc(window.XIU_URL ? XIU_URL(p.src) : p.src)}" width="${p.w}" height="${p.h}"/></svg></div>`).join('');
+      const colors = `<span class="colors">${['#38332E', '#C9785B', '#8FA68A', '#D1A35A', '#8EA2B4'].map((c, j) => `<button class="color${j ? '' : ' on'}" data-c="${c}" style="background:${c}" aria-label="color"></button>`).join('')}</span>`;
+      return `<section class="ex" data-tipus="dibuixa" data-i="0"><div class="exT">${esc(T.ambElDit || '')}</div>
+        <div class="exC">${ps}</div><div class="exF">${colors}<button class="mini" data-esborra>${T.esborra}</button></div></section>`;
+    }
     return r.full.exercicis.map((ex, i) => {
       const parts = EX[ex.tipus](ex, 'digital');
       const cos = parts.map((p, k) => `<div class="pis" data-k="${k}" ${p.pissarra ? `data-p="${p.pissarra}"` : ''} style="aspect-ratio:${p.w}/${p.h};--ar:${(p.w / p.h).toFixed(3)}">
@@ -336,7 +350,7 @@
           p._t = t; fet(pis.every((q) => cobertura(q, q._t) > 0.85)); } }); });
         sec.querySelector('[data-esborra]').onclick = () => { ps.forEach((x) => x.esborra()); pis.forEach((p) => (p._t = [])); fet(false); };
       } else if (tipus === 'dibuixa') {
-        const ps = [...sec.querySelectorAll('.pis')].map((p) => pissarra(p, { gruix: 5, color: C.tinta, onTraç: () => fet() }));
+        const ps = [...sec.querySelectorAll('.pis')].map((p) => pissarra(p, { gruix: 5 * p.querySelector('svg').viewBox.baseVal.width / 300, color: C.tinta, onTraç: () => fet() }));
         sec.querySelectorAll('.color').forEach((b) => (b.onclick = () => { sec.querySelectorAll('.color').forEach((x) => x.classList.remove('on')); b.classList.add('on'); ps.forEach((p) => p.color(b.dataset.c)); }));
         sec.querySelector('[data-esborra]').onclick = () => { ps.forEach((p) => p.esborra()); fet(false); };
       } else {
@@ -370,6 +384,7 @@
     const W = 1654, H = 2339; // 200 ppp: prou per revisar i no tan pesat
     const cv = document.createElement('canvas'); cv.width = W; cv.height = H;
     const ctx = cv.getContext('2d');
+    recursos = recursos.filter((r) => !(r.full && r.full.model === 'pdf'));
     for (let i = 0; i < recursos.length; i++) {
       const r = recursos[i];
       const s = (r.tipus === 'fitxa' ? svgPaper(r, arees[r.area], lang, textos) : svgActivitat(r, arees[r.area], lang)).replace('>', `><style>${css}</style>`);
@@ -384,5 +399,11 @@
     return new Uint8Array(doc.output('arraybuffer'));
   }
 
-  window.XFitxa = { html, munta, svg: svgPaper, svgActivitat, pdf, pdfLot, endevina };
+  /** Vista prèvia per imprimir: per a una fitxa PDF, les seves pàgines; si no, l'A4 generat. */
+  function previa(r, area, lang, textos) {
+    if (r.full && r.full.model === 'pdf') return pagines(r, lang).map((p) => `<div class="sheet"><img src="${esc(window.XIU_URL ? XIU_URL(p.src) : p.src)}" alt="" loading="lazy" style="display:block;width:100%"></div>`).join('');
+    return `<div class="sheet">${svgPaper(r, area, lang, textos)}</div>`;
+  }
+
+  window.XFitxa = { html, munta, svg: svgPaper, svgActivitat, previa, pdf, pdfLot, endevina };
 })();

@@ -1,0 +1,102 @@
+{
+  "id": "comptem-fins-a-5",
+  "tipus": "fitxa",
+  "edat": "4-5",
+  "area": "log",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "10 min",
+  "titol": {
+    "ca": "Comptem fins a 5",
+    "es": "Contamos hasta 5"
+  },
+  "subtitol": {
+    "ca": "Comptatge i associació quantitat-nombre.",
+    "es": "Conteo y asociación cantidad-número."
+  },
+  "full": {
+    "exercicis": [
+      {
+        "tipus": "compta",
+        "text": {
+          "ca": "Compta els elements i encercla el nombre correcte.",
+          "es": "Cuenta los elementos y rodea el número correcto."
+        },
+        "grups": [
+          {
+            "element": "castanya",
+            "n": 4,
+            "opcions": [
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "element": "flor",
+            "n": 5,
+            "opcions": [
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "element": "estrella",
+            "n": 2,
+            "opcions": [
+              1,
+              2,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "tipus": "compta",
+        "text": {
+          "ca": "Quants elements hi ha a cada grup?",
+          "es": "¿Cuántos elementos hay en cada grupo?"
+        },
+        "grups": [
+          {
+            "element": "poma",
+            "n": 3,
+            "opcions": [
+              2,
+              3,
+              4
+            ]
+          },
+          {
+            "element": "fulla",
+            "n": 5,
+            "opcions": [
+              4,
+              5,
+              6
+            ]
+          },
+          {
+            "element": "bola",
+            "n": 4,
+            "opcions": [
+              2,
+              4,
+              5
+            ]
+          }
+        ]
+      },
+      {
+        "tipus": "dibuixa",
+        "text": {
+          "ca": "Dibuixa cinc fulles dins del requadre.",
+          "es": "Dibuja cinco hojas dentro del recuadro."
+        }
+      }
+    ]
+  }
+}

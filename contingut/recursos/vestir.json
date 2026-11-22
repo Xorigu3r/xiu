@@ -1,0 +1,83 @@
+{
+  "id": "vestir",
+  "tipus": "activitat",
+  "edat": "2-3",
+  "area": "aut",
+  "perfil": [
+    "fam"
+  ],
+  "durada": {
+    "ca": "Cada dia",
+    "es": "Cada día"
+  },
+  "titol": {
+    "ca": "Em vesteixo sol",
+    "es": "Me visto solo"
+  },
+  "subtitol": {
+    "ca": "Un racó perquè triïn i es vesteixin",
+    "es": "Un rincón para que elijan y se vistan"
+  },
+  "intencio": {
+    "ca": "Preparar l'entorn perquè l'infant pugui participar en la rutina de vestir-se, guanyant confiança i autonomia.",
+    "es": "Preparar el entorno para que el niño pueda participar en la rutina de vestirse, ganando confianza y autonomía."
+  },
+  "treballa": {
+    "ca": [
+      "Autonomia personal",
+      "Presa de decisions",
+      "Esquema corporal"
+    ],
+    "es": [
+      "Autonomía personal",
+      "Toma de decisiones",
+      "Esquema corporal"
+    ]
+  },
+  "materials": {
+    "ca": [
+      "Penjador baix",
+      "Dues opcions de roba",
+      "Un tamboret",
+      "Un mirall a la seva alçada"
+    ],
+    "es": [
+      "Perchero bajo",
+      "Dos opciones de ropa",
+      "Un taburete",
+      "Un espejo a su altura"
+    ]
+  },
+  "preparacio": {
+    "ca": "Prepara cada vespre dues opcions de roba al penjador.",
+    "es": "Prepara cada noche dos opciones de ropa en el perchero."
+  },
+  "desenvolupament": {
+    "ca": [
+      "Deixa que triï entre les dues opcions.",
+      "Ajuda només en el que encara no pot fer.",
+      "Celebra l'esforç, no el resultat."
+    ],
+    "es": [
+      "Deja que elija entre las dos opciones.",
+      "Ayuda solo en lo que todavía no puede hacer.",
+      "Celebra el esfuerzo, no el resultado."
+    ]
+  },
+  "variants": {
+    "ca": [
+      "A l'escola: racó de sabates i jaquetes."
+    ],
+    "es": [
+      "En la escuela: rincón de zapatos y chaquetas."
+    ]
+  },
+  "seguretat": {
+    "ca": [
+      "Tamboret estable i antilliscant."
+    ],
+    "es": [
+      "Taburete estable y antideslizante."
+    ]
+  }
+}

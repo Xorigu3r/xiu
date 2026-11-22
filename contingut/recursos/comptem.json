@@ -1,0 +1,20 @@
+{
+  "id": "comptem",
+  "tipus": "fitxa",
+  "edat": "3-4",
+  "area": "log",
+  "perfil": ["fam", "pro"],
+  "durada": "10 min",
+  "destacat": true,
+  "titol": { "ca": "Comptem elements", "es": "Contamos elementos" },
+  "subtitol": { "ca": "Comptatge i associació quantitat-nombre.", "es": "Conteo y asociación cantidad-número." },
+  "full": {
+    "exercicis": [
+      { "tipus": "compta", "text": { "ca": "Compta els elements i encercla el nombre correcte.", "es": "Cuenta los elementos y rodea el número correcto." },
+        "grups": [ { "element": "estrella", "n": 1, "opcions": [1, 2, 3] }, { "element": "flor", "n": 4, "opcions": [2, 4, 6] }, { "element": "bola", "n": 3, "opcions": [3, 4, 5] } ] },
+      { "tipus": "compta", "text": { "ca": "Quantes castanyes hi ha?", "es": "¿Cuántas castañas hay?" },
+        "grups": [ { "element": "castanya", "n": 2, "opcions": [1, 2, 3] }, { "element": "castanya", "n": 5, "opcions": [4, 5, 6] }, { "element": "poma", "n": 3, "opcions": [2, 3, 4] } ] },
+      { "tipus": "dibuixa", "text": { "ca": "Dibuixa dues castanyes dins del requadre.", "es": "Dibuja dos castañas dentro del recuadro." } }
+    ]
+  }
+}

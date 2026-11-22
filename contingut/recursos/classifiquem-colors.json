@@ -1,0 +1,81 @@
+{
+  "id": "classifiquem-colors",
+  "tipus": "activitat",
+  "edat": "3-4",
+  "area": "log",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "15-20 min",
+  "titol": {
+    "ca": "Classifiquem per colors",
+    "es": "Clasificamos por colores"
+  },
+  "subtitol": {
+    "ca": "Cada cosa al seu lloc.",
+    "es": "Cada cosa en su sitio."
+  },
+  "intencio": {
+    "ca": "Agrupar objectes segons el color, una de les primeres operacions lògiques, amb materials de casa o de la natura.",
+    "es": "Agrupar objetos según el color, una de las primeras operaciones lógicas, con materiales de casa o de la naturaleza."
+  },
+  "treballa": {
+    "ca": [
+      "Classificació",
+      "Reconeixement de colors",
+      "Atenció",
+      "Vocabulari"
+    ],
+    "es": [
+      "Clasificación",
+      "Reconocimiento de colores",
+      "Atención",
+      "Vocabulario"
+    ]
+  },
+  "materials": {
+    "ca": [
+      "Bols o cartolines de 3-4 colors",
+      "Objectes petits dels mateixos colors: taps, pinces, fulles, peces"
+    ],
+    "es": [
+      "Cuencos o cartulinas de 3-4 colores",
+      "Objetos pequeños de los mismos colores: tapones, pinzas, hojas, piezas"
+    ]
+  },
+  "preparacio": {
+    "ca": "Barreja tots els objectes en una cistella i col·loca els bols de colors al davant.",
+    "es": "Mezcla todos los objetos en una cesta y coloca los cuencos de colores delante."
+  },
+  "desenvolupament": {
+    "ca": [
+      "Agafa un objecte, digues el color i posa'l al seu bol.",
+      "Convida l'infant a continuar.",
+      "Al final, compteu quants n'hi ha a cada bol."
+    ],
+    "es": [
+      "Coge un objeto, di el color y ponlo en su cuenco.",
+      "Invita al niño a continuar.",
+      "Al final, contad cuántos hay en cada cuenco."
+    ]
+  },
+  "variants": {
+    "ca": [
+      "Classificar per mida o per forma.",
+      "A la natura: fulles verdes, grogues i marrons."
+    ],
+    "es": [
+      "Clasificar por tamaño o por forma.",
+      "En la naturaleza: hojas verdes, amarillas y marrones."
+    ]
+  },
+  "seguretat": {
+    "ca": [
+      "Objectes no gaire petits si hi ha infants menors de 3 anys."
+    ],
+    "es": [
+      "Objetos no muy pequeños si hay niños menores de 3 años."
+    ]
+  }
+}

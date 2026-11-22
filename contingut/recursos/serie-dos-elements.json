@@ -1,0 +1,43 @@
+{
+  "id": "serie-dos-elements",
+  "tipus": "fitxa",
+  "edat": "3-4",
+  "area": "log",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "10 min",
+  "titol": {
+    "ca": "Sèries de dos",
+    "es": "Series de dos"
+  },
+  "subtitol": {
+    "ca": "Observem i continuem el patró.",
+    "es": "Observamos y continuamos el patrón."
+  },
+  "full": {
+    "exercicis": [
+      {
+        "tipus": "serie",
+        "text": {
+          "ca": "Què ve després? Completa la sèrie.",
+          "es": "¿Qué viene después? Completa la serie."
+        },
+        "files": [
+          "mfmfm?",
+          "ebebe?",
+          "lplpl?",
+          "cfcfc?"
+        ]
+      },
+      {
+        "tipus": "dibuixa",
+        "text": {
+          "ca": "Fes la teva sèrie amb dos colors.",
+          "es": "Haz tu serie con dos colores."
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "id": "pinces-i-pompons",
+  "tipus": "activitat",
+  "edat": "2-3",
+  "area": "mot",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "15 min",
+  "titol": {
+    "ca": "Pinces i pompons",
+    "es": "Pinzas y pompones"
+  },
+  "subtitol": {
+    "ca": "Agafar, apretar i deixar anar.",
+    "es": "Coger, apretar y soltar."
+  },
+  "intencio": {
+    "ca": "Enfortir els dits i practicar la pinça, la base per agafar el llapis més endavant, amb un joc de traspassar pompons d'un bol a una safata de glaçons.",
+    "es": "Fortalecer los dedos y practicar la pinza, la base para coger el lápiz más adelante, con un juego de trasladar pompones de un cuenco a una cubitera."
+  },
+  "treballa": {
+    "ca": [
+      "Pinça digital",
+      "Força dels dits",
+      "Coordinació bimanual",
+      "Concentració"
+    ],
+    "es": [
+      "Pinza digital",
+      "Fuerza de los dedos",
+      "Coordinación bimanual",
+      "Concentración"
+    ]
+  },
+  "materials": {
+    "ca": [
+      "Pinces de cuina petites o pinces per al pa",
+      "Pompons de colors",
+      "Un bol i una safata de glaçons"
+    ],
+    "es": [
+      "Pinzas de cocina pequeñas o pinzas para el pan",
+      "Pompones de colores",
+      "Un cuenco y una cubitera"
+    ]
+  },
+  "preparacio": {
+    "ca": "Posa els pompons al bol, a l'esquerra, i la safata de glaçons a la dreta, sobre una safata.",
+    "es": "Pon los pompones en el cuenco, a la izquierda, y la cubitera a la derecha, sobre una bandeja."
+  },
+  "desenvolupament": {
+    "ca": [
+      "Mostra com s'agafa la pinça i com es mou, a poc a poc.",
+      "Convida a posar un pompó a cada forat.",
+      "Quan acabi, poden tornar-los al bol o classificar-los per colors."
+    ],
+    "es": [
+      "Muestra cómo se coge la pinza y cómo se mueve, despacio.",
+      "Invita a poner un pompón en cada hueco.",
+      "Cuando acabe, pueden devolverlos al cuenco o clasificarlos por colores."
+    ]
+  },
+  "variants": {
+    "ca": [
+      "Més fàcil: amb els dits, sense pinça.",
+      "Més difícil: pinces d'estendre roba i boles més petites."
+    ],
+    "es": [
+      "Más fácil: con los dedos, sin pinza.",
+      "Más difícil: pinzas de tender la ropa y bolas más pequeñas."
+    ]
+  },
+  "seguretat": {
+    "ca": [
+      "Pompons grossos i supervisió: no es poden posar a la boca."
+    ],
+    "es": [
+      "Pompones grandes y supervisión: no se pueden meter en la boca."
+    ]
+  }
+}

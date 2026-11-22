@@ -1,0 +1,89 @@
+{
+  "id": "regar-plantes",
+  "tipus": "activitat",
+  "edat": "2-3",
+  "area": "aut",
+  "perfil": [
+    "fam"
+  ],
+  "durada": {
+    "ca": "10 min cada dia",
+    "es": "10 min cada día"
+  },
+  "titol": {
+    "ca": "Regar les plantes",
+    "es": "Regar las plantas"
+  },
+  "subtitol": {
+    "ca": "Una petita responsabilitat de cada dia.",
+    "es": "Una pequeña responsabilidad de cada día."
+  },
+  "intencio": {
+    "ca": "Donar a l'infant una tasca real i diària, cuidar una planta, que li permet sentir-se capaç i descobrir el cicle de la vida.",
+    "es": "Dar al niño una tarea real y diaria, cuidar una planta, que le permite sentirse capaz y descubrir el ciclo de la vida."
+  },
+  "treballa": {
+    "ca": [
+      "Autonomia i responsabilitat",
+      "Rutines",
+      "Cura de l'entorn",
+      "Control del moviment"
+    ],
+    "es": [
+      "Autonomía y responsabilidad",
+      "Rutinas",
+      "Cuidado del entorno",
+      "Control del movimiento"
+    ]
+  },
+  "materials": {
+    "ca": [
+      "Una regadora petita",
+      "Una o dues plantes resistents",
+      "Un drap per eixugar"
+    ],
+    "es": [
+      "Una regadera pequeña",
+      "Una o dos plantas resistentes",
+      "Un trapo para secar"
+    ]
+  },
+  "preparacio": {
+    "ca": "Col·loca la planta i la regadora a l'alçada de l'infant, en un lloc fix.",
+    "es": "Coloca la planta y la regadera a la altura del niño, en un lugar fijo."
+  },
+  "desenvolupament": {
+    "ca": [
+      "Ensenya com s'omple la regadora fins a una marca.",
+      "Rega amb ell a poc a poc, a la base de la planta.",
+      "Si cau aigua, eixugueu-la junts amb el drap.",
+      "Observeu cada setmana com creix."
+    ],
+    "es": [
+      "Enseña cómo se llena la regadera hasta una marca.",
+      "Riega con él despacio, en la base de la planta.",
+      "Si cae agua, secadla juntos con el trapo.",
+      "Observad cada semana cómo crece."
+    ]
+  },
+  "variants": {
+    "ca": [
+      "Plantar llavors de llegums en un pot de vidre amb cotó.",
+      "A l'aula: un calendari de qui rega cada dia."
+    ],
+    "es": [
+      "Plantar semillas de legumbres en un bote de cristal con algodón.",
+      "En el aula: un calendario de quién riega cada día."
+    ]
+  },
+  "seguretat": {
+    "ca": [
+      "Plantes no tòxiques.",
+      "Terra lluny de la boca."
+    ],
+    "es": [
+      "Plantas no tóxicas.",
+      "Tierra lejos de la boca."
+    ]
+  }
+}

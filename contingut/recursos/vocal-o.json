@@ -1,0 +1,60 @@
+{
+  "id": "vocal-o",
+  "tipus": "fitxa",
+  "edat": "3-4",
+  "area": "llen",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "10 min",
+  "titol": {
+    "ca": "Descobrim la vocal O",
+    "es": "Descubrimos la vocal O"
+  },
+  "subtitol": {
+    "ca": "Reconeixement i traç de la lletra.",
+    "es": "Reconocimiento y trazo de la letra."
+  },
+  "full": {
+    "exercicis": [
+      {
+        "tipus": "ressegueix",
+        "text": {
+          "ca": "Resseguim la lletra O.",
+          "es": "Repasamos la letra O."
+        },
+        "caracters": "OOOOOO"
+      },
+      {
+        "tipus": "dibuixa",
+        "text": {
+          "ca": "Practiquem nosaltres.",
+          "es": "Practicamos nosotros."
+        }
+      },
+      {
+        "tipus": "encercla",
+        "text": {
+          "ca": "Identifica i encercla la lletra O.",
+          "es": "Identifica y rodea la letra O."
+        },
+        "objectiu": "O",
+        "elements": [
+          "O",
+          "I",
+          "O",
+          "E",
+          "E",
+          "E",
+          "A",
+          "A",
+          "E",
+          "O",
+          "U",
+          "E"
+        ]
+      }
+    ]
+  }
+}

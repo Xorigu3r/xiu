@@ -1,0 +1,43 @@
+{
+  "id": "serie-tres-elements",
+  "tipus": "fitxa",
+  "edat": "5-6",
+  "area": "log",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "15 min",
+  "titol": {
+    "ca": "Sèries de tres",
+    "es": "Series de tres"
+  },
+  "subtitol": {
+    "ca": "Patrons més llargs per pensar.",
+    "es": "Patrones más largos para pensar."
+  },
+  "full": {
+    "exercicis": [
+      {
+        "tipus": "serie",
+        "text": {
+          "ca": "Observa el patró i completa la sèrie.",
+          "es": "Observa el patrón y completa la serie."
+        },
+        "files": [
+          "febfe?",
+          "lmplm?",
+          "pcmpc?",
+          "ebbebb?"
+        ]
+      },
+      {
+        "tipus": "dibuixa",
+        "text": {
+          "ca": "Inventa una sèrie de tres elements.",
+          "es": "Inventa una serie de tres elementos."
+        }
+      }
+    ]
+  }
+}

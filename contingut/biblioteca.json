@@ -1,0 +1,44 @@
+{
+  "edats": ["0-1", "1-2", "2-3", "3-4", "4-5", "5-6"],
+  "arees": {
+    "exp":  { "color": "#8FA68A", "ca": "Experimentació i descoberta",        "es": "Experimentación y descubrimiento" },
+    "llen": { "color": "#8EA2B4", "ca": "Llenguatge i comunicació",           "es": "Lenguaje y comunicación" },
+    "mot":  { "color": "#D1A35A", "ca": "Motricitat fina i grafomotricitat",  "es": "Motricidad fina y grafomotricidad" },
+    "log":  { "color": "#C9785B", "ca": "Lògica i matemàtiques",              "es": "Lógica y matemáticas" },
+    "cre":  { "color": "#D29A92", "ca": "Creativitat i expressió",            "es": "Creatividad y expresión" },
+    "aut":  { "color": "#9D9B60", "ca": "Autonomia i vida quotidiana",        "es": "Autonomía y vida cotidiana" }
+  },
+  "temporada": {
+    "titol": { "ca": "Tardor", "es": "Otoño" },
+    "destacat": "tardor"
+  },
+  "colleccions": [
+    {
+      "id": "tardor",
+      "titol": { "ca": "La tardor a les mans", "es": "El otoño en las manos" },
+      "text": { "ca": "Fulles, castanyes i colors càlids per a totes les edats", "es": "Hojas, castañas y colores cálidos para todas las edades" },
+      "portada": "tardor",
+      "recursos": ["tardor", "comptem", "pintura", "serie"]
+    },
+    {
+      "id": "primers-sentits",
+      "titol": { "ca": "Primers sentits", "es": "Primeros sentidos" },
+      "text": { "ca": "Propostes per als més petits, de 0 a 2 anys", "es": "Propuestas para los más pequeños, de 0 a 2 años" },
+      "portada": "panera",
+      "recursos": ["panera", "massatge", "tardor"]
+    },
+    {
+      "id": "escriptura",
+      "titol": { "ca": "Preparem l'escriptura", "es": "Preparamos la escritura" },
+      "text": { "ca": "La mà abans del llapis", "es": "La mano antes del lápiz" },
+      "portada": "trasvas",
+      "recursos": ["trasvas", "pintura", "vocal-a", "numero-1"]
+    }
+  ],
+  "descobreix": ["vestir", "flota", "massatge", "pintura"],
+  "cita": {
+    "ca": "«El joc és la forma més elevada de la investigació.»",
+    "es": "«El juego es la forma más elevada de la investigación.»",
+    "autor": "Albert Einstein"
+  }
+}
