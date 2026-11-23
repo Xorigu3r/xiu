@@ -1,0 +1,82 @@
+{
+  "id": "joc-trencaclosques-9",
+  "tipus": "joc",
+  "edat": "4-5",
+  "area": "exp",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "10 min",
+  "novetat": true,
+  "titol": {
+    "ca": "Trencaclosques de 9 peces",
+    "es": "Puzle de 9 piezas"
+  },
+  "subtitol": {
+    "ca": "Un repte més gran",
+    "es": "Un reto más grande"
+  },
+  "intencio": {
+    "ca": "Resoldre un trencaclosques fixant-se en vores, colors i formes.",
+    "es": "Resolver un puzle fijándose en bordes, colores y formas."
+  },
+  "treballa": {
+    "ca": [
+      "Orientació espacial",
+      "Planificació",
+      "Perseverança"
+    ],
+    "es": [
+      "Orientación espacial",
+      "Planificación",
+      "Perseverancia"
+    ]
+  },
+  "desenvolupament": {
+    "ca": [
+      "Comença per les cantonades.",
+      "Toca dues peces per canviar-les de lloc."
+    ],
+    "es": [
+      "Empieza por las esquinas.",
+      "Toca dos piezas para cambiarlas de sitio."
+    ]
+  },
+  "variants": {
+    "ca": [
+      "Feu-lo per torns, peça a peça"
+    ],
+    "es": [
+      "Hacedlo por turnos, pieza a pieza"
+    ]
+  },
+  "materials": {
+    "ca": [
+      "Un mòbil, una tauleta o un ordinador"
+    ],
+    "es": [
+      "Un móvil, una tableta o un ordenador"
+    ]
+  },
+  "preparacio": {
+    "ca": "Seieu junts davant de la pantalla. Deixa que l'infant toqui; tu acompanya'l amb paraules.",
+    "es": "Sentaos juntos delante de la pantalla. Deja que el niño o la niña toque; tú acompáñale con palabras."
+  },
+  "seguretat": {
+    "ca": [
+      "Partides curtes: millor pocs minuts i amb ganes de repetir",
+      "Sempre amb una persona adulta al costat"
+    ],
+    "es": [
+      "Partidas cortas: mejor pocos minutos y con ganas de repetir",
+      "Siempre con una persona adulta al lado"
+    ]
+  },
+  "joc": {
+    "model": "puzzle",
+    "costat": 3,
+    "element": "flor",
+    "fons": "#DDE6D8"
+  }
+}

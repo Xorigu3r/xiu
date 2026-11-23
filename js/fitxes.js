@@ -155,7 +155,7 @@
       <circle cx="14" cy="51" r="1.6" fill="${area.color}"/>
       <text x="18" y="52.3" font-family="${ff('text')}" font-size="3.8" fill="${C.marro}">${esc(area[lang])}    ·    ${esc(r.edat)} ${lang === 'es' ? 'años' : 'anys'}</text>
       ${cos}
-      <text x="14" y="262" font-family="${ff('text')}" font-size="3.6" fill="${C.marro}">${esc(textos.nom)} ______________________________</text>
+      <text x="14" y="262" font-family="${ff('text')}" font-size="3.6" fill="${C.marro}">${esc(textos.nom)} ${textos.infant ? `</text><text x="27" y="261.6" font-family="${ff('manuscrita')}" font-size="7" fill="${C.tinta}">${esc(textos.infant)}` : '______________________________'}</text>
       <text x="140" y="262" font-family="${ff('text')}" font-size="3.6" fill="${C.marro}">${esc(textos.data)} ______________</text>
       ${logo}</svg>`;
   }
@@ -342,7 +342,11 @@
   /** Dona vida a la versió digital ja posada dins de `arrel`. */
   function munta(arrel) {
     arrel.querySelectorAll('.ex').forEach((sec) => {
-      const tipus = sec.dataset.tipus, fet = (v = true) => sec.classList.toggle('fet', v);
+      const tipus = sec.dataset.tipus, fet = (v = true) => {
+        const abans = sec.classList.contains('fet'); sec.classList.toggle('fet', v);
+        // tots els exercicis fets → l'app ho apunta al progrés de l'infant
+        if (v && !abans && [...arrel.querySelectorAll('.ex')].every((x) => x.classList.contains('fet') || x.dataset.tipus === 'dibuixa')) arrel.dispatchEvent(new CustomEvent('xiu-fitxa-feta', { bubbles: true }));
+      };
       if (tipus === 'ressegueix') {
         // cada fila té la seva pissarra; l'exercici és fet quan totes les guies estan resseguides (> 85 %)
         const pis = [...sec.querySelectorAll('.pis')];
@@ -405,5 +409,37 @@
     return `<div class="sheet">${svgPaper(r, area, lang, textos)}</div>`;
   }
 
-  window.XFitxa = { html, munta, svg: svgPaper, svgActivitat, previa, pdf, pdfLot, endevina };
+  /** La mateixa fitxa per a tota la classe: una còpia per infant, amb el seu nom (o `noms` buits = còpies sense nom). */
+  async function pdfAula(r, area, lang, textos, noms) {
+    const doc = new window.jspdf.jsPDF({ unit: 'mm', format: 'a4', compress: true });
+    doc.setProperties({ title: `XIU · ${r.titol[lang]}`, creator: 'XIU · Aprendre jugant' });
+    let primera = true;
+    const pagina = (url, w = 210, h = 297) => { if (!primera) doc.addPage([w, h], h >= w ? 'portrait' : 'landscape'); primera = false; doc.addImage(url, 'JPEG', 0, 0, w, h, undefined, 'FAST'); };
+    if (r.full && r.full.model === 'pdf') {
+      const ps = await Promise.all(pagines(r, lang).map(async (p) => {
+        const im = new Image(); im.crossOrigin = 'anonymous'; im.src = window.XIU_URL ? XIU_URL(p.src) : p.src; await im.decode();
+        const cv = document.createElement('canvas'); cv.width = im.naturalWidth; cv.height = im.naturalHeight; cv.getContext('2d').drawImage(im, 0, 0);
+        return { url: cv.toDataURL('image/jpeg', 0.88), w: 210, h: (210 * p.h) / p.w };
+      }));
+      for (const nom of noms) ps.forEach((p, i) => {
+        pagina(p.url, p.w, p.h);
+        if (i === 0 && nom) { doc.setFillColor(255, 255, 255); doc.roundedRect(150, 6, 54, 10, 2, 2, 'F'); doc.setFont('helvetica', 'normal'); doc.setFontSize(12); doc.setTextColor(56, 51, 46); doc.text(nom, 177, 12.8, { align: 'center' }); }
+      });
+    } else {
+      const css = await carregaFonts(), W = 2480, H = 3508, cv = document.createElement('canvas'); cv.width = W; cv.height = H;
+      const ctx = cv.getContext('2d');
+      for (const nom of noms) {
+        const s = svgPaper(r, area, lang, { ...textos, infant: nom || '' }).replace('>', `><style>${css}</style>`);
+        const img = new Image(); img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(s); await img.decode();
+        await new Promise((ok) => setTimeout(ok, 30));
+        ctx.fillStyle = C.paper; ctx.fillRect(0, 0, W, H); ctx.drawImage(img, 0, 0, W, H);
+        pagina(cv.toDataURL('image/jpeg', 0.85));
+      }
+    }
+    return new Uint8Array(doc.output('arraybuffer'));
+  }
+
+  /** Un dels dibuixos (estrella, flor, bola, castanya, fulla, pedra, poma) centrat a (0,0), de radi r. */
+  const dibuix = (nom, r) => (ICONES[nom] || ICONES.bola)(r);
+  window.XFitxa = { html, munta, svg: svgPaper, svgActivitat, previa, pdf, pdfLot, endevina, dibuix, pdfAula, DIBUIXOS: Object.keys(ICONES) };
 })();

@@ -1,0 +1,79 @@
+{
+  "id": "joc-trencaclosques-4",
+  "tipus": "joc",
+  "edat": "2-3",
+  "area": "exp",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "5 min",
+  "novetat": true,
+  "titol": {
+    "ca": "Trencaclosques de 4 peces",
+    "es": "Puzle de 4 piezas"
+  },
+  "subtitol": {
+    "ca": "Toca dues peces per canviar-les",
+    "es": "Toca dos piezas para cambiarlas"
+  },
+  "intencio": {
+    "ca": "Compondre una imatge senzilla a partir de les seves parts.",
+    "es": "Componer una imagen sencilla a partir de sus partes."
+  },
+  "treballa": {
+    "ca": [
+      "Orientació espacial",
+      "Part i tot"
+    ],
+    "es": [
+      "Orientación espacial",
+      "Parte y todo"
+    ]
+  },
+  "desenvolupament": {
+    "ca": [
+      "Mira el model petit de sota.",
+      "Toca una peça i després la del lloc on ha d'anar: es canvien."
+    ],
+    "es": [
+      "Mira el modelo pequeño de abajo.",
+      "Toca una pieza y después la del sitio donde debe ir: se cambian."
+    ]
+  },
+  "variants": {
+    "ca": [
+      "Retalleu una foto en 4 trossos i feu-la en paper"
+    ],
+    "es": [
+      "Recortad una foto en 4 trozos y hacedla en papel"
+    ]
+  },
+  "materials": {
+    "ca": [
+      "Un mòbil, una tauleta o un ordinador"
+    ],
+    "es": [
+      "Un móvil, una tableta o un ordenador"
+    ]
+  },
+  "preparacio": {
+    "ca": "Seieu junts davant de la pantalla. Deixa que l'infant toqui; tu acompanya'l amb paraules.",
+    "es": "Sentaos juntos delante de la pantalla. Deja que el niño o la niña toque; tú acompáñale con palabras."
+  },
+  "seguretat": {
+    "ca": [
+      "Partides curtes: millor pocs minuts i amb ganes de repetir",
+      "Sempre amb una persona adulta al costat"
+    ],
+    "es": [
+      "Partidas cortas: mejor pocos minutos y con ganas de repetir",
+      "Siempre con una persona adulta al lado"
+    ]
+  },
+  "joc": {
+    "model": "puzzle",
+    "costat": 2,
+    "element": "poma"
+  }
+}

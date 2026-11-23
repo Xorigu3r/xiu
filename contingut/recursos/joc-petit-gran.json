@@ -1,0 +1,79 @@
+{
+  "id": "joc-petit-gran",
+  "tipus": "joc",
+  "edat": "2-3",
+  "area": "log",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "5 min",
+  "novetat": true,
+  "titol": {
+    "ca": "De petit a gran",
+    "es": "De pequeño a grande"
+  },
+  "subtitol": {
+    "ca": "Ordena per mida",
+    "es": "Ordena por tamaño"
+  },
+  "intencio": {
+    "ca": "Comparar mides i ordenar de més petit a més gran.",
+    "es": "Comparar tamaños y ordenar de más pequeño a más grande."
+  },
+  "treballa": {
+    "ca": [
+      "Seriació",
+      "Conceptes petit i gran"
+    ],
+    "es": [
+      "Seriación",
+      "Conceptos pequeño y grande"
+    ]
+  },
+  "desenvolupament": {
+    "ca": [
+      "Busca la poma més petita i toca-la.",
+      "Després la mitjana, i al final la més gran."
+    ],
+    "es": [
+      "Busca la manzana más pequeña y tócala.",
+      "Después la mediana, y al final la más grande."
+    ]
+  },
+  "variants": {
+    "ca": [
+      "Ordeneu tres cullers o tres pots de la cuina"
+    ],
+    "es": [
+      "Ordenad tres cucharas o tres botes de la cocina"
+    ]
+  },
+  "materials": {
+    "ca": [
+      "Un mòbil, una tauleta o un ordinador"
+    ],
+    "es": [
+      "Un móvil, una tableta o un ordenador"
+    ]
+  },
+  "preparacio": {
+    "ca": "Seieu junts davant de la pantalla. Deixa que l'infant toqui; tu acompanya'l amb paraules.",
+    "es": "Sentaos juntos delante de la pantalla. Deja que el niño o la niña toque; tú acompáñale con palabras."
+  },
+  "seguretat": {
+    "ca": [
+      "Partides curtes: millor pocs minuts i amb ganes de repetir",
+      "Sempre amb una persona adulta al costat"
+    ],
+    "es": [
+      "Partidas cortas: mejor pocos minutos y con ganas de repetir",
+      "Siempre con una persona adulta al lado"
+    ]
+  },
+  "joc": {
+    "model": "mida",
+    "n": 3,
+    "element": "poma"
+  }
+}

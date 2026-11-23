@@ -1,0 +1,80 @@
+{
+  "id": "joc-ombres",
+  "tipus": "joc",
+  "edat": "3-4",
+  "area": "exp",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "5 min",
+  "novetat": true,
+  "titol": {
+    "ca": "Cada dibuix amb la seva ombra",
+    "es": "Cada dibujo con su sombra"
+  },
+  "subtitol": {
+    "ca": "Mira bé les formes",
+    "es": "Mira bien las formas"
+  },
+  "intencio": {
+    "ca": "Reconèixer un objecte només per la seva silueta.",
+    "es": "Reconocer un objeto solo por su silueta."
+  },
+  "treballa": {
+    "ca": [
+      "Percepció visual",
+      "Formes",
+      "Atenció"
+    ],
+    "es": [
+      "Percepción visual",
+      "Formas",
+      "Atención"
+    ]
+  },
+  "desenvolupament": {
+    "ca": [
+      "Toca un dibuix.",
+      "Després toca l'ombra que té la mateixa forma."
+    ],
+    "es": [
+      "Toca un dibujo.",
+      "Después toca la sombra que tiene la misma forma."
+    ]
+  },
+  "variants": {
+    "ca": [
+      "Amb una llanterna, feu ombres d'objectes a la paret i endevineu què són"
+    ],
+    "es": [
+      "Con una linterna, haced sombras de objetos en la pared y adivinad qué son"
+    ]
+  },
+  "materials": {
+    "ca": [
+      "Un mòbil, una tauleta o un ordinador"
+    ],
+    "es": [
+      "Un móvil, una tableta o un ordenador"
+    ]
+  },
+  "preparacio": {
+    "ca": "Seieu junts davant de la pantalla. Deixa que l'infant toqui; tu acompanya'l amb paraules.",
+    "es": "Sentaos juntos delante de la pantalla. Deja que el niño o la niña toque; tú acompáñale con palabras."
+  },
+  "seguretat": {
+    "ca": [
+      "Partides curtes: millor pocs minuts i amb ganes de repetir",
+      "Sempre amb una persona adulta al costat"
+    ],
+    "es": [
+      "Partidas cortas: mejor pocos minutos y con ganas de repetir",
+      "Siempre con una persona adulta al lado"
+    ]
+  },
+  "joc": {
+    "model": "ombres",
+    "n": 4
+  }
+}

@@ -70,6 +70,10 @@
 
   for (const l of ['ca', 'es']) Object.assign(T[l], (window.XIU_TEXTOS_COMPTE || {})[l] || {});
 
+  // Mòduls (js/moduls/*.js): s'hi enganxen amb window.XIU_MODULS.push((A) => {...}); A = window.XIU_APP (al final)
+  const HOOKS = { accions: [], inici: [], perfil: [], quant: [], insignia: [], recurs: {}, despres: [], bib: [] };
+  const VISTES = {};
+
   /* ---------- Estat (preferències locals: idioma i favorits) ---------- */
   const ls = { get(k, d) { try { const v = localStorage.getItem('xiu-' + k); return v == null ? d : JSON.parse(v); } catch (e) { return d; } },
                set(k, v) { try { localStorage.setItem('xiu-' + k, JSON.stringify(v)); } catch (e) { /* sense emmagatzematge */ } } };
@@ -156,7 +160,7 @@
     return `<div class="card" data-go="#/r/${r.id}">${photo(r)}
       <span class="kind">${kind(r)}</span>${esPrem(r) && premiumActiu() ? `<span class="prem ${bloquejat(r) ? '' : 'obert'}">${bloquejat(r) ? I.cadenat : I.estrella}${t('premium')}</span>` : ''}
       <button class="fav ${on ? 'on' : ''}" data-fav="${r.id}" aria-label="${t('guardar')}">${I.fav}</button>
-      <h3>${esc(L(r.titol))}</h3>
+      ${HOOKS.insignia.map((f) => f(r)).join('')}<h3>${esc(L(r.titol))}</h3>
       <div class="meta"><span class="dot" style="background:${AREES[r.area].color}"></span>${r.edat} ${t('anys')} · ${areaCurta(r)}</div></div>`;
   }
 
@@ -175,6 +179,7 @@
         <div class="txt"><div class="eyebrow">${h.edat} ${t('anys')} · ${AREES[h.area][lang]}</div>
         <h3>${esc(L(h.titol))}</h3><p class="scr">${esc(L(h.subtitol))}</p>
         <div class="tags"><span class="tag">${kind(h)}</span><span class="tag">${esc(L(h.durada))}</span></div></div></div>
+      ${HOOKS.inici.map((f) => f()).join('')}
       ${gratis.length ? `<div class="sec"><h2>${t('gratis')}</h2></div><div class="row">${gratis.map(card).join('')}</div>
         <button class="premB" data-go="#/premium">${I.estrella}<span><b>${t('premBanner')}</b>${t('premBannerP')}</span>${I.back}</button>` : ''}
       <div class="sec"><h2>${t('perEdat')}</h2></div>
@@ -208,7 +213,8 @@
       <label class="search">${I.search}<input id="q" type="search" value="${esc(F.q)}" placeholder="${t('cerca')}" autocomplete="off"></label>
       ${chips('edat', EDATS.map((e) => [e, e + ' ' + t('anys')]))}
       ${chips('area', Object.entries(AREES).map(([k, a]) => [k, a[lang]]))}
-      ${chips('tipus', [['activitat', t('activitat')], ['fitxa', t('fitxa')]])}
+      ${HOOKS.bib.map((f) => f()).join('')}
+      ${chips('tipus', [['activitat', t('activitat')], ['fitxa', t('fitxa')], ['joc', t('joc') || 'Joc']])}
       ${chips('perfil', [['fam', t('fam')], ['pro', t('pro')]])}
       ${premiumActiu() ? chips('acces', [['gratuit', t('gratuit')], ['premium', t('premium')]]) : ''}
       <div id="llista">${llista()}</div>`;
@@ -228,9 +234,11 @@
 
         ${r.tipus == 'activitat' && !bloquejat(r) ? `<button class="btn" data-pdf="${r.id}">${I.dl}${t('pdf')}</button>` : ''}
         ${r.tipus == 'activitat' && !bloquejat(r) && XP.potCompartir() ? `<button class="btn" data-comparteix="${r.id}">${I.share}${t('compartir')}</button>` : ''}
+        ${bloquejat(r) ? '' : HOOKS.accions.map((f) => f(r)).join('')}
         </div>
       </div></div>`;
     if (bloquejat(r)) return cap + paret(r);
+    if (HOOKS.recurs[r.tipus]) return cap + HOOKS.recurs[r.tipus](r);
     if (r.tipus == 'fitxa') {
       // la mateixa fitxa: per fer-la aquí amb el dit, o per imprimir (PDF)
       const tabs = `<div class="modes"><button class="${modeFitxa == 'digital' ? 'on' : ''}" data-mode="digital">${I.dit}${t('ferAqui')}</button>
@@ -282,6 +290,7 @@
       <div class="caixa prova"><p class="sub2">${t('provaP')}</p>
         <label class="interruptor"><input type="checkbox" data-simula ${simula ? 'checked' : ''}><span></span><b>${t('simula')}</b></label><p class="sub2">${t('simulaP')}</p>
         <button class="btn" data-reinicia>${t('reinicia')}</button></div>
+      ${HOOKS.perfil.map((f) => f()).join('')}
       <div class="sec"><h2>${t('mes')}</h2></div><div class="llistaMes"><button data-go="#/quant">${I.info}<span>${t('quant')}</span>${I.back}</button></div>
       <div class="sec"><h2>${t('idioma')}</h2></div>
       <div class="lang" style="display:inline-flex">${['ca', 'es'].map((l) => `<button class="${lang == l ? 'on' : ''}" data-lang="${l}">${l == 'ca' ? 'Català' : 'Castellano'}</button>`).join('')}</div>
@@ -306,7 +315,8 @@
   const llistaMes = () => `<div class="llistaMes">
       <button data-actualitza>${I.refresca}<span>${t('actualitzar')}</span>${I.back}</button>
       <button data-go="#/ajuda">${I.ajuda}<span>${t('ajuda')}</span>${I.back}</button>
-      <button data-go="#/drets">${I.copyright}<span>${t('drets')}</span>${I.back}</button></div>`;
+      <button data-go="#/drets">${I.copyright}<span>${t('drets')}</span>${I.back}</button>
+      ${HOOKS.quant.map((f) => f()).join('')}</div>`;
   const quanEs = (d) => new Date(d).toLocaleDateString(lang == 'es' ? 'es-ES' : 'ca-ES', { day: 'numeric', month: 'long', year: 'numeric' });
   function vQuant() {
     const pq = window.XIU_PAQUET_ACTUAL || window.XIU_PAQUET || {};
@@ -321,7 +331,7 @@
     return `<button class="back" data-enrere>${I.back}${t('tornar')}</button>
       <section class="pageH"><h1>${t('ajuda')}</h1><div class="scr">${t('ajudaS')}</div></section>
       <div class="faq">${t('faq').map(([q, a]) => `<details><summary>${esc(q)}</summary><p>${esc(a)}</p></details>`).join('')}</div>
-      <div class="caixa" style="margin-top:22px"><h3>${t('ajudaMes')}</h3><p class="sub2">${t('ajudaMesP')}</p></div>`;
+      <div class="caixa" style="margin-top:22px"><h3>${t('ajudaMes')}</h3><p class="sub2">${t('ajudaMesP')}</p>${VISTES.contacte ? `<div class="actions"><button class="btn pri" data-go="#/contacte">${t('contacte')}</button></div>` : ''}</div>`;
   }
   function vDrets() {
     return `<button class="back" data-enrere>${I.back}${t('tornar')}</button>
@@ -592,7 +602,7 @@
   function enrere() { if (!pila.length) return false; ruta = pila.pop(); render(); scrollTo(0, 0); return true; }
   function nav() {
     const cur = ruta.split('/')[1] || '';
-    const actiu = cur == 'r' ? 'bib' : cur == 'c' ? 'insp' : ['ajuda', 'drets'].includes(cur) ? 'quant' : ['pagament', 'fet'].includes(cur) ? 'compte' : cur == 'premium' ? 'perfil' : cur;
+    const actiu = cur == 'r' || cur == 'material' ? 'bib' : cur == 'c' ? 'insp' : ['ajuda', 'drets', 'privadesa', 'condicions', 'cookies', 'contacte'].includes(cur) ? 'quant' : ['pagament', 'fet'].includes(cur) ? 'compte' : ['premium', 'progres', 'programacio', 'observacio'].includes(cur) ? 'perfil' : cur;
     const boto = ([h, k, nom]) => `<button class="${actiu == h ? 'on' : ''}" data-tab="#/${h}">${I[k]}<span>${nom || t(k)}</span></button>`;
     const base = [['', 'inici'], ['bib', 'bib'], ['insp', 'insp'], ['fav', 'fav']], perf = ['perfil', 'ajustos', t('perfilT')];
     $('#sideNav').innerHTML = [...base, ['quant', 'info', t('quant')], perf].map(boto).join('');
@@ -611,9 +621,11 @@
     const benv = !perfil && !ls.get('perfil-omes', false) || onb;
     document.body.classList.toggle('onbOn', !!benv);
     const v = benv ? vBenvinguda : { '': vInici, bib: vBib, fav: vFav, insp: vInsp, perfil: vPerfil, premium: vPremium, compte: vCompte, pagament: () => vPagament(p[1]), fet: () => vFet(p[1]),
-      quant: vQuant, ajuda: vAjuda, drets: vDrets, r: () => vFitxa(p[1]), c: () => vColleccio(p[1]) }[p[0]] || vInici;
+      quant: vQuant, ajuda: vAjuda, drets: vDrets, r: () => vFitxa(p[1]), c: () => vColleccio(p[1]),
+      ...Object.fromEntries(Object.entries(VISTES).map(([k, f]) => [k, () => f(p.slice(1))])) }[p[0]] || vInici;
     $('#view').innerHTML = `<div class="${manté ? '' : 'fade'}">${v()}</div>`;
     if ($('#digital')) XFitxa.munta($('#digital'));
+    for (const f of HOOKS.despres) f(p);
     nav();
     if (manté) scrollTo(0, y);
   }
@@ -690,7 +702,20 @@
   });
   const goOrig = go;
   go = (h) => { if (pendent) { pendent = false; dades(); } goOrig(h); };
+  window.XIU_APP = {
+    t, L, esc, I, ls, avis, modal, quanEs, photo, card, bloquejat, esPrem, HOOKS,
+    go: (h) => go(h), render: (m) => render(m), enrere: () => enrere(),
+    vista: (k, f) => (VISTES[k] = f),
+    textos: (o) => { for (const l of ['ca', 'es']) Object.assign(T[l], o[l] || {}); },
+    get lang() { return lang; }, get perfil() { return perfil; }, get compte() { return compte; }, get ruta() { return ruta; },
+    get R() { return R; }, get BIB() { return BIB; }, get AREES() { return AREES; }, get EDATS() { return EDATS; }, get perId() { return perId; },
+  };
+  for (const m of window.XIU_MODULS || []) { try { m(window.XIU_APP); } catch (e) { console.error('Mòdul', e); } }
+  // enllaç directe a una proposta (el que es comparteix amb les famílies): .../xiu/#/r/<id>
+  if (/^#\/(r|c|joc)\/[\w-]+$/.test(location.hash)) { pila = ['#/']; ruta = location.hash.replace('#/joc/', '#/r/'); }
   render();
+  document.getElementById('splash')?.classList.add('fora');
+  setTimeout(() => document.getElementById('splash')?.remove(), 700);
   // en obrir l'app: si hi ha una versió nova, ho diu i demana actualitzar (APK: plantilla xoriguer-actualitza; web: service worker)
   if (window.XActualitza) XActualitza.inicia({ app: 'xiu', versio: window.XIU_VERSIO || '0', url: 'https://xorigu3r.github.io/xiu/app/versio.json' });
 })();

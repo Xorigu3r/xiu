@@ -1,0 +1,84 @@
+{
+  "id": "joc-memory-gran",
+  "tipus": "joc",
+  "edat": "4-5",
+  "area": "log",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "10 min",
+  "novetat": true,
+  "titol": {
+    "ca": "Memory gran",
+    "es": "Memory grande"
+  },
+  "subtitol": {
+    "ca": "Sis parelles per trobar",
+    "es": "Seis parejas por encontrar"
+  },
+  "intencio": {
+    "ca": "Reforçar la memòria de treball i l'estratègia: recordar on era cada carta.",
+    "es": "Reforzar la memoria de trabajo y la estrategia: recordar dónde estaba cada carta."
+  },
+  "treballa": {
+    "ca": [
+      "Memòria de treball",
+      "Concentració",
+      "Estratègia"
+    ],
+    "es": [
+      "Memoria de trabajo",
+      "Concentración",
+      "Estrategia"
+    ]
+  },
+  "desenvolupament": {
+    "ca": [
+      "Gira dues cartes.",
+      "Si són iguals, es queden girades.",
+      "Intenta trobar-les totes amb pocs intents."
+    ],
+    "es": [
+      "Gira dos cartas.",
+      "Si son iguales, se quedan giradas.",
+      "Intenta encontrarlas todas con pocos intentos."
+    ]
+  },
+  "variants": {
+    "ca": [
+      "Compteu els intents i proveu de fer-ne menys",
+      "Digueu el nom de cada dibuix en veu alta"
+    ],
+    "es": [
+      "Contad los intentos y probad a hacer menos",
+      "Decid el nombre de cada dibujo en voz alta"
+    ]
+  },
+  "materials": {
+    "ca": [
+      "Un mòbil, una tauleta o un ordinador"
+    ],
+    "es": [
+      "Un móvil, una tableta o un ordenador"
+    ]
+  },
+  "preparacio": {
+    "ca": "Seieu junts davant de la pantalla. Deixa que l'infant toqui; tu acompanya'l amb paraules.",
+    "es": "Sentaos juntos delante de la pantalla. Deja que el niño o la niña toque; tú acompáñale con palabras."
+  },
+  "seguretat": {
+    "ca": [
+      "Partides curtes: millor pocs minuts i amb ganes de repetir",
+      "Sempre amb una persona adulta al costat"
+    ],
+    "es": [
+      "Partidas cortas: mejor pocos minutos y con ganas de repetir",
+      "Siempre con una persona adulta al lado"
+    ]
+  },
+  "joc": {
+    "model": "memory",
+    "parelles": 6
+  }
+}

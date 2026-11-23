@@ -472,3 +472,138 @@ body.onbOn main{padding-bottom:40px}
 .compteS>b{padding:0}
 .compteS span{font-size:14px;font-weight:600;line-height:1.2;min-width:0;overflow:hidden;text-overflow:ellipsis}
 .compteS small{display:block;font-size:12px;font-weight:500;color:var(--soft)}
+
+/* ---------- Pantalla de càrrega ---------- */
+#splash{position:fixed;inset:0;z-index:100;background:var(--paper);display:grid;place-items:center;transition:opacity .5s}
+#splash img{width:150px;animation:batec 1.2s ease-in-out infinite}
+#splash.fora{opacity:0;pointer-events:none}
+@keyframes batec{50%{transform:scale(1.05)}}
+
+/* ---------- Infants, progrés i diplomes ---------- */
+.avatar{display:inline-grid;place-items:center;width:42px;height:42px;border-radius:50%;color:#fff;font-family:var(--serif);font-size:21px;font-weight:600;flex-shrink:0}
+.avatar.petit{width:24px;height:24px;font-size:13px}
+.avatar.gran{width:70px;height:70px;font-size:34px}
+.infants{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
+.infC{display:flex;align-items:center;gap:12px;padding:12px;border-radius:18px;background:var(--surface);border:1px solid var(--line);text-align:left}
+.infC span{font-size:13px;color:var(--soft)}
+.infC b{display:block;font-size:16px;color:var(--ink)}
+.infC svg,.infX svg,.estrellesG svg,.diplomaB svg{width:14px;height:14px;fill:#D1A35A;stroke:none;vertical-align:-2px;margin-right:2px}
+.infTria{display:flex;gap:8px;flex-wrap:wrap}
+.infTria.inici{gap:12px}
+.infX{display:flex;flex-direction:column;align-items:center;gap:4px;padding:12px 16px;border-radius:18px;background:var(--surface);border:2px solid var(--line);min-width:96px}
+.infX.on{border-color:var(--ink);background:var(--accent-soft)}
+.infX small{font-size:12px;color:var(--soft)}
+.infTria .chip{display:inline-flex;align-items:center;gap:6px;cursor:pointer}
+.infTria .chip input{display:none}
+.chip.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.colorsInf{display:flex;gap:10px}
+.colorsInf input{display:none}
+.colorsInf span{display:block;width:32px;height:32px;border-radius:50%;cursor:pointer;border:3px solid transparent}
+.colorsInf input:checked+span{border-color:var(--ink)}
+.fotoB{justify-content:center;cursor:pointer}
+.fotoPrev{max-height:160px;border-radius:12px;margin:0 auto}
+.card .fetI{position:absolute;right:10px;top:52px;width:28px;height:28px;border-radius:50%;background:#6F8F6A;display:grid;place-items:center}
+.card .fetI svg{width:16px;height:16px;stroke:#fff;fill:none;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+.btn.on>svg{stroke:currentColor}
+.infCap{display:flex;align-items:center;gap:16px;margin:8px 0 6px;flex-wrap:wrap}
+.infCap h1{font-size:32px}
+.estrellesG{margin-left:auto;display:flex;align-items:center;gap:6px;background:#F6E7C9;border-radius:99px;padding:8px 16px}
+.estrellesG svg{width:22px;height:22px}
+.estrellesG b{font-family:var(--serif);font-size:26px}
+.estrellesG span{font-size:13px;color:var(--soft)}
+.diplomes{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px}
+.diplomaB{display:flex;align-items:center;gap:10px;padding:14px;border-radius:16px;background:var(--surface);border:1px solid #E6C98F;text-align:left}
+.diplomaB svg{width:26px;height:26px}
+.diplomaB span{font-size:13px;color:var(--soft)}
+.diplomaB b{display:block;font-family:var(--serif);font-size:18px;color:var(--ink)}
+.diplomaB.proper{opacity:.6;border-style:dashed}
+.barres{display:grid;gap:8px}
+.barra{display:grid;grid-template-columns:minmax(120px,1.2fr) 2fr auto;gap:10px;align-items:center;font-size:14px}
+.barra i{height:10px;border-radius:99px;background:var(--sand);overflow:hidden}
+.barra em{display:block;height:100%;background:var(--ink);border-radius:99px}
+.barra small{color:var(--soft)}
+.historial{display:grid;gap:8px;margin-top:10px}
+.hist{display:flex;gap:12px;align-items:flex-start;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:12px}
+.hist img{width:72px;height:72px;object-fit:cover;border-radius:10px}
+.hist>div{flex:1;min-width:0}
+.hist b{display:block;cursor:pointer}
+.hist small{font-size:12px;color:var(--soft)}
+.hist p{font-size:14px;color:var(--soft);margin-top:4px}
+.nivell{font-size:11px;font-weight:700;padding:4px 9px;border-radius:99px;white-space:nowrap}
+.nivell.n0{background:#F6E7C9;color:#6B4E1F}.nivell.n1{background:#E9E3DA;color:#5E544B}.nivell.n2{background:#E5ECE2;color:#4F6B4A}
+
+/* ---------- Jocs ---------- */
+.jocCaixa{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:18px;margin-top:20px;position:relative}
+.jocAjuda{display:flex;gap:8px;align-items:center;color:var(--soft);font-size:15px;margin-bottom:14px}
+.jocAjuda svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.6;flex-shrink:0}
+.joc{user-select:none;-webkit-user-select:none}
+.joc svg{display:block;width:100%;height:100%}
+.joc button{touch-action:manipulation}
+.jocInfo{text-align:center;color:var(--soft);font-size:14px;margin:10px 0}
+.memory{display:grid;gap:10px;grid-template-columns:repeat(4,1fr);max-width:560px;margin:0 auto}
+.memory.c6{grid-template-columns:repeat(3,1fr);max-width:420px}
+.memory.c12{grid-template-columns:repeat(4,1fr)}
+.carta{aspect-ratio:1;position:relative;perspective:600px}
+.carta span{position:absolute;inset:0;border-radius:16px;backface-visibility:hidden;transition:transform .35s;display:grid;place-items:center;padding:12%}
+.carta .dors{background:repeating-linear-gradient(45deg,var(--c,#D1A35A) 0 8px,color-mix(in srgb,var(--c,#D1A35A) 70%,#fff) 8px 16px);border:3px solid #fff;box-shadow:0 2px 6px rgba(56,51,46,.15)}
+.carta .cara{background:#fff;border:2px solid var(--line);transform:rotateY(180deg)}
+.carta.on .dors{transform:rotateY(180deg)}.carta.on .cara{transform:rotateY(360deg)}
+.carta.ok .cara{border-color:#6F8F6A;background:#F1F6EF}
+.grupJoc{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;max-width:520px;margin:10px auto 22px}
+.grupJoc svg{width:76px;height:76px}
+.opcionsJoc{display:flex;justify-content:center;gap:14px}
+.num{width:84px;height:84px;border-radius:22px;background:#fff;border:2px solid var(--line);font-family:var(--sans);font-size:40px;font-weight:700;color:var(--ink)}
+.num.ok,.pesa.ok{background:#E5ECE2;border-color:#6F8F6A}
+.mal{animation:sacseja .35s}
+@keyframes sacseja{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.midaJoc{display:flex;justify-content:center;align-items:flex-end;gap:12px;flex-wrap:wrap;min-height:160px}
+.pesa{background:#fff;border:2px solid var(--line);border-radius:18px;padding:8px;position:relative}
+.midaJoc .pesa{width:120px;height:120px}
+.pesa.tria{border-color:var(--ink);box-shadow:0 0 0 3px var(--accent-soft);transform:translateY(-3px)}
+.pesa[data-ordre]::after{content:attr(data-ordre);position:absolute;top:-10px;right:-10px;width:28px;height:28px;border-radius:50%;background:#6F8F6A;color:#fff;font-weight:700;display:grid;place-items:center;font-size:14px}
+.ombresJoc{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:520px;margin:0 auto}
+.ombresJoc .col{display:grid;gap:10px}
+.ombresJoc .pesa{aspect-ratio:1;max-height:120px}
+.ombra{opacity:.85}
+.puzzle{display:grid;gap:4px;max-width:420px;margin:0 auto;background:var(--line);border-radius:16px;overflow:hidden;padding:4px}
+.peca{aspect-ratio:1;padding:0;border-radius:8px;overflow:hidden;outline:3px solid transparent;outline-offset:-3px}
+.peca.tria{outline-color:var(--ink)}
+.joc.acabat .peca{border-radius:0}
+.model{width:110px;margin:14px auto 0;opacity:.7;border-radius:10px;overflow:hidden}
+.coses{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:20px}
+.coses .pesa{width:84px;height:84px}
+.coses .pesa.ok{visibility:hidden}
+.cistelles{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.cistella{border:3px dashed var(--line);border-radius:22px;padding:12px;min-height:130px;background:var(--paper);display:flex;flex-direction:column;align-items:center;gap:8px}
+.cistella .mostra{width:54px;height:54px;opacity:.6}
+.cistella .dins{display:flex;flex-wrap:wrap;justify-content:center;gap:4px}
+.cistella .dins svg{width:36px;height:36px}
+.jocFi{position:absolute;inset:0;background:rgba(251,249,245,.94);border-radius:24px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;animation:apareix .4s}
+.jocFi b{font-family:var(--script);font-size:56px;font-weight:400}
+.jocFi span{color:var(--soft);margin-bottom:10px}
+@keyframes apareix{from{opacity:0;transform:scale(.95)}}
+
+/* ---------- Què tens a casa? ---------- */
+.matB{margin:0 0 18px}
+.matChips{flex-wrap:wrap;margin:18px 0 0;padding:0}
+
+/* ---------- Programació ---------- */
+.setmana{display:grid;gap:10px;margin-top:16px}
+@media (min-width:900px){.setmana{grid-template-columns:repeat(5,1fr)}.setmana .dia.cap{display:none}}
+.dia{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:12px;min-height:110px}
+.dia.avui{border:2px solid var(--ink)}
+.diaCap{display:flex;justify-content:space-between;margin-bottom:8px}
+.diaCap span{color:var(--soft);font-size:13px}
+.prog{display:flex;gap:6px;align-items:flex-start;border-left:4px solid var(--c);padding:6px 8px;background:var(--paper);border-radius:8px;margin-bottom:6px;cursor:pointer}
+.prog span{flex:1;font-size:13px}
+.prog b{display:block;font-weight:600}
+.prog small{color:var(--soft)}
+.buitD{color:var(--mute);font-size:13px}
+.qr{width:220px;margin:14px auto 6px;background:#fff;padding:8px;border-radius:12px}
+.qr svg{width:100%;height:auto;display:block}
+.enllacQr{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:#fff;font:inherit;font-size:13px;margin-top:10px;color:var(--soft)}
+.formC.caixa{max-width:none;margin-top:16px}
+.formC select,.formC textarea{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:#fff;font:inherit;font-weight:500}
+.mcaixa{max-height:calc(100vh - 32px);overflow:auto}
+.jocFi[hidden],.fotoPrev[hidden]{display:none}
+.estrellesG b,.diplomaB b,.infCap h1,.avatar{font-variant-numeric:lining-nums;font-feature-settings:"lnum" 1}

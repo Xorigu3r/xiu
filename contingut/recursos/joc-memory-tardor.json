@@ -1,0 +1,84 @@
+{
+  "id": "joc-memory-tardor",
+  "tipus": "joc",
+  "edat": "2-3",
+  "area": "log",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "5 min",
+  "novetat": true,
+  "titol": {
+    "ca": "Memory de la tardor",
+    "es": "Memory de otoño"
+  },
+  "subtitol": {
+    "ca": "Busca les parelles iguals",
+    "es": "Busca las parejas iguales"
+  },
+  "intencio": {
+    "ca": "Exercitar l'atenció i la memòria visual amb poques cartes, buscant dues imatges iguals.",
+    "es": "Ejercitar la atención y la memoria visual con pocas cartas, buscando dos imágenes iguales."
+  },
+  "treballa": {
+    "ca": [
+      "Memòria visual",
+      "Atenció",
+      "Torns i paciència"
+    ],
+    "es": [
+      "Memoria visual",
+      "Atención",
+      "Turnos y paciencia"
+    ]
+  },
+  "desenvolupament": {
+    "ca": [
+      "Gireu una carta i digueu què hi ha dibuixat.",
+      "Gireu-ne una altra: és igual?",
+      "Si no ho és, es tornen a girar: recordeu on eren!"
+    ],
+    "es": [
+      "Girad una carta y decid qué hay dibujado.",
+      "Girad otra: ¿es igual?",
+      "Si no lo es, se vuelven a girar: ¡recordad dónde estaban!"
+    ]
+  },
+  "variants": {
+    "ca": [
+      "Feu-ho per torns: un cop l'infant, un cop l'adult",
+      "Amb el mateix joc en paper: retalleu les cartes"
+    ],
+    "es": [
+      "Hacedlo por turnos: una vez el niño, una vez el adulto",
+      "Con el mismo juego en papel: recortad las cartas"
+    ]
+  },
+  "materials": {
+    "ca": [
+      "Un mòbil, una tauleta o un ordinador"
+    ],
+    "es": [
+      "Un móvil, una tableta o un ordenador"
+    ]
+  },
+  "preparacio": {
+    "ca": "Seieu junts davant de la pantalla. Deixa que l'infant toqui; tu acompanya'l amb paraules.",
+    "es": "Sentaos juntos delante de la pantalla. Deja que el niño o la niña toque; tú acompáñale con palabras."
+  },
+  "seguretat": {
+    "ca": [
+      "Partides curtes: millor pocs minuts i amb ganes de repetir",
+      "Sempre amb una persona adulta al costat"
+    ],
+    "es": [
+      "Partidas cortas: mejor pocos minutos y con ganas de repetir",
+      "Siempre con una persona adulta al lado"
+    ]
+  },
+  "joc": {
+    "model": "memory",
+    "parelles": 3
+  }
+}
