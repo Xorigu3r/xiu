@@ -1,10 +1,10 @@
 {
-  "versio": "0.3.0",
-  "web": "0.3.0",
-  "web_zip": "https://xorigu3r.github.io/xiu/app/web-0.3.0.zip",
-  "web_sha256": "219e4dd7c79a651a7657c206211cd5eb58cc1ce0d0e20e09ee9c4e2cacab83fb",
-  "web_mida": 562779,
+  "versio": "0.3.1",
+  "web": "0.3.1",
+  "web_zip": "https://xorigu3r.github.io/xiu/app/web-0.3.1.zip",
+  "web_sha256": "08ca983d5730410497aa20c7827bfbe336120ae9b5c2f5cdd59c00b205abebcc",
+  "web_mida": 563654,
   "apk_min": 2,
   "apk": "https://xorigu3r.github.io/xiu/app/XIU.apk",
-  "apk_codi": 4
+  "apk_codi": 5
 }

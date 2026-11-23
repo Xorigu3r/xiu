@@ -17,7 +17,19 @@
 <link rel="stylesheet" href="css/xiu.css">
 </head>
 <body>
-<div id="splash"><img src="img/logo.svg" alt=""></div>
+<script src="js/logo.js"></script>
+<div id="splash" aria-hidden="true"></div>
+<script>
+// Animació del logo en obrir l'app: la X, la I i la U cauen i reboten; després surt «Aprendre jugant» i els dos puntets.
+(function () {
+  window.XIU_T0 = performance.now();
+  const s = document.getElementById('splash'); s.innerHTML = window.XIU_LOGO || '';
+  const svg = s.querySelector('svg'); if (!svg) return;
+  const ns = 'http://www.w3.org/2000/svg', embolica = (el, cls, i) => { const g = document.createElementNS(ns, 'g'); g.setAttribute('class', cls); g.style.setProperty('--i', i); el.replaceWith(g); g.appendChild(el); };
+  [...svg.querySelectorAll('path')].forEach((p, i) => (i < 3 ? embolica(p, 'lletra', i) : embolica(p, 'lema', i - 3)));
+  [...svg.querySelectorAll('circle')].forEach((c, i) => embolica(c, 'punt', i));
+})();
+</script>
 <div class="app">
   <aside class="side">
     <img class="logoImg" src="img/logo.svg" alt="XIU · Aprendre jugant">
@@ -38,7 +50,6 @@
 <script src="vendor/jspdf.umd.min.js"></script>
 <script src="js/contingut.js"></script>
 <script src="js/carrega.js"></script>
-<script src="js/logo.js"></script>
 <script src="js/fonts.js"></script>
 <script src="js/plataforma.js"></script>
 <script src="js/fitxes.js"></script>

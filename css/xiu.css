@@ -475,7 +475,15 @@ body.onbOn main{padding-bottom:40px}
 
 /* ---------- Pantalla de càrrega ---------- */
 #splash{position:fixed;inset:0;z-index:100;background:var(--paper);display:grid;place-items:center;transition:opacity .5s}
-#splash img{width:150px;animation:batec 1.2s ease-in-out infinite}
+#splash svg{width:min(260px,62vw);height:auto;overflow:visible}
+#splash g{transform-box:fill-box;transform-origin:50% 100%}
+#splash .lletra{animation:cau .75s cubic-bezier(.3,.7,.4,1) both;animation-delay:calc(var(--i) * .17s)}
+#splash .lema{animation:puja .35s ease-out both;animation-delay:calc(.8s + var(--i) * .025s)}
+#splash .punt{transform-origin:50% 50%;animation:pop .4s cubic-bezier(.3,1.6,.5,1) both;animation-delay:calc(1.15s + var(--i) * .1s)}
+@keyframes cau{0%{transform:translateY(-260%) scale(.9,1.12);opacity:0}45%{opacity:1}60%{transform:translateY(0) scale(1.12,.86)}75%{transform:translateY(-14%) scale(.96,1.05)}88%{transform:translateY(0) scale(1.03,.97)}100%{transform:none}}
+@keyframes puja{from{transform:translateY(40%);opacity:0}to{transform:none;opacity:1}}
+@keyframes pop{0%{transform:scale(0)}100%{transform:none}}
+@media (prefers-reduced-motion:reduce){#splash g{animation:none!important}}
 #splash.fora{opacity:0;pointer-events:none}
 @keyframes batec{50%{transform:scale(1.05)}}
 
@@ -607,3 +615,4 @@ body.onbOn main{padding-bottom:40px}
 .mcaixa{max-height:calc(100vh - 32px);overflow:auto}
 .jocFi[hidden],.fotoPrev[hidden]{display:none}
 .estrellesG b,.diplomaB b,.infCap h1,.avatar{font-variant-numeric:lining-nums;font-feature-settings:"lnum" 1}
+

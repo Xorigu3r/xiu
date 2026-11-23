@@ -714,8 +714,9 @@
   // enllaç directe a una proposta (el que es comparteix amb les famílies): .../xiu/#/r/<id>
   if (/^#\/(r|c|joc)\/[\w-]+$/.test(location.hash)) { pila = ['#/']; ruta = location.hash.replace('#/joc/', '#/r/'); }
   render();
-  document.getElementById('splash')?.classList.add('fora');
-  setTimeout(() => document.getElementById('splash')?.remove(), 700);
+  // la pantalla del logo es queda fins que acaba l'animació (uns 1,7 s des que s'obre l'app)
+  const resta = matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : Math.max(0, 1750 - (performance.now() - (window.XIU_T0 || 0)));
+  setTimeout(() => { document.getElementById('splash')?.classList.add('fora'); setTimeout(() => document.getElementById('splash')?.remove(), 600); }, resta);
   // en obrir l'app: si hi ha una versió nova, ho diu i demana actualitzar (APK: plantilla xoriguer-actualitza; web: service worker)
   if (window.XActualitza) XActualitza.inicia({ app: 'xiu', versio: window.XIU_VERSIO || '0', url: 'https://xorigu3r.github.io/xiu/app/versio.json' });
 })();
