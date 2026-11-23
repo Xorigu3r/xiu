@@ -118,6 +118,7 @@
     aula: '<svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M7 20l2-4M17 20l-2-4M7 9h6M7 12h4"/></svg>',
     ok: '<svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>',
     perfil: '<svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c.8-4 3.6-6 7-6s6.2 2 7 6"/></svg>',
+    ajustos: '<svg viewBox="0 0 24 24"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></svg>',
     info: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.01"/></svg>',
     mes: '<svg viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.3"/><circle cx="12" cy="12" r="1.3"/><circle cx="19" cy="12" r="1.3"/></svg>',
     ajuda: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6v.6M12 17h.01"/></svg>',
@@ -281,7 +282,7 @@
       <div class="caixa prova"><p class="sub2">${t('provaP')}</p>
         <label class="interruptor"><input type="checkbox" data-simula ${simula ? 'checked' : ''}><span></span><b>${t('simula')}</b></label><p class="sub2">${t('simulaP')}</p>
         <button class="btn" data-reinicia>${t('reinicia')}</button></div>
-      <div class="sec"><h2>${t('mes')}</h2></div>${llistaMes()}
+      <div class="sec"><h2>${t('mes')}</h2></div><div class="llistaMes"><button data-go="#/quant">${I.info}<span>${t('quant')}</span>${I.back}</button></div>
       <div class="sec"><h2>${t('idioma')}</h2></div>
       <div class="lang" style="display:inline-flex">${['ca', 'es'].map((l) => `<button class="${lang == l ? 'on' : ''}" data-lang="${l}">${l == 'ca' ? 'Català' : 'Castellano'}</button>`).join('')}</div>
       <p style="margin-top:30px"><button class="btn" data-presentacio>${t('presentacio')}</button></p>`;
@@ -303,7 +304,6 @@
 
   /* ================= Quant a · Actualitzar · Ajuda · Drets d'autor ================= */
   const llistaMes = () => `<div class="llistaMes">
-      <button data-go="#/quant">${I.info}<span>${t('quant')}</span>${I.back}</button>
       <button data-actualitza>${I.refresca}<span>${t('actualitzar')}</span>${I.back}</button>
       <button data-go="#/ajuda">${I.ajuda}<span>${t('ajuda')}</span>${I.back}</button>
       <button data-go="#/drets">${I.copyright}<span>${t('drets')}</span>${I.back}</button></div>`;
@@ -401,7 +401,7 @@
     if (XP.NATIU) return cap + `<div class="pagCols"><div><div class="play"><div class="playCap"><b>Google Play</b></div><p><b>${esc(p.nom)}</b><br>${eur(r.total)}${p.sub ? ' ' + t(p.tipus == 'mensual' ? 'perMes' : 'perAny') : ''}</p>
         <p class="sub2">${t('play')}</p><form data-form="paga" data-codi="${p.codi}" novalidate><label class="check"><input type="checkbox" name="condicions"> <span>${p.sub ? t('acceptoSub').replace('{p}', t('pla_' + p.tipus).toLowerCase()) : t('acceptoCompra')}</span></label><div class="err"></div>
         <button class="btn pri gran" type="submit">${p.sub ? t('playB') : t('playC')}</button></form></div></div><aside>${r.html}</aside></div>`;
-    const metodes = [['targeta', t('targeta')], ['paypal', 'PayPal'], ['bizum', 'Bizum'], esIOS() ? ['apay', 'Apple Pay'] : ['gpay', 'Google Pay']];
+    const metodes = [['targeta', t('targeta')], ['paypal', 'PayPal'], esIOS() ? ['apay', 'Apple Pay'] : ['gpay', 'Google Pay']];
     if (!metodes.some((m) => m[0] == metode)) metode = 'targeta';
     const nomM = metodes.find((m) => m[0] == metode)[1];
     const camps = metode == 'targeta' ? `<label>${t('numTargeta')}<input name="num" inputmode="numeric" autocomplete="off" placeholder="4242 4242 4242 4242" maxlength="23"></label>
@@ -592,14 +592,17 @@
   function enrere() { if (!pila.length) return false; ruta = pila.pop(); render(); scrollTo(0, 0); return true; }
   function nav() {
     const cur = ruta.split('/')[1] || '';
-    const actiu = cur == 'r' ? 'bib' : cur == 'c' ? 'insp' : ['premium', 'compte', 'pagament', 'fet', 'quant', 'ajuda', 'drets'].includes(cur) ? 'perfil' : cur;
-    const html = [['', 'inici'], ['bib', 'bib'], ['insp', 'insp'], ['fav', 'fav'], ['perfil', 'perfil']]
-      .map(([h, k]) => `<button class="${actiu == h ? 'on' : ''}" data-tab="#/${h}">${I[k]}<span>${k == 'perfil' ? t('perfilT') : t(k)}</span></button>`).join('');
-    $('#sideNav').innerHTML = html; $('#tabNav').innerHTML = html;
+    const actiu = cur == 'r' ? 'bib' : cur == 'c' ? 'insp' : ['ajuda', 'drets'].includes(cur) ? 'quant' : ['pagament', 'fet'].includes(cur) ? 'compte' : cur == 'premium' ? 'perfil' : cur;
+    const boto = ([h, k, nom]) => `<button class="${actiu == h ? 'on' : ''}" data-tab="#/${h}">${I[k]}<span>${nom || t(k)}</span></button>`;
+    const base = [['', 'inici'], ['bib', 'bib'], ['insp', 'insp'], ['fav', 'fav']], perf = ['perfil', 'ajustos', t('perfilT')];
+    $('#sideNav').innerHTML = [...base, ['quant', 'info', t('quant')], perf].map(boto).join('');
+    $('#tabNav').innerHTML = [...base, perf].map(boto).join('');
+    const inicial = compte ? esc(compte.nom.trim().charAt(0).toUpperCase()) : '';
+    $('#menuT').innerHTML = `<button class="menuB ${actiu == 'compte' ? 'on' : ''}" data-tab="#/compte" aria-label="${t('compte')}" title="${t('compte')}">${inicial ? `<b>${inicial}</b>` : I.perfil}</button>
+      <button class="menuB ${actiu == 'quant' ? 'on' : ''}" data-tab="#/quant" aria-label="${t('quant')}" title="${t('quant')}">${I.info}</button>`;
+    $('#menuS').innerHTML = `<button class="compteS ${actiu == 'compte' ? 'on' : ''}" data-tab="#/compte">${inicial ? `<b>${inicial}</b>` : I.perfil}<span>${compte ? esc(compte.nom) : t('compte')}<small>${compte ? (subscrit() ? 'XIU Premium' : t('elMeuCompte')) : t('entraOCrea')}</small></span></button>`;
     const lg = ['ca', 'es'].map((l) => `<button class="${lang == l ? 'on' : ''}" data-lang="${l}">${l.toUpperCase()}</button>`).join('');
     $('#langS').innerHTML = lg; $('#langT').innerHTML = lg; $('#tagline').textContent = t('tag');
-    $('#menuT').innerHTML = `<button class="menuB" data-menu aria-label="${t('menu')}">${I.mes}</button>`;
-    $('#menuS').innerHTML = `<button data-go="#/quant">${t('quant')}</button><button data-actualitza>${t('actualitzar')}</button><button data-go="#/ajuda">${t('ajuda')}</button><button data-go="#/drets">${t('drets')}</button>`;
     document.documentElement.lang = lang;
     document.title = 'XIU · ' + t('tag');
   }

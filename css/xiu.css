@@ -324,10 +324,7 @@ body.onbOn main{padding-bottom:40px}
 .menuB{width:36px;height:36px;border-radius:50%;background:var(--sand);display:grid;place-items:center}
 .menuB svg,.llistaMes svg,.filaC svg,.quant svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .menuS{display:none}
-@media (min-width:900px){.menuS{display:flex;flex-direction:column;margin-top:auto;margin-bottom:14px;padding:0 6px}
-  .menuS button{text-align:left;font-size:13px;color:var(--soft);padding:5px 6px;border-radius:8px}
-  .menuS button:hover{background:var(--paper);color:var(--ink)}
-  .side .menuS+.lang{margin-top:0}}
+@media (min-width:900px){.side .menuS+.lang{margin-top:0}}
 .llistaMes{display:grid;gap:2px;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:6px;margin-top:8px}
 .llistaMes button,.filaC{display:flex;align-items:center;gap:12px;width:100%;padding:12px;border-radius:12px;text-align:left}
 .llistaMes button:hover,.filaC:hover{background:var(--paper)}
@@ -394,8 +391,7 @@ body.onbOn main{padding-bottom:40px}
 .pagCols{display:grid;gap:18px}
 @media (min-width:860px){.pagCols{grid-template-columns:1.3fr 1fr;align-items:start}.pagCols aside{position:sticky;top:20px}}
 .h3p{font-size:22px;margin:10px 0 10px}
-.metodes{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
-@media (max-width:520px){.metodes{grid-template-columns:repeat(2,1fr)}}
+.metodes{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
 .metode{display:flex;flex-direction:column;align-items:center;gap:4px;padding:12px 6px;border-radius:14px;background:var(--surface);border:2px solid var(--line);font-size:13px;font-weight:600}
 .metode svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.7}
 .metode i{font-style:normal;font-weight:800;font-size:15px;height:24px;display:grid;place-items:center}
@@ -463,3 +459,16 @@ body.onbOn main{padding-bottom:40px}
 .xact-b button.p{background:var(--ink)!important;color:var(--paper)!important}
 .xact-barra{background:var(--sand)!important}
 .xact-barra i{background:var(--ink)!important}
+
+/* a dalt (mòbil): idioma + Compte + Quant a; a baix de la barra lateral (ordinador): Compte */
+.menuB{color:var(--soft)}
+.menuB.on{background:var(--ink);color:var(--paper)}
+.menuB b,.compteS b{font-family:var(--serif);font-size:18px;font-weight:600}
+#menuT{display:flex;gap:6px}
+@media (min-width:900px){.menuS{display:block;margin-top:auto;margin-bottom:12px;padding:0}}
+.compteS{display:flex;align-items:center;gap:10px;width:100%;padding:10px;border-radius:14px;border:1px solid var(--line);background:var(--paper);text-align:left}
+.compteS:hover,.compteS.on{border-color:var(--ink)}
+.compteS>svg,.compteS>b{width:34px;height:34px;border-radius:50%;background:var(--sand);display:grid;place-items:center;flex-shrink:0;padding:7px;stroke:currentColor;fill:none;stroke-width:1.8}
+.compteS>b{padding:0}
+.compteS span{font-size:14px;font-weight:600;line-height:1.2;min-width:0;overflow:hidden;text-overflow:ellipsis}
+.compteS small{display:block;font-size:12px;font-weight:500;color:var(--soft)}
