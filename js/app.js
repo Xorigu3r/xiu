@@ -89,7 +89,7 @@
   let acces = Object.assign({ pla: null, renova: null, cancel: false, paquets: [], factures: [] }, ls.get('acces', {}));
   let simula = ls.get('pilot-simula', false);
   const hashId = (id) => [...id].reduce((a, c) => a + c.charCodeAt(0), 0);
-  const esPrem = (r) => !!r.premium || (simula && hashId(r.id) % 3 !== 0);
+  const esPrem = (r) => !r.meva && (!!r.premium || (simula && hashId(r.id) % 3 !== 0));
   const premiumActiu = () => !!(BIB.premium && BIB.premium.actiu) || simula;
   const subscrit = () => !!(compte && acces.pla && new Date(acces.renova) > new Date());
   const teAcces = (r) => subscrit() || !!(compte && acces.paquets.some((q) => (q.tipus == 'area' && q.k == r.area) || (q.tipus == 'edat' && q.k == r.edat)));
@@ -607,7 +607,7 @@
   function enrere() { if (!pila.length) return false; ruta = pila.pop(); render(); scrollTo(0, 0); return true; }
   function nav() {
     const cur = ruta.split('/')[1] || '';
-    const actiu = cur == 'r' || cur == 'material' ? 'bib' : cur == 'c' ? 'insp' : ['ajuda', 'drets', 'privadesa', 'condicions', 'cookies', 'contacte'].includes(cur) ? 'quant' : ['pagament', 'fet'].includes(cur) ? 'compte' : ['premium', 'progres', 'programacio', 'observacio'].includes(cur) ? 'perfil' : cur;
+    const actiu = cur == 'r' || cur == 'material' ? 'bib' : cur == 'c' ? 'insp' : ['ajuda', 'drets', 'privadesa', 'condicions', 'cookies', 'contacte'].includes(cur) ? 'quant' : ['pagament', 'fet'].includes(cur) ? 'compte' : ['premium', 'progres', 'programacio', 'observacio', 'nom', 'rutines', 'rutina', 'diari', 'tradicions'].includes(cur) ? 'perfil' : ['crea', 'avui'].includes(cur) ? 'bib' : cur;
     const boto = ([h, k, nom]) => `<button class="${actiu == h ? 'on' : ''}" data-tab="#/${h}">${I[k]}<span>${nom || t(k)}</span></button>`;
     const base = [['', 'inici'], ['bib', 'bib'], ['insp', 'insp'], ['fav', 'fav']], perf = ['perfil', 'ajustos', t('perfilT')];
     $('#sideNav').innerHTML = [...base, ['quant', 'info', t('quant')], perf].map(boto).join('');
