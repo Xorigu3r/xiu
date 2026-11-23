@@ -441,5 +441,5 @@
 
   /** Un dels dibuixos (estrella, flor, bola, castanya, fulla, pedra, poma) centrat a (0,0), de radi r. */
   const dibuix = (nom, r) => (ICONES[nom] || ICONES.bola)(r);
-  window.XFitxa = { html, munta, svg: svgPaper, svgActivitat, previa, pdf, pdfLot, endevina, dibuix, pdfAula, DIBUIXOS: Object.keys(ICONES) };
+  window.XFitxa = { html, munta, svg: svgPaper, svgActivitat, previa, pdf, pdfLot, endevina, dibuix, pdfAula, fontsCss: () => carregaFonts(), C, DIBUIXOS: Object.keys(ICONES) };
 })();

@@ -71,7 +71,7 @@
   for (const l of ['ca', 'es']) Object.assign(T[l], (window.XIU_TEXTOS_COMPTE || {})[l] || {});
 
   // Mòduls (js/moduls/*.js): s'hi enganxen amb window.XIU_MODULS.push((A) => {...}); A = window.XIU_APP (al final)
-  const HOOKS = { accions: [], inici: [], perfil: [], quant: [], insignia: [], recurs: {}, despres: [], bib: [] };
+  const HOOKS = { accions: [], inici: [], iniciDalt: [], perfil: [], quant: [], insignia: [], recurs: {}, despres: [], bib: [], progres: [], progresSec: [], fitxaSota: [] };
   const VISTES = {};
 
   /* ---------- Estat (preferències locals: idioma i favorits) ---------- */
@@ -175,6 +175,7 @@
       .sort((a, b) => (bloquejat(a) - bloquejat(b)) || (b.novetat ? 1 : 0) - (a.novetat ? 1 : 0)).slice(0, 14);
     const gratis = premiumActiu() && !subscrit() ? R.filter((r) => !esPrem(r)).slice(0, 14) : [];
     return `<section class="pageH"><h1>${hola}</h1><div class="scr">${t('tag')}.</div><p>${t('holaP')}</p></section>
+      ${HOOKS.iniciDalt.map((f) => f()).join('')}
       ${pt && pt.length ? `<div class="sec"><h2>${t('perATu')} <small>${t('perATuP')[perfil.tipus]}${perfil.edats.length ? ' · ' + perfil.edats.join(', ') + ' ' + t('anys') : ''}</small></h2><button data-go="#/perfil">${t('canvia')}</button></div>
         <div class="row">${pt.map(card).join('')}</div>` : ''}
       <div class="sec"><h2>${t('setmana')} · ${esc(L(BIB.temporada.titol))}</h2></div>
@@ -223,6 +224,7 @@
       <div id="llista">${llista()}</div>`;
   }
 
+  const sota = (r) => HOOKS.fitxaSota.map((f) => f(r)).join('');
   const ul = (a) => `<ul>${a.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>`;
   function vFitxa(id) {
     const r = perId[id]; if (!r) return vInici();
@@ -241,17 +243,17 @@
         </div>
       </div></div>`;
     if (bloquejat(r)) return cap + paret(r);
-    if (HOOKS.recurs[r.tipus]) return cap + HOOKS.recurs[r.tipus](r);
+    if (HOOKS.recurs[r.tipus]) return cap + HOOKS.recurs[r.tipus](r) + sota(r);
     if (r.tipus == 'fitxa') {
       // la mateixa fitxa: per fer-la aquí amb el dit, o per imprimir (PDF)
       const tabs = `<div class="modes"><button class="${modeFitxa == 'digital' ? 'on' : ''}" data-mode="digital">${I.dit}${t('ferAqui')}</button>
         <button class="${modeFitxa == 'paper' ? 'on' : ''}" data-mode="paper">${I.print}${t('imprimir')}</button></div>`;
       if (modeFitxa == 'digital') return cap + tabs + `<div class="digital" id="digital" style="--c:${a.color}">
-        ${XFitxa.html(r, lang, { esborra: t('esborra'), reinicia: t('reinicia'), moltbe: t('moltbe'), ambElDit: t('ambElDit') })}</div>`;
+        ${XFitxa.html(r, lang, { esborra: t('esborra'), reinicia: t('reinicia'), moltbe: t('moltbe'), ambElDit: t('ambElDit') })}</div>` + sota(r);
       return cap + tabs + `<div class="actions" style="justify-content:center">
           <button class="btn pri" data-pdf="${r.id}">${I.dl}${t('pdf')}</button>
           ${XP.potCompartir() ? `<button class="btn" data-comparteix="${r.id}">${I.share}${t('compartir')}</button>` : ''}</div>
-        ${XFitxa.previa(r, a, lang, { nom: t('nom'), data: t('data') })}`;
+        ${XFitxa.previa(r, a, lang, { nom: t('nom'), data: t('data') })}` + sota(r);
     }
     return cap + `<div style="--c:${a.color}">
       <div class="intent"><div class="eyebrow" style="margin-bottom:8px">${t('intencio')}</div><p>${esc(L(r.intencio))}</p></div>
@@ -262,7 +264,7 @@
         <div class="box full"><h3>${t('desenvolupament')}</h3><ol class="steps">${L(r.desenvolupament).map((x) => `<li>${esc(x)}</li>`).join('')}</ol></div>
         <div class="box"><h3>${t('variants')}</h3>${ul(L(r.variants))}</div>
         <div class="box warn"><h3>${t('seguretat')}</h3>${ul(L(r.seguretat))}</div>
-      </div></div>`;
+      </div>${HOOKS.fitxaSota.map((f) => f(r)).join('')}</div>`;
   }
 
   /* El mur de Premium: què hi ha a dins i «Molt aviat» (encara no hi ha pagaments) */

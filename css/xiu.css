@@ -626,3 +626,66 @@ body.onbOn main{padding-bottom:40px}
 .logoAnim.cau .lletra{animation:cau .75s cubic-bezier(.3,.7,.4,1) both;animation-delay:calc(var(--i) * .15s)}
 .logoAnim.salta .lletra{animation:salta .55s ease-in-out both;animation-delay:calc(var(--i) * .12s)}
 @keyframes salta{0%{transform:none}25%{transform:translateY(2%) scale(1.06,.92)}55%{transform:translateY(-18%) scale(.96,1.06)}80%{transform:translateY(0) scale(1.04,.96)}100%{transform:none}}
+
+/* ---------- Què fem avui? ---------- */
+.avuiB{margin:18px 0 4px;background:linear-gradient(135deg,#E5ECE2,#CFDCC9)}
+.avuiQ{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:14px 16px;margin-top:16px}
+.avuiQ .lbl{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--soft);margin:12px 0 6px}
+.avuiQ .lbl:first-child{margin-top:0}
+.avuiQ .chips{flex-wrap:wrap;margin:0;padding:0}
+.sec button svg{width:16px;height:16px;vertical-align:-3px;margin-right:4px;stroke:currentColor;fill:none;stroke-width:1.8}
+
+/* ---------- Tradicions ---------- */
+.tradB{display:flex;align-items:center;gap:14px;width:100%;text-align:left;padding:16px 18px;border-radius:20px;background:color-mix(in srgb,var(--c) 22%,#FFFDF9);border:1px solid color-mix(in srgb,var(--c) 40%,#fff)}
+.tradB span{flex:1;font-size:14px;color:var(--soft)}
+.tradB b{display:block;font-family:var(--serif);font-size:20px;font-weight:600;color:var(--ink)}
+.tradB>svg:last-child{width:18px;height:18px;transform:rotate(180deg);stroke:currentColor;fill:none;stroke-width:1.8}
+.tradIc{width:54px;height:54px;flex-shrink:0;background:#fff;border-radius:50%;padding:6px}
+.trad{display:flex;gap:16px;align-items:flex-start;background:color-mix(in srgb,var(--c) 16%,#FFFDF9);border-radius:22px;padding:18px;margin-top:14px}
+.trad h3{font-size:24px;margin:2px 0 4px}
+.trad p{color:var(--soft)}
+.trad .inclou{margin:12px 0 0;max-width:none}
+.dataT{font-size:13px;color:var(--mute);margin:6px 4px 0}
+
+/* ---------- Inclusió i observar ---------- */
+.cols.extra{margin-top:14px}
+.cols.extra details{cursor:pointer}
+.cols.extra summary{list-style:none}
+.cols.extra summary::-webkit-details-marker{display:none}
+.cols.extra summary h3::after{content:" +";color:var(--mute)}
+.cols.extra details[open] summary h3::after{content:" −"}
+.cols.extra h4{font-family:var(--sans);font-size:13px;font-weight:700;margin:12px 0 4px;color:var(--ink)}
+.cols.extra .actions{margin-top:12px}
+
+/* ---------- Pantalla gran (aula) ---------- */
+body.granP .side,body.granP .tabs,body.granP .top,body.granP .dHead,body.granP .back,body.granP .modes,body.granP .intent,body.granP .cols,body.granP .jocAjuda{display:none!important}
+body.granP main{max-width:none;padding:70px 3vw 20px}
+body.granP .jocCaixa,body.granP .digital{max-width:min(96vw,calc((100vh - 110px) * 1.3));margin:0 auto}
+body.granP .memory,body.granP .puzzle,body.granP .ombresJoc{max-width:min(90vw,calc(100vh - 140px))}
+body.granP .grupJoc svg{width:min(14vw,130px);height:min(14vw,130px)}
+body.granP .num{width:min(14vw,130px);height:min(14vw,130px);font-size:min(7vw,64px)}
+#granBar{position:fixed;top:0;left:0;right:0;z-index:60;display:flex;align-items:center;gap:12px;padding:10px 16px;background:rgba(251,249,245,.96);border-bottom:1px solid var(--line)}
+#granBar .torn{margin-right:auto;font-size:18px}
+#granBar .torn b{font-family:var(--serif);font-size:26px}
+
+/* ---------- Pas a pas ---------- */
+.pasapas{position:fixed;inset:0;z-index:70;background:var(--paper);display:grid;grid-template-rows:auto 1fr auto auto;padding:calc(12px + env(safe-area-inset-top)) 18px calc(14px + env(safe-area-inset-bottom))}
+.pasCap{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.pasCap>b{font-family:var(--serif);font-size:22px;font-weight:600;margin-right:auto}
+.pasCap>span{color:var(--soft);display:flex;align-items:center;gap:6px}
+.pasCap svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.8}
+.pasCap .interruptor{margin:0}
+.pasCos{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:10px;max-width:760px;margin:0 auto;width:100%}
+.pasIl{width:min(46vw,240px);aspect-ratio:4/5;border-radius:22px;overflow:hidden}
+.pasIl svg{width:100%;height:100%;display:block}
+.pasIl.ok>svg{padding:20%;stroke:#6F8F6A;fill:none;stroke-width:2.4;background:#E5ECE2}
+.pasTxt{font-size:clamp(20px,3.4vw,34px);line-height:1.35;color:var(--ink);font-weight:500}
+.pasCos h2{font-size:34px}
+.pasPeu{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:10px 0}
+.pasPeu .btn{padding:16px 26px;font-size:18px}
+.pasPeu svg,.gran2 svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.8}
+.pasPunts{display:flex;justify-content:center;gap:6px}
+.pasPunts i{width:10px;height:10px;border-radius:50%;background:var(--line)}
+.pasPunts i.fet{background:var(--c)}
+.pasPunts i.on{background:var(--ink);transform:scale(1.25)}
+.btn.gran2{padding:16px 26px;font-size:18px}

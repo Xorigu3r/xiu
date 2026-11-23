@@ -71,4 +71,15 @@
   });
   document.addEventListener('input', (e) => { if (e.target.id === 'matQ') { escrit = e.target.value; document.getElementById('matRes').innerHTML = resultats(); } });
   A.parla = parla;
+  /** Diu un text (talla el que s'estigués dient). Per a la guia pas a pas. */
+  A.diu = async (text) => {
+    const llengua = A.lang === 'es' ? 'es-ES' : 'ca-ES';
+    parlant = false;
+    try { speechSynthesis.cancel(); } catch { /* */ }
+    if (TTS()) { try { await TTS().stop(); await TTS().speak({ text, lang: llengua, rate: 0.9 }); } catch { /* */ } return; }
+    if (!('speechSynthesis' in window)) return;
+    const u = new SpeechSynthesisUtterance(text); u.lang = llengua; u.rate = 0.9;
+    const v = speechSynthesis.getVoices().find((x) => x.lang.replace('_', '-').toLowerCase().startsWith(llengua.slice(0, 2))); if (v) u.voice = v;
+    speechSynthesis.speak(u);
+  };
 });

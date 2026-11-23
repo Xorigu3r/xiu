@@ -156,7 +156,8 @@
     return `<button class="back" data-enrere>${I.back}${t('tornar')}</button>
       <div class="infCap">${avatar(x, 'gran')}<div><h1>${esc(x.nom)}</h1><div class="sub2">${x.edat} ${t('anys2')}</div></div>
         <div class="estrellesG">${estrella}<b>${n}</b><span>${t('estrellesN')(n).replace(/^\d+ /, '')}</span></div></div>
-      <div class="actions"><button class="btn" data-inf-edita="${x.id}">${t('editaInfant')}</button>${A.VISTA_OBS ? `<button class="btn" data-go="#/observacio/${x.id}">${t('observacions')}</button>` : ''}</div>
+      <div class="actions"><button class="btn" data-inf-edita="${x.id}">${t('editaInfant')}</button>${A.VISTA_OBS ? `<button class="btn" data-go="#/observacio/${x.id}">${t('observacions')}</button>` : ''}${(A.HOOKS.progres || []).map((f) => f(x)).join('')}</div>
+      ${(A.HOOKS.progresSec || []).map((f) => f(x)).join('')}
       <div class="sec"><h2>${t('diplomes')}</h2></div>
       <div class="diplomes">${fites.filter((v) => v <= n).map((v) => `<button class="diplomaB" data-diploma-e="${x.id}:${v}">${estrella}<span><b>${t('diploma')}</b>${t('estrellesN')(v)}</span></button>`).join('')}
         ${colls.filter((q) => q.tot && q.fet === q.tot).map((q) => `<button class="diplomaB" data-diploma-c="${x.id}:${q.c.id}">${estrella}<span><b>${t('diploma')}</b>${esc(A.L(q.c.titol))}</span></button>`).join('')}
