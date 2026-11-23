@@ -1,0 +1,63 @@
+{
+  "id": "el-poder-dels-imants",
+  "tipus": "fitxa",
+  "edat": "3-4",
+  "area": "exp",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "15 min",
+  "novetat": true,
+  "titol": {
+    "ca": "El poder dels imants",
+    "es": "El poder de los imanes"
+  },
+  "subtitol": {
+    "ca": "Descobrim quins objectes s'atreuen i quins no",
+    "es": "Descubrimos qué objetos se atraen y cuáles no"
+  },
+  "full": {
+    "model": "pdf",
+    "pdf": {
+      "ca": "contingut/fitxers/el-poder-dels-imants/original-ca-0a40c748.pdf",
+      "es": "contingut/fitxers/el-poder-dels-imants/original-ca-0a40c748.pdf"
+    },
+    "pagines": {
+      "ca": [
+        {
+          "src": "contingut/fitxers/el-poder-dels-imants/f-0a40c748-1.jpg",
+          "w": 1240,
+          "h": 1754
+        },
+        {
+          "src": "contingut/fitxers/el-poder-dels-imants/f-0a40c748-2.jpg",
+          "w": 1240,
+          "h": 1754
+        }
+      ],
+      "es": [
+        {
+          "src": "contingut/fitxers/el-poder-dels-imants/f-0a40c748-1.jpg",
+          "w": 1240,
+          "h": 1754
+        },
+        {
+          "src": "contingut/fitxers/el-poder-dels-imants/f-0a40c748-2.jpg",
+          "w": 1240,
+          "h": 1754
+        }
+      ]
+    },
+    "original": {
+      "ca": {
+        "ruta": "contingut/fitxers/el-poder-dels-imants/original-ca-0a40c748.pdf",
+        "n": 2
+      },
+      "es": {
+        "ruta": "contingut/fitxers/el-poder-dels-imants/original-ca-0a40c748.pdf",
+        "n": 2
+      }
+    }
+  }
+}

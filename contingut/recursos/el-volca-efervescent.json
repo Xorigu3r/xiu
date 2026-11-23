@@ -1,0 +1,63 @@
+{
+  "id": "el-volca-efervescent",
+  "tipus": "fitxa",
+  "edat": "4-5",
+  "area": "exp",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "15 min",
+  "novetat": true,
+  "titol": {
+    "ca": "El volcà efervescent",
+    "es": "El volcán efervescente"
+  },
+  "subtitol": {
+    "ca": "Creem una petita erupció i descobrim què passa",
+    "es": "Creamos una pequeña erupción y descubrimos qué pasa"
+  },
+  "full": {
+    "model": "pdf",
+    "pdf": {
+      "ca": "contingut/fitxers/el-volca-efervescent/original-ca-0a40c748.pdf",
+      "es": "contingut/fitxers/el-volca-efervescent/original-ca-0a40c748.pdf"
+    },
+    "pagines": {
+      "ca": [
+        {
+          "src": "contingut/fitxers/el-volca-efervescent/f-0a40c748-1.jpg",
+          "w": 1240,
+          "h": 1754
+        },
+        {
+          "src": "contingut/fitxers/el-volca-efervescent/f-0a40c748-2.jpg",
+          "w": 1240,
+          "h": 1754
+        }
+      ],
+      "es": [
+        {
+          "src": "contingut/fitxers/el-volca-efervescent/f-0a40c748-1.jpg",
+          "w": 1240,
+          "h": 1754
+        },
+        {
+          "src": "contingut/fitxers/el-volca-efervescent/f-0a40c748-2.jpg",
+          "w": 1240,
+          "h": 1754
+        }
+      ]
+    },
+    "original": {
+      "ca": {
+        "ruta": "contingut/fitxers/el-volca-efervescent/original-ca-0a40c748.pdf",
+        "n": 2
+      },
+      "es": {
+        "ruta": "contingut/fitxers/el-volca-efervescent/original-ca-0a40c748.pdf",
+        "n": 2
+      }
+    }
+  }
+}

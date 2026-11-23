@@ -1,0 +1,53 @@
+{
+  "id": "descobrim-les-lletres",
+  "tipus": "fitxa",
+  "edat": "3-4",
+  "area": "llen",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "10 min",
+  "novetat": true,
+  "titol": {
+    "ca": "Descobrim les lletres",
+    "es": "Descubrimos las letras"
+  },
+  "subtitol": {
+    "ca": "Repassa les lletres i encercla les vocals",
+    "es": "Repasa las letras y rodea las vocales"
+  },
+  "full": {
+    "model": "pdf",
+    "pdf": {
+      "ca": "contingut/fitxers/descobrim-les-lletres/original-ca-0a40c748.pdf",
+      "es": "contingut/fitxers/descobrim-les-lletres/original-ca-0a40c748.pdf"
+    },
+    "pagines": {
+      "ca": [
+        {
+          "src": "contingut/fitxers/descobrim-les-lletres/f-0a40c748-1.jpg",
+          "w": 1240,
+          "h": 1754
+        }
+      ],
+      "es": [
+        {
+          "src": "contingut/fitxers/descobrim-les-lletres/f-0a40c748-1.jpg",
+          "w": 1240,
+          "h": 1754
+        }
+      ]
+    },
+    "original": {
+      "ca": {
+        "ruta": "contingut/fitxers/descobrim-les-lletres/original-ca-0a40c748.pdf",
+        "n": 1
+      },
+      "es": {
+        "ruta": "contingut/fitxers/descobrim-les-lletres/original-ca-0a40c748.pdf",
+        "n": 1
+      }
+    }
+  }
+}

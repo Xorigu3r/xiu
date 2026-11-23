@@ -1,0 +1,63 @@
+{
+  "id": "descobrim-les-paraules",
+  "tipus": "fitxa",
+  "edat": "3-4",
+  "area": "llen",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "10 min",
+  "novetat": true,
+  "titol": {
+    "ca": "Descobrim les paraules",
+    "es": "Descubrimos las palabras"
+  },
+  "subtitol": {
+    "ca": "Vocabulari i associació d'imatges",
+    "es": "Vocabulario y asociación de imágenes"
+  },
+  "full": {
+    "model": "pdf",
+    "pdf": {
+      "ca": "contingut/fitxers/descobrim-les-paraules/original-ca-0a40c748.pdf",
+      "es": "contingut/fitxers/descobrim-les-paraules/original-ca-0a40c748.pdf"
+    },
+    "pagines": {
+      "ca": [
+        {
+          "src": "contingut/fitxers/descobrim-les-paraules/f-0a40c748-1.jpg",
+          "w": 1240,
+          "h": 1754
+        },
+        {
+          "src": "contingut/fitxers/descobrim-les-paraules/f-0a40c748-2.jpg",
+          "w": 1240,
+          "h": 1754
+        }
+      ],
+      "es": [
+        {
+          "src": "contingut/fitxers/descobrim-les-paraules/f-0a40c748-1.jpg",
+          "w": 1240,
+          "h": 1754
+        },
+        {
+          "src": "contingut/fitxers/descobrim-les-paraules/f-0a40c748-2.jpg",
+          "w": 1240,
+          "h": 1754
+        }
+      ]
+    },
+    "original": {
+      "ca": {
+        "ruta": "contingut/fitxers/descobrim-les-paraules/original-ca-0a40c748.pdf",
+        "n": 2
+      },
+      "es": {
+        "ruta": "contingut/fitxers/descobrim-les-paraules/original-ca-0a40c748.pdf",
+        "n": 2
+      }
+    }
+  }
+}
