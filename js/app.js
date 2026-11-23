@@ -138,6 +138,9 @@
     // fitxa PDF sense foto: la primera pàgina, per la part de dalt
     const pag = r.full && r.full.model === 'pdf' && r.full.pagines.ca[0];
     if (pag) return `<div class="photo pag"><img src="${esc(XIU_URL((r.full.pagines[lang] || r.full.pagines.ca)[0].src))}" alt="" loading="lazy"></div>`;
+    // sense foto: una il·lustració feta a partir de la proposta (js/il-lustracions.js)
+    const il = window.XIL && XIL.portada(r, AREES[r.area]);
+    if (il) return `<div class="photo il">${il}</div>`;
     const seed = [...r.id].reduce((a, c) => a + c.charCodeAt(0), 0);
     const rnd = (n) => { const x = Math.sin(seed * 9.7 + n * 3.1) * 10000; return x - Math.floor(x); };
     const c = AREES[r.area].color;

@@ -52,7 +52,7 @@ main{flex:1;min-width:0;padding:calc(20px + env(safe-area-inset-top)) 16px 110px
 .pageH p{color:var(--soft);margin-top:6px;max-width:560px}
 
 .photo{position:relative;overflow:hidden;border-radius:var(--r);background:var(--sand)}
-.photo svg,.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.photo>svg,.photo>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .photo .ph{position:absolute;right:10px;bottom:8px;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:rgba(59,47,40,.35)}
 
 .hero{display:grid;background:var(--surface);border-radius:24px;overflow:hidden;border:1px solid var(--line);cursor:pointer}
@@ -616,3 +616,13 @@ body.onbOn main{padding-bottom:40px}
 .jocFi[hidden],.fotoPrev[hidden]{display:none}
 .estrellesG b,.diplomaB b,.infCap h1,.avatar{font-variant-numeric:lining-nums;font-feature-settings:"lnum" 1}
 
+
+/* ---------- Logo animat (capçalera i barra lateral) ---------- */
+.logoAnim{padding:0;background:none;border:0;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.logoAnim svg,.side .logoAnim svg{display:block;width:100%;height:auto;overflow:visible;stroke:none}
+.top .logoAnim{height:34px;width:auto}
+.top .logoAnim svg{height:100%;width:auto}
+.logoAnim g{transform-box:fill-box;transform-origin:50% 100%}
+.logoAnim.cau .lletra{animation:cau .75s cubic-bezier(.3,.7,.4,1) both;animation-delay:calc(var(--i) * .15s)}
+.logoAnim.salta .lletra{animation:salta .55s ease-in-out both;animation-delay:calc(var(--i) * .12s)}
+@keyframes salta{0%{transform:none}25%{transform:translateY(2%) scale(1.06,.92)}55%{transform:translateY(-18%) scale(.96,1.06)}80%{transform:translateY(0) scale(1.04,.96)}100%{transform:none}}
