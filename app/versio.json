@@ -1,0 +1,10 @@
+{
+  "versio": "0.2.0",
+  "web": "0.2.0",
+  "web_zip": "https://xorigu3r.github.io/xiu/app/web-0.2.0.zip",
+  "web_sha256": "320abd62be4199f6636bc207ad01aa136481e49400dea3dd11311ca159212c49",
+  "web_mida": 517709,
+  "apk_min": 2,
+  "apk": "https://xorigu3r.github.io/xiu/app/XIU.apk",
+  "apk_codi": 2
+}

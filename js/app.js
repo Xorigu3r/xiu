@@ -15,7 +15,7 @@
       setmana: 'Proposta de la setmana', perEdat: 'Idees per a cada edat', novetats: 'Novetats', veure: 'Veure-ho tot',
       arees: 'Les sis àrees', anys: 'anys', propostes: (n) => n + (n == 1 ? ' proposta' : ' propostes'), cerca: 'Cerca una activitat, un material...',
       edat: 'Edat', area: 'Àrea', tipus: 'Tipus', perfil: 'Perfil', tots: 'Tot', activitat: 'Activitat', fitxa: 'Fitxa imprimible',
-      fam: 'Famílies', pro: 'Professionals', resultats: (n) => n + (n == 1 ? ' recurs' : ' recursos'),
+      fam: 'Famílies', pro: 'Docents', resultats: (n) => n + (n == 1 ? ' recurs' : ' recursos'),
       buit: 'Cap recurs amb aquests filtres', buitP: 'Prova de treure algun filtre.', netejar: 'Treure els filtres',
       tornar: 'Tornar', guardar: 'Desar', guardat: 'Desat', pdf: 'Descarregar PDF', compartir: 'Compartir', fent: 'Preparant...', durada: 'Durada',
       intencio: 'Intenció pedagògica', treballa: 'Què es treballa', materials: 'Materials', preparacio: 'Preparació',
@@ -23,13 +23,27 @@
       vistaFitxa: 'Vista prèvia de la fitxa', nom: 'Nom:', data: 'Data:', desat: 'Desat a {p}', ferAqui: 'Fer-la aquí', ambElDit: 'Fes la fitxa amb el dit, directament a sobre.', imprimir: 'Imprimir', esborra: 'Esborra', reinicia: 'Torna-hi', moltbe: 'Molt bé!', errPdf: 'No s\'ha pogut crear el PDF',
       favBuit: 'Encara no tens favorits', favBuitP: 'Toca el cor d\'una activitat per desar-la aquí i recuperar-la quan la necessitis.',
       favP: 'Les teves propostes desades.', bibS: 'Tot el que necessites, ben ordenat.', inspS: 'Idees per descobrir.', anarBib: 'Anar a la biblioteca',
-      inspP: 'Col·leccions, temporades i propostes que potser encara no coneixes.', potser: 'Potser no coneixes...', foto: 'foto' },
+      inspP: 'Col·leccions, temporades i propostes que potser encara no coneixes.', potser: 'Potser no coneixes...', foto: 'foto',
+      perfilT: 'Perfil', benvinguda: 'Et donem la benvinguda', benvingudaP: 'Una biblioteca de propostes amb intenció per acompanyar els infants de 0 a 6 anys.',
+      com: ['Propostes ordenades per edat i per àrea', 'Fitxes per fer a la pantalla o per imprimir', 'Activitats explicades pas a pas'],
+      qui: 'Qui ets?', quiP: 'Així t\'oferim les propostes que et són més útils.', famT: 'Família', famD: 'Pare, mare o tutor/a', proT: 'Docent', proD: 'Educador/a o mestre/a',
+      edatsQ: 'Quines edats t\'interessen?', edatsP: 'Pots triar-ne més d\'una. Ho pots canviar quan vulguis des del teu perfil.', comenca: 'Comença', araNo: 'Ara no', seguent: 'Següent',
+      perATu: 'Per a tu', perATuP: { fam: 'Propostes per fer a casa', pro: 'Propostes per a l\'aula' }, gratis: 'Per començar, gratuït',
+      premium: 'Premium', gratuit: 'Gratuït', acces: 'Accés', premT: 'Contingut Premium',
+      premP: 'Aquesta proposta forma part de XIU Premium. Amb un sol accés tens les dues versions: per fer-la a la pantalla i en PDF per imprimir.',
+      premTot: 'Tot XIU, sense límits', premTotP: 'Totes les fitxes, activitats, jocs, materials complementaris i recursos pedagògics, per a totes les edats.',
+      premInclou: ['Totes les fitxes, per fer a la pantalla i en PDF', 'Totes les activitats explicades pas a pas', 'Jocs, materials complementaris i recursos pedagògics', 'Contingut nou cada mes'],
+      plans: [['Mensual', 'Accés a tot, mes a mes'], ['Anual', 'Accés a tot durant un any, més econòmic'], ['Paquets', 'Només una àrea o una franja d\'edat']],
+      aviat: 'Molt aviat', aviatP: 'Encara no es pot contractar. Ben aviat podràs triar la modalitat que et vagi millor.', veurePrem: 'Què inclou Premium',
+      premBanner: 'Descobreix XIU Premium', premBannerP: 'Totes les fitxes i activitats, a la pantalla i en PDF.',
+      tuEts: 'El teu perfil', canvia: 'Canvia', idioma: 'Idioma', compte: 'Compte', compteP: 'Molt aviat podràs crear un compte per tenir els favorits a tots els aparells i accedir a Premium.',
+      teusEdats: 'Edats que t\'interessen', totesEdats: 'Totes', presentacio: 'Torna a veure la presentació' },
     es: { tag: 'Aprender jugando', inici: 'Inicio', bib: 'Biblioteca', fav: 'Favoritos', insp: 'Inspiración',
       hola: ['Buenos días', 'Buenas tardes', 'Buenas noches'], holaP: 'Propuestas con intención para acompañar a los niños y niñas de 0 a 6 años, en casa y en el aula.',
       setmana: 'Propuesta de la semana', perEdat: 'Ideas para cada edad', novetats: 'Novedades', veure: 'Ver todo',
       arees: 'Las seis áreas', anys: 'años', propostes: (n) => n + (n == 1 ? ' propuesta' : ' propuestas'), cerca: 'Busca una actividad, un material...',
       edat: 'Edad', area: 'Área', tipus: 'Tipo', perfil: 'Perfil', tots: 'Todo', activitat: 'Actividad', fitxa: 'Ficha imprimible',
-      fam: 'Familias', pro: 'Profesionales', resultats: (n) => n + (n == 1 ? ' recurso' : ' recursos'),
+      fam: 'Familias', pro: 'Docentes', resultats: (n) => n + (n == 1 ? ' recurso' : ' recursos'),
       buit: 'Ningún recurso con estos filtros', buitP: 'Prueba a quitar algún filtro.', netejar: 'Quitar los filtros',
       tornar: 'Volver', guardar: 'Guardar', guardat: 'Guardado', pdf: 'Descargar PDF', compartir: 'Compartir', fent: 'Preparando...', durada: 'Duración',
       intencio: 'Intención pedagógica', treballa: 'Qué se trabaja', materials: 'Materiales', preparacio: 'Preparación',
@@ -37,8 +51,24 @@
       vistaFitxa: 'Vista previa de la ficha', nom: 'Nombre:', data: 'Fecha:', desat: 'Guardado en {p}', ferAqui: 'Hacerla aquí', ambElDit: 'Haz la ficha con el dedo, directamente encima.', imprimir: 'Imprimir', esborra: 'Borrar', reinicia: 'Otra vez', moltbe: '¡Muy bien!', errPdf: 'No se ha podido crear el PDF',
       favBuit: 'Todavía no tienes favoritos', favBuitP: 'Toca el corazón de una actividad para guardarla aquí y recuperarla cuando la necesites.',
       favP: 'Tus propuestas guardadas.', bibS: 'Todo lo que necesitas, bien ordenado.', inspS: 'Ideas para descubrir.', anarBib: 'Ir a la biblioteca',
-      inspP: 'Colecciones, temporadas y propuestas que quizá todavía no conoces.', potser: 'Quizá no conoces...', foto: 'foto' },
+      inspP: 'Colecciones, temporadas y propuestas que quizá todavía no conoces.', potser: 'Quizá no conoces...', foto: 'foto',
+      perfilT: 'Perfil', benvinguda: 'Te damos la bienvenida', benvingudaP: 'Una biblioteca de propuestas con intención para acompañar a los niños y niñas de 0 a 6 años.',
+      com: ['Propuestas ordenadas por edad y por área', 'Fichas para hacer en la pantalla o para imprimir', 'Actividades explicadas paso a paso'],
+      qui: '¿Quién eres?', quiP: 'Así te ofrecemos las propuestas que te resultan más útiles.', famT: 'Familia', famD: 'Padre, madre o tutor/a', proT: 'Docente', proD: 'Educador/a o maestro/a',
+      edatsQ: '¿Qué edades te interesan?', edatsP: 'Puedes elegir más de una. Lo puedes cambiar cuando quieras desde tu perfil.', comenca: 'Empezar', araNo: 'Ahora no', seguent: 'Siguiente',
+      perATu: 'Para ti', perATuP: { fam: 'Propuestas para hacer en casa', pro: 'Propuestas para el aula' }, gratis: 'Para empezar, gratis',
+      premium: 'Premium', gratuit: 'Gratis', acces: 'Acceso', premT: 'Contenido Premium',
+      premP: 'Esta propuesta forma parte de XIU Premium. Con un solo acceso tienes las dos versiones: para hacerla en la pantalla y en PDF para imprimir.',
+      premTot: 'Todo XIU, sin límites', premTotP: 'Todas las fichas, actividades, juegos, materiales complementarios y recursos pedagógicos, para todas las edades.',
+      premInclou: ['Todas las fichas, para hacer en la pantalla y en PDF', 'Todas las actividades explicadas paso a paso', 'Juegos, materiales complementarios y recursos pedagógicos', 'Contenido nuevo cada mes'],
+      plans: [['Mensual', 'Acceso a todo, mes a mes'], ['Anual', 'Acceso a todo durante un año, más económico'], ['Paquetes', 'Solo un área o una franja de edad']],
+      aviat: 'Muy pronto', aviatP: 'Todavía no se puede contratar. Muy pronto podrás elegir la modalidad que mejor te vaya.', veurePrem: 'Qué incluye Premium',
+      premBanner: 'Descubre XIU Premium', premBannerP: 'Todas las fichas y actividades, en la pantalla y en PDF.',
+      tuEts: 'Tu perfil', canvia: 'Cambiar', idioma: 'Idioma', compte: 'Cuenta', compteP: 'Muy pronto podrás crear una cuenta para tener los favoritos en todos los dispositivos y acceder a Premium.',
+      teusEdats: 'Edades que te interesan', totesEdats: 'Todas', presentacio: 'Volver a ver la presentación' },
   };
+
+  for (const l of ['ca', 'es']) Object.assign(T[l], (window.XIU_TEXTOS_COMPTE || {})[l] || {});
 
   /* ---------- Estat (preferències locals: idioma i favorits) ---------- */
   const ls = { get(k, d) { try { const v = localStorage.getItem('xiu-' + k); return v == null ? d : JSON.parse(v); } catch (e) { return d; } },
@@ -46,7 +76,21 @@
   let lang = ls.get('idioma', /^es\b/i.test(navigator.language || '') ? 'es' : 'ca');
   let favs = ls.get('favorits', []).filter((id) => perId[id]);
   let F = buit();
-  function buit() { return { edat: null, area: null, tipus: null, perfil: null, q: '' }; }
+  function buit() { return { edat: null, area: null, tipus: null, perfil: null, acces: null, q: '' }; }
+  // perfil: { tipus: 'fam' | 'pro', edats: [...] } — es tria en obrir l'app per primer cop (es desa en aquest aparell)
+  let perfil = ls.get('perfil', null), onb = null;
+  // Premium: r.premium el marca el Gestor i BIB.premium.actiu activa els cadenats.
+  // PILOT (fase 2, mode de prova): compte, compres i subscripció es desen NOMÉS en aquest aparell; no es cobra res.
+  let compte = ls.get('compte', null);
+  let acces = Object.assign({ pla: null, renova: null, cancel: false, paquets: [], factures: [] }, ls.get('acces', {}));
+  let simula = ls.get('pilot-simula', false);
+  const hashId = (id) => [...id].reduce((a, c) => a + c.charCodeAt(0), 0);
+  const esPrem = (r) => !!r.premium || (simula && hashId(r.id) % 3 !== 0);
+  const premiumActiu = () => !!(BIB.premium && BIB.premium.actiu) || simula;
+  const subscrit = () => !!(compte && acces.pla && new Date(acces.renova) > new Date());
+  const teAcces = (r) => subscrit() || !!(compte && acces.paquets.some((q) => (q.tipus == 'area' && q.k == r.area) || (q.tipus == 'edat' && q.k == r.edat)));
+  const bloquejat = (r) => esPrem(r) && premiumActiu() && !teAcces(r);
+  const desaAcces = () => ls.set('acces', acces);
   let ruta = '#/', pila = [], modeFitxa = 'digital';
 
   const t = (k) => T[lang][k];
@@ -68,6 +112,19 @@
     dit: '<svg viewBox="0 0 24 24"><path d="M9 11V5.5a1.5 1.5 0 0 1 3 0V10m0-1.5a1.5 1.5 0 0 1 3 0V11m0-1a1.5 1.5 0 0 1 3 0v4.5A6.5 6.5 0 0 1 11.5 21h-.6a6 6 0 0 1-4.6-2.2L3.6 15.4a1.6 1.6 0 0 1 2.4-2.1L9 16"/></svg>',
     print: '<svg viewBox="0 0 24 24"><path d="M7 9V3h10v6M7 17H5a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2"/><path d="M7 14h10v7H7z"/></svg>',
     search: '<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg>',
+    cadenat: '<svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>',
+    estrella: '<svg viewBox="0 0 24 24"><path d="M12 4l2.3 4.8 5.2.7-3.8 3.6.9 5.2L12 15.8l-4.6 2.5.9-5.2-3.8-3.6 5.2-.7z"/></svg>',
+    casa: '<svg viewBox="0 0 24 24"><path d="M4 11l8-6 8 6v8a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z"/><path d="M10 20v-5h4v5"/></svg>',
+    aula: '<svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M7 20l2-4M17 20l-2-4M7 9h6M7 12h4"/></svg>',
+    ok: '<svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>',
+    perfil: '<svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c.8-4 3.6-6 7-6s6.2 2 7 6"/></svg>',
+    info: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.01"/></svg>',
+    mes: '<svg viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.3"/><circle cx="12" cy="12" r="1.3"/><circle cx="19" cy="12" r="1.3"/></svg>',
+    ajuda: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6v.6M12 17h.01"/></svg>',
+    refresca: '<svg viewBox="0 0 24 24"><path d="M20 11a8 8 0 1 0-2.3 5.7M20 5v6h-6"/></svg>',
+    copyright: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M14.8 9.5a3.5 3.5 0 1 0 0 5"/></svg>',
+    targeta: '<svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18M7 15h3"/></svg>',
+    sortir: '<svg viewBox="0 0 24 24"><path d="M14 4h4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-4M10 16l-4-4 4-4M6 12h10"/></svg>',
   };
 
   /* Foto del recurs o, mentre no n'hi hagi, una composició abstracta amb el color de l'àrea */
@@ -96,7 +153,7 @@
   function card(r) {
     const on = favs.includes(r.id);
     return `<div class="card" data-go="#/r/${r.id}">${photo(r)}
-      <span class="kind">${kind(r)}</span>
+      <span class="kind">${kind(r)}</span>${esPrem(r) && premiumActiu() ? `<span class="prem ${bloquejat(r) ? '' : 'obert'}">${bloquejat(r) ? I.cadenat : I.estrella}${t('premium')}</span>` : ''}
       <button class="fav ${on ? 'on' : ''}" data-fav="${r.id}" aria-label="${t('guardar')}">${I.fav}</button>
       <h3>${esc(L(r.titol))}</h3>
       <div class="meta"><span class="dot" style="background:${AREES[r.area].color}"></span>${r.edat} ${t('anys')} · ${areaCurta(r)}</div></div>`;
@@ -106,14 +163,21 @@
   function vInici() {
     const h = perId[BIB.temporada.destacat], hora = new Date().getHours();
     const hola = t('hola')[hora < 14 ? 0 : hora < 20 ? 1 : 2];
+    const pt = perfil && R.filter((r) => r.perfil.includes(perfil.tipus) && (!perfil.edats.length || perfil.edats.includes(r.edat)))
+      .sort((a, b) => (bloquejat(a) - bloquejat(b)) || (b.novetat ? 1 : 0) - (a.novetat ? 1 : 0)).slice(0, 14);
+    const gratis = premiumActiu() && !subscrit() ? R.filter((r) => !esPrem(r)).slice(0, 14) : [];
     return `<section class="pageH"><h1>${hola}</h1><div class="scr">${t('tag')}.</div><p>${t('holaP')}</p></section>
+      ${pt && pt.length ? `<div class="sec"><h2>${t('perATu')} <small>${t('perATuP')[perfil.tipus]}${perfil.edats.length ? ' · ' + perfil.edats.join(', ') + ' ' + t('anys') : ''}</small></h2><button data-go="#/perfil">${t('canvia')}</button></div>
+        <div class="row">${pt.map(card).join('')}</div>` : ''}
       <div class="sec"><h2>${t('setmana')} · ${esc(L(BIB.temporada.titol))}</h2></div>
       <div class="hero" data-go="#/r/${h.id}">${photo(h)}
         <div class="txt"><div class="eyebrow">${h.edat} ${t('anys')} · ${AREES[h.area][lang]}</div>
         <h3>${esc(L(h.titol))}</h3><p class="scr">${esc(L(h.subtitol))}</p>
         <div class="tags"><span class="tag">${kind(h)}</span><span class="tag">${esc(L(h.durada))}</span></div></div></div>
+      ${gratis.length ? `<div class="sec"><h2>${t('gratis')}</h2></div><div class="row">${gratis.map(card).join('')}</div>
+        <button class="premB" data-go="#/premium">${I.estrella}<span><b>${t('premBanner')}</b>${t('premBannerP')}</span>${I.back}</button>` : ''}
       <div class="sec"><h2>${t('perEdat')}</h2></div>
-      <div class="ages">${EDATS.map((e) => `<div class="age" data-filtre='{"edat":"${e}"}'><b>${e}</b><span>${t('anys')}</span></div>`).join('')}</div>
+      <div class="ages">${EDATS.map((e) => `<div class="age ${perfil && perfil.edats.includes(e) ? 'meva' : ''}" data-filtre='{"edat":"${e}"}'><b>${e}</b><span>${t('anys')}</span></div>`).join('')}</div>
       <div class="sec"><h2>${t('novetats')}</h2><button data-go="#/bib">${t('veure')}</button></div>
       <div class="row">${R.filter((r) => r.novetat).map(card).join('')}</div>
       <div class="sec"><h2>${t('arees')}</h2></div>
@@ -130,7 +194,7 @@
   function filtra() {
     const q = norm(F.q.trim());
     return R.filter((r) => (!F.edat || r.edat == F.edat) && (!F.area || r.area == F.area) && (!F.tipus || r.tipus == F.tipus)
-      && (!F.perfil || r.perfil.includes(F.perfil))
+      && (!F.perfil || r.perfil.includes(F.perfil)) && (!F.acces || (F.acces == 'premium') == esPrem(r))
       && (!q || norm([L(r.titol), L(r.subtitol), ...(r.materials ? L(r.materials) : []), ...(r.treballa ? L(r.treballa) : [])].join(' ')).includes(q)));
   }
   function llista() {
@@ -145,6 +209,7 @@
       ${chips('area', Object.entries(AREES).map(([k, a]) => [k, a[lang]]))}
       ${chips('tipus', [['activitat', t('activitat')], ['fitxa', t('fitxa')]])}
       ${chips('perfil', [['fam', t('fam')], ['pro', t('pro')]])}
+      ${premiumActiu() ? chips('acces', [['gratuit', t('gratuit')], ['premium', t('premium')]]) : ''}
       <div id="llista">${llista()}</div>`;
   }
 
@@ -157,12 +222,14 @@
         <h1>${esc(L(r.titol))}</h1><div class="sub">${esc(L(r.subtitol))}</div>
         <div class="meta-line"><span><span class="dot" style="background:${a.color}"></span>${a[lang]}</span>
           <span>${I.persona}${r.edat} ${t('anys')}</span><span>${I.rellotge}${esc(L(r.durada))}</span></div>
-        <div class="tags"><span class="tag">${kind(r)}</span>${r.perfil.map((p) => `<span class="tag">${t(p)}</span>`).join('')}</div>
+        <div class="tags"><span class="tag">${kind(r)}</span>${r.perfil.map((p) => `<span class="tag">${t(p)}</span>`).join('')}${esPrem(r) && premiumActiu() ? `<span class="tag prem">${I.estrella}${t('premium')}</span>` : ''}</div>
         <div class="actions"><button class="btn ${on ? 'on' : ''}" data-fav="${r.id}">${I.fav}${on ? t('guardat') : t('guardar')}</button>
-        ${r.tipus == 'activitat' ? `<button class="btn" data-pdf="${r.id}">${I.dl}${t('pdf')}</button>` : ''}
-        ${r.tipus == 'activitat' && XP.potCompartir() ? `<button class="btn" data-comparteix="${r.id}">${I.share}${t('compartir')}</button>` : ''}
+
+        ${r.tipus == 'activitat' && !bloquejat(r) ? `<button class="btn" data-pdf="${r.id}">${I.dl}${t('pdf')}</button>` : ''}
+        ${r.tipus == 'activitat' && !bloquejat(r) && XP.potCompartir() ? `<button class="btn" data-comparteix="${r.id}">${I.share}${t('compartir')}</button>` : ''}
         </div>
       </div></div>`;
+    if (bloquejat(r)) return cap + paret(r);
     if (r.tipus == 'fitxa') {
       // la mateixa fitxa: per fer-la aquí amb el dit, o per imprimir (PDF)
       const tabs = `<div class="modes"><button class="${modeFitxa == 'digital' ? 'on' : ''}" data-mode="digital">${I.dit}${t('ferAqui')}</button>
@@ -185,6 +252,316 @@
         <div class="box warn"><h3>${t('seguretat')}</h3>${ul(L(r.seguretat))}</div>
       </div></div>`;
   }
+
+  /* El mur de Premium: què hi ha a dins i «Molt aviat» (encara no hi ha pagaments) */
+  function paret(r) {
+    const ini = r.tipus == 'activitat' ? `<div class="intent"><div class="eyebrow" style="margin-bottom:8px">${t('intencio')}</div><p>${esc(L(r.intencio))}</p></div>` : '';
+    return `${ini}<div class="paret">${I.cadenat}<h2>${t('premT')}</h2><p>${t('premP')}</p>
+      <div class="actions" style="justify-content:center"><button class="btn pri" data-go="#/premium">${I.estrella}${t('veurePrem')}</button></div></div>`;
+  }
+  function vPremium() {
+    return `<button class="back" data-enrere>${I.back}${t('tornar')}</button>
+      <section class="pageH premH"><div class="eyebrow">XIU ${t('premium')}</div><h1>${t('premTot')}</h1><p>${t('premTotP')}</p></section>
+      <ul class="inclou">${t('premInclou').map((x) => `<li>${I.ok}${esc(x)}</li>`).join('')}</ul>
+      <div class="plans">${t('plans').map(([n, d], i) => `<div class="pla ${i == 1 ? 'dest' : ''}"><b>${n}</b><p>${d}</p><span class="aviat">${t('aviat')}</span></div>`).join('')}</div>
+      <p class="nota">${t('aviatP')}</p>`;
+  }
+  function vPerfil() {
+    const p = perfil || { tipus: null, edats: [] };
+    return `<section class="pageH"><h1>${t('perfilT')}</h1><div class="scr">${t('tuEts')}</div></section>
+      <div class="opcions dues" style="margin-top:22px">${['fam', 'pro'].map((k) => `<button class="opcio ${p.tipus == k ? 'on' : ''}" data-perfil="${k}">${k == 'fam' ? I.casa : I.aula}<b>${t(k + 'T')}</b><span>${t(k + 'D')}</span></button>`).join('')}</div>
+      <div class="sec"><h2>${t('teusEdats')}</h2></div>
+      <div class="chips">${EDATS.map((e) => `<button class="chip ${p.edats.includes(e) ? 'on' : ''}" data-pedat="${e}">${e} ${t('anys')}</button>`).join('')}</div>
+      <div class="sec"><h2>${t('premium')}</h2></div>
+      <button class="premB" data-go="#/premium">${I.estrella}<span><b>${t('premBanner')}</b>${t('premBannerP')}</span>${I.back}</button>
+      <div class="sec"><h2>${t('compte')}</h2></div>
+      ${compte ? `<button class="filaC" data-go="#/compte">${I.perfil}<span><b>${esc(compte.nom)}</b>${esc(compte.correu)}${subscrit() ? ' · Premium' : ''}</span>${I.back}</button>`
+        : `<p class="sub2">${t('senseCompte')}</p><div class="actions"><button class="btn pri" data-go="#/compte" data-cmode="registre">${t('creaCompte')}</button><button class="btn" data-go="#/compte" data-cmode="entra">${t('entra')}</button></div>`}
+      <div class="sec"><h2>${t('provaT')}</h2></div>
+      <div class="caixa prova"><p class="sub2">${t('provaP')}</p>
+        <label class="interruptor"><input type="checkbox" data-simula ${simula ? 'checked' : ''}><span></span><b>${t('simula')}</b></label><p class="sub2">${t('simulaP')}</p>
+        <button class="btn" data-reinicia>${t('reinicia')}</button></div>
+      <div class="sec"><h2>${t('mes')}</h2></div>${llistaMes()}
+      <div class="sec"><h2>${t('idioma')}</h2></div>
+      <div class="lang" style="display:inline-flex">${['ca', 'es'].map((l) => `<button class="${lang == l ? 'on' : ''}" data-lang="${l}">${l == 'ca' ? 'Català' : 'Castellano'}</button>`).join('')}</div>
+      <p style="margin-top:30px"><button class="btn" data-presentacio>${t('presentacio')}</button></p>`;
+  }
+  function vBenvinguda() {
+    const o = onb || (onb = { pas: 0, tipus: perfil ? perfil.tipus : null, edats: perfil ? [...perfil.edats] : [] });
+    const lg = `<div class="lang">${['ca', 'es'].map((l) => `<button class="${lang == l ? 'on' : ''}" data-lang="${l}">${l.toUpperCase()}</button>`).join('')}</div>`;
+    if (o.pas == 0) return `<div class="onb">${lg}<img class="onbLogo" src="img/logo.svg" alt="XIU · Aprendre jugant">
+      <h1>${t('benvinguda')}</h1><p>${t('benvingudaP')}</p>
+      <ul class="inclou">${t('com').map((x) => `<li>${I.ok}${esc(x)}</li>`).join('')}</ul>
+      <h2>${t('qui')}</h2><p class="pet">${t('quiP')}</p>
+      <div class="opcions dues">${['fam', 'pro'].map((k) => `<button class="opcio ${o.tipus == k ? 'on' : ''}" data-onb-tipus="${k}">${k == 'fam' ? I.casa : I.aula}<b>${t(k + 'T')}</b><span>${t(k + 'D')}</span></button>`).join('')}</div>
+      <div class="onbPeu"><button class="btn" data-onb-fi="no">${t('araNo')}</button><button class="btn pri" data-onb-seg ${o.tipus ? '' : 'disabled'}>${t('seguent')}</button></div></div>`;
+    return `<div class="onb">${lg}<img class="onbLogo" src="img/logo.svg" alt="XIU · Aprendre jugant">
+      <h2>${t('edatsQ')}</h2><p class="pet">${t('edatsP')}</p>
+      <div class="ages onbEdats">${EDATS.map((e) => `<button class="age ${o.edats.includes(e) ? 'meva' : ''}" data-onb-edat="${e}"><b>${e}</b><span>${t('anys')}</span></button>`).join('')}</div>
+      <div class="onbPeu"><button class="btn" data-onb-enrere>${t('tornar')}</button><button class="btn pri" data-onb-fi="si">${t('comenca')}</button></div></div>`;
+  }
+
+  /* ================= Quant a · Actualitzar · Ajuda · Drets d'autor ================= */
+  const llistaMes = () => `<div class="llistaMes">
+      <button data-go="#/quant">${I.info}<span>${t('quant')}</span>${I.back}</button>
+      <button data-actualitza>${I.refresca}<span>${t('actualitzar')}</span>${I.back}</button>
+      <button data-go="#/ajuda">${I.ajuda}<span>${t('ajuda')}</span>${I.back}</button>
+      <button data-go="#/drets">${I.copyright}<span>${t('drets')}</span>${I.back}</button></div>`;
+  const quanEs = (d) => new Date(d).toLocaleDateString(lang == 'es' ? 'es-ES' : 'ca-ES', { day: 'numeric', month: 'long', year: 'numeric' });
+  function vQuant() {
+    const pq = window.XIU_PAQUET_ACTUAL || window.XIU_PAQUET || {};
+    const plat = XP.NATIU ? 'Android' : XP.ESC ? (navigator.platform.startsWith('Win') ? 'Windows' : 'Linux') : 'Web';
+    return `<button class="back" data-enrere>${I.back}${t('tornar')}</button>
+      <div class="quant"><img src="img/logo.svg" alt="XIU · Aprendre jugant"><p>${t('quantP')}</p>
+        <dl><dt>${t('versio')}</dt><dd>${esc(window.XIU_VERSIO || '')}</dd><dt>${t('plataforma')}</dt><dd>${plat}</dd>
+        ${pq.actualitzat ? `<dt>${lang == 'es' ? 'Contenido' : 'Contingut'}</dt><dd>${quanEs(pq.actualitzat)}</dd>` : ''}</dl>
+        <p class="sub2">${t('quantFet')}</p></div>${llistaMes()}`;
+  }
+  function vAjuda() {
+    return `<button class="back" data-enrere>${I.back}${t('tornar')}</button>
+      <section class="pageH"><h1>${t('ajuda')}</h1><div class="scr">${t('ajudaS')}</div></section>
+      <div class="faq">${t('faq').map(([q, a]) => `<details><summary>${esc(q)}</summary><p>${esc(a)}</p></details>`).join('')}</div>
+      <div class="caixa" style="margin-top:22px"><h3>${t('ajudaMes')}</h3><p class="sub2">${t('ajudaMesP')}</p></div>`;
+  }
+  function vDrets() {
+    return `<button class="back" data-enrere>${I.back}${t('tornar')}</button>
+      <section class="pageH"><h1>${t('drets')}</h1><div class="scr">${t('dretsS')}</div></section>
+      <div class="drets">${t('dretsText').map(([h, p]) => `<h3>${esc(h)}</h3><p>${esc(p)}</p>`).join('')}<p class="nota" style="text-align:left">${t('dretsNota')}</p></div>`;
+  }
+  async function actualitza(manual) {
+    if (window.XIU_COMPROVA) window.XIU_COMPROVA();   // contingut nou
+    if (window.XActualitza && XActualitza.natiu) { await XActualitza.comprova(manual, manual ? (m) => { if (m) avis(m); } : null); return; }
+    if (manual) avis(t('buscant'));
+    try {
+      const r = navigator.serviceWorker && (await navigator.serviceWorker.getRegistration());
+      if (r) { await r.update(); if (r.installing || r.waiting) return; }   // en canviar de versió salta «xiu-nova-versio»
+    } catch (e) { /* sense connexió */ }
+    if (manual) avis(t('darreraV').replace('{v}', window.XIU_VERSIO || ''));
+  }
+  function modal(html, cls = '') {
+    document.querySelector('.modal')?.remove();
+    const m = document.createElement('div'); m.className = 'modal'; m.innerHTML = `<div class="mcaixa ${cls}">${html}</div>`;
+    document.body.appendChild(m); return m;
+  }
+  addEventListener('xiu-nova-versio', () => {
+    const m = modal(`${I.refresca}<h2>${t('novaV')}</h2><p>${t('novaVP')}</p><div class="actions" style="justify-content:center"><button class="btn" data-m="tard">${t('tard')}</button><button class="btn pri" data-m="ara">${t('actualitzaAra')}</button></div>`);
+    m.onclick = (e) => { const b = e.target.closest('[data-m]'); if (!b) return; if (b.dataset.m == 'ara') location.reload(); else m.remove(); };
+  });
+  function menuMes() {
+    const m = modal(`<div class="sheetCap"><b>${t('menu')}</b><button class="tancaM" data-m="x">×</button></div>${llistaMes()}
+      <button class="filaC" data-go="#/compte">${I.perfil}<span><b>${compte ? esc(compte.nom) : t('compte')}</b>${compte ? t('elMeuCompte') : t('entraOCrea')}</span>${I.back}</button>`, 'sheet');
+    m.addEventListener('click', (e) => { if (e.target === m || e.target.closest('[data-m],[data-go],[data-actualitza]')) setTimeout(() => m.remove()); });
+  }
+
+  /* ================= PILOT fase 2: compte, plans i pagament (MODE DE PROVA: no es cobra res) ================= */
+  const PREUS = { mensual: 4.99, anual: 39.99, area: 6.99, edat: 9.99 };
+  const eur = (n) => n.toFixed(2).replace('.', ',') + ' €';
+  let compteMode = 'registre', metode = null, promo = false;
+  const banda = () => `<div class="pilot">${I.info}<span><b>${t('pilotT')}</b> ${t('pilotP')}</span></div>`;
+  function producte(codi) {
+    const [tipus, k] = String(codi).split(':');
+    if (tipus == 'mensual' || tipus == 'anual') return { codi, tipus, nom: 'XIU Premium · ' + t('pla_' + tipus), preu: PREUS[tipus], sub: true };
+    if (tipus == 'area' && AREES[k]) return { codi, tipus, k, nom: t('paqArea') + ' «' + AREES[k][lang] + '»', preu: PREUS.area, sub: false };
+    if (tipus == 'edat' && EDATS.includes(k)) return { codi, tipus, k, nom: t('paqEdat') + ' «' + k + ' ' + t('anys') + '»', preu: PREUS.edat, sub: false };
+    return null;
+  }
+  const teP = (tipus, k) => acces.paquets.some((q) => q.tipus == tipus && q.k == k);
+  function vPremium() {
+    const sub = subscrit(), pla = sub && acces.pla;
+    const botoPla = (k) => `<button class="btn ${pla == k ? '' : 'pri'}" data-compra="${k}" ${pla == k || (pla == 'anual' && k == 'mensual') ? 'disabled' : ''}>${pla == k ? t('elTeu') : t('tria')}</button>`;
+    const paq = (tipus, k, nom, color) => { const te = compte && teP(tipus, k); return `<button class="paq ${te ? 'on' : ''}" data-compra="${tipus}:${k}" ${te || sub ? 'disabled' : ''}>${color ? `<span class="dot" style="background:${color}"></span>` : ''}<span>${nom}</span>${te ? `<em>${t('elTeu')}</em>` : ''}</button>`; };
+    return `<button class="back" data-enrere>${I.back}${t('tornar')}</button>${banda()}
+      <section class="pageH premH"><div class="eyebrow">XIU ${t('premium')}</div><h1>${t('premTot')}</h1><p>${t('premTotP')}</p></section>
+      <ul class="inclou">${t('premInclou').map((x) => `<li>${I.ok}${esc(x)}</li>`).join('')}</ul>
+      ${sub ? `<div class="jaTens">${I.ok}<span><b>${t('jaTensP')}</b>${t(acces.cancel ? 'sacaba' : 'esRenova').replace('{d}', quanEs(acces.renova))}</span><button class="btn" data-go="#/compte">${t('gestiona')}</button></div>` : ''}
+      <div class="sec"><h2>${t('subscripcio')}</h2></div>
+      <div class="plans">
+        <div class="pla"><b>${t('pla_mensual')}</b><div class="preu">${eur(PREUS.mensual)}<small>${t('perMes')}</small></div><p>${t('plaMensP')}</p>${botoPla('mensual')}</div>
+        <div class="pla dest"><span class="rec">${t('recomanat')}</span><b>${t('pla_anual')}</b><div class="preu">${eur(PREUS.anual)}<small>${t('perAny')}</small></div><p>${t('plaAnualP').replace('{m}', eur(PREUS.anual / 12))}</p>${botoPla('anual')}</div>
+      </div>
+      <div class="sec"><h2>${t('paquets')}</h2></div><p class="sub2">${t('paquetsP')}</p>
+      <div class="lblP">${t('perArea')} · <b>${eur(PREUS.area)}</b></div>
+      <div class="paqs">${Object.entries(AREES).map(([k, a]) => paq('area', k, a[lang], a.color)).join('')}</div>
+      <div class="lblP">${t('perEdatP')} · <b>${eur(PREUS.edat)}</b></div>
+      <div class="paqs edats">${EDATS.map((e) => paq('edat', e, e + ' ' + t('anys'))).join('')}</div>
+      <p class="nota">${t('preusIva')}</p>`;
+  }
+  function resum(p) {
+    const desc = promo ? Math.round(p.preu * 10) / 100 : 0, total = Math.round((p.preu - desc) * 100) / 100;
+    return { total, html: `<div class="caixa resum"><h3>${t('resum')}</h3><div class="linia"><span>${esc(p.nom)}</span><b>${eur(p.preu)}${p.sub ? `<small>${t(p.tipus == 'mensual' ? 'perMes' : 'perAny')}</small>` : ''}</b></div>
+      ${desc ? `<div class="linia desc"><span>${t('descompte')} (XIU10)</span><b>−${eur(desc)}</b></div>` : ''}
+      <div class="linia total"><span>${t('total')}</span><b>${eur(total)}</b></div><p class="sub2">${t('ivaInc')} · ${p.sub ? t(p.tipus == 'mensual' ? 'renovaMes' : 'renovaAny') : t('perSempre')}</p></div>` };
+  }
+  const esIOS = () => /iPhone|iPad|iPod/.test(navigator.userAgent) || (navigator.platform == 'MacIntel' && navigator.maxTouchPoints > 1);
+  function vPagament(codi) {
+    const p = producte(codi); if (!p) return vPremium();
+    const r = resum(p);
+    const cap = `<button class="back" data-enrere>${I.back}${t('tornar')}</button>${banda()}<section class="pageH"><h1>${t('pagT')}</h1></section>`;
+    if (!compte) return cap + r.html + `<div class="sec"><h2>${t('primerCompte')}</h2></div><p class="sub2">${t('primerCompteP')}</p>${formCompte()}`;
+    if (XP.NATIU) return cap + `<div class="pagCols"><div><div class="play"><div class="playCap"><b>Google Play</b></div><p><b>${esc(p.nom)}</b><br>${eur(r.total)}${p.sub ? ' ' + t(p.tipus == 'mensual' ? 'perMes' : 'perAny') : ''}</p>
+        <p class="sub2">${t('play')}</p><form data-form="paga" data-codi="${p.codi}" novalidate><label class="check"><input type="checkbox" name="condicions"> <span>${p.sub ? t('acceptoSub').replace('{p}', t('pla_' + p.tipus).toLowerCase()) : t('acceptoCompra')}</span></label><div class="err"></div>
+        <button class="btn pri gran" type="submit">${p.sub ? t('playB') : t('playC')}</button></form></div></div><aside>${r.html}</aside></div>`;
+    const metodes = [['targeta', t('targeta')], ['paypal', 'PayPal'], ['bizum', 'Bizum'], esIOS() ? ['apay', 'Apple Pay'] : ['gpay', 'Google Pay']];
+    if (!metodes.some((m) => m[0] == metode)) metode = 'targeta';
+    const nomM = metodes.find((m) => m[0] == metode)[1];
+    const camps = metode == 'targeta' ? `<label>${t('numTargeta')}<input name="num" inputmode="numeric" autocomplete="off" placeholder="4242 4242 4242 4242" maxlength="23"></label>
+        <div class="dos"><label>${t('caducitat')}<input name="cad" inputmode="numeric" placeholder="MM/AA" maxlength="5" autocomplete="off"></label><label>CVC<input name="cvc" inputmode="numeric" maxlength="4" placeholder="123" autocomplete="off"></label></div>
+        <label>${t('titular')}<input name="titular" value="${esc(compte.nom)}" autocomplete="off"></label>`
+      : metode == 'bizum' ? `<label>${t('telefon')}<input name="tel" inputmode="tel" placeholder="600 000 000" autocomplete="off"></label><p class="sub2">${t('bizumP')}</p>`
+      : `<p class="sub2">${t('externP').replace('{m}', nomM)}</p>`;
+    return cap + `<div class="pagCols"><div>
+        <h3 class="h3p">${t('metode')}</h3>
+        <div class="metodes">${metodes.map(([k, n]) => `<button class="metode ${metode == k ? 'on' : ''} m-${k}" data-metode="${k}">${k == 'targeta' ? I.targeta : `<i>${n.split(' ')[0]}</i>`}<span>${n}</span></button>`).join('')}</div>
+        <form data-form="paga" data-codi="${p.codi}" class="formC" novalidate>${camps}
+          <label class="check"><input type="checkbox" name="condicions"> <span>${p.sub ? t('acceptoSub').replace('{p}', t('pla_' + p.tipus).toLowerCase()) : t('acceptoCompra')}</span></label>
+          <div class="err"></div>
+          <button class="btn pri gran" type="submit">${I.cadenat}${t('paga')} ${eur(r.total)}</button>
+          <p class="segur">${t('segur')}</p></form></div>
+      <aside>${r.html}<form data-form="promo" class="promo" novalidate><input name="codi" placeholder="${t('codiPromo')}" value="${promo ? 'XIU10' : ''}" autocomplete="off"><button class="btn" type="submit">${t('aplica')}</button></form><p class="sub2">${t('promoPista')}</p></aside></div>`;
+  }
+  function formCompte() {
+    const m = compteMode;
+    const socials = `<div class="socials"><button type="button" class="btn" data-social="google"><i class="g">G</i>${t('ambGoogle')}</button><button type="button" class="btn" data-social="apple"><i class="a"></i>${t('ambApple')}</button></div><div class="o"><span>${t('o')}</span></div>`;
+    if (m == 'oblit') return `<form data-form="oblit" class="formC" novalidate><p class="sub2">${t('oblitP')}</p><label>${t('correu')}<input name="correu" type="email" autocomplete="email"></label><div class="err"></div>
+      <button class="btn pri gran" type="submit">${t('enviaEnllac')}</button><p class="canvi"><button type="button" class="enllac" data-cmode="entra">${t('tornar')}</button></p></form>`;
+    if (m == 'entra') return `<div class="formC">${socials}<form data-form="entra" novalidate><label>${t('correu')}<input name="correu" type="email" autocomplete="email"></label>
+      <label>${t('contrasenya')}<input name="pw" type="password" autocomplete="current-password"></label><p style="text-align:right"><button type="button" class="enllac" data-cmode="oblit">${t('oblit')}</button></p>
+      <div class="err"></div><button class="btn pri gran" type="submit">${t('entra')}</button></form><p class="canvi">${t('noTens')} <button class="enllac" data-cmode="registre">${t('creaCompte')}</button></p></div>`;
+    const tp = (perfil && perfil.tipus) || 'fam';
+    return `<div class="formC">${socials}<form data-form="registre" novalidate>
+      <label>${t('nomC')}<input name="nom" autocomplete="name"></label>
+      <label>${t('correu')}<input name="correu" type="email" autocomplete="email"></label>
+      <label>${t('contrasenya')} <small>${t('contrasenyaP')}</small><input name="pw" type="password" autocomplete="new-password"></label>
+      <div class="lblF">${t('soc')}</div><div class="opcions dues petites">${['fam', 'pro'].map((k) => `<label class="opcio ${tp == k ? 'on' : ''}"><input type="radio" name="tipus" value="${k}" ${tp == k ? 'checked' : ''}>${k == 'fam' ? I.casa : I.aula}<b>${t(k + 'T')}</b></label>`).join('')}</div>
+      <label>${t('centre')} <small>(${t('opcional')})</small><input name="centre" autocomplete="organization"></label>
+      <label class="check"><input type="checkbox" name="condicions"> <span>${t('acceptoCond')}</span></label>
+      <label class="check"><input type="checkbox" name="novetats"> <span>${t('novetatsMail')}</span></label>
+      <div class="err"></div><button class="btn pri gran" type="submit">${t('creaCompte')}</button></form>
+      <p class="canvi">${t('jaTens')} <button class="enllac" data-cmode="entra">${t('entra')}</button></p></div>`;
+  }
+  function vCompte() {
+    if (!compte) return `<button class="back" data-enrere>${I.back}${t('tornar')}</button>${banda()}<section class="pageH"><h1>${t(compteMode == 'entra' ? 'entraT' : compteMode == 'oblit' ? 'oblitT' : 'creaT')}</h1><div class="scr">${t('compteS')}</div></section>${formCompte()}`;
+    const sub = subscrit();
+    return `<button class="back" data-enrere>${I.back}${t('tornar')}</button>${banda()}
+      <section class="pageH"><h1>${t('elMeuCompte')}</h1><div class="scr">${esc(compte.nom)}</div></section>
+      <div class="caixa"><h3>${t('subscripcio')}</h3>${sub ? `<p><b>XIU Premium · ${t('pla_' + acces.pla)}</b> · ${eur(PREUS[acces.pla])}${t(acces.pla == 'mensual' ? 'perMes' : 'perAny')}</p>
+          <p class="sub2">${t(acces.cancel ? 'sacaba' : 'esRenova').replace('{d}', quanEs(acces.renova))}</p>
+          <div class="actions">${acces.pla == 'mensual' && !acces.cancel ? `<button class="btn" data-compra="anual">${t('passaAnual')}</button>` : ''}${acces.cancel ? `<button class="btn pri" data-sub="reactiva">${t('reactiva')}</button>` : `<button class="btn mal" data-sub="cancel">${t('cancela')}</button>`}</div>`
+        : `<p class="sub2">${t('senseSub')}</p><div class="actions"><button class="btn pri" data-go="#/premium">${I.estrella}${t('veurePrem')}</button></div>`}</div>
+      ${acces.paquets.length ? `<div class="caixa"><h3>${t('elsTeusPaq')}</h3><ul class="llistaC">${acces.paquets.map((q) => `<li><span>${esc((producte(q.tipus + ':' + q.k) || {}).nom || '')}</span><small>${quanEs(q.data)}</small></li>`).join('')}</ul></div>` : ''}
+      ${acces.factures.length ? `<div class="caixa"><h3>${t('factures')}</h3><ul class="llistaC">${acces.factures.map((f, i) => `<li><span><b>${f.num}</b> · ${esc(f.concepte)}<br><small>${quanEs(f.data)} · ${eur(f.import)}</small></span><button class="btn" data-factura="${i}">${I.dl}PDF</button></li>`).join('')}</ul></div>` : ''}
+      <div class="caixa"><h3>${t('lesTevesDades')}</h3><form data-form="dades" class="formC" novalidate>
+        <label>${t('nomC')}<input name="nom" value="${esc(compte.nom)}"></label><label>${t('correu')}<input name="correu" type="email" value="${esc(compte.correu)}"></label>
+        <label>${t('centre')} <small>(${t('opcional')})</small><input name="centre" value="${esc(compte.centre || '')}"></label><div class="err"></div><button class="btn" type="submit">${t('desaCanvis')}</button></form></div>
+      <div class="actions"><button class="btn" data-sessio="surt">${I.sortir}${t('tancaSessio')}</button><button class="btn mal" data-sessio="esborra">${t('esborraCompte')}</button></div>`;
+  }
+  function vFet(codi) {
+    const p = producte(codi); if (!p) return vInici();
+    return `<div class="fet">${I.ok}<h1>${t('graciesT')}</h1><p>${p.sub ? t('graciesSub') : t('graciesPaq').replace('{p}', esc(p.nom))}</p>
+      <p class="sub2">${t('rebutEnviat').replace('{c}', esc(compte ? compte.correu : ''))}</p>
+      <div class="actions" style="justify-content:center"><button class="btn pri" data-tab="#/bib">${t('explora')}</button><button class="btn" data-tab="#/compte">${t('elMeuCompte')}</button></div></div>`;
+  }
+  const correuOk = (c) => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(c);
+  const luhn = (n) => { let s = 0; for (let i = 0; i < n.length; i++) { let d = +n[n.length - 1 - i]; if (i % 2) { d *= 2; if (d > 9) d -= 9; } s += d; } return s % 10 == 0; };
+  function entraAmb(c) {
+    compte = c; ls.set('compte', compte);
+    if (!perfil && c.tipus) { perfil = { tipus: c.tipus, edats: [] }; ls.set('perfil', perfil); }
+  }
+  const tornaDespres = () => render(true);   // a #/compte surt el compte; a #/pagament, el pagament
+  function factura(i) {
+    const f = acces.factures[i]; if (!f) return;
+    const { jsPDF } = window.jspdf, d = new jsPDF({ unit: 'mm', format: 'a4' });
+    d.setFont('helvetica', 'bold'); d.setFontSize(26); d.text('XIU', 20, 28);
+    d.setFont('helvetica', 'normal'); d.setFontSize(10); d.text(t('tag'), 20, 34);
+    d.setTextColor(181, 84, 58); d.setFont('helvetica', 'bold'); d.text(t('facturaProva'), 20, 46); d.setTextColor(56, 51, 46); d.setFont('helvetica', 'normal');
+    d.setFontSize(12); d.text(`${t('factura')}: ${f.num}`, 20, 60); d.text(`${t('dataF')}: ${quanEs(f.data)}`, 20, 67); d.text(`${t('client')}: ${compte ? compte.nom + ' <' + compte.correu + '>' : ''}`, 20, 74);
+    d.setDrawColor(221, 208, 193); d.line(20, 84, 190, 84);
+    d.text(f.concepte, 20, 94); d.text(eur(f.import), 190, 94, { align: 'right' });
+    const base = Math.round((f.import / 1.21) * 100) / 100;
+    d.line(20, 102, 190, 102); d.setFontSize(11);
+    d.text(t('baseImp'), 120, 112); d.text(eur(base), 190, 112, { align: 'right' });
+    d.text(t('iva'), 120, 119); d.text(eur(Math.round((f.import - base) * 100) / 100), 190, 119, { align: 'right' });
+    d.setFont('helvetica', 'bold'); d.text(t('total'), 120, 128); d.text(eur(f.import), 190, 128, { align: 'right' });
+    XP.desaPdf(new Uint8Array(d.output('arraybuffer')), `XIU ${f.num}.pdf`, { desat: t('desat') }).then((m) => m && avis(m)).catch(() => avis(t('errPdf')));
+  }
+  function completa(p, total) {
+    const ara = new Date();
+    if (p.sub) { const r = new Date(ara); if (p.tipus == 'mensual') r.setMonth(r.getMonth() + 1); else r.setFullYear(r.getFullYear() + 1); acces.pla = p.tipus; acces.renova = r.toISOString(); acces.cancel = false; }
+    else acces.paquets.push({ tipus: p.tipus, k: p.k, data: ara.toISOString() });
+    acces.factures.unshift({ num: `XIU-${ara.getFullYear()}-${String(acces.factures.length + 1).padStart(4, '0')}`, data: ara.toISOString(), concepte: p.nom, import: total, metode: XP.NATIU ? 'Google Play' : metode });
+    desaAcces(); promo = false; metode = null;
+    pila = ['#/']; ruta = '#/fet/' + p.codi; render(); scrollTo(0, 0);
+  }
+  document.addEventListener('submit', (e) => {
+    const f = e.target, tipus = f.dataset.form; if (!tipus) return;
+    e.preventDefault();
+    const v = Object.fromEntries(new FormData(f)), err = (k) => { f.querySelector('.err').textContent = k ? t(k) : ''; return false; };
+    if (tipus == 'registre') {
+      if (!(v.nom || '').trim()) return err('errNom');
+      if (!correuOk(v.correu || '')) return err('errCorreu');
+      if ((v.pw || '').length < 8) return err('errPw');
+      if (!v.condicions) return err('errCond');
+      entraAmb({ nom: v.nom.trim(), correu: v.correu.trim(), tipus: v.tipus, centre: (v.centre || '').trim(), novetats: !!v.novetats, des: new Date().toISOString() });
+      avis(t('benvingutC').replace('{n}', compte.nom)); return tornaDespres();
+    }
+    if (tipus == 'entra') {
+      if (!correuOk(v.correu || '')) return err('errCorreu');
+      if (!(v.pw || '').length) return err('errPw');
+      const ant = ls.get('compte-anterior', null);
+      entraAmb(ant && ant.correu == v.correu.trim() ? ant : { nom: v.correu.split('@')[0], correu: v.correu.trim(), tipus: perfil ? perfil.tipus : 'fam' });
+      avis(t('hola2').replace('{n}', compte.nom)); return tornaDespres();
+    }
+    if (tipus == 'oblit') { if (!correuOk(v.correu || '')) return err('errCorreu'); avis(t('enllacEnviat')); compteMode = 'entra'; return render(true); }
+    if (tipus == 'dades') {
+      if (!(v.nom || '').trim()) return err('errNom');
+      if (!correuOk(v.correu || '')) return err('errCorreu');
+      compte = { ...compte, nom: v.nom.trim(), correu: v.correu.trim(), centre: (v.centre || '').trim() }; ls.set('compte', compte); avis(t('desats')); return render(true);
+    }
+    if (tipus == 'promo') { promo = (v.codi || '').trim().toUpperCase() == 'XIU10'; avis(t(promo ? 'promoOk' : 'promoKo')); return render(true); }
+    if (tipus == 'paga') {
+      const p = producte(f.dataset.codi); if (!p) return;
+      if (!XP.NATIU && metode == 'targeta') {
+        const n = (v.num || '').replace(/\D/g, ''), [mm, aa] = (v.cad || '').split('/').map((x) => parseInt(x, 10));
+        if (n.length < 13 || n.length > 19 || !luhn(n)) return err('errNum');
+        const fi = new Date(2000 + (aa || 0), mm || 0, 1);
+        if (!(mm >= 1 && mm <= 12) || !(aa >= 0) || fi <= new Date()) return err('errCad');
+        if (!/^\d{3,4}$/.test(v.cvc || '')) return err('errCvc');
+        if (!(v.titular || '').trim()) return err('errTit');
+      }
+      if (!XP.NATIU && metode == 'bizum' && !/^[67]\d{8}$/.test((v.tel || '').replace(/\D/g, ''))) return err('errTel');
+      if (!v.condicions) return err('errCond');
+      err(''); f.reset();   // les dades de la targeta no es guarden enlloc
+      const total = resum(p).total;
+      modal(`<div class="roda"></div><h2>${t('processant')}</h2><p>${t('processantP')}</p>`);
+      setTimeout(() => { document.querySelector('.modal')?.remove(); completa(p, total); }, 1700);
+    }
+  });
+  document.addEventListener('input', (e) => {
+    const n = e.target.name, f = e.target.form; if (!f || f.dataset.form != 'paga') return;
+    if (n == 'num') e.target.value = e.target.value.replace(/\D/g, '').slice(0, 19).replace(/(.{4})/g, '$1 ').trim();
+    if (n == 'cad') { const d = e.target.value.replace(/\D/g, '').slice(0, 4); e.target.value = d.length > 2 ? d.slice(0, 2) + '/' + d.slice(2) : d; }
+  });
+  document.addEventListener('change', (e) => {
+    if (e.target.matches('[data-simula]')) { simula = e.target.checked; ls.set('pilot-simula', simula); render(true); }
+    if (e.target.name == 'tipus' && e.target.form && e.target.form.dataset.form == 'registre') e.target.form.querySelectorAll('.opcio').forEach((o) => o.classList.toggle('on', o.contains(e.target)));
+  });
+  document.addEventListener('click', (e) => {
+    const el = e.target.closest('[data-menu],[data-actualitza],[data-compra],[data-metode],[data-cmode],[data-social],[data-sub],[data-sessio],[data-factura],[data-reinicia]');
+    if (!el) return;
+    const d = el.dataset;
+    if (d.cmode) { compteMode = d.cmode; render(true); return; }   // (si també té data-go, ja ha canviat de pàgina)
+    if (d.menu != null) menuMes();
+    else if (d.actualitza != null) actualitza(true);
+    else if (d.compra) go('#/pagament/' + d.compra);
+    else if (d.metode) { metode = d.metode; render(true); }
+    else if (d.social) { entraAmb({ nom: d.social == 'google' ? 'Usuària de Google' : 'Usuària d\'Apple', correu: d.social == 'google' ? 'prova@gmail.com' : 'prova@icloud.com', tipus: perfil ? perfil.tipus : 'fam', via: d.social }); avis(t('hola2').replace('{n}', compte.nom)); tornaDespres(); }
+    else if (d.sub == 'cancel') { if (confirm(t('cancelaQ').replace('{d}', quanEs(acces.renova)))) { acces.cancel = true; desaAcces(); avis(t('cancelada')); render(true); } }
+    else if (d.sub == 'reactiva') { acces.cancel = false; desaAcces(); avis(t('reactivada')); render(true); }
+    else if (d.sessio == 'surt') { ls.set('compte-anterior', compte); compte = null; ls.set('compte', null); avis(t('sessioTancada')); pila = []; ruta = '#/perfil'; render(); }
+    else if (d.sessio == 'esborra') { if (confirm(t('esborraQ'))) { compte = null; ls.set('compte', null); ls.set('compte-anterior', null); acces = { pla: null, renova: null, cancel: false, paquets: [], factures: [] }; desaAcces(); pila = []; ruta = '#/perfil'; render(); } }
+    else if (d.factura) factura(+d.factura);
+    else if (d.reinicia != null) { if (confirm(t('reiniciaQ'))) { compte = null; ls.set('compte', null); ls.set('compte-anterior', null); acces = { pla: null, renova: null, cancel: false, paquets: [], factures: [] }; desaAcces(); avis(t('reiniciat')); render(true); } }
+  });
 
   function vFav() {
     const l = favs.map((id) => perId[id]).filter(Boolean);
@@ -215,18 +592,23 @@
   function enrere() { if (!pila.length) return false; ruta = pila.pop(); render(); scrollTo(0, 0); return true; }
   function nav() {
     const cur = ruta.split('/')[1] || '';
-    const actiu = cur == 'r' ? 'bib' : cur == 'c' ? 'insp' : cur;
-    const html = [['', 'inici'], ['bib', 'bib'], ['insp', 'insp'], ['fav', 'fav']]
-      .map(([h, k]) => `<button class="${actiu == h ? 'on' : ''}" data-tab="#/${h}">${I[k]}<span>${t(k)}</span></button>`).join('');
+    const actiu = cur == 'r' ? 'bib' : cur == 'c' ? 'insp' : ['premium', 'compte', 'pagament', 'fet', 'quant', 'ajuda', 'drets'].includes(cur) ? 'perfil' : cur;
+    const html = [['', 'inici'], ['bib', 'bib'], ['insp', 'insp'], ['fav', 'fav'], ['perfil', 'perfil']]
+      .map(([h, k]) => `<button class="${actiu == h ? 'on' : ''}" data-tab="#/${h}">${I[k]}<span>${k == 'perfil' ? t('perfilT') : t(k)}</span></button>`).join('');
     $('#sideNav').innerHTML = html; $('#tabNav').innerHTML = html;
     const lg = ['ca', 'es'].map((l) => `<button class="${lang == l ? 'on' : ''}" data-lang="${l}">${l.toUpperCase()}</button>`).join('');
     $('#langS').innerHTML = lg; $('#langT').innerHTML = lg; $('#tagline').textContent = t('tag');
+    $('#menuT').innerHTML = `<button class="menuB" data-menu aria-label="${t('menu')}">${I.mes}</button>`;
+    $('#menuS').innerHTML = `<button data-go="#/quant">${t('quant')}</button><button data-actualitza>${t('actualitzar')}</button><button data-go="#/ajuda">${t('ajuda')}</button><button data-go="#/drets">${t('drets')}</button>`;
     document.documentElement.lang = lang;
     document.title = 'XIU · ' + t('tag');
   }
   function render(manté) {
     const p = ruta.replace('#/', '').split('/'), y = scrollY;
-    const v = { '': vInici, bib: vBib, fav: vFav, insp: vInsp, r: () => vFitxa(p[1]), c: () => vColleccio(p[1]) }[p[0]] || vInici;
+    const benv = !perfil && !ls.get('perfil-omes', false) || onb;
+    document.body.classList.toggle('onbOn', !!benv);
+    const v = benv ? vBenvinguda : { '': vInici, bib: vBib, fav: vFav, insp: vInsp, perfil: vPerfil, premium: vPremium, compte: vCompte, pagament: () => vPagament(p[1]), fet: () => vFet(p[1]),
+      quant: vQuant, ajuda: vAjuda, drets: vDrets, r: () => vFitxa(p[1]), c: () => vColleccio(p[1]) }[p[0]] || vInici;
     $('#view').innerHTML = `<div class="${manté ? '' : 'fade'}">${v()}</div>`;
     if ($('#digital')) XFitxa.munta($('#digital'));
     nav();
@@ -242,6 +624,7 @@
 
   async function fesPdf(id, comparteix, boto) {
     const r = perId[id], text = boto.innerHTML;
+    if (bloquejat(r)) return go('#/premium');
     boto.disabled = true; boto.textContent = t('fent');
     try {
       const dades = await XFitxa.pdf(r, AREES[r.area], lang, { nom: t('nom'), data: t('data') });
@@ -254,10 +637,26 @@
 
   /* Un sol gestor de clics per a tota l'app */
   document.addEventListener('click', (e) => {
-    const el = e.target.closest('[data-fav],[data-go],[data-tab],[data-lang],[data-f],[data-filtre],[data-enrere],[data-netejar],[data-pdf],[data-comparteix],[data-mode]');
+    const el = e.target.closest('[data-fav],[data-go],[data-tab],[data-lang],[data-f],[data-filtre],[data-enrere],[data-netejar],[data-pdf],[data-comparteix],[data-mode],[data-onb-tipus],[data-onb-edat],[data-onb-seg],[data-onb-enrere],[data-onb-fi],[data-perfil],[data-pedat],[data-presentacio]');
     if (!el) return;
     const d = el.dataset;
-    if (d.fav) {
+    if (d.onbTipus) { onb.tipus = d.onbTipus; render(true); }
+    else if (d.onbSeg != null) { onb.pas = 1; render(); scrollTo(0, 0); }
+    else if (d.onbEnrere != null) { onb.pas = 0; render(); scrollTo(0, 0); }
+    else if (d.onbEdat) { onb.edats = onb.edats.includes(d.onbEdat) ? onb.edats.filter((x) => x != d.onbEdat) : [...onb.edats, d.onbEdat]; render(true); }
+    else if (d.onbFi) {
+      if (d.onbFi == 'si' && onb.tipus) { perfil = { tipus: onb.tipus, edats: EDATS.filter((x) => onb.edats.includes(x)) }; ls.set('perfil', perfil); }
+      else ls.set('perfil-omes', true);
+      onb = null; pila = []; ruta = '#/'; render(); scrollTo(0, 0);
+    }
+    else if (d.perfil) { perfil = { tipus: d.perfil, edats: perfil ? perfil.edats : [] }; ls.set('perfil', perfil); render(true); }
+    else if (d.pedat) {
+      const ed = perfil ? perfil.edats : [];
+      perfil = { tipus: perfil ? perfil.tipus : 'fam', edats: EDATS.filter((x) => (ed.includes(d.pedat) ? x != d.pedat && ed.includes(x) : ed.includes(x) || x == d.pedat)) };
+      ls.set('perfil', perfil); render(true);
+    }
+    else if (d.presentacio != null) { onb = null; vBenvinguda(); render(); scrollTo(0, 0); }
+    else if (d.fav) {
       e.stopPropagation();
       const on = !favs.includes(d.fav);
       favs = on ? [...favs, d.fav] : favs.filter((x) => x != d.fav);
@@ -289,4 +688,6 @@
   const goOrig = go;
   go = (h) => { if (pendent) { pendent = false; dades(); } goOrig(h); };
   render();
+  // en obrir l'app: si hi ha una versió nova, ho diu i demana actualitzar (APK: plantilla xoriguer-actualitza; web: service worker)
+  if (window.XActualitza) XActualitza.inicia({ app: 'xiu', versio: window.XIU_VERSIO || '0', url: 'https://xorigu3r.github.io/xiu/app/versio.json' });
 })();

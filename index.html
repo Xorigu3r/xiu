@@ -21,12 +21,13 @@
   <aside class="side">
     <img class="logoImg" src="img/logo.svg" alt="XIU · Aprendre jugant">
     <nav id="sideNav"></nav>
+    <div class="menuS" id="menuS"></div>
     <div class="lang" id="langS"></div>
   </aside>
   <main>
     <div class="top">
       <img class="logoImg" src="img/logo-curt.svg" alt="XIU"><span id="tagline" hidden></span>
-      <div class="lang" id="langT"></div>
+      <div class="topD"><div class="lang" id="langT"></div><span id="menuT"></span></div>
     </div>
     <div id="view"></div>
   </main>
@@ -40,12 +41,18 @@
 <script src="js/fonts.js"></script>
 <script src="js/plataforma.js"></script>
 <script src="js/fitxes.js"></script>
+<script src="js/versio.js"></script>
+<script src="xoriguer-actualitza.js"></script>
+<script src="js/textos-compte.js"></script>
 <script src="js/app.js"></script>
 <script>
 // Versió web: el service worker (sw.js, el crea scripts/web.mjs) la fa funcionar sense connexió.
 // A l'APK (Capacitor) i a l'escriptori (Electron) no cal: ja ho porten tot dins.
 if ('serviceWorker' in navigator && /^https?:$/.test(location.protocol) && !(window.Capacitor && Capacitor.isNativePlatform && Capacitor.isNativePlatform()) && !window.xiuEscriptori) {
-  navigator.serviceWorker.register('sw.js').catch(() => {});
+  // si arriba una versió nova (el service worker nou pren el control), l'app ho diu i demana actualitzar
+  const habiaControl = !!navigator.serviceWorker.controller;
+  navigator.serviceWorker.addEventListener('controllerchange', () => { if (habiaControl) dispatchEvent(new Event('xiu-nova-versio')); });
+  navigator.serviceWorker.register('sw.js').then((r) => { setInterval(() => r.update().catch(() => {}), 3600e3); }).catch(() => {});
 }
 </script>
 </body>
