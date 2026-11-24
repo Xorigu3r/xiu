@@ -160,7 +160,8 @@
       <defs><linearGradient id="g-${r.id}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F3EBDD"/><stop offset="1" stop-color="${c}" stop-opacity=".22"/></linearGradient></defs>
       <rect width="100" height="100" fill="url(#g-${r.id})"/>${sh}</svg><span class="ph">${t('foto')}</span></div>`;
   }
-  const kind = (r) => t(r.tipus);
+  const llegir = (r) => !!(r.full && r.full.dibuix === false);   // fitxa PDF només per llegir i imprimir (p. ex. una activitat explicada en PDF)
+  const kind = (r) => (llegir(r) ? t('fitxaLlegir') : t(r.tipus));
   const areaCurta = (r) => AREES[r.area][lang].split(' ')[0];
 
   function card(r) {
@@ -298,6 +299,10 @@
       </div></div>`;
     if (bloquejat(r)) return cap + paret(r);
     if (HOOKS.recurs[r.tipus]) return cap + HOOKS.recurs[r.tipus](r) + sota(r);
+    if (r.tipus == 'fitxa' && llegir(r)) return cap + `<div class="actions" style="justify-content:center">
+          <button class="btn pri" data-pdf="${r.id}">${I.dl}${t('pdf')}</button>
+          ${XP.potCompartir() ? `<button class="btn" data-comparteix="${r.id}">${I.share}${t('compartir')}</button>` : ''}</div>
+        ${XFitxa.previa(r, a, lang, { nom: t('nom'), data: t('data') })}` + sota(r);
     if (r.tipus == 'fitxa') {
       // la mateixa fitxa: per fer-la aquí amb el dit, o per imprimir (PDF)
       const tabs = `<div class="modes"><button class="${modeFitxa == 'digital' ? 'on' : ''}" data-mode="digital">${I.dit}${t('ferAqui')}</button>
