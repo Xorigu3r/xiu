@@ -1,0 +1,82 @@
+{
+  "id": "mirem-les-estrelles",
+  "tipus": "activitat",
+  "edat": "5-6",
+  "area": "exp",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "20 min",
+  "novetat": true,
+  "titol": {
+    "ca": "Mirem les estrelles",
+    "es": "Miramos las estrellas"
+  },
+  "subtitol": {
+    "ca": "La nit més curta, amb el cap enlaire",
+    "es": "La noche más corta, con la cabeza en alto"
+  },
+  "intencio": {
+    "ca": "Observar el cel de nit i descobrir que hi ha estrelles més brillants i dibuixos al cel.",
+    "es": "Observar el cielo de noche y descubrir que hay estrellas más brillantes y dibujos en el cielo."
+  },
+  "treballa": {
+    "ca": [
+      "Observació",
+      "Curiositat",
+      "Vocabulari"
+    ],
+    "es": [
+      "Observación",
+      "Curiosidad",
+      "Vocabulario"
+    ]
+  },
+  "materials": {
+    "ca": [
+      "Una manta",
+      "Una llanterna amb paper vermell",
+      "Paper i llapis"
+    ],
+    "es": [
+      "Una manta",
+      "Una linterna con papel rojo",
+      "Papel y lápiz"
+    ]
+  },
+  "preparacio": {
+    "ca": "Busqueu un lloc fosc, lluny dels llums, una nit clara.",
+    "es": "Buscad un sitio oscuro, lejos de las luces, una noche clara."
+  },
+  "desenvolupament": {
+    "ca": [
+      "Estireu-vos a la manta i espereu que els ulls s'acostumin.",
+      "Busqueu l'estrella més brillant i la lluna.",
+      "Uniu estrelles amb el dit i inventeu-ne un dibuix."
+    ],
+    "es": [
+      "Tumbaos en la manta y esperad que los ojos se acostumbren.",
+      "Buscad la estrella más brillante y la luna.",
+      "Unid estrellas con el dedo e inventad un dibujo."
+    ]
+  },
+  "variants": {
+    "ca": [
+      "Dibuixeu el vostre dibuix d'estrelles en un full negre amb gomets."
+    ],
+    "es": [
+      "Dibujad vuestro dibujo de estrellas en una hoja negra con gomets."
+    ]
+  },
+  "seguretat": {
+    "ca": [
+      "Sempre amb un adult i abrigats."
+    ],
+    "es": [
+      "Siempre con un adulto y abrigados."
+    ]
+  },
+  "festa": "santjoan",
+  "premium": true
+}

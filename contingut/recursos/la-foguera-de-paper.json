@@ -1,0 +1,81 @@
+{
+  "id": "la-foguera-de-paper",
+  "tipus": "activitat",
+  "edat": "4-5",
+  "area": "cre",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "20 min",
+  "novetat": true,
+  "titol": {
+    "ca": "La foguera de paper",
+    "es": "La hoguera de papel"
+  },
+  "subtitol": {
+    "ca": "Flames vermelles, taronges i grogues",
+    "es": "Llamas rojas, naranjas y amarillas"
+  },
+  "intencio": {
+    "ca": "Celebrar la revetlla de Sant Joan creant una foguera amb paper i colors càlids.",
+    "es": "Celebrar la verbena de San Juan creando una hoguera con papel y colores cálidos."
+  },
+  "treballa": {
+    "ca": [
+      "Expressió plàstica",
+      "Colors càlids",
+      "Tradicions"
+    ],
+    "es": [
+      "Expresión plástica",
+      "Colores cálidos",
+      "Tradiciones"
+    ]
+  },
+  "materials": {
+    "ca": [
+      "Paper de seda vermell, taronja i groc",
+      "Rotlles de cartró",
+      "Cola"
+    ],
+    "es": [
+      "Papel de seda rojo, naranja y amarillo",
+      "Rollos de cartón",
+      "Cola"
+    ]
+  },
+  "preparacio": {
+    "ca": "Talla tires de paper de seda.",
+    "es": "Corta tiras de papel de seda."
+  },
+  "desenvolupament": {
+    "ca": [
+      "Feu la pila de «llenya» amb els rotlles de cartró.",
+      "Enganxeu-hi les tires com si fossin flames.",
+      "Bufeu: les flames es mouen!"
+    ],
+    "es": [
+      "Haced la pila de «leña» con los rollos de cartón.",
+      "Pegad las tiras como si fueran llamas.",
+      "Soplad: ¡las llamas se mueven!"
+    ]
+  },
+  "variants": {
+    "ca": [
+      "Expliqueu per què es fan fogueres per Sant Joan."
+    ],
+    "es": [
+      "Contad por qué se hacen hogueras por San Juan."
+    ]
+  },
+  "seguretat": {
+    "ca": [
+      "Parleu de com estar segurs a prop del foc de veritat."
+    ],
+    "es": [
+      "Hablad de cómo estar seguros cerca del fuego de verdad."
+    ]
+  },
+  "festa": "santjoan"
+}

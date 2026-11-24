@@ -58,8 +58,8 @@
       guarda: 'Para...', guardaT: 'Guárdala para un niño o niña', perFer: 'Por hacer', preferida: 'Preferida', perFerT: 'Por hacer', preferidesT: 'Preferidas', capPerFer: 'Nada pendiente. Guarda propuestas con «Para...».',
       capPreferides: 'Todavía ninguna preferida.', medalles: 'Medallas', medallesP: 'Para celebrar el camino, no para competir.', guardat2: 'Guardado.',
       M: { primera: ['Primera propuesta', '¡La primera de muchas!'], e5: ['5 estrellas', 'Ya lleva cinco'], e10: ['10 estrellas', 'Constancia'], e25: ['25 estrellas', 'Gran explorador/a'], e50: ['50 estrellas', '¡Imparable!'],
-        arees: ['Las seis áreas', 'Ha probado todas las áreas'], exp: ['Pequeño científico', '5 de Experimentación'], llen: ['Palabrero', '5 de Lenguaje'], mot: ['Manos hábiles', '5 de Motricidad'],
-        log: ['Cabeza de números', '5 de Lógica'], cre: ['Artista', '5 de Creatividad'], aut: ['¡Lo hago solo!', '5 de Autonomía'], rutina: ['Rutina hecha', 'Una rutina entera'], festa: ['De fiesta', 'Una propuesta de fiesta'] },
+        arees: ['Las seis áreas', 'Ha probado todas las áreas'], exp: ['Pequeño científico', '5 de Experimentación'], llen: ['Gran conversador', '5 de Lenguaje'], mot: ['Manos hábiles', '5 de Motricidad'],
+        log: ['Cabeza matemática', '5 de Lógica'], cre: ['Artista', '5 de Creatividad'], aut: ['¡Lo hago solo!', '5 de Autonomía'], rutina: ['Rutina hecha', 'Una rutina entera'], festa: ['De fiesta', 'Una propuesta de fiesta'] },
       medallaFalta: 'Todavía no', medallaPdf: 'Tócala para imprimir el diploma',
     },
   });
@@ -232,5 +232,6 @@
     else if (d.diplomaC) { const [i, c] = d.diplomaC.split(':'); const cc = A.BIB.colleccions.find((q) => q.id === c); diploma(infant(i), t('diplomaColl').replace('{c}', A.L(cc.titol))); }
     else if (d.fetEsb) { const [dd, i, r] = d.fetEsb.split('|'); fets = fets.filter((f) => !(f.d === dd && String(f.i) === i && f.r === r)); desa(); A.render(true); }
   });
-  A.INFANTS = { llista: () => infants, infant, deInfant, avatar, docent };
+  const afegeix = (nom, edat) => { const n = { id: uid(), nom, edat, color: COLORS[infants.length % COLORS.length], pendents: [], preferides: [], interessos: [] }; infants.push(n); if (!actiu) actiu = n.id; desa(); return n; };
+  A.INFANTS = { llista: () => infants, infant, deInfant, avatar, docent, afegeix };
 });

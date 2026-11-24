@@ -1,0 +1,81 @@
+{
+  "id": "ballem-una-sardana",
+  "tipus": "activitat",
+  "edat": "4-5",
+  "area": "aut",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "15 min",
+  "novetat": true,
+  "titol": {
+    "ca": "Ballem una sardana",
+    "es": "Bailamos una sardana"
+  },
+  "subtitol": {
+    "ca": "Ens donem les mans i comptem passos",
+    "es": "Nos damos las manos y contamos pasos"
+  },
+  "intencio": {
+    "ca": "Ballar en rotllana: escoltar la música, comptar els passos i fer-ho tots junts.",
+    "es": "Bailar en corro: escuchar la música, contar los pasos y hacerlo todos juntos."
+  },
+  "treballa": {
+    "ca": [
+      "Ritme",
+      "Cooperació",
+      "Tradicions"
+    ],
+    "es": [
+      "Ritmo",
+      "Cooperación",
+      "Tradiciones"
+    ]
+  },
+  "materials": {
+    "ca": [
+      "Música de sardana",
+      "Espai per fer una rotllana"
+    ],
+    "es": [
+      "Música de sardana",
+      "Espacio para hacer un corro"
+    ]
+  },
+  "preparacio": {
+    "ca": "Escolteu primer la música asseguts i piqueu de mans al ritme.",
+    "es": "Escuchad primero la música sentados y dad palmas al ritmo."
+  },
+  "desenvolupament": {
+    "ca": [
+      "Feu una rotllana donant-vos les mans, amb els braços avall.",
+      "Dos passos a la dreta, dos a l'esquerra, comptant en veu alta.",
+      "Aixequeu els braços quan la música s'animi."
+    ],
+    "es": [
+      "Haced un corro dándoos las manos, con los brazos abajo.",
+      "Dos pasos a la derecha, dos a la izquierda, contando en voz alta.",
+      "Levantad los brazos cuando la música se anime."
+    ]
+  },
+  "variants": {
+    "ca": [
+      "Amb peluixos si sou pocs.",
+      "Ballar altres danses populars."
+    ],
+    "es": [
+      "Con peluches si sois pocos.",
+      "Bailar otras danzas populares."
+    ]
+  },
+  "seguretat": {
+    "ca": [
+      "Espai lliure d'obstacles."
+    ],
+    "es": [
+      "Espacio libre de obstáculos."
+    ]
+  },
+  "festa": "diada"
+}

@@ -148,6 +148,44 @@
       ]
     },
     {
+      "id": "diada",
+      "grup": "festes",
+      "titol": {
+        "ca": "La Diada",
+        "es": "La Diada"
+      },
+      "text": {
+        "ca": "L'11 de setembre: la senyera, les cançons i la sardana",
+        "es": "El 11 de septiembre: la senyera, las canciones y la sardana"
+      },
+      "portada": "la-senyera-de-colors",
+      "recursos": [
+        "la-senyera-de-colors",
+        "ballem-una-sardana",
+        "cancons-de-cada-dia",
+        "musica-amb-pots"
+      ]
+    },
+    {
+      "id": "santjoan",
+      "grup": "festes",
+      "titol": {
+        "ca": "Sant Joan",
+        "es": "San Juan"
+      },
+      "text": {
+        "ca": "La nit més curta: fogueres, estrelles i l'arribada de l'estiu",
+        "es": "La noche más corta: hogueras, estrellas y la llegada del verano"
+      },
+      "portada": "la-foguera-de-paper",
+      "recursos": [
+        "la-foguera-de-paper",
+        "mirem-les-estrelles",
+        "llum-i-ombres",
+        "flota"
+      ]
+    },
+    {
       "id": "tardor",
       "grup": "temporades",
       "titol": {
@@ -316,6 +354,50 @@
         "flota",
         "llum-i-ombres",
         "ous-de-colors"
+      ]
+    },
+    {
+      "id": "aire-lliure",
+      "grup": "temes",
+      "titol": {
+        "ca": "A l'aire lliure",
+        "es": "Al aire libre"
+      },
+      "text": {
+        "ca": "Per fer al parc, al pati o al jardí",
+        "es": "Para hacer en el parque, en el patio o en el jardín"
+      },
+      "portada": "regar-plantes",
+      "recursos": [
+        "regar-plantes",
+        "a-la-recerca-dels-ous",
+        "tardor",
+        "mirem-les-estrelles",
+        "pintura",
+        "comptem-castanyes",
+        "juguem-amb-les-ombres"
+      ]
+    },
+    {
+      "id": "dies-de-pluja",
+      "grup": "temes",
+      "titol": {
+        "ca": "Dies de pluja",
+        "es": "Días de lluvia"
+      },
+      "text": {
+        "ca": "Propostes tranquil·les per fer a casa",
+        "es": "Propuestas tranquilas para hacer en casa"
+      },
+      "portada": "plastilina-casolana",
+      "recursos": [
+        "plastilina-casolana",
+        "titelles-contes",
+        "bossa-misteriosa",
+        "disfresses-de-casa",
+        "ampolla-de-neu",
+        "musica-amb-pots",
+        "pa-amb-tomaquet"
       ]
     },
     {

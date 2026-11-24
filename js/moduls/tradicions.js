@@ -54,7 +54,7 @@
   }
   const norm = (s) => String(s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
   // cada tradició amb la seva col·lecció d'Inspiració (si n'hi ha); si no, les propostes que hi lliguen
-  const COLL = { castanyada: 'castanyada', nadal: 'nadal', reis: 'nadal', carnestoltes: 'carnaval', mona: 'pasqua', santjordi: 'santjordi', santjoan: 'estiu' };
+  const COLL = { diada: 'diada', castanyada: 'castanyada', nadal: 'nadal', reis: 'nadal', carnestoltes: 'carnaval', mona: 'pasqua', santjordi: 'santjordi', santjoan: 'santjoan' };
   const coll = (tr) => (A.BIB.colleccions || []).find((c) => c.id === COLL[tr.id]);
   const relacionades = (tr) => coll(tr) ? coll(tr).recursos.map((id) => A.perId[id]).filter((r) => r && !A.bloquejat(r)) : A.R.filter((r) => !A.bloquejat(r) && tr.par.test(norm([r.id, A.L(r.titol), ...(A.L(r.materials) || [])].join(' ')))).slice(0, 8);
   const txt = (tr) => tr[A.lang] || tr.ca;

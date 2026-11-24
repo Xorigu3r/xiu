@@ -1,0 +1,3 @@
+# XIU: no surt als cercadors; s'hi entra només amb l'enllaç.
+User-agent: *
+Disallow: /

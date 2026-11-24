@@ -1,0 +1,84 @@
+{
+  "id": "la-senyera-de-colors",
+  "tipus": "activitat",
+  "edat": "3-4",
+  "area": "cre",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "15 min",
+  "novetat": true,
+  "titol": {
+    "ca": "La senyera de colors",
+    "es": "La senyera de colores"
+  },
+  "subtitol": {
+    "ca": "Quatre barres vermelles",
+    "es": "Cuatro barras rojas"
+  },
+  "intencio": {
+    "ca": "Conèixer un símbol de la Diada i practicar el traç de línies amb pintura.",
+    "es": "Conocer un símbolo de la Diada y practicar el trazo de líneas con pintura."
+  },
+  "treballa": {
+    "ca": [
+      "Tradicions",
+      "Traç de línies",
+      "Comptar fins a 4"
+    ],
+    "es": [
+      "Tradiciones",
+      "Trazo de líneas",
+      "Contar hasta 4"
+    ]
+  },
+  "materials": {
+    "ca": [
+      "Full groc gran",
+      "Pintura vermella",
+      "Pinzell gruixut o rodet",
+      "Cinta de carrosser"
+    ],
+    "es": [
+      "Hoja amarilla grande",
+      "Pintura roja",
+      "Pincel grueso o rodillo",
+      "Cinta de carrocero"
+    ]
+  },
+  "preparacio": {
+    "ca": "Enganxa tires de cinta al full per marcar on aniran les barres.",
+    "es": "Pega tiras de cinta en la hoja para marcar dónde irán las barras."
+  },
+  "desenvolupament": {
+    "ca": [
+      "Pinteu quatre barres vermelles de dalt a baix.",
+      "Compteu-les juntes: una, dues, tres, quatre.",
+      "Quan s'eixugui, traieu la cinta: sorpresa!"
+    ],
+    "es": [
+      "Pintad cuatro barras rojas de arriba abajo.",
+      "Contadlas juntas: una, dos, tres, cuatro.",
+      "Cuando se seque, quitad la cinta: ¡sorpresa!"
+    ]
+  },
+  "variants": {
+    "ca": [
+      "Feu-ne una de petita per al balcó o la finestra."
+    ],
+    "es": [
+      "Haced una pequeña para el balcón o la ventana."
+    ]
+  },
+  "seguretat": {
+    "ca": [
+      "Pintura apta per a infants."
+    ],
+    "es": [
+      "Pintura apta para niños."
+    ]
+  },
+  "festa": "diada",
+  "premium": true
+}

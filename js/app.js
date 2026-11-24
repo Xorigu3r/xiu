@@ -184,7 +184,7 @@
       ${HOOKS.iniciDalt.map((f) => f()).join('')}
       ${bloc(1, t('b1T'), t('b1P'), `<button class="blocB" data-go="#/avui">${t('b1Tria')}</button>`)}
       ${HOOKS.bloc1.map((f) => f()).join('')}
-      ${bloc(2, t('b2T'), t('b2P'), `<button class="blocB" data-go="#/c/quotidiana">${t('veure')}</button>`)}
+      ${bloc(2, t(perfil && perfil.tipus == 'pro' ? 'b2Tpro' : 'b2T'), t(perfil && perfil.tipus == 'pro' ? 'b2Ppro' : 'b2P'), `<button class="blocB" data-go="#/c/quotidiana">${t('veure')}</button>`)}
       ${casaAvui.length ? `<div class="row">${casaAvui.map(card).join('')}</div>` : ''}
       ${HOOKS.bloc2.map((f) => f()).join('')}
       ${bloc(3, t('b3T'), t('b3P'))}
@@ -362,6 +362,9 @@
     return `<div class="onb">${lg}<img class="onbLogo" src="img/logo.svg" alt="XIU · Aprendre jugant">
       <h2>${t('edatsQ')}</h2><p class="pet">${t('edatsP')}</p>
       <div class="ages onbEdats">${EDATS.map((e) => `<button class="age ${o.edats.includes(e) ? 'meva' : ''}" data-onb-edat="${e}"><b>${e}</b><span>${t('anys')}</span></button>`).join('')}</div>
+      ${o.tipus == 'fam' && window.XIU_APP?.INFANTS ? `<h2>${t('onbInfT')}</h2><p class="pet">${t('onbInfP')}</p><div class="onbInf">${(o.noms ||= [{ nom: '', edat: o.edats[0] || '3-4' }]).map((x, i) => `<div class="onbInfF">
+        <input data-onb-nom="${i}" value="${esc(x.nom)}" placeholder="${t('nomInfant') || 'Nom'}" maxlength="30"><select data-onb-iedat="${i}">${EDATS.map((e) => `<option ${x.edat == e ? 'selected' : ''}>${e}</option>`).join('')}</select></div>`).join('')}
+        <button class="enllac" data-onb-mesinf>+ ${t('onbMesInf')}</button></div>` : ''}
       <div class="onbPeu"><button class="btn" data-onb-enrere>${t('tornar')}</button><button class="btn pri" data-onb-fi="si">${t('comenca')}</button></div></div>`;
   }
 
@@ -607,6 +610,7 @@
     if (n == 'cad') { const d = e.target.value.replace(/\D/g, '').slice(0, 4); e.target.value = d.length > 2 ? d.slice(0, 2) + '/' + d.slice(2) : d; }
   });
   document.addEventListener('change', (e) => {
+    if (e.target.dataset.onbIedat != null && onb) onb.noms[+e.target.dataset.onbIedat].edat = e.target.value;
     if (e.target.matches('[data-simula]')) { simula = e.target.checked; ls.set('pilot-simula', simula); render(true); }
     if (e.target.name == 'tipus' && e.target.form && e.target.form.dataset.form == 'registre') e.target.form.querySelectorAll('.opcio').forEach((o) => o.classList.toggle('on', o.contains(e.target)));
   });
@@ -713,15 +717,17 @@
 
   /* Un sol gestor de clics per a tota l'app */
   document.addEventListener('click', (e) => {
-    const el = e.target.closest('[data-fav],[data-go],[data-tab],[data-lang],[data-f],[data-filtre],[data-enrere],[data-netejar],[data-pdf],[data-comparteix],[data-mode],[data-onb-tipus],[data-onb-edat],[data-onb-seg],[data-onb-enrere],[data-onb-fi],[data-perfil],[data-pedat],[data-presentacio]');
+    const el = e.target.closest('[data-fav],[data-go],[data-tab],[data-lang],[data-f],[data-filtre],[data-enrere],[data-netejar],[data-pdf],[data-comparteix],[data-mode],[data-onb-tipus],[data-onb-edat],[data-onb-seg],[data-onb-enrere],[data-onb-fi],[data-onb-mesinf],[data-perfil],[data-pedat],[data-presentacio]');
     if (!el) return;
     const d = el.dataset;
     if (d.onbTipus) { onb.tipus = d.onbTipus; render(true); }
     else if (d.onbSeg != null) { onb.pas = 1; render(); scrollTo(0, 0); }
     else if (d.onbEnrere != null) { onb.pas = 0; render(); scrollTo(0, 0); }
     else if (d.onbEdat) { onb.edats = onb.edats.includes(d.onbEdat) ? onb.edats.filter((x) => x != d.onbEdat) : [...onb.edats, d.onbEdat]; render(true); }
+    else if (d.onbMesinf != null) { onb.noms.push({ nom: '', edat: onb.edats[0] || '3-4' }); render(true); }
     else if (d.onbFi) {
-      if (d.onbFi == 'si' && onb.tipus) { perfil = { tipus: onb.tipus, edats: EDATS.filter((x) => onb.edats.includes(x)) }; ls.set('perfil', perfil); }
+      if (d.onbFi == 'si' && onb.tipus) { perfil = { tipus: onb.tipus, edats: EDATS.filter((x) => onb.edats.includes(x)) }; ls.set('perfil', perfil);
+        for (const x of onb.noms || []) if (x.nom.trim()) window.XIU_APP.INFANTS?.afegeix(x.nom.trim(), x.edat); }
       else ls.set('perfil-omes', true);
       onb = null; pila = []; ruta = '#/'; render(); scrollTo(0, 0);
     }
@@ -752,6 +758,7 @@
     else if (d.enrere != null) { if (!enrere()) go('#/'); }
   });
   document.addEventListener('input', (e) => {
+    if (e.target.dataset.onbNom != null && onb) onb.noms[+e.target.dataset.onbNom].nom = e.target.value;
     if (e.target.id == 'q') { F.q = e.target.value; $('#llista').innerHTML = ruta == '#/bib' && !F.q.trim() ? '' : llista(); }
   });
   XP.botoEnrere(enrere);
