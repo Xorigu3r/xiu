@@ -817,5 +817,5 @@
   const resta = matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : Math.max(0, 1750 - (performance.now() - (window.XIU_T0 || 0)));
   setTimeout(() => { document.getElementById('splash')?.classList.add('fora'); setTimeout(() => document.getElementById('splash')?.remove(), 600); }, resta);
   // en obrir l'app: si hi ha una versió nova, ho diu i demana actualitzar (APK: plantilla xoriguer-actualitza; web: service worker)
-  if (window.XActualitza) XActualitza.inicia({ app: 'xiu', versio: window.XIU_VERSIO || '0', url: 'https://xorigu3r.github.io/xiu/app/versio.json' });
+  if (window.XActualitza) XActualitza.inicia({ app: 'xiu', versio: window.XIU_VERSIO || '0', url: 'https://xiu-8kg.pages.dev/app/versio.json' });
 })();

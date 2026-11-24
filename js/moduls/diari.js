@@ -2,7 +2,7 @@
 // una nota i una foto; després s'envia a les famílies (amb els enllaços per repetir-ho a casa) o se'n fa el PDF de la setmana.
 (window.XIU_MODULS ||= []).push((A) => {
   const { esc, I, ls } = A, t = (k) => A.t(k);
-  const WEB = 'https://xorigu3r.github.io/xiu/';
+  const WEB = 'https://xiu-8kg.pages.dev/';
   A.textos({
     ca: { diari: "Diari de l'aula", diariS: 'Què hem fet avui', diariP: 'Tria què heu fet, afegeix-hi unes paraules i envia-ho a les famílies.', diariB: "Escriu el diari d'avui en dos tocs",
       avuiHem: 'Què hem fet', avuiHemP: 'Surt sol del que heu apuntat avui i de la programació. Toca per treure o posar.', notaDia: 'Unes paraules sobre el dia', notaDiaP: 'Avui hem...',

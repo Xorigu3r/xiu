@@ -2,7 +2,7 @@
 // compartir una proposta amb les famílies (enllaç i codi QR) i imprimir una fitxa per a tota la classe (amb el nom de cada infant).
 (window.XIU_MODULS ||= []).push((A) => {
   const { esc, I, ls } = A, t = (k) => A.t(k);
-  const WEB = 'https://xorigu3r.github.io/xiu/';
+  const WEB = 'https://xiu-8kg.pages.dev/';
   let programa = ls.get('programa', {}), obs = ls.get('observacions', []);
   const desaP = () => ls.set('programa', programa), desaO = () => ls.set('observacions', obs);
   const docent = () => A.perfil && A.perfil.tipus === 'pro';

@@ -1,11 +1,11 @@
 // D'on surt el contingut de XIU (fitxes, activitats, fotos):
-//   · la web publicada (https://xorigu3r.github.io/xiu/contingut/), on el Gestor hi afegeix coses noves;
+//   · la web publicada (https://xiu-8kg.pages.dev/contingut/), on el Gestor hi afegeix coses noves;
 //   · una còpia desada al dispositiu (la darrera que s'ha baixat), per quan no hi ha connexió;
 //   · la còpia que porta l'app de fàbrica (js/contingut.js), per al primer cop sense connexió.
 // Es fa servir la més nova. En obrir l'app (i en tornar-hi) es mira si a la web n'hi ha una de més nova:
 // si n'hi ha, es desa i l'app es refresca (event «xiu-contingut»).
 (function () {
-  const REMOT = 'https://xorigu3r.github.io/xiu/';
+  const REMOT = 'https://xiu-8kg.pages.dev/';
   const CAP = window.Capacitor;
   const natiu = !!(CAP && CAP.isNativePlatform && CAP.isNativePlatform());
   const web = /^https?:$/.test(location.protocol) && !natiu && !window.xiuEscriptori;
