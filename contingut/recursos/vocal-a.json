@@ -3,17 +3,60 @@
   "tipus": "fitxa",
   "edat": "3-4",
   "area": "llen",
-  "perfil": ["fam", "pro"],
+  "perfil": [
+    "fam",
+    "pro"
+  ],
   "durada": "10 min",
   "novetat": true,
-  "titol": { "ca": "Descobrim la vocal A", "es": "Descubrimos la vocal A" },
-  "subtitol": { "ca": "Reconeixement i traç de la lletra.", "es": "Reconocimiento y trazo de la letra." },
+  "titol": {
+    "ca": "Descobrim la vocal A",
+    "es": "Descubrimos la vocal A"
+  },
+  "subtitol": {
+    "ca": "Reconeixement i traç de la lletra.",
+    "es": "Reconocimiento y trazo de la letra."
+  },
   "full": {
     "exercicis": [
-      { "tipus": "ressegueix", "text": { "ca": "Resseguim la lletra A.", "es": "Repasamos la letra A." }, "caracters": "AAAAAA" },
-      { "tipus": "dibuixa", "text": { "ca": "Practiquem nosaltres.", "es": "Practicamos nosotros." } },
-      { "tipus": "encercla", "text": { "ca": "Identifica i encercla la lletra A.", "es": "Identifica y rodea la letra A." },
-        "objectiu": "A", "elements": ["O", "E", "I", "A", "O", "U", "A", "U", "I", "E", "A", "O"] }
+      {
+        "tipus": "ressegueix",
+        "text": {
+          "ca": "Resseguim la lletra A.",
+          "es": "Repasamos la letra A."
+        },
+        "caracters": "AAAAAA"
+      },
+      {
+        "tipus": "dibuixa",
+        "text": {
+          "ca": "Practiquem nosaltres.",
+          "es": "Practicamos nosotros."
+        }
+      },
+      {
+        "tipus": "encercla",
+        "text": {
+          "ca": "Identifica i encercla la lletra A.",
+          "es": "Identifica y rodea la letra A."
+        },
+        "objectiu": "A",
+        "elements": [
+          "O",
+          "E",
+          "I",
+          "A",
+          "O",
+          "U",
+          "A",
+          "U",
+          "I",
+          "E",
+          "A",
+          "O"
+        ]
+      }
     ]
-  }
+  },
+  "premium": true
 }

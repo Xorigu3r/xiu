@@ -1,0 +1,81 @@
+{
+  "id": "comptem-castanyes",
+  "tipus": "activitat",
+  "edat": "2-3",
+  "area": "log",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "10 min",
+  "novetat": true,
+  "titol": {
+    "ca": "Comptem castanyes",
+    "es": "Contamos castañas"
+  },
+  "subtitol": {
+    "ca": "Una, dues, tres... a la cistella!",
+    "es": "Una, dos, tres... ¡a la cesta!"
+  },
+  "intencio": {
+    "ca": "Comptar objectes reals de la tardor i relacionar quantitats petites.",
+    "es": "Contar objetos reales del otoño y relacionar cantidades pequeñas."
+  },
+  "treballa": {
+    "ca": [
+      "Comptar",
+      "Quantitats",
+      "Tardor"
+    ],
+    "es": [
+      "Contar",
+      "Cantidades",
+      "Otoño"
+    ]
+  },
+  "materials": {
+    "ca": [
+      "Castanyes",
+      "3 bols",
+      "Targetes amb els números 1, 2 i 3"
+    ],
+    "es": [
+      "Castañas",
+      "3 cuencos",
+      "Tarjetas con los números 1, 2 y 3"
+    ]
+  },
+  "preparacio": {
+    "ca": "Posa una targeta davant de cada bol.",
+    "es": "Pon una tarjeta delante de cada cuenco."
+  },
+  "desenvolupament": {
+    "ca": [
+      "Compteu les castanyes tocant-les una a una.",
+      "Poseu-ne a cada bol tantes com diu la targeta.",
+      "Quin bol en té més?"
+    ],
+    "es": [
+      "Contad las castañas tocándolas una a una.",
+      "Poned en cada cuenco tantas como dice la tarjeta.",
+      "¿Qué cuenco tiene más?"
+    ]
+  },
+  "variants": {
+    "ca": [
+      "Amb pinyes o fulles."
+    ],
+    "es": [
+      "Con piñas u hojas."
+    ]
+  },
+  "seguretat": {
+    "ca": [
+      "Castanyes grosses i amb supervisió."
+    ],
+    "es": [
+      "Castañas grandes y con supervisión."
+    ]
+  },
+  "festa": "castanyada"
+}

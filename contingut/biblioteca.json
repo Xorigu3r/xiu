@@ -1,41 +1,353 @@
 {
-  "edats": ["0-1", "1-2", "2-3", "3-4", "4-5", "5-6"],
+  "edats": [
+    "0-1",
+    "1-2",
+    "2-3",
+    "3-4",
+    "4-5",
+    "5-6"
+  ],
   "arees": {
-    "exp":  { "color": "#8FA68A", "ca": "Experimentació i descoberta",        "es": "Experimentación y descubrimiento" },
-    "llen": { "color": "#8EA2B4", "ca": "Llenguatge i comunicació",           "es": "Lenguaje y comunicación" },
-    "mot":  { "color": "#D1A35A", "ca": "Motricitat fina i grafomotricitat",  "es": "Motricidad fina y grafomotricidad" },
-    "log":  { "color": "#C9785B", "ca": "Lògica i matemàtiques",              "es": "Lógica y matemáticas" },
-    "cre":  { "color": "#D29A92", "ca": "Creativitat i expressió",            "es": "Creatividad y expresión" },
-    "aut":  { "color": "#9D9B60", "ca": "Autonomia i vida quotidiana",        "es": "Autonomía y vida cotidiana" }
+    "exp": {
+      "color": "#8FA68A",
+      "ca": "Experimentació i descoberta",
+      "es": "Experimentación y descubrimiento"
+    },
+    "llen": {
+      "color": "#8EA2B4",
+      "ca": "Llenguatge i comunicació",
+      "es": "Lenguaje y comunicación"
+    },
+    "mot": {
+      "color": "#D1A35A",
+      "ca": "Motricitat fina i grafomotricitat",
+      "es": "Motricidad fina y grafomotricidad"
+    },
+    "log": {
+      "color": "#C9785B",
+      "ca": "Lògica i matemàtiques",
+      "es": "Lógica y matemáticas"
+    },
+    "cre": {
+      "color": "#D29A92",
+      "ca": "Creativitat i expressió",
+      "es": "Creatividad y expresión"
+    },
+    "aut": {
+      "color": "#9D9B60",
+      "ca": "Autonomia i vida quotidiana",
+      "es": "Autonomía y vida cotidiana"
+    }
   },
   "temporada": {
-    "titol": { "ca": "Tardor", "es": "Otoño" },
-    "destacat": "tardor"
+    "titol": {
+      "ca": "Nadal",
+      "es": "Navidad"
+    },
+    "destacat": "fem-el-tio"
   },
   "colleccions": [
     {
+      "id": "nadal",
+      "grup": "festes",
+      "titol": {
+        "ca": "Nadal i el Tió",
+        "es": "Navidad y el Tió"
+      },
+      "text": {
+        "ca": "El Tió, els Reis, la carta i la màgia de l'hivern",
+        "es": "El Tió, los Reyes, la carta y la magia del invierno"
+      },
+      "portada": "fem-el-tio",
+      "recursos": [
+        "fem-el-tio",
+        "la-carta-als-reis",
+        "ampolla-de-neu",
+        "musica-amb-pots",
+        "titelles-contes"
+      ]
+    },
+    {
+      "id": "carnaval",
+      "grup": "festes",
+      "titol": {
+        "ca": "Carnaval",
+        "es": "Carnaval"
+      },
+      "text": {
+        "ca": "Disfresses, màscares, colors i moviment",
+        "es": "Disfraces, máscaras, colores y movimiento"
+      },
+      "portada": "mascares-de-cartro",
+      "recursos": [
+        "mascares-de-cartro",
+        "disfresses-de-casa",
+        "vestir",
+        "musica-amb-pots",
+        "pintura"
+      ]
+    },
+    {
+      "id": "santjordi",
+      "grup": "festes",
+      "titol": {
+        "ca": "Sant Jordi",
+        "es": "Sant Jordi"
+      },
+      "text": {
+        "ca": "Roses, dracs, contes i llibres",
+        "es": "Rosas, dragones, cuentos y libros"
+      },
+      "portada": "la-rosa-de-paper",
+      "recursos": [
+        "la-rosa-de-paper",
+        "el-conte-del-drac",
+        "punt-de-llibre",
+        "titelles-contes",
+        "descobrim-les-lletres"
+      ]
+    },
+    {
+      "id": "castanyada",
+      "grup": "festes",
+      "titol": {
+        "ca": "La Castanyada",
+        "es": "La Castanyada"
+      },
+      "text": {
+        "ca": "Castanyes, panellets i fulles de tardor",
+        "es": "Castañas, panellets y hojas de otoño"
+      },
+      "portada": "panellets-de-plastilina",
+      "recursos": [
+        "panellets-de-plastilina",
+        "comptem-castanyes",
+        "tardor",
+        "plastilina-casolana",
+        "joc-memory-tardor"
+      ]
+    },
+    {
+      "id": "pasqua",
+      "grup": "festes",
+      "titol": {
+        "ca": "Pasqua i primavera",
+        "es": "Pascua y primavera"
+      },
+      "text": {
+        "ca": "Ous, recerques, flors i natura",
+        "es": "Huevos, búsquedas, flores y naturaleza"
+      },
+      "portada": "ous-de-colors",
+      "recursos": [
+        "ous-de-colors",
+        "a-la-recerca-dels-ous",
+        "plantem-una-llavor",
+        "regar-plantes",
+        "pintura"
+      ]
+    },
+    {
       "id": "tardor",
-      "titol": { "ca": "La tardor a les mans", "es": "El otoño en las manos" },
-      "text": { "ca": "Fulles, castanyes i colors càlids per a totes les edats", "es": "Hojas, castañas y colores cálidos para todas las edades" },
+      "grup": "temporades",
+      "titol": {
+        "ca": "La tardor a les mans",
+        "es": "El otoño en las manos"
+      },
+      "text": {
+        "ca": "Fulles, castanyes i colors càlids per a totes les edats",
+        "es": "Hojas, castañas y colores cálidos para todas las edades"
+      },
       "portada": "tardor",
-      "recursos": ["tardor", "comptem", "pintura", "serie"]
+      "recursos": [
+        "tardor",
+        "comptem-castanyes",
+        "pintura",
+        "serie",
+        "comptem",
+        "joc-classifica"
+      ]
+    },
+    {
+      "id": "hivern",
+      "grup": "temporades",
+      "titol": {
+        "ca": "Hivern de casa",
+        "es": "Invierno en casa"
+      },
+      "text": {
+        "ca": "Llum, calma i calidesa per als dies freds",
+        "es": "Luz, calma y calidez para los días fríos"
+      },
+      "portada": "ampolla-de-neu",
+      "recursos": [
+        "ampolla-de-neu",
+        "llum-i-ombres",
+        "massatge",
+        "cancons-de-cada-dia",
+        "juguem-amb-les-ombres"
+      ]
+    },
+    {
+      "id": "primavera",
+      "grup": "temporades",
+      "titol": {
+        "ca": "Primavera",
+        "es": "Primavera"
+      },
+      "text": {
+        "ca": "Plantes, flors i ganes de sortir",
+        "es": "Plantas, flores y ganas de salir"
+      },
+      "portada": "plantem-una-llavor",
+      "recursos": [
+        "plantem-una-llavor",
+        "regar-plantes",
+        "a-la-recerca-dels-ous",
+        "pintura",
+        "joc-trencaclosques-9"
+      ]
+    },
+    {
+      "id": "estiu",
+      "grup": "temporades",
+      "titol": {
+        "ca": "Estiu i aigua",
+        "es": "Verano y agua"
+      },
+      "text": {
+        "ca": "Aigua, ombres i experiments a l'aire lliure",
+        "es": "Agua, sombras y experimentos al aire libre"
+      },
+      "portada": "flota",
+      "recursos": [
+        "flota",
+        "trasvas",
+        "ampolles-sensorials",
+        "juguem-amb-les-ombres",
+        "el-volca-efervescent"
+      ]
     },
     {
       "id": "primers-sentits",
-      "titol": { "ca": "Primers sentits", "es": "Primeros sentidos" },
-      "text": { "ca": "Propostes per als més petits, de 0 a 2 anys", "es": "Propuestas para los más pequeños, de 0 a 2 años" },
+      "grup": "temes",
+      "titol": {
+        "ca": "Primeres experiències",
+        "es": "Primeras experiencias"
+      },
+      "text": {
+        "ca": "Propostes per als més petits, de 0 a 2 anys",
+        "es": "Propuestas para los más pequeños, de 0 a 2 años"
+      },
       "portada": "panera",
-      "recursos": ["panera", "massatge", "tardor"]
+      "recursos": [
+        "panera",
+        "agafar-i-deixar",
+        "paper-que-sona",
+        "el-moment-del-bany",
+        "massatge",
+        "caixa-permanencia",
+        "pots-i-tapes"
+      ]
+    },
+    {
+      "id": "sensorial",
+      "grup": "temes",
+      "titol": {
+        "ca": "Joc sensorial",
+        "es": "Juego sensorial"
+      },
+      "text": {
+        "ca": "Tocar, escoltar, mirar i descobrir",
+        "es": "Tocar, escuchar, mirar y descubrir"
+      },
+      "portada": "ampolles-sensorials",
+      "recursos": [
+        "ampolles-sensorials",
+        "bossa-misteriosa",
+        "joc-heuristic",
+        "tardor",
+        "paper-que-sona",
+        "panera",
+        "ampolla-de-neu"
+      ]
+    },
+    {
+      "id": "quotidiana",
+      "grup": "temes",
+      "titol": {
+        "ca": "Vida quotidiana",
+        "es": "Vida cotidiana"
+      },
+      "text": {
+        "ca": "També aprenem en les petites coses de cada dia",
+        "es": "También aprendemos en las pequeñas cosas de cada día"
+      },
+      "portada": "el-moment-del-bany",
+      "recursos": [
+        "el-moment-del-bany",
+        "les-coses-de-casa",
+        "pinces-de-la-roba",
+        "pots-i-tapes",
+        "recollim-les-joguines",
+        "cancons-de-cada-dia",
+        "estenem-la-roba",
+        "parem-taula",
+        "classifiquem-la-roba",
+        "pa-amb-tomaquet"
+      ]
+    },
+    {
+      "id": "cientifics",
+      "grup": "temes",
+      "titol": {
+        "ca": "Petits científics",
+        "es": "Pequeños científicos"
+      },
+      "text": {
+        "ca": "Experiments per fer-se preguntes",
+        "es": "Experimentos para hacerse preguntas"
+      },
+      "portada": "el-poder-dels-imants",
+      "recursos": [
+        "el-poder-dels-imants",
+        "el-volca-efervescent",
+        "juguem-amb-les-ombres",
+        "flota",
+        "llum-i-ombres",
+        "ous-de-colors"
+      ]
     },
     {
       "id": "escriptura",
-      "titol": { "ca": "Preparem l'escriptura", "es": "Preparamos la escritura" },
-      "text": { "ca": "La mà abans del llapis", "es": "La mano antes del lápiz" },
+      "grup": "temes",
+      "titol": {
+        "ca": "Preparem l'escriptura",
+        "es": "Preparamos la escritura"
+      },
+      "text": {
+        "ca": "La mà abans del llapis",
+        "es": "La mano antes del lápiz"
+      },
       "portada": "trasvas",
-      "recursos": ["trasvas", "pintura", "vocal-a", "numero-1"]
+      "recursos": [
+        "trasvas",
+        "pinces-i-pompons",
+        "estenem-la-roba",
+        "la-rosa-de-paper",
+        "vocal-a",
+        "numero-1",
+        "descobrim-les-lletres"
+      ]
     }
   ],
-  "descobreix": ["vestir", "flota", "massatge", "pintura"],
+  "descobreix": [
+    "el-volca-efervescent",
+    "parem-taula",
+    "fem-el-tio",
+    "juguem-amb-les-ombres",
+    "joc-memory-gran"
+  ],
   "cita": {
     "ca": "«El joc és la forma més elevada de la investigació.»",
     "es": "«El juego es la forma más elevada de la investigación.»",

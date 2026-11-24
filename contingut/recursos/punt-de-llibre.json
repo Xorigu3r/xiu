@@ -1,0 +1,80 @@
+{
+  "id": "punt-de-llibre",
+  "tipus": "activitat",
+  "edat": "2-3",
+  "area": "cre",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "15 min",
+  "novetat": true,
+  "titol": {
+    "ca": "El meu punt de llibre",
+    "es": "Mi punto de libro"
+  },
+  "subtitol": {
+    "ca": "Per Sant Jordi, un llibre i un punt",
+    "es": "Por Sant Jordi, un libro y un punto"
+  },
+  "intencio": {
+    "ca": "Crear un punt de llibre amb tècniques senzilles i valorar els llibres.",
+    "es": "Crear un punto de libro con técnicas sencillas y valorar los libros."
+  },
+  "treballa": {
+    "ca": [
+      "Expressió plàstica",
+      "Estima pels llibres"
+    ],
+    "es": [
+      "Expresión plástica",
+      "Amor por los libros"
+    ]
+  },
+  "materials": {
+    "ca": [
+      "Tires de cartolina",
+      "Pintura de dits o segells",
+      "Una cinta"
+    ],
+    "es": [
+      "Tiras de cartulina",
+      "Pintura de dedos o sellos",
+      "Una cinta"
+    ]
+  },
+  "preparacio": {
+    "ca": "Talla tires de cartolina d'uns 5 × 18 cm.",
+    "es": "Corta tiras de cartulina de unos 5 × 18 cm."
+  },
+  "desenvolupament": {
+    "ca": [
+      "Que decori la tira amb els dits o amb segells.",
+      "Quan s'eixugui, feu un forat i lligueu-hi la cinta.",
+      "Poseu-lo al seu conte preferit."
+    ],
+    "es": [
+      "Que decore la tira con los dedos o con sellos.",
+      "Cuando se seque, haced un agujero y atad la cinta.",
+      "Ponedlo en su cuento preferido."
+    ]
+  },
+  "variants": {
+    "ca": [
+      "Regaleu-ne un a algú de la família."
+    ],
+    "es": [
+      "Regalad uno a alguien de la familia."
+    ]
+  },
+  "seguretat": {
+    "ca": [
+      "Pintura apta per a infants."
+    ],
+    "es": [
+      "Pintura apta para niños."
+    ]
+  },
+  "festa": "santjordi",
+  "premium": true
+}

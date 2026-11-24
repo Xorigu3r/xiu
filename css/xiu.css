@@ -747,3 +747,78 @@ body.granP .num{width:min(14vw,130px);height:min(14vw,130px);font-size:min(7vw,6
 .diariB{margin:18px 0 4px;background:linear-gradient(135deg,#E2E8EE,#C9D6E2)}
 .diariChips{flex-wrap:wrap;margin:0;padding:0}
 .diariChips select{padding:7px 12px;border-radius:99px;border:1px dashed var(--line);background:#fff;font:inherit;font-size:14px;max-width:220px}
+
+/* ========== 0.6.0: Inici en quatre blocs ========== */
+.bloc{display:flex;align-items:center;gap:12px;margin:40px 0 14px;padding-top:18px;border-top:1px solid var(--line)}
+.bloc:first-of-type{border-top:0}
+.blocN{width:34px;height:34px;flex-shrink:0;border-radius:50%;background:var(--ink);color:var(--paper);display:grid;place-items:center;font-family:var(--serif);font-size:18px;font-weight:600;font-variant-numeric:lining-nums}
+.bloc>div{flex:1;min-width:0}
+.bloc h2{font-size:26px}
+.bloc p{color:var(--soft);font-size:14px;margin-top:2px}
+.blocB{font-size:14px;color:var(--accent);font-weight:600;white-space:nowrap}
+.avuiHero .actions{margin-top:14px}
+.sec.petit{margin:6px 0 8px}
+.sec.petit h2{font-size:18px}
+.perInf{margin-bottom:18px}
+.perInfCap{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.perInfCap>div{flex:1}
+.perInfCap b{display:block;font-family:var(--serif);font-size:20px;font-weight:600}
+.perInfCap small{color:var(--soft);font-size:13px}
+.perInfCap button{font-size:14px;color:var(--accent);font-weight:500}
+.ctaInf{margin-bottom:14px}
+.coll.petita{flex:0 0 200px;scroll-snap-align:start}
+.coll.petita .photo{aspect-ratio:4/3}
+.coll.petita h3{font-size:16px}
+
+/* ========== Biblioteca: edat → àrea → propostes ========== */
+.edatsBib{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:18px 0}
+@media (min-width:700px){.edatsBib{grid-template-columns:repeat(3,1fr)}}
+.edatB{display:flex;flex-direction:column;align-items:flex-start;gap:2px;padding:20px;border-radius:22px;background:var(--surface);border:1px solid var(--line);text-align:left;transition:.15s}
+.edatB:hover{border-color:var(--ink);transform:translateY(-2px)}
+.edatB b{font-family:var(--serif);font-size:40px;font-weight:500;line-height:1;font-variant-numeric:lining-nums}
+.edatB span{font-size:13px;color:var(--soft)}
+.edatB small{margin-top:10px;font-size:12px;font-weight:600;color:var(--accent)}
+.edatB.meva{background:var(--accent-soft);border-color:var(--accent)}
+.salts{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;margin:10px -16px 0;padding:0 16px}
+.salts::-webkit-scrollbar{display:none}
+@media (min-width:900px){.salts{flex-wrap:wrap;margin:10px 0 0;padding:0}}
+.salts .chip{display:inline-flex;align-items:center;gap:4px}
+.salts .dot{margin:0}
+.areesBib{display:grid;gap:10px;margin-top:18px}
+@media (min-width:700px){.areesBib{grid-template-columns:1fr 1fr}}
+.areaB{display:flex;align-items:center;gap:14px;padding:10px 14px 10px 10px;border-radius:20px;background:color-mix(in srgb,var(--c) 22%,#FFFDF9);border:1px solid color-mix(in srgb,var(--c) 40%,#fff);text-align:left}
+.areaB .mini{width:64px;height:64px;border-radius:14px;overflow:hidden;flex-shrink:0;position:relative;background:var(--sand)}
+.areaB .mini .photo{position:absolute;inset:0;border-radius:0}
+.areaB .txt{flex:1}
+.areaB b{display:block;font-family:var(--serif);font-size:19px;font-weight:600;line-height:1.15}
+.areaB small{font-size:13px;color:var(--soft)}
+.areaB>svg{width:18px;height:18px;transform:rotate(180deg);stroke:currentColor;fill:none;stroke-width:1.8;color:var(--soft)}
+.areaCap h1{border-left:6px solid var(--c);padding-left:12px}
+.filtres{margin:14px 0 6px;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:10px 14px}
+.filtres summary{cursor:pointer;font-weight:600;font-size:14px;color:var(--soft)}
+.filtres[open] summary{margin-bottom:6px}
+
+/* ========== Inspiració i Premium ========== */
+.compara{display:grid;gap:12px;margin-top:22px}
+@media (min-width:700px){.compara{grid-template-columns:1fr 1fr}}
+.compara .col{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:18px}
+.compara .col.prem{background:linear-gradient(135deg,#F6EDDD,#EBD9BC);border-color:#E0C79B}
+.compara h3{font-size:22px;margin-bottom:8px}
+.compara ul{list-style:none;display:grid;gap:8px}
+.compara li{display:flex;gap:8px;font-size:14px;align-items:flex-start}
+.compara li svg{width:18px;height:18px;flex-shrink:0;stroke:var(--soft);fill:none;stroke-width:2;margin-top:1px}
+
+/* ========== Perfils: medalles, per fer, preferides ========== */
+.medalles{display:grid;grid-template-columns:repeat(auto-fill,minmax(118px,1fr));gap:10px}
+.medalla{display:flex;flex-direction:column;align-items:center;gap:4px;padding:14px 8px 12px;border-radius:18px;background:var(--surface);border:1px dashed var(--line);text-align:center;opacity:.55}
+.medalla.on{opacity:1;border:1px solid color-mix(in srgb,var(--c) 45%,#fff);background:color-mix(in srgb,var(--c) 12%,#FFFDF9)}
+.medalla .disc{width:52px;height:52px;border-radius:50%;background:var(--sand);display:grid;place-items:center;position:relative}
+.medalla.on .disc{background:var(--c);box-shadow:inset 0 0 0 3px rgba(255,255,255,.6)}
+.medalla.on .disc::after{content:"";position:absolute;bottom:-9px;left:50%;width:22px;height:14px;transform:translateX(-50%);background:var(--c);clip-path:polygon(0 0,100% 0,100% 100%,50% 70%,0 100%);opacity:.8}
+.medalla .disc svg{width:24px;height:24px;fill:#fff;stroke:none}
+.medalla b{font-size:13px;line-height:1.2;margin-top:6px}
+.medalla small{font-size:11px;color:var(--soft)}
+.guardaLl{display:grid;gap:8px;margin-top:14px;text-align:left}
+.guardaF{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.guardaF b{flex:1;min-width:80px}
+.guardaF .chip svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:1.8;vertical-align:-2px;margin-right:3px}

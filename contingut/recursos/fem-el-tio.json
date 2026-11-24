@@ -1,0 +1,86 @@
+{
+  "id": "fem-el-tio",
+  "tipus": "activitat",
+  "edat": "4-5",
+  "area": "cre",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "20 min",
+  "novetat": true,
+  "titol": {
+    "ca": "Fem el Tió",
+    "es": "Hacemos el Tió"
+  },
+  "subtitol": {
+    "ca": "Un tronc, uns ulls i una barretina",
+    "es": "Un tronco, unos ojos y una barretina"
+  },
+  "intencio": {
+    "ca": "Viure la tradició del Tió creant-ne un i cuidant-lo fins a Nadal.",
+    "es": "Vivir la tradición del Tió creando uno y cuidándolo hasta Navidad."
+  },
+  "treballa": {
+    "ca": [
+      "Creativitat",
+      "Tradicions",
+      "Responsabilitat"
+    ],
+    "es": [
+      "Creatividad",
+      "Tradiciones",
+      "Responsabilidad"
+    ]
+  },
+  "materials": {
+    "ca": [
+      "Un tronc o un tub de cartró gran",
+      "Cartolina vermella",
+      "Retoladors",
+      "Una manta petita"
+    ],
+    "es": [
+      "Un tronco o un tubo de cartón grande",
+      "Cartulina roja",
+      "Rotuladores",
+      "Una mantita"
+    ]
+  },
+  "preparacio": {
+    "ca": "Busqueu un tronc al bosc o feu-lo amb un tub de cartró.",
+    "es": "Buscad un tronco en el bosque o hacedlo con un tubo de cartón."
+  },
+  "desenvolupament": {
+    "ca": [
+      "Dibuixeu-li la cara i feu-li la barretina.",
+      "Poseu-li la manta perquè no tingui fred.",
+      "Cada dia, doneu-li menjar (pela de mandarina!).",
+      "Per Nadal, canteu la cançó i feu-lo cagar."
+    ],
+    "es": [
+      "Dibujadle la cara y hacedle la barretina.",
+      "Ponedle la manta para que no tenga frío.",
+      "Cada día, dadle de comer (¡piel de mandarina!).",
+      "En Navidad, cantad la canción y hacedlo cagar."
+    ]
+  },
+  "variants": {
+    "ca": [
+      "Escriviu un diari: què ha menjat el Tió?"
+    ],
+    "es": [
+      "Escribid un diario: ¿qué ha comido el Tió?"
+    ]
+  },
+  "seguretat": {
+    "ca": [
+      "Els pals per picar, de fusta i sense punxes."
+    ],
+    "es": [
+      "Los palos para golpear, de madera y sin pinchos."
+    ]
+  },
+  "festa": "nadal",
+  "premium": true
+}

@@ -78,5 +78,6 @@
     "costat": 3,
     "element": "flor",
     "fons": "#DDE6D8"
-  }
+  },
+  "premium": true
 }

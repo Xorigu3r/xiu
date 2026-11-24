@@ -1,0 +1,82 @@
+{
+  "id": "ous-de-colors",
+  "tipus": "activitat",
+  "edat": "3-4",
+  "area": "exp",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "20 min",
+  "novetat": true,
+  "titol": {
+    "ca": "Ous de colors",
+    "es": "Huevos de colores"
+  },
+  "subtitol": {
+    "ca": "Barregem colors i decorem",
+    "es": "Mezclamos colores y decoramos"
+  },
+  "intencio": {
+    "ca": "Descobrir què passa quan barregem colors mentre decorem ous per Pasqua.",
+    "es": "Descubrir qué pasa cuando mezclamos colores mientras decoramos huevos por Pascua."
+  },
+  "treballa": {
+    "ca": [
+      "Barreja de colors",
+      "Creativitat",
+      "Tradicions"
+    ],
+    "es": [
+      "Mezcla de colores",
+      "Creatividad",
+      "Tradiciones"
+    ]
+  },
+  "materials": {
+    "ca": [
+      "Ous durs o ous de cartró",
+      "Colorant alimentari o pintura",
+      "Gots i culleres"
+    ],
+    "es": [
+      "Huevos duros o huevos de cartón",
+      "Colorante alimentario o pintura",
+      "Vasos y cucharas"
+    ]
+  },
+  "preparacio": {
+    "ca": "Prepara gots amb aigua i colorant de tres colors.",
+    "es": "Prepara vasos con agua y colorante de tres colores."
+  },
+  "desenvolupament": {
+    "ca": [
+      "Fiqueu un ou a cada got amb la cullera.",
+      "Què passa si el posem en dos colors?",
+      "Deixeu-los assecar i feu-ne una mona."
+    ],
+    "es": [
+      "Meted un huevo en cada vaso con la cuchara.",
+      "¿Qué pasa si lo ponemos en dos colores?",
+      "Dejadlos secar y haced una mona."
+    ]
+  },
+  "variants": {
+    "ca": [
+      "Pinteu pedres en lloc d'ous."
+    ],
+    "es": [
+      "Pintad piedras en lugar de huevos."
+    ]
+  },
+  "seguretat": {
+    "ca": [
+      "Colorant alimentari si són ous de menjar."
+    ],
+    "es": [
+      "Colorante alimentario si son huevos para comer."
+    ]
+  },
+  "festa": "pasqua",
+  "premium": true
+}

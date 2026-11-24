@@ -1,0 +1,84 @@
+{
+  "id": "mascares-de-cartro",
+  "tipus": "activitat",
+  "edat": "5-6",
+  "area": "cre",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "20 min",
+  "novetat": true,
+  "titol": {
+    "ca": "Màscares de cartró",
+    "es": "Máscaras de cartón"
+  },
+  "subtitol": {
+    "ca": "Qui seré avui?",
+    "es": "¿Quién seré hoy?"
+  },
+  "intencio": {
+    "ca": "Dissenyar una màscara i jugar a ser un personatge: expressar emocions amb el cos.",
+    "es": "Diseñar una máscara y jugar a ser un personaje: expresar emociones con el cuerpo."
+  },
+  "treballa": {
+    "ca": [
+      "Creativitat",
+      "Retallar",
+      "Expressió corporal"
+    ],
+    "es": [
+      "Creatividad",
+      "Recortar",
+      "Expresión corporal"
+    ]
+  },
+  "materials": {
+    "ca": [
+      "Plats de cartró o cartolina",
+      "Tisores de punta rodona",
+      "Colors, plomes i gomets",
+      "Una goma elàstica"
+    ],
+    "es": [
+      "Platos de cartón o cartulina",
+      "Tijeras de punta redonda",
+      "Colores, plumas y gomets",
+      "Una goma elástica"
+    ]
+  },
+  "preparacio": {
+    "ca": "Marca on van els ulls i retalla els forats tu.",
+    "es": "Marca dónde van los ojos y recorta tú los agujeros."
+  },
+  "desenvolupament": {
+    "ca": [
+      "Que decideixi quin personatge vol ser.",
+      "Pinteu i enganxeu-hi plomes i gomets.",
+      "Poseu-hi la goma i feu una desfilada."
+    ],
+    "es": [
+      "Que decida qué personaje quiere ser.",
+      "Pintad y pegad plumas y gomets.",
+      "Poned la goma y haced un desfile."
+    ]
+  },
+  "variants": {
+    "ca": [
+      "Endevineu l'emoció de cada màscara."
+    ],
+    "es": [
+      "Adivinad la emoción de cada máscara."
+    ]
+  },
+  "seguretat": {
+    "ca": [
+      "Forats dels ulls grans: ha de veure-hi bé."
+    ],
+    "es": [
+      "Agujeros de los ojos grandes: tiene que ver bien."
+    ]
+  },
+  "festa": "carnaval",
+  "premium": true
+}

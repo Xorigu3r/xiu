@@ -1,0 +1,81 @@
+{
+  "id": "pinces-de-la-roba",
+  "tipus": "activitat",
+  "edat": "1-2",
+  "area": "mot",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "10 min",
+  "novetat": true,
+  "titol": {
+    "ca": "Pinces de la roba",
+    "es": "Pinzas de la ropa"
+  },
+  "subtitol": {
+    "ca": "Treure-les i posar-les",
+    "es": "Quitarlas y ponerlas"
+  },
+  "intencio": {
+    "ca": "Enfortir la mà amb un objecte de casa: primer treure pinces, després posar-les.",
+    "es": "Fortalecer la mano con un objeto de casa: primero quitar pinzas, después ponerlas."
+  },
+  "treballa": {
+    "ca": [
+      "Força de la mà",
+      "Pinça",
+      "Coordinació"
+    ],
+    "es": [
+      "Fuerza de la mano",
+      "Pinza",
+      "Coordinación"
+    ]
+  },
+  "materials": {
+    "ca": [
+      "Pinces de fusta toves",
+      "Un bol o la vora d'una capsa"
+    ],
+    "es": [
+      "Pinzas de madera blandas",
+      "Un cuenco o el borde de una caja"
+    ]
+  },
+  "preparacio": {
+    "ca": "Posa unes quantes pinces a la vora del bol.",
+    "es": "Pon unas cuantas pinzas en el borde del cuenco."
+  },
+  "desenvolupament": {
+    "ca": [
+      "Deixa que les tregui i les posi dins el bol.",
+      "Quan ja en sap, ensenya-li a obrir-ne una.",
+      "Penjeu un mitjó a la vora."
+    ],
+    "es": [
+      "Deja que las quite y las meta en el cuenco.",
+      "Cuando ya sepa, enséñale a abrir una.",
+      "Colgad un calcetín en el borde."
+    ]
+  },
+  "variants": {
+    "ca": [
+      "Pinces de colors per classificar.",
+      "Pengeu dibuixos en un cordill."
+    ],
+    "es": [
+      "Pinzas de colores para clasificar.",
+      "Colgad dibujos en una cuerda."
+    ]
+  },
+  "seguretat": {
+    "ca": [
+      "Pinces toves que no pessiguin fort."
+    ],
+    "es": [
+      "Pinzas blandas que no pellizquen fuerte."
+    ]
+  },
+  "quotidiana": true
+}

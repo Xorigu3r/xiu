@@ -1,0 +1,79 @@
+{
+  "id": "disfresses-de-casa",
+  "tipus": "activitat",
+  "edat": "3-4",
+  "area": "cre",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "20 min",
+  "novetat": true,
+  "titol": {
+    "ca": "Disfresses amb roba de casa",
+    "es": "Disfraces con ropa de casa"
+  },
+  "subtitol": {
+    "ca": "Un bagul ple de personatges",
+    "es": "Un baúl lleno de personajes"
+  },
+  "intencio": {
+    "ca": "Imaginar personatges amb el que tenim a casa i jugar a representar-los.",
+    "es": "Imaginar personajes con lo que tenemos en casa y jugar a representarlos."
+  },
+  "treballa": {
+    "ca": [
+      "Joc simbòlic",
+      "Vestir-se sol",
+      "Imaginació"
+    ],
+    "es": [
+      "Juego simbólico",
+      "Vestirse solo",
+      "Imaginación"
+    ]
+  },
+  "materials": {
+    "ca": [
+      "Mocadors, barrets, camises grans",
+      "Un mirall"
+    ],
+    "es": [
+      "Pañuelos, sombreros, camisas grandes",
+      "Un espejo"
+    ]
+  },
+  "preparacio": {
+    "ca": "Omple una caixa amb roba vella i complements.",
+    "es": "Llena una caja con ropa vieja y complementos."
+  },
+  "desenvolupament": {
+    "ca": [
+      "Que triï què es posa i es vesteixi sol.",
+      "Davant del mirall: qui ets?",
+      "Poseu música i feu una rua per casa."
+    ],
+    "es": [
+      "Que elija qué se pone y se vista solo.",
+      "Delante del espejo: ¿quién eres?",
+      "Poned música y haced una rúa por casa."
+    ]
+  },
+  "variants": {
+    "ca": [
+      "Fotografieu cada disfressa i feu un àlbum."
+    ],
+    "es": [
+      "Fotografiad cada disfraz y haced un álbum."
+    ]
+  },
+  "seguretat": {
+    "ca": [
+      "Res de cordons llargs al coll."
+    ],
+    "es": [
+      "Nada de cordones largos al cuello."
+    ]
+  },
+  "festa": "carnaval"
+}

@@ -1,0 +1,85 @@
+{
+  "id": "parem-taula",
+  "tipus": "activitat",
+  "edat": "3-4",
+  "area": "aut",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "10 min",
+  "novetat": true,
+  "titol": {
+    "ca": "Parem taula",
+    "es": "Ponemos la mesa"
+  },
+  "subtitol": {
+    "ca": "Un plat, un got, una cullera per a cadascú",
+    "es": "Un plato, un vaso, una cuchara para cada uno"
+  },
+  "intencio": {
+    "ca": "Participar en una tasca real de la família i practicar la correspondència un a un.",
+    "es": "Participar en una tarea real de la familia y practicar la correspondencia uno a uno."
+  },
+  "treballa": {
+    "ca": [
+      "Autonomia",
+      "Comptar",
+      "Responsabilitat"
+    ],
+    "es": [
+      "Autonomía",
+      "Contar",
+      "Responsabilidad"
+    ]
+  },
+  "materials": {
+    "ca": [
+      "Plats i gots irrompibles",
+      "Coberts",
+      "Tovallons",
+      "Un estalvi o mantell amb el dibuix del lloc de cada cosa"
+    ],
+    "es": [
+      "Platos y vasos irrompibles",
+      "Cubiertos",
+      "Servilletas",
+      "Un mantel individual con el dibujo del sitio de cada cosa"
+    ]
+  },
+  "preparacio": {
+    "ca": "Dibuixa en un full on va el plat, el got i la cullera: serà la guia.",
+    "es": "Dibuja en una hoja dónde va el plato, el vaso y la cuchara: será la guía."
+  },
+  "desenvolupament": {
+    "ca": [
+      "Compteu quants sereu a taula.",
+      "Porta un plat per persona, i després els gots.",
+      "Comprova amb la guia que tot és al seu lloc."
+    ],
+    "es": [
+      "Contad cuántos seréis a la mesa.",
+      "Lleva un plato por persona, y después los vasos.",
+      "Comprueba con la guía que todo está en su sitio."
+    ]
+  },
+  "variants": {
+    "ca": [
+      "També pot desparar i portar-ho a la pica.",
+      "Posar un detall: una flor, un tovalló doblegat."
+    ],
+    "es": [
+      "También puede quitar la mesa y llevarlo al fregadero.",
+      "Poner un detalle: una flor, una servilleta doblada."
+    ]
+  },
+  "seguretat": {
+    "ca": [
+      "Res de vidre ni ganivets."
+    ],
+    "es": [
+      "Nada de vidrio ni cuchillos."
+    ]
+  },
+  "quotidiana": true
+}

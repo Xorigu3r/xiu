@@ -1,0 +1,87 @@
+{
+  "id": "pa-amb-tomaquet",
+  "tipus": "activitat",
+  "edat": "5-6",
+  "area": "aut",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "15 min",
+  "novetat": true,
+  "titol": {
+    "ca": "Fem pa amb tomàquet",
+    "es": "Hacemos pan con tomate"
+  },
+  "subtitol": {
+    "ca": "La primera recepta, de cap a peus",
+    "es": "La primera receta, de principio a fin"
+  },
+  "intencio": {
+    "ca": "Seguir els passos d'una recepta senzilla i tradicional, i menjar-se el que has fet.",
+    "es": "Seguir los pasos de una receta sencilla y tradicional, y comerse lo que has hecho."
+  },
+  "treballa": {
+    "ca": [
+      "Seqüenciació",
+      "Autonomia",
+      "Hàbits saludables"
+    ],
+    "es": [
+      "Secuenciación",
+      "Autonomía",
+      "Hábitos saludables"
+    ]
+  },
+  "materials": {
+    "ca": [
+      "Pa",
+      "Tomàquets madurs",
+      "Oli d'oliva i sal",
+      "Ganivet de punta rodona"
+    ],
+    "es": [
+      "Pan",
+      "Tomates maduros",
+      "Aceite de oliva y sal",
+      "Cuchillo de punta redonda"
+    ]
+  },
+  "preparacio": {
+    "ca": "Renteu-vos les mans i tallant tu el tomàquet per la meitat.",
+    "es": "Lavaos las manos y corta tú el tomate por la mitad."
+  },
+  "desenvolupament": {
+    "ca": [
+      "Que fregui el tomàquet sobre el pa.",
+      "Que hi tiri un rajolí d'oli, amb compte.",
+      "Una mica de sal, amb els dits.",
+      "A taula, a compartir-lo!"
+    ],
+    "es": [
+      "Que frote el tomate sobre el pan.",
+      "Que eche un chorrito de aceite, con cuidado.",
+      "Un poco de sal, con los dedos.",
+      "¡A la mesa, a compartirlo!"
+    ]
+  },
+  "variants": {
+    "ca": [
+      "Dibuixeu la recepta en 4 vinyetes.",
+      "Feu-ne per a tota la família."
+    ],
+    "es": [
+      "Dibujad la receta en 4 viñetas.",
+      "Haced para toda la familia."
+    ]
+  },
+  "seguretat": {
+    "ca": [
+      "L'adult talla; l'infant frega i unta."
+    ],
+    "es": [
+      "El adulto corta; el niño frota y unta."
+    ]
+  },
+  "quotidiana": true
+}

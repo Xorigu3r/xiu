@@ -108,7 +108,7 @@
     }
     const msg = await XP.desaPdf(new Uint8Array(doc.output('arraybuffer')), `XIU - ${t('rutines')} - ${nomR(r)}.pdf`, { desat: t('desat') }); if (msg) A.avis(msg);
   }
-  A.HOOKS.inici.push(() => (A.perfil?.tipus === 'pro' ? '' : `<button class="premB rutB" data-go="#/rutines">${svg('sol')}<span><b>${t('rutines')}</b>${t('rutinesB')}</span>${I.back}</button>`));
+  A.HOOKS.bloc2.push(() => (A.perfil?.tipus === 'pro' ? '' : `<button class="premB rutB" data-go="#/rutines">${svg('sol')}<span><b>${t('rutines')}</b>${t('rutinesB')}</span>${I.back}</button>`));
   A.HOOKS.perfil.push(() => `<div class="llistaMes" style="margin-top:8px"><button data-go="#/rutines">${I.rellotge}<span>${t('rutines')}</span>${I.back}</button></div>`);
   document.addEventListener('input', (e) => { const id = e.target.dataset.rutNom; if (id) { const r = propia(id); r.ca = r.es = e.target.value; desa(); } });
   document.addEventListener('click', (e) => {

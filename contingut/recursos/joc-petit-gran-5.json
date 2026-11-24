@@ -72,5 +72,6 @@
   "joc": {
     "model": "mida",
     "n": 5
-  }
+  },
+  "premium": true
 }

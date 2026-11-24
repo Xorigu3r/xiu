@@ -1,0 +1,81 @@
+{
+  "id": "classifiquem-la-roba",
+  "tipus": "activitat",
+  "edat": "4-5",
+  "area": "aut",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "15 min",
+  "novetat": true,
+  "titol": {
+    "ca": "Classifiquem la roba",
+    "es": "Clasificamos la ropa"
+  },
+  "subtitol": {
+    "ca": "Mitjons, samarretes i la roba de cadascú",
+    "es": "Calcetines, camisetas y la ropa de cada uno"
+  },
+  "intencio": {
+    "ca": "Classificar segons diferents criteris (tipus, color, persona) amb la roba neta.",
+    "es": "Clasificar según diferentes criterios (tipo, color, persona) con la ropa limpia."
+  },
+  "treballa": {
+    "ca": [
+      "Classificació",
+      "Aparellar",
+      "Autonomia"
+    ],
+    "es": [
+      "Clasificación",
+      "Emparejar",
+      "Autonomía"
+    ]
+  },
+  "materials": {
+    "ca": [
+      "Una cistella de roba neta",
+      "3 o 4 cistells o munts"
+    ],
+    "es": [
+      "Una cesta de ropa limpia",
+      "3 o 4 cestos o montones"
+    ]
+  },
+  "preparacio": {
+    "ca": "Aboca la roba neta sobre el llit.",
+    "es": "Vuelca la ropa limpia sobre la cama."
+  },
+  "desenvolupament": {
+    "ca": [
+      "Primer, aparelleu els mitjons.",
+      "Després, feu munts: de qui és cada peça?",
+      "Al final, que porti la seva roba al calaix."
+    ],
+    "es": [
+      "Primero, emparejad los calcetines.",
+      "Después, haced montones: ¿de quién es cada prenda?",
+      "Al final, que lleve su ropa al cajón."
+    ]
+  },
+  "variants": {
+    "ca": [
+      "Classifiqueu per colors.",
+      "Comptem quants mitjons hi ha."
+    ],
+    "es": [
+      "Clasificad por colores.",
+      "Contad cuántos calcetines hay."
+    ]
+  },
+  "seguretat": {
+    "ca": [
+      "Res de perills: només roba neta."
+    ],
+    "es": [
+      "Sin peligros: solo ropa limpia."
+    ]
+  },
+  "quotidiana": true
+}

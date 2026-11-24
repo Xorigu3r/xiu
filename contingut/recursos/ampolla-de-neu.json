@@ -1,0 +1,81 @@
+{
+  "id": "ampolla-de-neu",
+  "tipus": "activitat",
+  "edat": "2-3",
+  "area": "exp",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "15 min",
+  "novetat": true,
+  "titol": {
+    "ca": "Ampolla de neu",
+    "es": "Botella de nieve"
+  },
+  "subtitol": {
+    "ca": "Una nevada que es mou a les mans",
+    "es": "Una nevada que se mueve en las manos"
+  },
+  "intencio": {
+    "ca": "Observar com cauen les partícules a l'aigua i relaxar-se mirant-les.",
+    "es": "Observar cómo caen las partículas en el agua y relajarse mirándolas."
+  },
+  "treballa": {
+    "ca": [
+      "Observació",
+      "Calma",
+      "Causa-efecte"
+    ],
+    "es": [
+      "Observación",
+      "Calma",
+      "Causa-efecto"
+    ]
+  },
+  "materials": {
+    "ca": [
+      "Una ampolla de plàstic transparent",
+      "Aigua i una mica de glicerina o oli de nadó",
+      "Purpurina blanca i estrelles"
+    ],
+    "es": [
+      "Una botella de plástico transparente",
+      "Agua y un poco de glicerina o aceite de bebé",
+      "Purpurina blanca y estrellas"
+    ]
+  },
+  "preparacio": {
+    "ca": "Prepara l'ampolla amb l'infant i tanca el tap amb cola.",
+    "es": "Prepara la botella con el niño y cierra el tapón con cola."
+  },
+  "desenvolupament": {
+    "ca": [
+      "Que hi tiri la purpurina i les estrelles.",
+      "Gireu l'ampolla: neva!",
+      "Mireu fins que caigui l'última estrella."
+    ],
+    "es": [
+      "Que eche la purpurina y las estrellas.",
+      "Girad la botella: ¡nieva!",
+      "Mirad hasta que caiga la última estrella."
+    ]
+  },
+  "variants": {
+    "ca": [
+      "Feu-ne una de cada color per a cada estació."
+    ],
+    "es": [
+      "Haced una de cada color para cada estación."
+    ]
+  },
+  "seguretat": {
+    "ca": [
+      "Tap enganxat amb cola: que no es pugui obrir."
+    ],
+    "es": [
+      "Tapón pegado con cola: que no se pueda abrir."
+    ]
+  },
+  "festa": "nadal"
+}

@@ -71,7 +71,7 @@
   for (const l of ['ca', 'es']) Object.assign(T[l], (window.XIU_TEXTOS_COMPTE || {})[l] || {});
 
   // Mòduls (js/moduls/*.js): s'hi enganxen amb window.XIU_MODULS.push((A) => {...}); A = window.XIU_APP (al final)
-  const HOOKS = { accions: [], inici: [], iniciDalt: [], perfil: [], quant: [], insignia: [], recurs: {}, despres: [], bib: [], progres: [], progresSec: [], fitxaSota: [] };
+  const HOOKS = { accions: [], inici: [], iniciDalt: [], bloc1: [], bloc2: [], bloc3: [], bloc4: [], perfil: [], quant: [], insignia: [], recurs: {}, despres: [], bib: [], progres: [], progresSec: [], fitxaSota: [] };
   const VISTES = {};
 
   /* ---------- Estat (preferències locals: idioma i favorits) ---------- */
@@ -80,7 +80,7 @@
   let lang = ls.get('idioma', /^es\b/i.test(navigator.language || '') ? 'es' : 'ca');
   let favs = ls.get('favorits', []).filter((id) => perId[id]);
   let F = buit();
-  function buit() { return { edat: null, area: null, tipus: null, perfil: null, acces: null, q: '' }; }
+  function buit() { return { edat: null, area: null, tipus: null, perfil: null, acces: null, durada: null, pocs: null, obj: null, q: '' }; }
   // perfil: { tipus: 'fam' | 'pro', edats: [...] } — es tria en obrir l'app per primer cop (es desa en aquest aparell)
   let perfil = ls.get('perfil', null), onb = null;
   // Premium: r.premium el marca el Gestor i BIB.premium.actiu activa els cadenats.
@@ -169,31 +169,42 @@
 
   /* ---------- Pantalles ---------- */
   function vInici() {
+    // Quatre blocs: 1 Què fem avui? · 2 Avui a casa · 3 Per a cada infant · 4 Descobreix XIU (document de millores, nov. 2026)
     const h = perId[BIB.temporada.destacat], hora = new Date().getHours();
     const hola = t('hola')[hora < 14 ? 0 : hora < 20 ? 1 : 2];
-    const pt = perfil && R.filter((r) => r.perfil.includes(perfil.tipus) && (!perfil.edats.length || perfil.edats.includes(r.edat)))
-      .sort((a, b) => (bloquejat(a) - bloquejat(b)) || (b.novetat ? 1 : 0) - (a.novetat ? 1 : 0)).slice(0, 14);
+    const edats = perfil && perfil.edats.length ? perfil.edats : null, ie = (e) => EDATS.indexOf(e);
+    const aprop = (r) => !edats || edats.some((e) => Math.abs(ie(e) - ie(r.edat)) <= 1);
+    const dia = Math.floor(Date.now() / 864e5);
+    const casa = R.filter((r) => r.quotidiana && aprop(r) && !bloquejat(r));
+    const casaAvui = casa.length ? [...casa.slice(dia % casa.length), ...casa.slice(0, dia % casa.length)].slice(0, 6) : [];
+    const colls = BIB.colleccions || [];
     const gratis = premiumActiu() && !subscrit() ? R.filter((r) => !esPrem(r)).slice(0, 14) : [];
+    const bloc = (n, tit, sub, dreta = '') => `<div class="bloc"><span class="blocN">${n}</span><div><h2>${tit}</h2>${sub ? `<p>${sub}</p>` : ''}</div>${dreta}</div>`;
     return `<section class="pageH"><h1>${hola}</h1><div class="scr">${t('tag')}.</div><p>${t('holaP')}</p></section>
       ${HOOKS.iniciDalt.map((f) => f()).join('')}
-      ${pt && pt.length ? `<div class="sec"><h2>${t('perATu')} <small>${t('perATuP')[perfil.tipus]}${perfil.edats.length ? ' · ' + perfil.edats.join(', ') + ' ' + t('anys') : ''}</small></h2><button data-go="#/perfil">${t('canvia')}</button></div>
-        <div class="row">${pt.map(card).join('')}</div>` : ''}
+      ${bloc(1, t('b1T'), t('b1P'), `<button class="blocB" data-go="#/avui">${t('b1Tria')}</button>`)}
+      ${HOOKS.bloc1.map((f) => f()).join('')}
+      ${bloc(2, t('b2T'), t('b2P'), `<button class="blocB" data-go="#/c/quotidiana">${t('veure')}</button>`)}
+      ${casaAvui.length ? `<div class="row">${casaAvui.map(card).join('')}</div>` : ''}
+      ${HOOKS.bloc2.map((f) => f()).join('')}
+      ${bloc(3, t('b3T'), t('b3P'))}
+      ${HOOKS.bloc3.map((f) => f()).join('')}
+      ${bloc(4, t('b4T'), t('b4P'))}
+      ${HOOKS.bloc4.map((f) => f()).join('')}
       <div class="sec"><h2>${t('setmana')} · ${esc(L(BIB.temporada.titol))}</h2></div>
       <div class="hero" data-go="#/r/${h.id}">${photo(h)}
         <div class="txt"><div class="eyebrow">${h.edat} ${t('anys')} · ${AREES[h.area][lang]}</div>
         <h3>${esc(L(h.titol))}</h3><p class="scr">${esc(L(h.subtitol))}</p>
         <div class="tags"><span class="tag">${kind(h)}</span><span class="tag">${esc(L(h.durada))}</span></div></div></div>
-      ${HOOKS.inici.map((f) => f()).join('')}
-      ${gratis.length ? `<div class="sec"><h2>${t('gratis')}</h2></div><div class="row">${gratis.map(card).join('')}</div>
-        <button class="premB" data-go="#/premium">${I.estrella}<span><b>${t('premBanner')}</b>${t('premBannerP')}</span>${I.back}</button>` : ''}
-      <div class="sec"><h2>${t('perEdat')}</h2></div>
-      <div class="ages">${EDATS.map((e) => `<div class="age ${perfil && perfil.edats.includes(e) ? 'meva' : ''}" data-filtre='{"edat":"${e}"}'><b>${e}</b><span>${t('anys')}</span></div>`).join('')}</div>
-      <div class="sec"><h2>${t('novetats')}</h2><button data-go="#/bib">${t('veure')}</button></div>
-      <div class="row">${R.filter((r) => r.novetat).map(card).join('')}</div>
-      <div class="sec"><h2>${t('arees')}</h2></div>
-      <div class="areas">${Object.entries(AREES).map(([k, a]) => `<button class="areaC" style="background:color-mix(in srgb,${a.color} 28%,#FFFDF9)" data-filtre='{"area":"${k}"}'>
-        <b>${a[lang]}</b><span>${t('propostes')(R.filter((r) => r.area == k).length)}</span></button>`).join('')}</div>`;
+      <div class="sec"><h2>${t('novetats')}</h2><button data-go="#/bib/tot">${t('veure')}</button></div>
+      <div class="row">${R.filter((r) => r.novetat).slice(0, 14).map(card).join('')}</div>
+      <div class="sec"><h2>${t('colleccionsT')}</h2><button data-tab="#/insp">${t('veure')}</button></div>
+      <div class="row">${colls.map((c) => perId[c.portada] ? `<button class="coll petita" data-go="#/c/${c.id}">${photo(perId[c.portada])}<div class="ct"><h3>${esc(L(c.titol))}</h3></div></button>` : '').join('')}</div>
+      ${gratis.length ? `<button class="premB" data-go="#/premium">${I.estrella}<span><b>${t('premBanner')}</b>${t('premBannerP')}</span>${I.back}</button>` : ''}
+      <div class="sec"><h2>${t('exploraEdats')}</h2><button data-tab="#/bib">${t('bib')}</button></div>
+      <div class="ages">${EDATS.map((e) => `<div class="age ${edats && edats.includes(e) ? 'meva' : ''}" data-go="#/bib/${e}"><b>${e}</b><span>${t('anys')}</span></div>`).join('')}</div>`;
   }
+
 
   function chips(key, opts) {
     return `<div class="filt"><div class="lbl">${t(key)}</div><div class="chips">
@@ -201,28 +212,66 @@
       ${opts.map(([v, l]) => `<button class="chip ${F[key] == v ? 'on' : ''}" data-f="${key}" data-v="${v}">${l}</button>`).join('')}</div></div>`;
   }
   const norm = (s) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
-  function filtra() {
+  const minuts = (r) => parseInt(L(r.durada), 10) || 10;
+  const ordena = (a, b) => (a.ordre ?? 1e6) - (b.ordre ?? 1e6) || ['activitat', 'fitxa', 'joc'].indexOf(a.tipus) - ['activitat', 'fitxa', 'joc'].indexOf(b.tipus) || L(a.titol).localeCompare(L(b.titol));
+  function filtra(sense) {
     const q = norm(F.q.trim());
     return R.filter((r) => (!F.edat || r.edat == F.edat) && (!F.area || r.area == F.area) && (!F.tipus || r.tipus == F.tipus)
       && (!F.perfil || r.perfil.includes(F.perfil)) && (!F.acces || (F.acces == 'premium') == esPrem(r))
-      && (!q || norm([L(r.titol), L(r.subtitol), ...(r.materials ? L(r.materials) : []), ...(r.treballa ? L(r.treballa) : [])].join(' ')).includes(q)));
+      && (sense === 'durada' || !F.durada || (F.durada == '10' ? minuts(r) <= 10 : F.durada == '20' ? minuts(r) > 10 && minuts(r) <= 20 : minuts(r) > 20))
+      && (!F.pocs || (F.pocs == 'pocs' ? r.tipus != 'activitat' || (L(r.materials) || []).length <= 3 : F.pocs == 'pantalla' ? r.tipus == 'activitat' : r.quotidiana))
+      && (!F.obj || (L(r.treballa) || []).some((x) => norm(x) == F.obj))
+      && (!q || norm([L(r.titol), L(r.subtitol), ...(r.materials ? L(r.materials) : []), ...(r.treballa ? L(r.treballa) : [])].join(' ')).includes(q))).sort(ordena);
   }
   function llista() {
     const l = filtra();
     return `<div class="count">${t('resultats')(l.length)}</div>` + (l.length ? `<div class="grid">${l.map(card).join('')}</div>`
       : `<div class="empty"><h3>${t('buit')}</h3><p>${t('buitP')}</p><p style="margin-top:16px"><button class="btn" data-netejar>${t('netejar')}</button></p></div>`);
   }
-  function vBib() {
-    return `<section class="pageH"><h1>${t('bib')}</h1><div class="scr">${t('bibS')}</div></section>
-      <label class="search">${I.search}<input id="q" type="search" value="${esc(F.q)}" placeholder="${t('cerca')}" autocomplete="off"></label>
-      ${chips('edat', EDATS.map((e) => [e, e + ' ' + t('anys')]))}
-      ${chips('area', Object.entries(AREES).map(([k, a]) => [k, a[lang]]))}
-      ${HOOKS.bib.map((f) => f()).join('')}
-      ${chips('tipus', [['activitat', t('activitat')], ['fitxa', t('fitxa')], ['joc', t('joc') || 'Joc']])}
+  /* Biblioteca: primer l'edat, després les sis àrees, i dins de cada àrea les propostes (amb filtres) */
+  const pocsFiltres = () => `${chips('tipus', [['activitat', t('activitat')], ['fitxa', t('fitxa')], ['joc', t('joc') || 'Joc']])}
       ${chips('perfil', [['fam', t('fam')], ['pro', t('pro')]])}
-      ${premiumActiu() ? chips('acces', [['gratuit', t('gratuit')], ['premium', t('premium')]]) : ''}
+      ${chips('durada', [['10', t('fDur10')], ['20', t('fDur20')], ['mes', t('fDurMes')]])}
+      ${chips('pocs', [['pocs', t('fPocs')], ['pantalla', t('fSensePantalla')], ['casa', t('fQuotidiana')]])}
+      ${premiumActiu() ? chips('acces', [['gratuit', t('gratuit')], ['premium', t('premium')]]) : ''}`;
+  function vBib(p = []) {
+    const [e, a] = p;
+    if (e && e !== 'tot' && !EDATS.includes(e)) return vBib([]);
+    if (!e) {
+      F.edat = F.area = null;
+      const n = (ed) => R.filter((r) => r.edat == ed).length;
+      return `<section class="pageH"><h1>${t('bib')}</h1><div class="scr">${t('bibS')}</div><p>${t('bibEdatP')}</p></section>
+        <label class="search">${I.search}<input id="q" type="search" value="${esc(F.q)}" placeholder="${t('cerca')}" autocomplete="off"></label>
+        <div id="llista">${F.q.trim() ? llista() : ''}</div>
+        <div class="edatsBib">${EDATS.map((ed) => `<button class="edatB ${perfil && perfil.edats.includes(ed) ? 'meva' : ''}" data-go="#/bib/${ed}"><b>${ed}</b><span>${t('anys')}</span><small>${t('propostes')(n(ed))}</small></button>`).join('')}</div>
+        ${HOOKS.bib.map((f) => f()).join('')}
+        <p style="margin-top:14px;text-align:center"><button class="enllac" data-go="#/bib/tot">${t('totesPropostes')}</button></p>`;
+    }
+    if (e === 'tot') return `<button class="back" data-enrere>${I.back}${t('tornar')}</button><section class="pageH"><h1>${t('totesPropostes')}</h1></section>
+      <label class="search">${I.search}<input id="q" type="search" value="${esc(F.q)}" placeholder="${t('cerca')}" autocomplete="off"></label>
+      ${chips('edat', EDATS.map((x) => [x, x + ' ' + t('anys')]))}${chips('area', Object.entries(AREES).map(([k, x]) => [k, x[lang]]))}${pocsFiltres()}
+      <div id="llista">${llista()}</div>`;
+    const salts = `<div class="salts">${EDATS.map((x) => `<button class="chip ${x == e ? 'on' : ''}" data-go="#/bib/${x}${a ? '/' + a : ''}">${x}</button>`).join('')}</div>`;
+    if (!a || !AREES[a]) {
+      F.edat = e; F.area = null;
+      return `<button class="back" data-go="#/bib">${I.back}${t('bib')}</button>
+        <section class="pageH"><div class="eyebrow">${t('bib')}</div><h1>${e} ${t('anys')}</h1><p>${t('bibAreaP')}</p></section>${salts}
+        <div class="areesBib">${Object.entries(AREES).map(([k, x]) => { const rs = R.filter((r) => r.edat == e && r.area == k);
+          return `<button class="areaB" data-go="#/bib/${e}/${k}" style="--c:${x.color}"><span class="mini">${rs[0] ? photo(rs[0]) : ''}</span><span class="txt"><b>${esc(x[lang])}</b><small>${t('propostes')(rs.length)}</small></span>${I.back}</button>`; }).join('')}</div>`;
+    }
+    F.edat = e; F.area = a;
+    const base = R.filter((r) => r.edat == e && r.area == a);
+    const cnt = new Map();
+    for (const x of base.flatMap((r) => L(r.treballa) || [])) { const v = cnt.get(norm(x)) || [x, 0]; v[1]++; cnt.set(norm(x), v); }
+    const objs = [...cnt.entries()].sort((x, y) => y[1][1] - x[1][1]).slice(0, 8);
+    return `<button class="back" data-go="#/bib/${e}">${I.back}${e} ${t('anys')}</button>
+      <section class="pageH areaCap" style="--c:${AREES[a].color}"><div class="eyebrow">${e} ${t('anys')}</div><h1>${esc(AREES[a][lang])}</h1></section>${salts}
+      <div class="salts">${Object.entries(AREES).map(([k, x]) => `<button class="chip ${k == a ? 'on' : ''}" data-go="#/bib/${e}/${k}"><span class="dot" style="background:${x.color}"></span>${esc(x[lang].split(' ')[0])}</button>`).join('')}</div>
+      <details class="filtres" ${F.tipus || F.perfil || F.durada || F.pocs || F.obj || F.acces ? 'open' : ''}><summary>${t('filtres')}</summary>
+        ${pocsFiltres()}${objs.length > 1 ? chips('obj', objs.map(([k, [x]]) => [k, x])) : ''}</details>
       <div id="llista">${llista()}</div>`;
   }
+
 
   const sota = (r) => HOOKS.fitxaSota.map((f) => f(r)).join('');
   const ul = (a) => `<ul>${a.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>`;
@@ -387,7 +436,8 @@
     const paq = (tipus, k, nom, color) => { const te = compte && teP(tipus, k); return `<button class="paq ${te ? 'on' : ''}" data-compra="${tipus}:${k}" ${te || sub ? 'disabled' : ''}>${color ? `<span class="dot" style="background:${color}"></span>` : ''}<span>${nom}</span>${te ? `<em>${t('elTeu')}</em>` : ''}</button>`; };
     return `<button class="back" data-enrere>${I.back}${t('tornar')}</button>${banda()}
       <section class="pageH premH"><div class="eyebrow">XIU ${t('premium')}</div><h1>${t('premTot')}</h1><p>${t('premTotP')}</p></section>
-      <ul class="inclou">${t('premInclou').map((x) => `<li>${I.ok}${esc(x)}</li>`).join('')}</ul>
+      <div class="compara"><div class="col"><h3>${t('gratuit')}</h3><ul>${t('gratuitL').map((x) => `<li>${I.ok}${esc(x)}</li>`).join('')}</ul></div>
+        <div class="col prem"><h3>XIU ${t('premium')}</h3><ul>${t('premiumL').map((x) => `<li>${I.estrella}${esc(x)}</li>`).join('')}</ul></div></div>
       ${sub ? `<div class="jaTens">${I.ok}<span><b>${t('jaTensP')}</b>${t(acces.cancel ? 'sacaba' : 'esRenova').replace('{d}', quanEs(acces.renova))}</span><button class="btn" data-go="#/compte">${t('gestiona')}</button></div>` : ''}
       <div class="sec"><h2>${t('subscripcio')}</h2></div>
       <div class="plans">
@@ -586,10 +636,15 @@
            <button class="btn pri" data-go="#/bib">${t('anarBib')}</button></div>`}`;
   }
 
+  // Inspiració: col·leccions per grups (festes tradicionals, estacions de l'any i temes), diferent de la Biblioteca
+  const collCard = (c) => (perId[c.portada] ? `<button class="coll" data-go="#/c/${c.id}">${photo(perId[c.portada])}<div class="ct"><h3>${esc(L(c.titol))}</h3><p>${esc(L(c.text))}</p></div></button>` : '');
   function vInsp() {
+    const grups = [['festes', t('gFestes'), t('gFestesP')], ['temporades', t('gTemporades'), t('gTemporadesP')], ['temes', t('gTemes'), t('gTemesP')]];
+    const sense = BIB.colleccions.filter((c) => !grups.some(([g]) => g == c.grup));
     return `<section class="pageH"><h1>${t('insp')}</h1><div class="scr">${t('inspS')}</div><p>${t('inspP')}</p></section>
-      <div class="inspoG" style="margin-top:22px">${BIB.colleccions.map((c) => `<button class="coll" data-go="#/c/${c.id}">${photo(perId[c.portada])}
-        <div class="ct"><h3>${esc(L(c.titol))}</h3><p>${esc(L(c.text))}</p></div></button>`).join('')}</div>
+      ${grups.map(([g, tit, sub]) => { const cs = BIB.colleccions.filter((c) => c.grup == g); return cs.length ? `<div class="sec"><h2>${tit}</h2>${g == 'festes' ? `<button data-go="#/tradicions">${t('calendari')}</button>` : ''}</div><p class="sub2" style="margin:-6px 0 12px">${sub}</p>
+        <div class="inspoG">${cs.map(collCard).join('')}</div>` : ''; }).join('')}
+      ${sense.length ? `<div class="inspoG" style="margin-top:22px">${sense.map(collCard).join('')}</div>` : ''}
       <div class="sec"><h2>${t('potser')}</h2></div>
       <div class="row">${BIB.descobreix.map((id) => card(perId[id])).join('')}</div>
       <div class="quote"><p>${esc(L(BIB.cita))}</p><span>${esc(BIB.cita.autor)}</span></div>`;
@@ -598,8 +653,9 @@
   function vColleccio(id) {
     const c = BIB.colleccions.find((x) => x.id == id); if (!c) return vInsp();
     return `<button class="back" data-enrere>${I.back}${t('tornar')}</button>
-      <section class="pageH"><h1>${esc(L(c.titol))}</h1><div class="scr">${esc(L(c.text))}</div></section>
-      <div class="grid" style="margin-top:22px">${c.recursos.map((x) => card(perId[x])).join('')}</div>`;
+      <section class="pageH"><div class="eyebrow">${esc({ festes: t('gFestes'), temporades: t('gTemporades'), temes: t('gTemes') }[c.grup] || t('insp'))}</div><h1>${esc(L(c.titol))}</h1><div class="scr">${esc(L(c.text))}</div></section>
+      <div class="grid" style="margin-top:22px">${c.recursos.filter((x) => perId[x]).map((x) => card(perId[x])).join('')}</div>
+      ${c.grup == 'festes' ? `<p style="margin-top:20px;text-align:center"><button class="btn" data-go="#/tradicions">${t('calendari')}</button></p>` : ''}`;
   }
 
   /* ---------- Navegació ---------- */
@@ -625,7 +681,7 @@
     const p = ruta.replace('#/', '').split('/'), y = scrollY;
     const benv = !perfil && !ls.get('perfil-omes', false) || onb;
     document.body.classList.toggle('onbOn', !!benv);
-    const v = benv ? vBenvinguda : { '': vInici, bib: vBib, fav: vFav, insp: vInsp, perfil: vPerfil, premium: vPremium, compte: vCompte, pagament: () => vPagament(p[1]), fet: () => vFet(p[1]),
+    const v = benv ? vBenvinguda : { '': vInici, bib: () => vBib(p.slice(1)), fav: vFav, insp: vInsp, perfil: vPerfil, premium: vPremium, compte: vCompte, pagament: () => vPagament(p[1]), fet: () => vFet(p[1]),
       quant: vQuant, ajuda: vAjuda, drets: vDrets, r: () => vFitxa(p[1]), c: () => vColleccio(p[1]),
       ...Object.fromEntries(Object.entries(VISTES).map(([k, f]) => [k, () => f(p.slice(1))])) }[p[0]] || vInici;
     $('#view').innerHTML = `<div class="${manté ? '' : 'fade'}">${v()}</div>`;
@@ -687,16 +743,16 @@
     } else if (d.mode) { modeFitxa = d.mode; render(true); }
     else if (d.pdf) fesPdf(d.pdf, false, el);
     else if (d.comparteix) fesPdf(d.comparteix, true, el);
-    else if (d.tab != null) { pila = []; ruta = d.tab; render(); scrollTo(0, 0); }
+    else if (d.tab != null) { pila = []; ruta = d.tab; if (d.tab == '#/bib') F = buit(); render(); scrollTo(0, 0); }
     else if (d.go) go(d.go);
     else if (d.lang) { lang = d.lang; ls.set('idioma', lang); render(true); }
     else if (d.f) { F[d.f] = d.v || null; render(true); }
-    else if (d.filtre) { F = Object.assign(buit(), JSON.parse(d.filtre)); go('#/bib'); }
+    else if (d.filtre) { const fl = JSON.parse(d.filtre); F = buit(); go(fl.edat && fl.area ? `#/bib/${fl.edat}/${fl.area}` : fl.edat ? `#/bib/${fl.edat}` : (Object.assign(F, fl), '#/bib/tot')); }
     else if (d.netejar != null) { F = buit(); render(true); }
     else if (d.enrere != null) { if (!enrere()) go('#/'); }
   });
   document.addEventListener('input', (e) => {
-    if (e.target.id == 'q') { F.q = e.target.value; $('#llista').innerHTML = llista(); }
+    if (e.target.id == 'q') { F.q = e.target.value; $('#llista').innerHTML = ruta == '#/bib' && !F.q.trim() ? '' : llista(); }
   });
   XP.botoEnrere(enrere);
   // contingut nou des de la web: es refresca, excepte si l'infant és fent una fitxa (es faria quan surti)

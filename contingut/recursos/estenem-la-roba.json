@@ -1,0 +1,83 @@
+{
+  "id": "estenem-la-roba",
+  "tipus": "activitat",
+  "edat": "3-4",
+  "area": "mot",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "15 min",
+  "novetat": true,
+  "titol": {
+    "ca": "Estenem la roba",
+    "es": "Tendemos la ropa"
+  },
+  "subtitol": {
+    "ca": "Pinces, mitjons i molta paciència",
+    "es": "Pinzas, calcetines y mucha paciencia"
+  },
+  "intencio": {
+    "ca": "Practicar la pinça amb força i precisió en una tasca de casa de veritat.",
+    "es": "Practicar la pinza con fuerza y precisión en una tarea de casa de verdad."
+  },
+  "treballa": {
+    "ca": [
+      "Pinça digital",
+      "Coordinació bimanual",
+      "Col·laboració"
+    ],
+    "es": [
+      "Pinza digital",
+      "Coordinación bimanual",
+      "Colaboración"
+    ]
+  },
+  "materials": {
+    "ca": [
+      "Un cordill baix o un estenedor petit",
+      "Pinces",
+      "Mitjons i peces petites"
+    ],
+    "es": [
+      "Una cuerda baja o un tendedero pequeño",
+      "Pinzas",
+      "Calcetines y prendas pequeñas"
+    ]
+  },
+  "preparacio": {
+    "ca": "Lliga un cordill a la seva alçada.",
+    "es": "Ata una cuerda a su altura."
+  },
+  "desenvolupament": {
+    "ca": [
+      "Ensenya-li com obrir la pinça amb el polze i l'índex.",
+      "Pengeu els mitjons un a un.",
+      "Quan s'eixuguin, despengeu-los i aparelleu-los."
+    ],
+    "es": [
+      "Enséñale cómo abrir la pinza con el pulgar y el índice.",
+      "Colgad los calcetines uno a uno.",
+      "Cuando se sequen, descolgadlos y emparejadlos."
+    ]
+  },
+  "variants": {
+    "ca": [
+      "Feu una sèrie de colors amb les pinces.",
+      "Pengeu els dibuixos que ha fet."
+    ],
+    "es": [
+      "Haced una serie de colores con las pinzas.",
+      "Colgad los dibujos que ha hecho."
+    ]
+  },
+  "seguretat": {
+    "ca": [
+      "Cordill a una alçada segura, lluny del coll."
+    ],
+    "es": [
+      "Cuerda a una altura segura, lejos del cuello."
+    ]
+  },
+  "quotidiana": true
+}

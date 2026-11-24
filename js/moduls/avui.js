@@ -2,13 +2,15 @@
 (window.XIU_MODULS ||= []).push((A) => {
   const { esc, I } = A, t = (k) => A.t(k);
   A.textos({
-    ca: { avuiT: 'Què fem avui?', avuiP: 'Respon tres preguntes i et proposem una sola cosa per fer ara.', avuiB: 'Tria-ho en 10 segons',
+    ca: { ctaInfants: 'Afegeix els teus infants i XIU et proposarà activitats per a cadascú, segons la seva edat i el que li agrada.', perGrup: 'Per al vostre grup',
+      avuiT: 'Què fem avui?', avuiP: 'Respon tres preguntes i et proposem una sola cosa per fer ara.', avuiB: 'Tria-ho en 10 segons',
       avuiTemps: 'Quant temps teniu?', avuiOn: 'On sou?', avuiCom: 'Com està?', avuiQui: 'Per a qui?', avuiPantalla: 'Millor sense pantalla',
       temps: [['5', '5 minuts'], ['15', 'Un quart d\'hora'], ['30', 'Mitja hora o més']], llocs: [['casa', 'A casa'], ['aula', 'A l\'aula'], ['fora', 'A fora']],
       estats: [['tranquil', 'Tranquil·la, tranquil'], ['mogut', 'Amb ganes de moure\'s'], ['cansat', 'Cansada, cansat']],
       avuiProposta: 'Avui us proposem', unaAltra: 'Una altra', obre: 'Som-hi', tambe: 'També us pot anar bé', avuiCap: 'No hem trobat res amb aquestes respostes. Prova de canviar-ne alguna.',
       seguentPas: 'El següent pas', seguentPasP: 'Una proposta per àrea, una mica més enllà del que ja heu fet.', perA: 'per a {n}', totFet: 'Ho heu fet tot en aquesta àrea! 🎉' },
-    es: { avuiT: '¿Qué hacemos hoy?', avuiP: 'Responde tres preguntas y te proponemos una sola cosa para hacer ahora.', avuiB: 'Elígelo en 10 segundos',
+    es: { ctaInfants: 'Añade a tus niños y niñas y XIU te propondrá actividades para cada uno, según su edad y lo que le gusta.', perGrup: 'Para vuestro grupo',
+      avuiT: '¿Qué hacemos hoy?', avuiP: 'Responde tres preguntas y te proponemos una sola cosa para hacer ahora.', avuiB: 'Elígelo en 10 segundos',
       avuiTemps: '¿Cuánto tiempo tenéis?', avuiOn: '¿Dónde estáis?', avuiCom: '¿Cómo está?', avuiQui: '¿Para quién?', avuiPantalla: 'Mejor sin pantalla',
       temps: [['5', '5 minutos'], ['15', 'Un cuarto de hora'], ['30', 'Media hora o más']], llocs: [['casa', 'En casa'], ['aula', 'En el aula'], ['fora', 'Fuera']],
       estats: [['tranquil', 'Tranquilo, tranquila'], ['mogut', 'Con ganas de moverse'], ['cansat', 'Cansado, cansada']],
@@ -55,7 +57,22 @@
           <h3>${esc(A.L(prim.titol))}</h3><p class="scr">${esc(A.L(prim.subtitol))}</p><div class="actions"><span class="btn pri">${t('obre')}</span></div></div></div>
         ${altres.length ? `<div class="sec"><h2>${t('tambe')}</h2></div><div class="grid">${altres.map(A.card).join('')}</div>` : ''}` : `<p class="sub2">${t('avuiCap')}</p>`}`;
   });
-  A.HOOKS.iniciDalt.push(() => `<button class="premB avuiB" data-go="#/avui">${I.estrella}<span><b>${t('avuiT')}</b>${t('avuiP')}</span>${I.back}</button>`);
+  // Bloc 1 de l'Inici: una proposta per a avui (per a l'infant que juga o les edats del perfil); «Una altra» en dona una altra
+  let saltHero = 0;
+  A.HOOKS.bloc1.push(() => {
+    const id = A.ls.get('infant-actiu', null), x = id && A.INFANTS?.infant(id);
+    const edats = x ? [x.edat] : (A.perfil?.edats?.length ? A.perfil.edats : A.EDATS);
+    const fets = new Set(x ? A.INFANTS.deInfant(x.id).map((f) => f.r) : []), gust = x ? interessos(x) : null;
+    const cs = A.R.filter((r) => !r.quotidiana && !A.bloquejat(r) && !fets.has(r.id) && edats.some((e) => Math.abs(edatI(e) - edatI(r.edat)) <= (x ? 0 : 1)))
+      .map((r) => ({ r, p: (gust && gust.test(text(r)) ? 3 : 0) + (r.tipus === 'activitat' ? 1 : 0) + ((r.id.length * 13 + Math.floor(Date.now() / 864e5) * 7) % 11) / 10 }))
+      .sort((a, b) => b.p - a.p);
+    if (!cs.length) return '';
+    const r = cs[saltHero % cs.length].r;
+    return `<div class="hero avuiHero" data-go="#/r/${r.id}">${A.photo(r)}<div class="txt"><div class="eyebrow">${x ? t('perA').replace('{n}', esc(x.nom)) + ' · ' : ''}${r.edat} ${t('anys')} · ${esc(A.AREES[r.area][A.lang])}</div>
+      <h3>${esc(A.L(r.titol))}</h3><p class="scr">${esc(A.L(r.subtitol))}</p>
+      <div class="actions"><span class="btn pri">${t('obre')}</span><button class="btn" data-hero-altra>${t('unaAltra')}</button></div></div></div>`;
+  });
+  document.addEventListener('click', (e) => { if (e.target.closest('[data-hero-altra]')) { e.stopPropagation(); saltHero++; A.render(true); } }, true);
   document.addEventListener('click', (e) => {
     const el = e.target.closest('[data-avui],[data-avui-altra]'); if (!el) return;
     if (el.dataset.avui) { const [k, v] = el.dataset.avui.split(':'); resp[k] = k === 'qui' && resp.qui === v ? null : v; salt = 0; }
@@ -64,20 +81,32 @@
   });
   document.addEventListener('change', (e) => { if (e.target.matches('[data-avui-pantalla]')) { resp.sensePantalla = e.target.checked; salt = 0; A.render(true); } });
 
-  /* ---------- El següent pas de cada infant ---------- */
+  /* ---------- El següent pas de cada infant (tenint en compte els seus interessos) ---------- */
+  const PARAULES = { animals: /animal|ocell|peix|conill|gos|gat|drac/, musica: /music|canco|so|ritme|pots/, natura: /natura|fulla|planta|regar|castany|pedr|flor|llavor|tardor/,
+    construir: /constru|caixa|apil|encaix|tapes|pots/, pintar: /pint|color|dibuix|mascar|pinzell/, contes: /conte|titell|lletr|paraul|llibre/, cuina: /cuin|recept|fruit|pa |macedonia|panell/,
+    moure: /mou|ball|salt|pilota|vest|recerca/, experiments: /experiment|iman|volca|ombr|flota|llum|aigua/ };
+  function interessos(x) { const ks = (x.interessos || []).filter((k) => PARAULES[k]); return ks.length ? new RegExp(ks.map((k) => PARAULES[k].source).join('|')) : null; }
   function seguentPas(x) {
-    const ie = edatI(x.edat), fets = new Set(A.INFANTS.deInfant(x.id).map((f) => f.r));
+    const ie = edatI(x.edat), fets = new Set(A.INFANTS.deInfant(x.id).map((f) => f.r)), gust = interessos(x);
     return Object.keys(A.AREES).map((k) => {
       const c = A.R.filter((r) => r.area === k && !fets.has(r.id) && !A.bloquejat(r) && edatI(r.edat) >= ie - 1)
-        .sort((a, b) => Math.abs(edatI(a.edat) - ie - 0.3) - Math.abs(edatI(b.edat) - ie - 0.3) || (a.ordre ?? 1e6) - (b.ordre ?? 1e6) || a.id.localeCompare(b.id));
+        .sort((a, b) => ((gust && gust.test(text(b)) ? 1 : 0) - (gust && gust.test(text(a)) ? 1 : 0)) || Math.abs(edatI(a.edat) - ie - 0.3) - Math.abs(edatI(b.edat) - ie - 0.3) || (a.ordre ?? 1e6) - (b.ordre ?? 1e6) || a.id.localeCompare(b.id));
       return { k, r: c[0] || null };
     });
   }
   A.HOOKS.progresSec.push((x) => { const sp = seguentPas(x).filter((q) => q.r);
     return sp.length ? `<div class="sec"><h2>${t('seguentPas')}</h2></div><p class="sub2" style="margin-bottom:10px">${t('seguentPasP')}</p><div class="row">${sp.map((q) => A.card(q.r)).join('')}</div>` : ''; });
-  A.HOOKS.inici.push(() => {
-    const id = A.ls.get('infant-actiu', null), x = id && A.INFANTS?.infant(id); if (!x) return '';
-    const sp = seguentPas(x).filter((q) => q.r); if (!sp.length) return '';
-    return `<div class="sec"><h2>${t('seguentPas')} <small>${t('perA').replace('{n}', esc(x.nom))}</small></h2><button data-go="#/progres/${x.id}">${t('veureProgres')}</button></div><div class="row">${sp.map((q) => A.card(q.r)).join('')}</div>`;
+  // Bloc 3 de l'Inici: propostes per a cada infant (o per al grup, si és docent)
+  A.HOOKS.bloc3.push(() => {
+    const inf = A.INFANTS?.llista() || [];
+    if (A.perfil?.tipus === 'pro' || !inf.length) {
+      const edats = A.perfil?.edats?.length ? A.perfil.edats : null;
+      const rs = edats ? A.R.filter((r) => edats.includes(r.edat) && !A.bloquejat(r)).sort((a, b) => (b.novetat ? 1 : 0) - (a.novetat ? 1 : 0)).slice(0, 10) : [];
+      return `${!inf.length ? `<div class="caixa ctaInf"><p class="sub2">${t('ctaInfants')}</p><div class="actions"><button class="btn pri" data-inf-nou>+ ${t('afegeixInfant')}</button></div></div>` : ''}
+        ${rs.length ? `<div class="sec"><h2>${A.perfil?.tipus === 'pro' ? t('perGrup') : t('perATu')} <small>${edats.join(', ')} ${t('anys')}</small></h2></div><div class="row">${rs.map(A.card).join('')}</div>` : ''}`;
+    }
+    return inf.slice(0, 4).map((x) => { const sp = seguentPas(x).filter((q) => q.r);
+      return `<div class="perInf"><div class="perInfCap">${A.INFANTS.avatar(x)}<div><b>${esc(x.nom)}</b><small>${x.edat} ${t('anys')}</small></div><button data-go="#/progres/${x.id}">${t('veureProgres')}</button></div>
+        ${sp.length ? `<div class="row">${sp.map((q) => A.card(q.r)).join('')}</div>` : `<p class="sub2">${t('totFet')}</p>`}</div>`; }).join('');
   });
 });

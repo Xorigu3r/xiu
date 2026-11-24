@@ -1,0 +1,79 @@
+{
+  "id": "pots-i-tapes",
+  "tipus": "activitat",
+  "edat": "1-2",
+  "area": "log",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "10 min",
+  "novetat": true,
+  "titol": {
+    "ca": "Pots i tapes",
+    "es": "Botes y tapas"
+  },
+  "subtitol": {
+    "ca": "Quina tapa va amb cada pot?",
+    "es": "¿Qué tapa va con cada bote?"
+  },
+  "intencio": {
+    "ca": "Relacionar mides i formes amb objectes reals de la cuina.",
+    "es": "Relacionar tamaños y formas con objetos reales de la cocina."
+  },
+  "treballa": {
+    "ca": [
+      "Mides i formes",
+      "Correspondència",
+      "Perseverança"
+    ],
+    "es": [
+      "Tamaños y formas",
+      "Correspondencia",
+      "Perseverancia"
+    ]
+  },
+  "materials": {
+    "ca": [
+      "3 o 4 pots de plàstic de mides diferents amb tapa"
+    ],
+    "es": [
+      "3 o 4 botes de plástico de tamaños diferentes con tapa"
+    ]
+  },
+  "preparacio": {
+    "ca": "Treu les tapes i posa-les en una safata al costat dels pots.",
+    "es": "Quita las tapas y ponlas en una bandeja al lado de los botes."
+  },
+  "desenvolupament": {
+    "ca": [
+      "Ensenya-li com tapes un pot, a poc a poc.",
+      "Deixa que provi totes les tapes.",
+      "Anomeneu: gran, petit, aquesta sí, aquesta no."
+    ],
+    "es": [
+      "Enséñale cómo tapas un bote, despacio.",
+      "Deja que pruebe todas las tapas.",
+      "Nombrad: grande, pequeño, esta sí, esta no."
+    ]
+  },
+  "variants": {
+    "ca": [
+      "Amagueu-hi una sorpresa a dins.",
+      "Feu-ho amb taps de rosca de colors."
+    ],
+    "es": [
+      "Esconded una sorpresa dentro.",
+      "Hacedlo con tapones de rosca de colores."
+    ]
+  },
+  "seguretat": {
+    "ca": [
+      "Res de vidre ni de vores tallants."
+    ],
+    "es": [
+      "Nada de vidrio ni de bordes cortantes."
+    ]
+  },
+  "quotidiana": true
+}

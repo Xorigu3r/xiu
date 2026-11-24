@@ -1,0 +1,81 @@
+{
+  "id": "recollim-les-joguines",
+  "tipus": "activitat",
+  "edat": "1-2",
+  "area": "aut",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "10 min",
+  "novetat": true,
+  "titol": {
+    "ca": "Recollim les joguines",
+    "es": "Recogemos los juguetes"
+  },
+  "subtitol": {
+    "ca": "Cada cosa al seu lloc, cantant",
+    "es": "Cada cosa en su sitio, cantando"
+  },
+  "intencio": {
+    "ca": "Fer de recollir un joc compartit i començar a entendre que cada cosa té el seu lloc.",
+    "es": "Hacer de recoger un juego compartido y empezar a entender que cada cosa tiene su sitio."
+  },
+  "treballa": {
+    "ca": [
+      "Autonomia",
+      "Ordre",
+      "Classificació"
+    ],
+    "es": [
+      "Autonomía",
+      "Orden",
+      "Clasificación"
+    ]
+  },
+  "materials": {
+    "ca": [
+      "Caixes o cistelles baixes",
+      "Una foto o un dibuix a cada caixa"
+    ],
+    "es": [
+      "Cajas o cestas bajas",
+      "Una foto o un dibujo en cada caja"
+    ]
+  },
+  "preparacio": {
+    "ca": "Enganxa a cada caixa una foto del que hi va (cotxes, peluixos, construccions).",
+    "es": "Pega en cada caja una foto de lo que va dentro (coches, peluches, construcciones)."
+  },
+  "desenvolupament": {
+    "ca": [
+      "Canteu sempre la mateixa cançó de recollir.",
+      "Agafa una joguina i pregunta: on va?",
+      "Celebreu-ho quan tot sigui al seu lloc."
+    ],
+    "es": [
+      "Cantad siempre la misma canción de recoger.",
+      "Coge un juguete y pregunta: ¿dónde va?",
+      "Celebradlo cuando todo esté en su sitio."
+    ]
+  },
+  "variants": {
+    "ca": [
+      "Feu-ho a contrarellotge amb un temporitzador de cuina.",
+      "Ell tria per on comencem."
+    ],
+    "es": [
+      "Hacedlo a contrarreloj con un temporizador de cocina.",
+      "Él elige por dónde empezamos."
+    ]
+  },
+  "seguretat": {
+    "ca": [
+      "Caixes lleugeres i a la seva alçada."
+    ],
+    "es": [
+      "Cajas ligeras y a su altura."
+    ]
+  },
+  "quotidiana": true
+}

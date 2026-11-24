@@ -1,0 +1,81 @@
+{
+  "id": "cancons-de-cada-dia",
+  "tipus": "activitat",
+  "edat": "2-3",
+  "area": "llen",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "10 min",
+  "novetat": true,
+  "titol": {
+    "ca": "Cançons de cada dia",
+    "es": "Canciones de cada día"
+  },
+  "subtitol": {
+    "ca": "Una cançó per rentar-se, per menjar, per dormir",
+    "es": "Una canción para lavarse, para comer, para dormir"
+  },
+  "intencio": {
+    "ca": "Fer servir les cançons per anticipar els moments del dia i jugar amb les paraules.",
+    "es": "Usar las canciones para anticipar los momentos del día y jugar con las palabras."
+  },
+  "treballa": {
+    "ca": [
+      "Ritme",
+      "Vocabulari",
+      "Anticipació"
+    ],
+    "es": [
+      "Ritmo",
+      "Vocabulario",
+      "Anticipación"
+    ]
+  },
+  "materials": {
+    "ca": [
+      "La vostra veu",
+      "Cançons populars curtes"
+    ],
+    "es": [
+      "Vuestra voz",
+      "Canciones populares cortas"
+    ]
+  },
+  "preparacio": {
+    "ca": "Tria una cançó per a cada moment (rentar-se les mans, recollir, anar a dormir).",
+    "es": "Elige una canción para cada momento (lavarse las manos, recoger, ir a dormir)."
+  },
+  "desenvolupament": {
+    "ca": [
+      "Canteu-la sempre en el mateix moment.",
+      "Atura't abans de l'última paraula: que la digui ell.",
+      "Inventeu-ne una estrofa nova junts."
+    ],
+    "es": [
+      "Cantadla siempre en el mismo momento.",
+      "Párate antes de la última palabra: que la diga él.",
+      "Inventad una estrofa nueva juntos."
+    ]
+  },
+  "variants": {
+    "ca": [
+      "Afegiu-hi gestos.",
+      "Canvieu-hi el nom de l'infant."
+    ],
+    "es": [
+      "Añadid gestos.",
+      "Cambiad el nombre del niño en la canción."
+    ]
+  },
+  "seguretat": {
+    "ca": [
+      "Cap."
+    ],
+    "es": [
+      "Ninguna."
+    ]
+  },
+  "quotidiana": true
+}

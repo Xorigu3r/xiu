@@ -1,0 +1,79 @@
+{
+  "id": "a-la-recerca-dels-ous",
+  "tipus": "activitat",
+  "edat": "1-2",
+  "area": "exp",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "15 min",
+  "novetat": true,
+  "titol": {
+    "ca": "A la recerca dels ous",
+    "es": "A la búsqueda de los huevos"
+  },
+  "subtitol": {
+    "ca": "On s'amaguen?",
+    "es": "¿Dónde se esconden?"
+  },
+  "intencio": {
+    "ca": "Buscar objectes amagats treballa la permanència de l'objecte i l'exploració de l'espai.",
+    "es": "Buscar objetos escondidos trabaja la permanencia del objeto y la exploración del espacio."
+  },
+  "treballa": {
+    "ca": [
+      "Permanència de l'objecte",
+      "Exploració",
+      "Moviment"
+    ],
+    "es": [
+      "Permanencia del objeto",
+      "Exploración",
+      "Movimiento"
+    ]
+  },
+  "materials": {
+    "ca": [
+      "Ous de plàstic o pilotes de colors",
+      "Una cistella"
+    ],
+    "es": [
+      "Huevos de plástico o pelotas de colores",
+      "Una cesta"
+    ]
+  },
+  "preparacio": {
+    "ca": "Amaga els ous en llocs fàcils, mig visibles.",
+    "es": "Esconde los huevos en sitios fáciles, medio visibles."
+  },
+  "desenvolupament": {
+    "ca": [
+      "Amaga'n un davant seu i deixa que el busqui.",
+      "Després, busqueu-los tots per la sala.",
+      "Poseu-los a la cistella i compteu-los."
+    ],
+    "es": [
+      "Esconde uno delante de él y deja que lo busque.",
+      "Después, buscadlos todos por la sala.",
+      "Metedlos en la cesta y contadlos."
+    ]
+  },
+  "variants": {
+    "ca": [
+      "Al pati o al parc, entre l'herba."
+    ],
+    "es": [
+      "En el patio o en el parque, entre la hierba."
+    ]
+  },
+  "seguretat": {
+    "ca": [
+      "Ous grossos, que no es puguin empassar."
+    ],
+    "es": [
+      "Huevos grandes, que no se puedan tragar."
+    ]
+  },
+  "festa": "pasqua"
+}

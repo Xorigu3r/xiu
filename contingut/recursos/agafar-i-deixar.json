@@ -1,0 +1,78 @@
+{
+  "id": "agafar-i-deixar",
+  "tipus": "activitat",
+  "edat": "0-1",
+  "area": "mot",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "10 min",
+  "novetat": true,
+  "titol": {
+    "ca": "Agafar i deixar anar",
+    "es": "Coger y soltar"
+  },
+  "subtitol": {
+    "ca": "Una cistella i coses per tocar",
+    "es": "Una cesta y cosas para tocar"
+  },
+  "intencio": {
+    "ca": "Practicar l'agafada i el deixar anar voluntari, que és la base de la manipulació.",
+    "es": "Practicar el agarre y el soltar voluntario, que es la base de la manipulación."
+  },
+  "treballa": {
+    "ca": [
+      "Prensió",
+      "Coordinació ull-mà",
+      "Exploració"
+    ],
+    "es": [
+      "Prensión",
+      "Coordinación ojo-mano",
+      "Exploración"
+    ]
+  },
+  "materials": {
+    "ca": [
+      "Una cistella baixa",
+      "Pilotes de roba, anelles de fusta, una esponja"
+    ],
+    "es": [
+      "Una cesta baja",
+      "Pelotas de tela, anillas de madera, una esponja"
+    ]
+  },
+  "preparacio": {
+    "ca": "Asseu-vos a terra i posa la cistella entre tots dos.",
+    "es": "Sentaos en el suelo y pon la cesta entre los dos."
+  },
+  "desenvolupament": {
+    "ca": [
+      "Ofereix-li un objecte a l'alçada de la mà.",
+      "Deixa que el tregui i el torni a deixar.",
+      "Acompanya amb paraules: dins, fora."
+    ],
+    "es": [
+      "Ofrécele un objeto a la altura de la mano.",
+      "Deja que lo saque y lo vuelva a dejar.",
+      "Acompaña con palabras: dentro, fuera."
+    ]
+  },
+  "variants": {
+    "ca": [
+      "Amb una capsa amb forat a la tapa."
+    ],
+    "es": [
+      "Con una caja con agujero en la tapa."
+    ]
+  },
+  "seguretat": {
+    "ca": [
+      "Objectes més grossos que el seu puny."
+    ],
+    "es": [
+      "Objetos más grandes que su puño."
+    ]
+  }
+}

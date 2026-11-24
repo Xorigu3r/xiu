@@ -53,7 +53,10 @@
     return prop && (prop.q.a - ara) / 864e5 <= 30 ? prop : null;
   }
   const norm = (s) => String(s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
-  const relacionades = (tr) => A.R.filter((r) => !A.bloquejat(r) && tr.par.test(norm([r.id, A.L(r.titol), ...(A.L(r.materials) || [])].join(' ')))).slice(0, 8);
+  // cada tradició amb la seva col·lecció d'Inspiració (si n'hi ha); si no, les propostes que hi lliguen
+  const COLL = { castanyada: 'castanyada', nadal: 'nadal', reis: 'nadal', carnestoltes: 'carnaval', mona: 'pasqua', santjordi: 'santjordi', santjoan: 'estiu' };
+  const coll = (tr) => (A.BIB.colleccions || []).find((c) => c.id === COLL[tr.id]);
+  const relacionades = (tr) => coll(tr) ? coll(tr).recursos.map((id) => A.perId[id]).filter((r) => r && !A.bloquejat(r)) : A.R.filter((r) => !A.bloquejat(r) && tr.par.test(norm([r.id, A.L(r.titol), ...(A.L(r.materials) || [])].join(' ')))).slice(0, 8);
   const txt = (tr) => tr[A.lang] || tr.ca;
   const icona = (tr, r = 16) => `<svg viewBox="-20 -20 40 40" class="tradIc">${window.XFitxa ? XFitxa.dibuix(tr.el, r) : ''}</svg>`;
   const compte = (q) => { const n = Math.round((q.a - avui()) / 864e5); return n === 1 ? t('demà') : t('falten').replace('{n}', n); };
@@ -62,11 +65,11 @@
     return `<div class="trad ${gran ? 'gran' : ''}" style="--c:${tr.color}">${icona(tr)}<div><div class="eyebrow">${q.actiu ? t('araToca') : compte(q)}</div><h3>${esc(nom)}</h3><p>${esc(text)}</p>
       ${gran ? `<ul class="inclou">${idees.map((x) => `<li>${I.ok}${esc(x)}</li>`).join('')}</ul>` : ''}</div></div>`;
   }
-  A.HOOKS.iniciDalt.push(() => {
+  A.HOOKS.bloc4.push(() => {
     const x = actual(); if (!x) return '';
     const rs = relacionades(x.tr);
     return `<div class="sec"><h2>${esc(txt(x.tr)[0])}</h2><button data-go="#/tradicions">${t('totes')}</button></div>
-      <button class="tradB" data-go="#/tradicions" style="--c:${x.tr.color}">${icona(x.tr)}<span><b>${x.q.actiu ? t('araToca') : compte(x.q)}</b>${esc(txt(x.tr)[1])}</span>${I.back}</button>
+      <button class="tradB" data-go="${coll(x.tr) ? '#/c/' + coll(x.tr).id : '#/tradicions'}" style="--c:${x.tr.color}">${icona(x.tr)}<span><b>${x.q.actiu ? t('araToca') : compte(x.q)}</b>${esc(txt(x.tr)[1])}</span>${I.back}</button>
       ${rs.length ? `<div class="row" style="margin-top:12px">${rs.map(A.card).join('')}</div>` : ''}`;
   });
   A.vista('tradicions', () => {

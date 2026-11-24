@@ -1,0 +1,85 @@
+{
+  "id": "el-moment-del-bany",
+  "tipus": "activitat",
+  "edat": "0-1",
+  "area": "aut",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "15 min",
+  "novetat": true,
+  "titol": {
+    "ca": "El moment del bany",
+    "es": "El momento del baño"
+  },
+  "subtitol": {
+    "ca": "Aigua, cançons i molta calma",
+    "es": "Agua, canciones y mucha calma"
+  },
+  "intencio": {
+    "ca": "Convertir el bany en un moment de connexió i de descoberta: l'aigua, el cos i les paraules que l'acompanyen.",
+    "es": "Convertir el baño en un momento de conexión y de descubrimiento: el agua, el cuerpo y las palabras que lo acompañan."
+  },
+  "treballa": {
+    "ca": [
+      "Consciència corporal",
+      "Vincle",
+      "Llenguatge"
+    ],
+    "es": [
+      "Conciencia corporal",
+      "Vínculo",
+      "Lenguaje"
+    ]
+  },
+  "materials": {
+    "ca": [
+      "Banyera o cubeta",
+      "Un got de plàstic",
+      "Una esponja suau"
+    ],
+    "es": [
+      "Bañera o barreño",
+      "Un vaso de plástico",
+      "Una esponja suave"
+    ]
+  },
+  "preparacio": {
+    "ca": "Prepara-ho tot abans de començar: aigua tèbia, tovallola i roba a l'abast.",
+    "es": "Prepáralo todo antes de empezar: agua tibia, toalla y ropa a mano."
+  },
+  "desenvolupament": {
+    "ca": [
+      "Anomena cada part del cos mentre la rentes.",
+      "Deixa caure aigua amb el got i mira com reacciona.",
+      "Canteu una cançó sempre igual: li anuncia el moment."
+    ],
+    "es": [
+      "Nombra cada parte del cuerpo mientras la lavas.",
+      "Deja caer agua con el vaso y mira cómo reacciona.",
+      "Cantad una canción siempre igual: le anuncia el momento."
+    ]
+  },
+  "variants": {
+    "ca": [
+      "Deixa-li l'esponja perquè l'esprèmi.",
+      "Feu el mateix amb una nina i una palangana."
+    ],
+    "es": [
+      "Déjale la esponja para que la estruje.",
+      "Haced lo mismo con un muñeco y una palangana."
+    ]
+  },
+  "seguretat": {
+    "ca": [
+      "No el deixis mai sol a l'aigua, ni un segon.",
+      "Comprova la temperatura de l'aigua amb el colze."
+    ],
+    "es": [
+      "No lo dejes nunca solo en el agua, ni un segundo.",
+      "Comprueba la temperatura del agua con el codo."
+    ]
+  },
+  "quotidiana": true
+}

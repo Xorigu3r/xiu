@@ -1,0 +1,76 @@
+{
+  "id": "paper-que-sona",
+  "tipus": "activitat",
+  "edat": "0-1",
+  "area": "cre",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "10 min",
+  "novetat": true,
+  "titol": {
+    "ca": "Paper que sona",
+    "es": "Papel que suena"
+  },
+  "subtitol": {
+    "ca": "Arrugar, estripar i escoltar",
+    "es": "Arrugar, rasgar y escuchar"
+  },
+  "intencio": {
+    "ca": "Descobrir sons i textures diferents i el plaer de transformar un material.",
+    "es": "Descubrir sonidos y texturas diferentes y el placer de transformar un material."
+  },
+  "treballa": {
+    "ca": [
+      "Exploració sensorial",
+      "Causa-efecte",
+      "Expressió"
+    ],
+    "es": [
+      "Exploración sensorial",
+      "Causa-efecto",
+      "Expresión"
+    ]
+  },
+  "materials": {
+    "ca": [
+      "Paper de seda, paper d'embalar, paper d'alumini"
+    ],
+    "es": [
+      "Papel de seda, papel de embalar, papel de aluminio"
+    ]
+  },
+  "preparacio": {
+    "ca": "Posa els papers sobre una manta.",
+    "es": "Pon los papeles sobre una manta."
+  },
+  "desenvolupament": {
+    "ca": [
+      "Arruga un paper a prop seu: escolta!",
+      "Deixa que el toqui i l'arrugui.",
+      "Feu una pilota de paper i llanceu-la."
+    ],
+    "es": [
+      "Arruga un papel cerca: ¡escucha!",
+      "Deja que lo toque y lo arrugue.",
+      "Haced una pelota de papel y lanzadla."
+    ]
+  },
+  "variants": {
+    "ca": [
+      "Amagueu una joguina dins del paper."
+    ],
+    "es": [
+      "Esconded un juguete dentro del papel."
+    ]
+  },
+  "seguretat": {
+    "ca": [
+      "Vigila que no se'n posi trossos a la boca."
+    ],
+    "es": [
+      "Vigila que no se meta trozos en la boca."
+    ]
+  }
+}

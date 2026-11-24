@@ -1,0 +1,79 @@
+{
+  "id": "el-conte-del-drac",
+  "tipus": "activitat",
+  "edat": "4-5",
+  "area": "llen",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "15 min",
+  "novetat": true,
+  "titol": {
+    "ca": "El conte del drac",
+    "es": "El cuento del dragón"
+  },
+  "subtitol": {
+    "ca": "Expliquem la llegenda de Sant Jordi",
+    "es": "Contamos la leyenda de Sant Jordi"
+  },
+  "intencio": {
+    "ca": "Conèixer la llegenda i aprendre a explicar una història en ordre: principi, nus i final.",
+    "es": "Conocer la leyenda y aprender a contar una historia en orden: inicio, nudo y final."
+  },
+  "treballa": {
+    "ca": [
+      "Narració",
+      "Ordre temporal",
+      "Tradicions"
+    ],
+    "es": [
+      "Narración",
+      "Orden temporal",
+      "Tradiciones"
+    ]
+  },
+  "materials": {
+    "ca": [
+      "Titelles o dibuixos del drac, la princesa i el cavaller",
+      "Una caixa com a teatre"
+    ],
+    "es": [
+      "Títeres o dibujos del dragón, la princesa y el caballero",
+      "Una caja como teatro"
+    ]
+  },
+  "preparacio": {
+    "ca": "Prepara els personatges i explica primer tu la llegenda.",
+    "es": "Prepara los personajes y cuenta primero tú la leyenda."
+  },
+  "desenvolupament": {
+    "ca": [
+      "Expliqueu-la junts amb els titelles.",
+      "Pregunta: què passa primer? I després?",
+      "Inventeu un final nou: i si el drac fos amic?"
+    ],
+    "es": [
+      "Contadla juntos con los títeres.",
+      "Pregunta: ¿qué pasa primero? ¿Y después?",
+      "Inventad un final nuevo: ¿y si el dragón fuera amigo?"
+    ]
+  },
+  "variants": {
+    "ca": [
+      "Dibuixeu la història en tres vinyetes."
+    ],
+    "es": [
+      "Dibujad la historia en tres viñetas."
+    ]
+  },
+  "seguretat": {
+    "ca": [
+      "Cap."
+    ],
+    "es": [
+      "Ninguna."
+    ]
+  },
+  "festa": "santjordi"
+}

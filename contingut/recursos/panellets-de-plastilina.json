@@ -1,0 +1,82 @@
+{
+  "id": "panellets-de-plastilina",
+  "tipus": "activitat",
+  "edat": "4-5",
+  "area": "mot",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "20 min",
+  "novetat": true,
+  "titol": {
+    "ca": "Panellets de plastilina",
+    "es": "Panellets de plastilina"
+  },
+  "subtitol": {
+    "ca": "Boles, pinyons i molta traça",
+    "es": "Bolas, piñones y mucha maña"
+  },
+  "intencio": {
+    "ca": "Fer boles i enganxar-hi pinyons treballa la força i la precisió dels dits.",
+    "es": "Hacer bolas y pegarles piñones trabaja la fuerza y la precisión de los dedos."
+  },
+  "treballa": {
+    "ca": [
+      "Modelar",
+      "Pinça",
+      "Tradicions"
+    ],
+    "es": [
+      "Modelar",
+      "Pinza",
+      "Tradiciones"
+    ]
+  },
+  "materials": {
+    "ca": [
+      "Plastilina casolana de color crema",
+      "Llavors o boletes",
+      "Una safata"
+    ],
+    "es": [
+      "Plastilina casera de color crema",
+      "Semillas o bolitas",
+      "Una bandeja"
+    ]
+  },
+  "preparacio": {
+    "ca": "Prepara la plastilina (vegeu «Plastilina casolana»).",
+    "es": "Prepara la plastilina (ver «Plastilina casera»)."
+  },
+  "desenvolupament": {
+    "ca": [
+      "Feu boles fent rodar la plastilina entre les mans.",
+      "Enganxeu-hi «pinyons» un a un amb els dits.",
+      "Poseu-los a la safata i compteu-los."
+    ],
+    "es": [
+      "Haced bolas haciendo rodar la plastilina entre las manos.",
+      "Pegad «piñones» uno a uno con los dedos.",
+      "Ponedlos en la bandeja y contadlos."
+    ]
+  },
+  "variants": {
+    "ca": [
+      "Feu-ne de veritat amb massapà, amb un adult."
+    ],
+    "es": [
+      "Hacedlos de verdad con mazapán, con un adulto."
+    ]
+  },
+  "seguretat": {
+    "ca": [
+      "Les llavors petites, només a partir de 4 anys i amb supervisió."
+    ],
+    "es": [
+      "Las semillas pequeñas, solo a partir de 4 años y con supervisión."
+    ]
+  },
+  "festa": "castanyada",
+  "premium": true
+}

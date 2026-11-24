@@ -1,0 +1,84 @@
+{
+  "id": "la-rosa-de-paper",
+  "tipus": "activitat",
+  "edat": "5-6",
+  "area": "mot",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "20 min",
+  "novetat": true,
+  "titol": {
+    "ca": "La rosa de paper",
+    "es": "La rosa de papel"
+  },
+  "subtitol": {
+    "ca": "Retallem, enrotllem i regalem",
+    "es": "Recortamos, enrollamos y regalamos"
+  },
+  "intencio": {
+    "ca": "Treballar la precisió de la mà fent una rosa per regalar per Sant Jordi.",
+    "es": "Trabajar la precisión de la mano haciendo una rosa para regalar por Sant Jordi."
+  },
+  "treballa": {
+    "ca": [
+      "Retallar",
+      "Precisió",
+      "Tradicions"
+    ],
+    "es": [
+      "Recortar",
+      "Precisión",
+      "Tradiciones"
+    ]
+  },
+  "materials": {
+    "ca": [
+      "Paper vermell i verd",
+      "Tisores de punta rodona",
+      "Un bastonet o una palleta",
+      "Cinta adhesiva"
+    ],
+    "es": [
+      "Papel rojo y verde",
+      "Tijeras de punta redonda",
+      "Un palito o una pajita",
+      "Cinta adhesiva"
+    ]
+  },
+  "preparacio": {
+    "ca": "Dibuixa una espiral en el paper vermell.",
+    "es": "Dibuja una espiral en el papel rojo."
+  },
+  "desenvolupament": {
+    "ca": [
+      "Que retalli l'espiral seguint la línia.",
+      "Enrotlleu-la des de fora cap a dins: ja és una rosa!",
+      "Enganxeu-la al bastonet i afegiu-hi una fulla verda."
+    ],
+    "es": [
+      "Que recorte la espiral siguiendo la línea.",
+      "Enrolladla de fuera hacia dentro: ¡ya es una rosa!",
+      "Pegadla al palito y añadid una hoja verde."
+    ]
+  },
+  "variants": {
+    "ca": [
+      "Feu-ne un ram per a la família."
+    ],
+    "es": [
+      "Haced un ramo para la familia."
+    ]
+  },
+  "seguretat": {
+    "ca": [
+      "Tisores de punta rodona i sempre assegut."
+    ],
+    "es": [
+      "Tijeras de punta redonda y siempre sentado."
+    ]
+  },
+  "festa": "santjordi",
+  "premium": true
+}

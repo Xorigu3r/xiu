@@ -1,0 +1,84 @@
+{
+  "id": "plantem-una-llavor",
+  "tipus": "activitat",
+  "edat": "4-5",
+  "area": "exp",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "15 min",
+  "novetat": true,
+  "titol": {
+    "ca": "Plantem una llavor",
+    "es": "Plantamos una semilla"
+  },
+  "subtitol": {
+    "ca": "I la mirem créixer cada dia",
+    "es": "Y la miramos crecer cada día"
+  },
+  "intencio": {
+    "ca": "Observar com creix una planta i tenir-ne cura: la primavera a les mans.",
+    "es": "Observar cómo crece una planta y cuidarla: la primavera en las manos."
+  },
+  "treballa": {
+    "ca": [
+      "Observació",
+      "Cura dels éssers vius",
+      "Paciència"
+    ],
+    "es": [
+      "Observación",
+      "Cuidado de los seres vivos",
+      "Paciencia"
+    ]
+  },
+  "materials": {
+    "ca": [
+      "Llenties o mongetes",
+      "Un got transparent",
+      "Cotó fluix",
+      "Aigua"
+    ],
+    "es": [
+      "Lentejas o judías",
+      "Un vaso transparente",
+      "Algodón",
+      "Agua"
+    ]
+  },
+  "preparacio": {
+    "ca": "Posa cotó fluix humit al got.",
+    "es": "Pon algodón húmedo en el vaso."
+  },
+  "desenvolupament": {
+    "ca": [
+      "Que hi posi tres o quatre llavors.",
+      "Cada dia, una mica d'aigua i mirar què ha canviat.",
+      "Dibuixeu la planta cada dos dies."
+    ],
+    "es": [
+      "Que ponga tres o cuatro semillas.",
+      "Cada día, un poco de agua y mirar qué ha cambiado.",
+      "Dibujad la planta cada dos días."
+    ]
+  },
+  "variants": {
+    "ca": [
+      "Una a la llum i una a les fosques: què passa?"
+    ],
+    "es": [
+      "Una a la luz y otra a oscuras: ¿qué pasa?"
+    ]
+  },
+  "seguretat": {
+    "ca": [
+      "Llavors grosses i sense menjar-se-les."
+    ],
+    "es": [
+      "Semillas grandes y sin comérselas."
+    ]
+  },
+  "festa": "pasqua",
+  "premium": true
+}

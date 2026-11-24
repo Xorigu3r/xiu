@@ -1,0 +1,84 @@
+{
+  "id": "la-carta-als-reis",
+  "tipus": "activitat",
+  "edat": "5-6",
+  "area": "llen",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "20 min",
+  "novetat": true,
+  "titol": {
+    "ca": "La carta als Reis",
+    "es": "La carta a los Reyes"
+  },
+  "subtitol": {
+    "ca": "Escrivim (i dibuixem) el que desitgem",
+    "es": "Escribimos (y dibujamos) lo que deseamos"
+  },
+  "intencio": {
+    "ca": "Escriure amb una intenció real i pensar en els altres: què demanem per a tothom?",
+    "es": "Escribir con una intención real y pensar en los demás: ¿qué pedimos para todos?"
+  },
+  "treballa": {
+    "ca": [
+      "Escriptura",
+      "Expressió",
+      "Pensar en els altres"
+    ],
+    "es": [
+      "Escritura",
+      "Expresión",
+      "Pensar en los demás"
+    ]
+  },
+  "materials": {
+    "ca": [
+      "Paper bonic",
+      "Llapis i colors",
+      "Un sobre"
+    ],
+    "es": [
+      "Papel bonito",
+      "Lápices y colores",
+      "Un sobre"
+    ]
+  },
+  "preparacio": {
+    "ca": "Escriu en un paper les paraules que necessitarà (estimats Reis, gràcies...).",
+    "es": "Escribe en un papel las palabras que necesitará (queridos Reyes, gracias...)."
+  },
+  "desenvolupament": {
+    "ca": [
+      "Pensa què vol demanar, i també què demana per a algú altre.",
+      "Que escrigui el que pugui; on no arribi, que dibuixi.",
+      "Signeu i poseu-la al sobre."
+    ],
+    "es": [
+      "Piensa qué quiere pedir, y también qué pide para otra persona.",
+      "Que escriba lo que pueda; donde no llegue, que dibuje.",
+      "Firmad y metedla en el sobre."
+    ]
+  },
+  "variants": {
+    "ca": [
+      "Una carta col·lectiva de la classe.",
+      "Retalleu fotos de catàlegs."
+    ],
+    "es": [
+      "Una carta colectiva de la clase.",
+      "Recortad fotos de catálogos."
+    ]
+  },
+  "seguretat": {
+    "ca": [
+      "Cap."
+    ],
+    "es": [
+      "Ninguna."
+    ]
+  },
+  "festa": "nadal",
+  "premium": true
+}

@@ -1,0 +1,79 @@
+{
+  "id": "les-coses-de-casa",
+  "tipus": "activitat",
+  "edat": "1-2",
+  "area": "llen",
+  "perfil": [
+    "fam",
+    "pro"
+  ],
+  "durada": "10 min",
+  "novetat": true,
+  "titol": {
+    "ca": "Les coses de casa",
+    "es": "Las cosas de casa"
+  },
+  "subtitol": {
+    "ca": "Anomenem el que fem servir cada dia",
+    "es": "Nombramos lo que usamos cada día"
+  },
+  "intencio": {
+    "ca": "Ampliar el vocabulari amb els objectes i les accions de cada dia.",
+    "es": "Ampliar el vocabulario con los objetos y las acciones de cada día."
+  },
+  "treballa": {
+    "ca": [
+      "Vocabulari",
+      "Comprensió",
+      "Atenció conjunta"
+    ],
+    "es": [
+      "Vocabulario",
+      "Comprensión",
+      "Atención conjunta"
+    ]
+  },
+  "materials": {
+    "ca": [
+      "Una bossa amb 5 objectes de casa (cullera, pinta, got, sabata, mitjó)"
+    ],
+    "es": [
+      "Una bolsa con 5 objetos de casa (cuchara, peine, vaso, zapato, calcetín)"
+    ]
+  },
+  "preparacio": {
+    "ca": "Posa els objectes a la bossa.",
+    "es": "Pon los objetos en la bolsa."
+  },
+  "desenvolupament": {
+    "ca": [
+      "Treu un objecte i digues-ne el nom i per a què serveix.",
+      "Fes veure que el fas servir (et pentines, beus...).",
+      "Demana-li: «dona'm la cullera»."
+    ],
+    "es": [
+      "Saca un objeto y di su nombre y para qué sirve.",
+      "Haz como que lo usas (te peinas, bebes...).",
+      "Pídele: «dame la cuchara»."
+    ]
+  },
+  "variants": {
+    "ca": [
+      "Feu-ho mentre ordeneu la compra.",
+      "Amb fotos dels objectes."
+    ],
+    "es": [
+      "Hacedlo mientras ordenáis la compra.",
+      "Con fotos de los objetos."
+    ]
+  },
+  "seguretat": {
+    "ca": [
+      "Objectes grossos que no es puguin empassar."
+    ],
+    "es": [
+      "Objetos grandes que no se puedan tragar."
+    ]
+  },
+  "quotidiana": true
+}

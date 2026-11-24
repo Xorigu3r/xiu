@@ -2,6 +2,14 @@
 // Els fa servir app.js (s'afegeixen als textos de l'app).
 window.XIU_TEXTOS_COMPTE = {
   ca: {
+    gratuitL: ["Una selecció d'activitats de totes les edats i àrees", 'Una part de la biblioteca', 'Recomanacions i propostes bàsiques', 'Les rutines, el calendari i les funcions bàsiques dels perfils'],
+    premiumL: ['Tota la biblioteca', 'Més activitats i fitxes imprimibles', 'Col·leccions exclusives de festes i temporades', 'Experiències i recursos especials', 'Contingut nou cada mes'],
+    gFestes: 'Festes tradicionals', gFestesP: 'Activitats per viure cada festa amb els infants.', gTemporades: "Estacions de l'any", gTemporadesP: 'Propostes per a cada moment de l\'any.',
+    gTemes: 'Temes i propostes especials', gTemesP: 'Primeres experiències, joc sensorial, vida quotidiana i més.', calendari: 'Calendari de festes',
+    b1T: 'Què fem avui?', b1P: 'Una proposta per a avui, triada per XIU.', b1Tria: 'Tria-la tu', b2T: 'Avui a casa', b2P: 'També aprenem en les petites coses de cada dia.',
+    b3T: 'Per a cada infant', b3P: 'Propostes pensades per a cadascú.', b4T: 'Descobreix XIU', b4P: 'Novetats, col·leccions, festes i temporades.', colleccionsT: 'Col·leccions', exploraEdats: 'Explora per edats',
+    fDur10: 'Fins a 10 min', fDur20: '10-20 min', fDurMes: 'Més de 20 min', pocs: 'Materials', fPocs: 'Pocs materials', fSensePantalla: 'Sense pantalla', fQuotidiana: 'Vida quotidiana', obj: 'Objectiu pedagògic',
+    bibEdatP: "Tria l'edat i després l'àrea: hi trobaràs totes les propostes, ben ordenades.", bibAreaP: 'Les sis àrees educatives per a aquesta edat.', totesPropostes: 'Veure totes les propostes', filtres: 'Filtres',
     mes: 'Més', quant: 'Quant a', actualitzar: 'Busca actualitzacions', ajuda: 'Ajuda', drets: "Drets d'autor", menu: 'Menú',
     versio: 'Versió', contingutAct: 'Contingut actualitzat el {d}', darreraV: 'Ja tens la darrera versió ({v}).', buscant: 'Buscant actualitzacions…',
     novaV: 'Hi ha una versió nova de XIU', novaVP: "S'ha baixat una versió nova de l'app. Actualitza-la ara per tenir-ne les millores.", tard: 'Més tard', actualitzaAra: 'Actualitza ara',
@@ -64,6 +72,14 @@ window.XIU_TEXTOS_COMPTE = {
     reinicia: 'Reinicia la prova', reiniciaQ: 'S\'esborraran el compte, les compres i els rebuts de prova d\'aquest aparell. Vols continuar?', reiniciat: 'Prova reiniciada.',
   },
   es: {
+    gratuitL: ['Una selección de actividades de todas las edades y áreas', 'Una parte de la biblioteca', 'Recomendaciones y propuestas básicas', 'Las rutinas, el calendario y las funciones básicas de los perfiles'],
+    premiumL: ['Toda la biblioteca', 'Más actividades y fichas imprimibles', 'Colecciones exclusivas de fiestas y temporadas', 'Experiencias y recursos especiales', 'Contenido nuevo cada mes'],
+    gFestes: 'Fiestas tradicionales', gFestesP: 'Actividades para vivir cada fiesta con los niños y niñas.', gTemporades: 'Estaciones del año', gTemporadesP: 'Propuestas para cada momento del año.',
+    gTemes: 'Temas y propuestas especiales', gTemesP: 'Primeras experiencias, juego sensorial, vida cotidiana y más.', calendari: 'Calendario de fiestas',
+    b1T: '¿Qué hacemos hoy?', b1P: 'Una propuesta para hoy, elegida por XIU.', b1Tria: 'Elígela tú', b2T: 'Hoy en casa', b2P: 'También aprendemos en las pequeñas cosas de cada día.',
+    b3T: 'Para cada niño y niña', b3P: 'Propuestas pensadas para cada uno.', b4T: 'Descubre XIU', b4P: 'Novedades, colecciones, fiestas y temporadas.', colleccionsT: 'Colecciones', exploraEdats: 'Explora por edades',
+    fDur10: 'Hasta 10 min', fDur20: '10-20 min', fDurMes: 'Más de 20 min', pocs: 'Materiales', fPocs: 'Pocos materiales', fSensePantalla: 'Sin pantalla', fQuotidiana: 'Vida cotidiana', obj: 'Objetivo pedagógico',
+    bibEdatP: 'Elige la edad y después el área: encontrarás todas las propuestas, bien ordenadas.', bibAreaP: 'Las seis áreas educativas para esta edad.', totesPropostes: 'Ver todas las propuestas', filtres: 'Filtros',
     mes: 'Más', quant: 'Acerca de', actualitzar: 'Buscar actualizaciones', ajuda: 'Ayuda', drets: 'Derechos de autor', menu: 'Menú',
     versio: 'Versión', contingutAct: 'Contenido actualizado el {d}', darreraV: 'Ya tienes la última versión ({v}).', buscant: 'Buscando actualizaciones…',
     novaV: 'Hay una versión nueva de XIU', novaVP: 'Se ha descargado una versión nueva de la app. Actualízala ahora para tener sus mejoras.', tard: 'Más tarde', actualitzaAra: 'Actualizar ahora',
