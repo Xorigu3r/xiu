@@ -75,8 +75,13 @@
   const VISTES = {};
 
   /* ---------- Estat (preferències locals: idioma i favorits) ---------- */
-  const ls = { get(k, d) { try { const v = localStorage.getItem('xiu-' + k); return v == null ? d : JSON.parse(v); } catch (e) { return d; } },
-               set(k, v) { try { localStorage.setItem('xiu-' + k, JSON.stringify(v)); } catch (e) { /* sense emmagatzematge */ } } };
+  // Les dades de les famílies (infants, progrés, medalles, programació, diari, fitxes creades...) són DEL COMPTE:
+  // es guarden amb el correu al davant. Sense compte obert no se'n llegeix ni se'n desa cap (el Perfil no surt).
+  const DEL_COMPTE = new Set(['infants', 'infant-actiu', 'fets', 'programa', 'observacions', 'diari', 'rutines', 'rutines-fet', 'creades', 'crea-estat', 'avis-setmana']);
+  const correuActiu = () => { try { const c = JSON.parse(localStorage.getItem('xiu-compte')); return c && c.correu ? c.correu.trim().toLowerCase() : null; } catch (e) { return null; } };
+  const clau = (k) => (DEL_COMPTE.has(k) ? (correuActiu() ? `xiu-c:${correuActiu()}:${k}` : null) : 'xiu-' + k);
+  const ls = { get(k, d) { try { const c = clau(k); if (!c) return d; const v = localStorage.getItem(c); return v == null ? d : JSON.parse(v); } catch (e) { return d; } },
+               set(k, v) { try { const c = clau(k); if (!c) return false; localStorage.setItem(c, JSON.stringify(v)); return true; } catch (e) { return false; } } };
   let lang = ls.get('idioma', /^es\b/i.test(navigator.language || '') ? 'es' : 'ca');
   let favs = ls.get('favorits', []).filter((id) => perId[id]);
   let F = buit();
@@ -534,8 +539,17 @@
   function entraAmb(c) {
     compte = c; ls.set('compte', compte);
     if (!perfil && c.tipus) { perfil = { tipus: c.tipus, edats: [] }; ls.set('perfil', perfil); }
+    // dades antigues (sense compte) d'aquest aparell: al primer compte que hi entri
+    for (const k of DEL_COMPTE) { const vell = localStorage.getItem('xiu-' + k); if (vell != null) { if (ls.get(k, null) == null) localStorage.setItem(clau(k), vell); localStorage.removeItem('xiu-' + k); } }
+    // els noms escrits a la benvinguda
+    const noms = JSON.parse(localStorage.getItem('xiu-onb-noms') || '[]');
+    if (noms.length) { const inf = ls.get('infants', []), colors = ['#C9785B', '#8FA68A', '#8EA2B4', '#D1A35A', '#D29A92', '#9D9B60'];
+      for (const x of noms) inf.push({ id: Math.random().toString(36).slice(2, 9), nom: x.nom, edat: x.edat, color: colors[inf.length % 6], pendents: [], preferides: [], interessos: [] });
+      ls.set('infants', inf); if (!ls.get('infant-actiu', null)) ls.set('infant-actiu', inf[0].id); localStorage.removeItem('xiu-onb-noms'); }
   }
-  const tornaDespres = () => render(true);   // a #/compte surt el compte; a #/pagament, el pagament
+  // en entrar o sortir d'un compte, l'app es torna a carregar (cada mòdul llegeix les dades del compte nou)
+  const recarrega = (r) => { try { sessionStorage.setItem('xiu-ruta', r); } catch (e) { /* */ } location.reload(); };
+  const tornaDespres = () => { if (ruta.startsWith('#/pagament')) render(true); else recarrega('#/perfil'); };
   function factura(i) {
     const f = acces.factures[i]; if (!f) return;
     const { jsPDF } = window.jspdf, d = new jsPDF({ unit: 'mm', format: 'a4' });
@@ -576,7 +590,7 @@
       if (!correuOk(v.correu || '')) return err('errCorreu');
       if (!(v.pw || '').length) return err('errPw');
       const ant = ls.get('compte-anterior', null);
-      entraAmb(ant && ant.correu == v.correu.trim() ? ant : { nom: v.correu.split('@')[0], correu: v.correu.trim(), tipus: perfil ? perfil.tipus : 'fam' });
+      entraAmb(ant && ant.correu.trim().toLowerCase() == v.correu.trim().toLowerCase() ? ant : { nom: v.correu.split('@')[0], correu: v.correu.trim(), tipus: perfil ? perfil.tipus : 'fam' });
       avis(t('hola2').replace('{n}', compte.nom)); return tornaDespres();
     }
     if (tipus == 'oblit') { if (!correuOk(v.correu || '')) return err('errCorreu'); avis(t('enllacEnviat')); compteMode = 'entra'; return render(true); }
@@ -626,8 +640,8 @@
     else if (d.social) { entraAmb({ nom: d.social == 'google' ? 'Usuària de Google' : 'Usuària d\'Apple', correu: d.social == 'google' ? 'prova@gmail.com' : 'prova@icloud.com', tipus: perfil ? perfil.tipus : 'fam', via: d.social }); avis(t('hola2').replace('{n}', compte.nom)); tornaDespres(); }
     else if (d.sub == 'cancel') { if (confirm(t('cancelaQ').replace('{d}', quanEs(acces.renova)))) { acces.cancel = true; desaAcces(); avis(t('cancelada')); render(true); } }
     else if (d.sub == 'reactiva') { acces.cancel = false; desaAcces(); avis(t('reactivada')); render(true); }
-    else if (d.sessio == 'surt') { ls.set('compte-anterior', compte); compte = null; ls.set('compte', null); avis(t('sessioTancada')); pila = []; ruta = '#/perfil'; render(); }
-    else if (d.sessio == 'esborra') { if (confirm(t('esborraQ'))) { compte = null; ls.set('compte', null); ls.set('compte-anterior', null); acces = { pla: null, renova: null, cancel: false, paquets: [], factures: [] }; desaAcces(); pila = []; ruta = '#/perfil'; render(); } }
+    else if (d.sessio == 'surt') { ls.set('compte-anterior', compte); compte = null; ls.set('compte', null); recarrega('#/'); }
+    else if (d.sessio == 'esborra') { if (confirm(t('esborraQ'))) { for (const k of DEL_COMPTE) ls.set(k, null); compte = null; ls.set('compte', null); ls.set('compte-anterior', null); acces = { pla: null, renova: null, cancel: false, paquets: [], factures: [] }; desaAcces(); recarrega('#/'); } }
     else if (d.factura) factura(+d.factura);
     else if (d.reinicia != null) { if (confirm(t('reiniciaQ'))) { compte = null; ls.set('compte', null); ls.set('compte-anterior', null); acces = { pla: null, renova: null, cancel: false, paquets: [], factures: [] }; desaAcces(); avis(t('reiniciat')); render(true); } }
   });
@@ -670,8 +684,8 @@
     const actiu = cur == 'r' || cur == 'material' ? 'bib' : cur == 'c' ? 'insp' : ['ajuda', 'drets', 'privadesa', 'condicions', 'cookies', 'contacte'].includes(cur) ? 'quant' : ['pagament', 'fet'].includes(cur) ? 'compte' : ['premium', 'progres', 'programacio', 'observacio', 'nom', 'rutines', 'rutina', 'diari', 'tradicions'].includes(cur) ? 'perfil' : ['crea', 'avui'].includes(cur) ? 'bib' : cur;
     const boto = ([h, k, nom]) => `<button class="${actiu == h ? 'on' : ''}" data-tab="#/${h}">${I[k]}<span>${nom || t(k)}</span></button>`;
     const base = [['', 'inici'], ['bib', 'bib'], ['insp', 'insp'], ['fav', 'fav']], perf = ['perfil', 'ajustos', t('perfilT')];
-    $('#sideNav').innerHTML = [...base, ['quant', 'info', t('quant')], perf].map(boto).join('');
-    $('#tabNav').innerHTML = [...base, perf].map(boto).join('');
+    $('#sideNav').innerHTML = [...base, ['quant', 'info', t('quant')], ...(compte ? [perf] : [])].map(boto).join('');
+    $('#tabNav').innerHTML = [...base, ...(compte ? [perf] : [['compte', 'perfil', t('compte')]])].map(boto).join('');
     const inicial = compte ? esc(compte.nom.trim().charAt(0).toUpperCase()) : '';
     $('#menuT').innerHTML = `<button class="menuB ${actiu == 'compte' ? 'on' : ''}" data-tab="#/compte" aria-label="${t('compte')}" title="${t('compte')}">${inicial ? `<b>${inicial}</b>` : I.perfil}</button>
       <button class="menuB ${actiu == 'quant' ? 'on' : ''}" data-tab="#/quant" aria-label="${t('quant')}" title="${t('quant')}">${I.info}</button>`;
@@ -685,7 +699,7 @@
     const p = ruta.replace('#/', '').split('/'), y = scrollY;
     const benv = !perfil && !ls.get('perfil-omes', false) || onb;
     document.body.classList.toggle('onbOn', !!benv);
-    const v = benv ? vBenvinguda : { '': vInici, bib: () => vBib(p.slice(1)), fav: vFav, insp: vInsp, perfil: vPerfil, premium: vPremium, compte: vCompte, pagament: () => vPagament(p[1]), fet: () => vFet(p[1]),
+    const v = benv ? vBenvinguda : { '': vInici, bib: () => vBib(p.slice(1)), fav: vFav, insp: vInsp, perfil: () => (compte ? vPerfil() : vCompte()), premium: vPremium, compte: vCompte, pagament: () => vPagament(p[1]), fet: () => vFet(p[1]),
       quant: vQuant, ajuda: vAjuda, drets: vDrets, r: () => vFitxa(p[1]), c: () => vColleccio(p[1]),
       ...Object.fromEntries(Object.entries(VISTES).map(([k, f]) => [k, () => f(p.slice(1))])) }[p[0]] || vInici;
     $('#view').innerHTML = `<div class="${manté ? '' : 'fade'}">${v()}</div>`;
@@ -727,7 +741,8 @@
     else if (d.onbMesinf != null) { onb.noms.push({ nom: '', edat: onb.edats[0] || '3-4' }); render(true); }
     else if (d.onbFi) {
       if (d.onbFi == 'si' && onb.tipus) { perfil = { tipus: onb.tipus, edats: EDATS.filter((x) => onb.edats.includes(x)) }; ls.set('perfil', perfil);
-        for (const x of onb.noms || []) if (x.nom.trim()) window.XIU_APP.INFANTS?.afegeix(x.nom.trim(), x.edat); }
+        const noms = (onb.noms || []).filter((x) => x.nom.trim()).map((x) => ({ nom: x.nom.trim(), edat: x.edat }));
+        if (noms.length) { localStorage.setItem('xiu-onb-noms', JSON.stringify(noms)); compteMode = 'registre'; onb = null; pila = ['#/']; ruta = '#/compte'; render(); scrollTo(0, 0); return; } }
       else ls.set('perfil-omes', true);
       onb = null; pila = []; ruta = '#/'; render(); scrollTo(0, 0);
     }
@@ -781,6 +796,7 @@
   for (const m of window.XIU_MODULS || []) { try { m(window.XIU_APP); } catch (e) { console.error('Mòdul', e); } }
   // enllaç directe a una proposta (el que es comparteix amb les famílies): .../xiu/#/r/<id>
   if (/^#\/(r|c|joc)\/[\w-]+$/.test(location.hash)) { pila = ['#/']; ruta = location.hash.replace('#/joc/', '#/r/'); }
+  try { const r = sessionStorage.getItem('xiu-ruta'); if (r) { sessionStorage.removeItem('xiu-ruta'); ruta = r; pila = r == '#/' ? [] : ['#/']; } } catch (e) { /* */ }
   render();
   // la pantalla del logo es queda fins que acaba l'animació (uns 1,7 s des que s'obre l'app)
   const resta = matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : Math.max(0, 1750 - (performance.now() - (window.XIU_T0 || 0)));

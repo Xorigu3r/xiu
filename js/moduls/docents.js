@@ -38,7 +38,7 @@
   const desaPdf = (doc, nom) => XP.desaPdf(new Uint8Array(doc.output('arraybuffer')), nom, { desat: t('desat') }).then((m) => m && A.avis(m)).catch(() => A.avis(t('errPdf')));
 
   /* ---------- accions a cada proposta ---------- */
-  A.HOOKS.accions.push((r) => `<button class="btn" data-planifica="${r.id}">${I.rellotge}${t('planifica')}</button>
+  A.HOOKS.accions.push((r) => `${A.compte ? `<button class="btn" data-planifica="${r.id}">${I.rellotge}${t('planifica')}</button>` : ''}
     <button class="btn" data-qr="${r.id}">${I.share}${docent() ? t('comparteix') : t('comparteixCasa')}</button>
     ${docent() && r.tipus === 'fitxa' ? `<button class="btn" data-classe="${r.id}">${I.print}${t('perClasse')}</button>` : ''}`);
   A.HOOKS.perfil.push(() => `<div class="sec"><h2>${docent() ? t('eines') : t('einesCasa')}</h2></div>

@@ -5,7 +5,7 @@
   const COLORS = ['#C9785B', '#8FA68A', '#8EA2B4', '#D1A35A', '#D29A92', '#9D9B60'];
   const uid = () => Math.random().toString(36).slice(2, 9);
   let infants = ls.get('infants', []), actiu = ls.get('infant-actiu', null), fets = ls.get('fets', []);
-  const desa = () => { ls.set('infants', infants); ls.set('infant-actiu', actiu); try { localStorage.setItem('xiu-fets', JSON.stringify(fets)); } catch { A.avis(t('pleMemoria')); } };
+  const desa = () => { ls.set('infants', infants); ls.set('infant-actiu', actiu); if (A.compte && !ls.set('fets', fets)) A.avis(t('pleMemoria')); };
   const docent = () => A.perfil && A.perfil.tipus === 'pro';
   const INTS = ['animals', 'musica', 'natura', 'construir', 'pintar', 'contes', 'cuina', 'moure', 'experiments'];
   const edatDe = (naix) => { const d = new Date(naix + 'T12:00'); if (isNaN(d)) return null; const m = (Date.now() - d) / (30.44 * 864e5); return A.EDATS[Math.max(0, Math.min(5, Math.floor(m / 12)))]; };
@@ -135,7 +135,7 @@
   // fitxa acabada a la pantalla, o joc acabat → una estrella per a l'infant que juga
   function feta(id) {
     const x = infant(actiu);
-    if (!x) { A.avis(t('molbeSense')); return; }
+    if (!x) { if (A.compte) A.avis(t('molbeSense')); return; }
     const avui = new Date().toDateString();
     if (!fets.some((f) => f.r === id && f.i === x.id && new Date(f.d).toDateString() === avui)) { fets.unshift({ r: id, i: x.id, d: new Date().toISOString(), nota: '', foto: null, auto: true }); treuPendent(id, x.id); desa(); }
     A.avis(t('molbeAmb').replace('{n}', x.nom));
@@ -170,10 +170,11 @@
   A.HOOKS.bloc1.push(() => infants.length > 1 ? `<div class="sec petit"><h2>${t('quiJuga')}</h2>${actiu ? `<button data-go="#/progres/${actiu}">${t('veureProgres')}</button>` : ''}</div>
     <div class="infTria inici">${infants.map((x) => `<button class="infX ${x.id === actiu ? 'on' : ''}" data-inf-actiu="${x.id}">${avatar(x)}<b>${esc(x.nom)}</b><small>${estrella}${estrelles(x.id)}</small></button>`).join('')}</div>` : '');
   A.HOOKS.accions.push((r) => {
+    if (!A.compte) return '';
     const ult = fets.find((f) => f.r === r.id && (!actiu || f.i === actiu || docent()));
     return `<button class="btn ${ult ? 'on' : ''}" data-hofet="${r.id}">${I.ok}${ult ? t('fetEl').replace('{d}', new Date(ult.d).toLocaleDateString(A.lang === 'es' ? 'es-ES' : 'ca-ES')) : t('hoHemFet')}</button>`;
   });
-  A.HOOKS.accions.push((r) => (infants.length ? `<button class="btn" data-guarda="${r.id}">${I.fav}${t('guarda')}</button>` : ''));
+  A.HOOKS.accions.push((r) => (A.compte && infants.length ? `<button class="btn" data-guarda="${r.id}">${I.fav}${t('guarda')}</button>` : ''));
   function guarda(r) {
     const m = A.modal(`<h2>${t('guardaT')}</h2><p>${esc(A.L(r.titol))}</p><div class="guardaLl">${infants.map((x) => `<div class="guardaF">${avatar(x, 'petit')}<b>${esc(x.nom)}</b>
         <button class="chip ${(x.pendents || []).includes(r.id) ? 'on' : ''}" data-gu="${x.id}:pendents">${t('perFer')}</button><button class="chip ${(x.preferides || []).includes(r.id) ? 'on' : ''}" data-gu="${x.id}:preferides">${I.fav}${t('preferida')}</button></div>`).join('')}</div>

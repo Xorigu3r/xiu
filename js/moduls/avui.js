@@ -2,14 +2,14 @@
 (window.XIU_MODULS ||= []).push((A) => {
   const { esc, I } = A, t = (k) => A.t(k);
   A.textos({
-    ca: { ctaInfants: 'Afegeix els teus infants i XIU et proposarà activitats per a cadascú, segons la seva edat i el que li agrada.', perGrup: 'Per al vostre grup',
+    ca: { ctaCompte: 'Crea el teu compte (és gratuït) per afegir-hi els teus infants: XIU et proposarà activitats per a cadascú i en guardarà el progrés.', ctaInfants: 'Afegeix els teus infants i XIU et proposarà activitats per a cadascú, segons la seva edat i el que li agrada.', perGrup: 'Per al vostre grup',
       avuiT: 'Què fem avui?', avuiP: 'Respon tres preguntes i et proposem una sola cosa per fer ara.', avuiB: 'Tria-ho en 10 segons',
       avuiTemps: 'Quant temps teniu?', avuiOn: 'On sou?', avuiCom: 'Com està?', avuiQui: 'Per a qui?', avuiPantalla: 'Millor sense pantalla',
       temps: [['5', '5 minuts'], ['15', 'Un quart d\'hora'], ['30', 'Mitja hora o més']], llocs: [['casa', 'A casa'], ['aula', 'A l\'aula'], ['fora', 'A fora']],
       estats: [['tranquil', 'Tranquil·la, tranquil'], ['mogut', 'Amb ganes de moure\'s'], ['cansat', 'Cansada, cansat']],
       avuiProposta: 'Avui us proposem', unaAltra: 'Una altra', obre: 'Som-hi', tambe: 'També us pot anar bé', avuiCap: 'No hem trobat res amb aquestes respostes. Prova de canviar-ne alguna.',
       seguentPas: 'El següent pas', seguentPasP: 'Una proposta per àrea, una mica més enllà del que ja heu fet.', perA: 'per a {n}', totFet: 'Ho heu fet tot en aquesta àrea! 🎉' },
-    es: { ctaInfants: 'Añade a tus niños y niñas y XIU te propondrá actividades para cada uno, según su edad y lo que le gusta.', perGrup: 'Para vuestro grupo',
+    es: { ctaCompte: 'Crea tu cuenta (es gratis) para añadir a tus niños y niñas: XIU te propondrá actividades para cada uno y guardará su progreso.', ctaInfants: 'Añade a tus niños y niñas y XIU te propondrá actividades para cada uno, según su edad y lo que le gusta.', perGrup: 'Para vuestro grupo',
       avuiT: '¿Qué hacemos hoy?', avuiP: 'Responde tres preguntas y te proponemos una sola cosa para hacer ahora.', avuiB: 'Elígelo en 10 segundos',
       avuiTemps: '¿Cuánto tiempo tenéis?', avuiOn: '¿Dónde estáis?', avuiCom: '¿Cómo está?', avuiQui: '¿Para quién?', avuiPantalla: 'Mejor sin pantalla',
       temps: [['5', '5 minutos'], ['15', 'Un cuarto de hora'], ['30', 'Media hora o más']], llocs: [['casa', 'En casa'], ['aula', 'En el aula'], ['fora', 'Fuera']],
@@ -102,7 +102,7 @@
     if (A.perfil?.tipus === 'pro' || !inf.length) {
       const edats = A.perfil?.edats?.length ? A.perfil.edats : null;
       const rs = edats ? A.R.filter((r) => edats.includes(r.edat) && !A.bloquejat(r)).sort((a, b) => (b.novetat ? 1 : 0) - (a.novetat ? 1 : 0)).slice(0, 10) : [];
-      return `${!inf.length ? `<div class="caixa ctaInf"><p class="sub2">${t('ctaInfants')}</p><div class="actions"><button class="btn pri" data-inf-nou>+ ${t('afegeixInfant')}</button></div></div>` : ''}
+      return `${!inf.length ? `<div class="caixa ctaInf"><p class="sub2">${A.compte ? t('ctaInfants') : t('ctaCompte')}</p><div class="actions">${A.compte ? `<button class="btn pri" data-inf-nou>+ ${t('afegeixInfant')}</button>` : `<button class="btn pri" data-go="#/compte" data-cmode="registre">${t('creaCompte')}</button><button class="btn" data-go="#/compte" data-cmode="entra">${t('entra')}</button>`}</div></div>` : ''}
         ${rs.length ? `<div class="sec"><h2>${A.perfil?.tipus === 'pro' ? t('perGrup') : t('perATu')} <small>${edats.join(', ')} ${t('anys')}</small></h2></div><div class="row">${rs.map(A.card).join('')}</div>` : ''}`;
     }
     return inf.slice(0, 4).map((x) => { const sp = seguentPas(x).filter((q) => q.r);

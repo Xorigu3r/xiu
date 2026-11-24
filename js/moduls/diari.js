@@ -15,7 +15,7 @@
   });
   let diari = ls.get('diari', []), foto = null, triats = null, estat = 0, notaTmp = '';
   const iso = (d = new Date()) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
-  const desa = () => { try { localStorage.setItem('xiu-diari', JSON.stringify(diari)); } catch { A.avis(t('pleMemoria') || 'Sense espai'); } };
+  const desa = () => { if (!ls.set('diari', diari)) A.avis(t('pleMemoria') || 'Sense espai'); };
   const docent = () => A.perfil?.tipus === 'pro';
   function suggerits() {
     const avui = new Date().toDateString(), fets = (A.ls.get('fets', []) || []).filter((f) => new Date(f.d).toDateString() === avui).map((f) => f.r);
@@ -71,7 +71,7 @@
     doc.setFont('helvetica', 'normal'); doc.setFontSize(9); doc.setTextColor(120, 102, 84); doc.text('XIU · ' + t('tag'), 20, 290);
     const m = await XP.desaPdf(new Uint8Array(doc.output('arraybuffer')), `XIU - ${t('diari')} ${iso()}.pdf`, { desat: t('desat') }); if (m) A.avis(m);
   }
-  A.HOOKS.iniciDalt.push(() => (docent() ? `<button class="premB diariB" data-go="#/diari">${I.rellotge}<span><b>${t('diari')}</b>${t('diariB')}</span>${I.back}</button>` : ''));
+  A.HOOKS.iniciDalt.push(() => (docent() && A.compte ? `<button class="premB diariB" data-go="#/diari">${I.rellotge}<span><b>${t('diari')}</b>${t('diariB')}</span>${I.back}</button>` : ''));
   A.HOOKS.perfil.push(() => (docent() ? `<div class="llistaMes" style="margin-top:8px"><button data-go="#/diari">${I.rellotge}<span>${t('diari')}</span>${I.back}</button></div>` : ''));
   document.addEventListener('change', async (e) => {
     if (e.target.matches('[data-dafeg]') && e.target.value) { triats.add(e.target.value); return A.render(true); }
