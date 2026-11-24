@@ -705,9 +705,24 @@
     $('#view').innerHTML = `<div class="${manté ? '' : 'fade'}">${v()}</div>`;
     if ($('#digital')) XFitxa.munta($('#digital'));
     for (const f of HOOKS.despres) f(p);
+    decoraFiles();
     nav();
     if (manté) scrollTo(0, y);
   }
+
+  // files de targetes: fletxes ‹ › a l'ordinador (només quan hi ha més targetes a un costat o l'altre)
+  function decoraFiles() {
+    for (const r of document.querySelectorAll('#view .row')) {
+      if (r.parentElement.classList.contains('rowW')) continue;
+      const w = document.createElement('div'); w.className = 'rowW'; r.replaceWith(w); w.appendChild(r);
+      w.insertAdjacentHTML('beforeend', '<button class="rowA esq" data-rowa="-1" aria-label="‹">‹</button><button class="rowA dre" data-rowa="1" aria-label="›">›</button>');
+      const mira = () => { w.classList.toggle('potEsq', r.scrollLeft > 4); w.classList.toggle('potDre', r.scrollLeft + r.clientWidth < r.scrollWidth - 4); };
+      r.addEventListener('scroll', mira, { passive: true }); mira();
+    }
+  }
+  addEventListener('resize', () => document.querySelectorAll('#view .row').forEach((r) => r.dispatchEvent(new Event('scroll'))));
+  document.addEventListener('click', (e) => { const b = e.target.closest('[data-rowa]'); if (!b) return; e.stopPropagation(); const r = b.parentElement.querySelector('.row'), pas = r.clientWidth + (parseFloat(getComputedStyle(r).columnGap) || 0); const fi = Math.max(0, Math.min(r.scrollWidth - r.clientWidth, Math.round(r.scrollLeft / pas + +b.dataset.rowa) * pas));
+    r.scrollTo({ left: fi, behavior: 'smooth' }); setTimeout(() => { if (Math.abs(r.scrollLeft - fi) > 3) r.scrollLeft = fi; }, 650); }, true);   // si el desplaçament suau no hi arriba, hi salta
 
   let avisT;
   function avis(txt) {
